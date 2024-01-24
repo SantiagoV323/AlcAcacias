@@ -1,0 +1,397 @@
+<style type="text/css">
+  .principal_cont {
+    margin: 0;
+    padding: 0;
+  }
+
+  .blanco_c01,
+  .azul_c01 {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .info_cont01,
+  .inf_cont02 {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .titulo-cilindro {
+    text-align: center;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  }
+
+  .container_ps {
+    width: 80%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .botones_container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    /* display: flex; */
+    flex: 1;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .titulo-cilindro h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-family: 'Work Sans', sans-serif !important;
+    font-weight: bold;
+  }
+
+  .titulo-cilindro span {
+    font-size: 16px;
+  }
+
+  .blanco_c01 {
+    background-color: #ebebeb;
+    color: #333;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    min-width: 300px;
+    flex: 1;
+  }
+
+  .info_cont01 {
+    background-color: #ebebeb;
+    color: #333;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    min-width: 300px;
+    flex: 1;
+  }
+
+  .inf_cont02 {
+    background-color: #ebebeb;
+    color: #333;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    min-width: 300px;
+    flex: 1;
+  }
+
+  .azul_c01 {
+    background-color: #3462ad;
+    color: #fff;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    min-width: 300px;
+    flex: 1;
+  }
+
+  .inf_cont02 {
+    background-color: #3462ad;
+    color: #fff;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    min-width: 300px;
+    flex: 1;
+  }
+
+  .logo-alcaldia {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .nombre_c01 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .descripcion p,
+  .alcaldia p {
+    font-size: 12px;
+    text-align: justify;
+  }
+
+  .descripcion_01 p {
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  .foto-persona {
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .foto-persona img {
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+    background-color: #fff;
+  }
+
+  .franja-oscura {
+    position: absolute;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    top: 5px;
+    left: 5px;
+    border: 5px solid #2c3e50;
+    border-radius: 80%;
+  }
+
+  .titulo_c01 h3 {
+    margin-bottom: 20px;
+    font-family: 'Work Sans', sans-serif !important;
+    font-weight: bold;
+    font-size: 20px !important;
+  }
+
+  .titulo-cilindro {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 1px;
+    border-radius: 60px 0px 0px 60px;
+    margin-bottom: 20px;
+    margin-right: 0;
+    letter-spacing: -1px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bold;
+    position: relative;
+  }
+
+  .nombre-persona {
+    margin-bottom: 10px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bold;
+  }
+
+  .alcaldia_c01 {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bold;
+  }
+
+  .row_c01 {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: auto;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+  }
+
+  .row_c02 {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    max-width: 1200px;
+    margin: auto;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+  }
+
+  @keyframes slideInFromRight {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideOutToLeft {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes slideInFromLeft {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideOutToRight {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+    }
+  }
+
+  .row_c01,
+  .row_c02 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .row_c01 {
+    animation: slideInFromRight 1s ease-out forwards;
+  }
+
+  .row_c02 {
+    animation: slideInFromLeft 1s ease-out forwards;
+    display: none;
+  }
+
+  .boton {
+    margin: 0 10px;
+  }
+</style>
+<div class="principal_cont">
+  <div class="container_ps">
+    <div class="row_c01">
+      <div class="col-xs-12 col-sm-6 blanco_c01">
+        <div class="nombre_c01">
+          <h2 style="margin-bottom: 10px">Sandra Patricia Fonseca Avella</h2>
+        </div>
+
+        <div class="descripcion">
+          <p>Abogada, mag&iacute;ster en derecho administrativo y especialista en derecho urbano. Cuenta con m&aacute;s
+            de 18 a&ntilde;os de experiencia profesional en el sector p&uacute;blico, asesorando jur&iacute;dicamente y
+            ejerciendo cargos de nivel directivo, se ha desempe&ntilde;ado profesionalmente en entidades p&uacute;blicas
+            de diferente orden como la Secretar&iacute;a Distrital de Planeaci&oacute;n, la Unidad Administrativa
+            Especial de Catastro Distrital, la Corporaci&oacute;n Aut&oacute;noma Regional de Cundinamarca, la
+            Superintendencia de Servicios P&uacute;blicos Domiciliarios, Central de Inversiones S.A.<br />
+            <br />
+            Tiene experiencia y conocimiento en el marco de la gesti&oacute;n jur&iacute;dica, administrativa,
+            urban&iacute;stica, de ordenamiento territorial, integraci&oacute;n y asociatividad territorial, as&iacute;
+            como en temas catastrales y ambientales.
+          </p>
+        </div>
+
+        <div class="logo-alcaldia"><img alt="Logo de la Alcaldía"
+            src="https://www.acacias.gov.co/info/acacias_se/media/galeria11942.png"
+            style="height:50px; margin-top:40%" /></div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 azul_c01">
+        <div class="foto-persona">
+          <div class="franja-oscura">&nbsp;</div>
+          <img alt="Foto de la Persona" src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png" />
+        </div>
+
+        <div class="titulo_c01">
+          <h3 style="color: white">OFICINA<br />
+            JUR&Iacute;DICA</h3>
+        </div>
+
+        <div class="titulo-cilindro">
+          <h3 style="color: white"><span>EQUIPO DE</span><br />
+            GOBIERNO</h3>
+        </div>
+
+        <div class="nombre-persona">
+          <p><span class="alcaldia_c01">CARLOS JULIO<br />
+              PLATA BECERRA<br />
+              ----Alcalde----</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row_c02">
+      <div class="col-xs-12 col-sm-6 info_cont01">
+        <div class="contenido_inf">
+          <div class="info_c01">
+            <h2 style="margin-bottom: 10px">Misi&oacute;n</h2>
+          </div>
+
+          <div class="descripcion_01">
+            <p>Es la Oficina responsable por el proceso de asesoria y asistencia juridica al despacho del alcalde y
+              dem&aacute;s dependencias de la estructura municipal, en los asuntos de orden legal que deba atender el
+              municipio, para lo cual prepara las minutas, realiza la revisi&oacute;n y ajuste de los actos de la
+              administraci&oacute;n y adelantar&aacute; los procesos disciplinarios a que haya lugar.</p>
+          </div>
+
+          <div class="info_c02">
+            <h2 style="margin-bottom: 10px">Objetivos</h2>
+          </div>
+
+          <div class="descripcion_01">
+            <p>1. Asesorar a la Administraci&oacute;n Municipal en todos los temas jur&iacute;dicos para dar
+              cumplimiento a las normas legales y defender los intereses del Municipio.</p>
+          </div>
+
+          <div class="logo-alcaldia"><img alt="Logo de la Alcaldía"
+              src="https://www.acacias.gov.co/info/acacias_se/media/galeria11942.png"
+              style="height:50px; margin-top:40%" /></div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 inf_cont02">
+        <div class="info_c03">
+          <h2 style="margin-bottom: 10px">Funciones</h2>
+        </div>
+
+        <div class="descripcion_01">
+          <p>&bull; Asesorar al Alcalde y a los diferentes funcionarios que lo requieran en temas jur&iacute;dicos
+            relacionados con la misi&oacute;n de la Alcald&iacute;a Municipal.<br />
+            &bull; Representar al Municipio en los procesos que se instauren en su contra, ejecutando las acciones
+            legales para defender los intereses del Municipio, bien sea en forma directa o a trav&eacute;s de los
+            asesores externos.<br />
+            &bull; Instaurar las demandas originadas en actuaciones de terceros que contravengan la ley y la norma en
+            detrimento de los intereses del Municipio.<br />
+            &bull; Realizar los procesos de an&aacute;lisis y validaci&oacute;n de los t&iacute;tulos de propiedad de
+            bienes p&uacute;blicos y fiscales y, construir el archivo correspondiente.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-sm-12 botones_container">
+    <div class="cont_btns"><button class="boton boton_01" onclick="mostrarContenido('buttn_01')">Jefe</button><button
+        class="boton boton_02" onclick="mostrarContenido('buttn_02')">Informaci&oacute;n</button></div>
+  </div>
+</div>
+<script>
+
+  function mostrarContenido(id) {
+    console.log('Mostrar contenido con id:', id);
+  }
+
+  $(document).ready(function () {
+    $(".boton_01").click(function () {
+      if ($(".row_c02").is(":visible")) {
+        $(".row_c02").css("animation", "slideOutToRight 1s ease-out forwards");
+        $(".row_c01").css("animation", "slideInFromLeft 1s ease-out forwards");
+
+        $(".row_c02").one('animationend', function () {
+          $(this).hide();
+          $(".row_c01").show().css("display", "flex");
+        });
+      }
+    });
+
+    $(".boton_02").click(function () {
+      if ($(".row_c01").is(":visible")) {
+        $(".row_c01").css("animation", "slideOutToLeft 1s ease-out forwards");
+        $(".row_c02").css("animation", "slideInFromRight 1s ease-out forwards");
+
+        $(".row_c01").one('animationend', function () {
+          $(this).hide();
+          $(".row_c02").show().css("display", "flex");
+        });
+      }
+    });
+  });
+
+</script>
