@@ -298,18 +298,41 @@
   }
 
   .navbar-light .navbar-nav .nav-link {
+    background-color: transparent;
     color: black;
     font-weight: 600;
-}
+  }
 
   .navbar-expand-lg .navbar-nav .dropdown-menu {
     position: absolute;
+    border-radius: 8px;
     background-color: #ebebeb;
   }
 
   .navbar {
     border-top: 5px solid #fbbb00;
     border-bottom: 5px solid #078930;
+  }
+
+  /* Estilos existentes para los enlaces del navbar */
+  .navbar-nav>li>a {
+    color: black;
+    /* O el color original de tus enlaces */
+    /* Otros estilos... */
+  }
+
+  /* Agregar estilos para el hover */
+  .navbar-nav>li>a:hover {
+    /* Cambiar al color azul deseado */
+    background-color: #3462ad;
+    /* Cambiar el color del texto a blanco */
+    color: white;
+  }
+
+  .desplegable {
+    color: black;
+    font-weight: 600;
+    background-color: transparent;
   }
 
 </style>
@@ -322,12 +345,12 @@
       <div class="cont_btns">
 
         <!-- dropdown button in NavBar -->
-        
+
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              <a class="nav-link dropdown-toggle desplegable" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 Desplegable
               </a>
