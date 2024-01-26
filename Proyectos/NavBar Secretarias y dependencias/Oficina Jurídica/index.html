@@ -345,6 +345,11 @@
     align-items: center;
   }
 
+  .nav-link {
+    width: 100%;
+    text-align: left;
+    padding-left: 8px
+  }
   
 
   @media (max-width: 767px) {
@@ -360,6 +365,10 @@
     color: white; /* Color de texto blanco cuando se hace hover */
   }
   
+  #navContent,
+  #navbarDropdownMenuLink {
+    padding-left: 8px;
+  }
 
 </style>
 
@@ -377,11 +386,11 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link btn btn-primary nav-link jefe boton_01" href="javascript:void(0);">Jefe <span class="sr-only">(current)</span></a>
+            <a class="nav-link btn btn-primary nav-link jefe boton_01" id="navContent" href="javascript:void(0);">Jefe <span class="sr-only">(current)</span></a>
             <!-- <a class="btn btn-primary nav-link jefe boton_01" href="javascript:void(0);">Jefe</a> -->
           </li>
           <li class="nav-item">
-            <a class="btn btn-primary nav-link info boton_02" href="javascript:void(0);">Información</a>
+            <a class="btn btn-primary nav-link info boton_02" href="javascript:void(0);" id="navContent">Información</a>
             <!-- <a href="javascript:void(0);" class="btn btn-primary nav-link info boton_02">Información</a> -->
 
           </li>
