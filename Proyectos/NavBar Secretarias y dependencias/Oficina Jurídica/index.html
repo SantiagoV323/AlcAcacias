@@ -69,7 +69,9 @@
     color: #333;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
     min-width: 300px;
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .info_cont01 {
@@ -93,7 +95,9 @@
     color: #fff;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
     min-width: 300px;
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .inf_cont02 {
@@ -105,13 +109,10 @@
   }
 
   .logo-alcaldia {
-    margin-top: 0;
+    margin-top: 56%;
     text-align: center;
   }
 
-  .logo-alcaldia>img {
-    margin-bottom: 40%;
-  }
 
   .nombre_c01 {
     margin-top: 20px;
@@ -185,7 +186,9 @@
     font-family: 'Work Sans', sans-serif;
     font-weight: bold;
   }
-
+.nombre-persona > p{
+  margin: 0px;
+}
   .alcaldia_c01 {
     /* margin-top: 76px; */
     font-family: 'Work Sans', sans-serif;
@@ -417,46 +420,51 @@
     </nav>
 
     <div class="row_c01">
-      <div class="col-xs-12 col-sm-6 blanco_c01">
-        <div class="nombre_c01">
-          <h2 style="margin-bottom: 10px">Sandra Patricia Fonseca Avella</h2>
+      <div class="col-xs-12 col-md-6 blanco_c01">
+        
+        <div>
+          <div class="nombre_c01">
+            <h2 style="margin-bottom: 10px">Sandra Patricia Fonseca Avella</h2>
+          </div>
+  
+          <div class="descripcion">
+            <p>Abogada, mag&iacute;ster en derecho administrativo y especialista en derecho urbano. Cuenta con m&aacute;s
+              de 18 a&ntilde;os de experiencia profesional en el sector p&uacute;blico, asesorando jur&iacute;dicamente y
+              ejerciendo cargos de nivel directivo, se ha desempe&ntilde;ado profesionalmente en entidades p&uacute;blicas
+              de diferente orden como la Secretar&iacute;a Distrital de Planeaci&oacute;n, la Unidad Administrativa
+              Especial de Catastro Distrital, la Corporaci&oacute;n Aut&oacute;noma Regional de Cundinamarca, la
+              Superintendencia de Servicios P&uacute;blicos Domiciliarios, Central de Inversiones S.A.<br />
+              <br />
+              Tiene experiencia y conocimiento en el marco de la gesti&oacute;n jur&iacute;dica, administrativa,
+              urban&iacute;stica, de ordenamiento territorial, integraci&oacute;n y asociatividad territorial, as&iacute;
+              como en temas catastrales y ambientales.
+            </p>
+          </div>
         </div>
-
-        <div class="descripcion">
-          <p>Abogada, mag&iacute;ster en derecho administrativo y especialista en derecho urbano. Cuenta con m&aacute;s
-            de 18 a&ntilde;os de experiencia profesional en el sector p&uacute;blico, asesorando jur&iacute;dicamente y
-            ejerciendo cargos de nivel directivo, se ha desempe&ntilde;ado profesionalmente en entidades p&uacute;blicas
-            de diferente orden como la Secretar&iacute;a Distrital de Planeaci&oacute;n, la Unidad Administrativa
-            Especial de Catastro Distrital, la Corporaci&oacute;n Aut&oacute;noma Regional de Cundinamarca, la
-            Superintendencia de Servicios P&uacute;blicos Domiciliarios, Central de Inversiones S.A.<br />
-            <br />
-            Tiene experiencia y conocimiento en el marco de la gesti&oacute;n jur&iacute;dica, administrativa,
-            urban&iacute;stica, de ordenamiento territorial, integraci&oacute;n y asociatividad territorial, as&iacute;
-            como en temas catastrales y ambientales.
-          </p>
-        </div>
-
         <div class="logo-alcaldia"><img alt="Logo de la Alcaldía"
             src="https://www.acacias.gov.co/info/acacias_se/media/galeria11942.png"
-            style="height:50px; margin-top:40%" /></div>
+            style="height:50px;  margin-bottom: 1rem;" />
+        </div>
       </div>
 
-      <div class="col-xs-12 col-sm-6 azul_c01">
-        <div class="foto-persona">
-          <div class="franja-oscura">&nbsp;</div>
-          <img alt="Foto de la Persona" src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png" />
+      <div class="col-xs-12 col-md-6 azul_c01">
+        
+        <div>
+          <div class="foto-persona">
+            <div class="franja-oscura">&nbsp;</div>
+            <img alt="Foto de la Persona" src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png" />
+          </div>
+  
+          <div class="titulo_c01">
+            <h3 style="color: white">OFICINA<br />
+              JUR&Iacute;DICA</h3>
+          </div>
+  
+          <div class="titulo-cilindro">
+            <h3 style="color: white"><span>EQUIPO DE</span><br />
+              GOBIERNO</h3>
+          </div>
         </div>
-
-        <div class="titulo_c01">
-          <h3 style="color: white">OFICINA<br />
-            JUR&Iacute;DICA</h3>
-        </div>
-
-        <div class="titulo-cilindro">
-          <h3 style="color: white"><span>EQUIPO DE</span><br />
-            GOBIERNO</h3>
-        </div>
-
         <div class="nombre-persona">
           <p><span class="alcaldia_c01">CARLOS JULIO<br />
               PLATA BECERRA<br />
@@ -466,7 +474,7 @@
     </div>
 
     <div class="row_c02">
-      <div class="col-xs-12 col-sm-6 info_cont01">
+      <div class="col-xs-12 col-md-6 info_cont01">
         <div class="contenido_inf">
           <div class="info_c01">
             <h2 style="margin-bottom: 10px">Misi&oacute;n</h2>
@@ -494,7 +502,7 @@
         </div>
       </div>
 
-      <div class="col-xs-12 col-sm-6 inf_cont02">
+      <div class="col-xs-12 col-md-6 inf_cont02">
         <div class="info_c03">
           <h2 style="margin-bottom: 10px">Funciones</h2>
         </div>
