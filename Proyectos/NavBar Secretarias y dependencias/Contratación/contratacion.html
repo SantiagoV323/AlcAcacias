@@ -4,7 +4,7 @@
 <html lang="en">
 
 <meta charset="UTF-8">
-
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <!-- Add the Bootstrap CSS link -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
@@ -55,7 +55,7 @@
 
   .titulo-cilindro h3 {
     font-size: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0;
     font-family: 'Work Sans', sans-serif !important;
     font-weight: bold;
   }
@@ -69,7 +69,9 @@
     color: #333;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
     min-width: 300px;
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .info_cont01 {
@@ -93,7 +95,9 @@
     color: #fff;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
     min-width: 300px;
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .inf_cont02 {
@@ -105,9 +109,11 @@
   }
 
   .logo-alcaldia {
-    margin-top: 0;
+    margin-top: 6%;
+    margin-bottom: 35px;
     text-align: center;
   }
+
 
   .nombre_c01 {
     margin-top: 20px;
@@ -116,12 +122,14 @@
 
   .descripcion p,
   .alcaldia p {
-    font-size: 12px;
+    margin-top: 50px;
+    font-size: 16px;
     text-align: justify;
   }
 
   .descripcion_01 p {
-    font-size: 14px;
+    margin: 50px 0;
+    font-size: 15px;
     text-align: justify;
   }
 
@@ -139,7 +147,9 @@
 
   .foto-persona img {
     width: 100%;
-    height: 120%;
+    height: 100%;
+    padding-top: 10px;
+    padding-left: 13px;
     object-fit: cover;
     background-color: #fff;
   }
@@ -155,7 +165,7 @@
   }
 
   .titulo_c01 h3 {
-    margin-bottom: 20px;
+    margin: 50px 0;
     font-family: 'Work Sans', sans-serif !important;
     font-weight: bold;
     font-size: 20px !important;
@@ -175,12 +185,18 @@
   }
 
   .nombre-persona {
-    margin-bottom: 10px;
+    /* margin-top: 56%; */
+    margin-bottom: 32px;
     font-family: 'Work Sans', sans-serif;
     font-weight: bold;
   }
 
+  .nombre-persona>p {
+    margin: 0px;
+  }
+
   .alcaldia_c01 {
+    /* margin-top: 76px; */
     font-family: 'Work Sans', sans-serif;
     font-weight: bold;
   }
@@ -275,7 +291,7 @@
   .row_c02 {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: auto;
     z-index: 1;
   }
 
@@ -350,26 +366,28 @@
     text-align: left;
     padding-left: 8px
   }
-  
+
 
   @media (max-width: 767px) {
     .navbar .nav-link.btn {
-      display: block;
+      /* display: block; */
       width: 100%;
-      text-align: left; /* Asegurarse de que estén alineados a la izquierda */
+      text-align: left;
+      /* Asegurarse de que estén alineados a la izquierda */
     }
   }
 
   .navbar-light .navbar-nav .nav-link.btn:hover {
-    background-color: #3462ad; /* Color de fondo azul cuando se hace hover */
-    color: white; /* Color de texto blanco cuando se hace hover */
+    background-color: #3462ad;
+    /* Color de fondo azul cuando se hace hover */
+    color: white;
+    /* Color de texto blanco cuando se hace hover */
   }
-  
+
   #navContent,
   #navbarDropdownMenuLink {
     padding-left: 8px;
   }
-
 </style>
 
 
@@ -377,17 +395,19 @@
   <div class="container_ps">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <!-- Botón inicio que puede llevar al home -->
-      <!-- <a class="navbar-brand" href="#">Inicio</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- <a class="navbar-brand" href="#">Inicio</a> -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-    
-      </button> -->
-    
-      
+
+      </button>
+
+
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link btn btn-primary nav-link jefe boton_01" id="navContent" href="javascript:void(0);">Jefe <span class="sr-only">(current)</span></a>
+            <a class="nav-link btn btn-primary nav-link jefe boton_01" id="navContent" href="javascript:void(0);">Jefe
+              <span class="sr-only">(current)</span></a>
             <!-- <a class="btn btn-primary nav-link jefe boton_01" href="javascript:void(0);">Jefe</a> -->
           </li>
           <li class="nav-item">
@@ -396,7 +416,8 @@
 
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Dropdown
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -410,59 +431,68 @@
     </nav>
 
     <div class="row_c01">
-      <div class="col-xs-12 col-sm-6 blanco_c01">
-        <div class="nombre_c01">
-          <h2 style="margin-bottom: 10px">Aldemar Armando Baquero Bonilla</h2>
-        </div>
+      <div class="col-xs-12 col-md-6 blanco_c01">
 
-        <div class="descripcion">
-          <p>Ingeniero Industrial de profesión, especialista en gobierno y gestión pública territoriales, de la pontifica Universidad Javeriana, especialista en gerencia ambiental de la universidad Sergio arboleda, con más de 10 años de experiencia en el sector público.<br />
-            <br />
-            Se desempeñó como director regional en el departamento administrativo para la prosperidad social de la Presidencia de la República Delegado para el Meta, también ha ejercido cargos como: Secretario General para la Contraloría Departamental del Meta, Secretario de Recursos Humanos para la Gobernación del Meta, Director Administrativo de Planeación Educativa para la Gobernación del Meta, Gerente General de la Empresa de Servicios Públicos de Acacias ESPA, entre otros, ha dedicado la mayor parte de su vida laboral al servicio publico y a la comunidad.
-          </p>
-        </div>
+        <div>
+          <div class="nombre_c01">
+            <h2 style="margin-bottom: 10px">Franki Alexander Gómez Sánchez</h2>
+          </div>
 
+          <div class="descripcion">
+            <p>Abogado egresado de la Universidad La Gran Colombia, especialista en derecho administrativo de la
+              Universidad del Rosario, especialista en derecho minero energético de la Universidad Externado de
+              Colombia, especialista en contratación estatal y magíster en contratación estatal de la Universidad de La
+              Sabana, cuenta con más de 10 años de experiencia profesional y trayectoria en el sector público y
+              privado.<br />
+              <br />
+              Ha trabajado en entidades del orden Nacional, Departamental y Distrital como el Instituto Nacional de
+              Vías, la Corporación Autónoma Regional de Cundinamarca y la Alcaldía Mayor de Bogotá, liderando equipos
+              jurídicos en Derecho Ambiental, Derecho Administrativo y Contratación Estatal.
+            </p>
+          </div>
+        </div>
         <div class="logo-alcaldia"><img alt="Logo de la Alcaldía"
             src="https://www.acacias.gov.co/info/acacias_se/media/galeria11942.png"
-            style="height:50px; margin-top:40%" /></div>
+            style="height:50px;  margin-bottom: 1rem;" />
+        </div>
       </div>
 
-      <div class="col-xs-12 col-sm-6 azul_c01">
-        <div class="foto-persona">
-          <div class="franja-oscura">&nbsp;</div>
-          <img alt="Foto de la Persona" src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png" />
-        </div>
+      <div class="col-xs-12 col-md-6 azul_c01">
 
-        <div class="titulo_c01">
-          <h3 style="color: white">OFICINA<br />
-            ADMINISTRATIVA<br />Y FINANCIERA </h3>
-        </div>
+        <div>
+          <div class="foto-persona">
+            <div class="franja-oscura">&nbsp;</div>
+            <img alt="Foto de la Persona" src="https://www.acacias.gov.co/info/acacias_se/media/galeria11935.png" />
+          </div>
 
-        <div class="titulo-cilindro">
-          <h3 style="color: white"><span>EQUIPO DE</span><br />
-            GOBIERNO</h3>
-        </div>
+          <div class="titulo_c01">
+            <h3 style="color: white">OFICINA DE TECNOLOGÍAS<br />
+              DE LA INFORMACIÓN<br />Y LAS TELECOMUNICACIONES</h3>
+          </div>
 
+          <div class="titulo-cilindro">
+            <h3 style="color: white"><span>EQUIPO DE</span><br />
+              GOBIERNO</h3>
+          </div>
+        </div>
         <div class="nombre-persona">
           <p><span class="alcaldia_c01">CARLOS JULIO<br />
               PLATA BECERRA<br />
-              ----Alcalde----</span></p>
+              Alcalde</span></p>
         </div>
       </div>
     </div>
 
     <div class="row_c02">
-      <div class="col-xs-12 col-sm-6 info_cont01">
+      <div class="col-xs-12 col-md-6 info_cont01">
         <div class="contenido_inf">
           <div class="info_c01">
             <h2 style="margin-bottom: 10px">Misi&oacute;n</h2>
           </div>
 
           <div class="descripcion_01">
-            <p>Es la Oficina responsable por el proceso de asesoria y asistencia juridica al despacho del alcalde y
-              dem&aacute;s dependencias de la estructura municipal, en los asuntos de orden legal que deba atender el
-              municipio, para lo cual prepara las minutas, realiza la revisi&oacute;n y ajuste de los actos de la
-              administraci&oacute;n y adelantar&aacute; los procesos disciplinarios a que haya lugar.</p>
+            <p>Llevar a Cabo todos los procesos contractuales necesarios para dar cumplimiento al plan de desarrollo del
+              municipio, tal como lo establece el artículo 311 de la Constitución Política de Colombia.</p>
           </div>
 
           <div class="info_c02">
@@ -470,31 +500,36 @@
           </div>
 
           <div class="descripcion_01">
-            <p>1. Asesorar a la Administraci&oacute;n Municipal en todos los temas jur&iacute;dicos para dar
-              cumplimiento a las normas legales y defender los intereses del Municipio.</p>
+            <p>
+              1. Desarrollar todos los procesos de contratación de acuerdo a lo establecido en la Ley 80 de 1993, la Ley
+              1150 de 2007, Decreto 2474 de 2008, Decreto 2025 de 2009 y demás Decretos reglamentarios. <br>
+              2. Velar por los principios de celeridad, transparencia y publicidad de todos los procesos contractuales
+              que desarrolle La Dirección Operativa de Apoyo a la Contratación. <br>
+              3. Llevar a cabo todos los procesos contractuales necesarios para dar cumplimiento al Plan de Desarrollo y
+              al Programa de Gobierno CAMBIO SALUDABLE. <br>
+            </p>
           </div>
 
           <div class="logo-alcaldia"><img alt="Logo de la Alcaldía"
-              src="https://www.acacias.gov.co/info/acacias_se/media/galeria11942.png"
-              style="height:50px; margin-top:40%" /></div>
+              src="https://www.acacias.gov.co/info/acacias_se/media/galeria11942.png" style="height:50px;" /></div>
         </div>
       </div>
 
-      <div class="col-xs-12 col-sm-6 inf_cont02">
+      <div class="col-xs-12 col-md-6 inf_cont02">
         <div class="info_c03">
           <h2 style="margin-bottom: 10px">Funciones</h2>
         </div>
 
         <div class="descripcion_01">
-          <p>&bull; Asesorar al Alcalde y a los diferentes funcionarios que lo requieran en temas jur&iacute;dicos
-            relacionados con la misi&oacute;n de la Alcald&iacute;a Municipal.<br />
-            &bull; Representar al Municipio en los procesos que se instauren en su contra, ejecutando las acciones
-            legales para defender los intereses del Municipio, bien sea en forma directa o a trav&eacute;s de los
-            asesores externos.<br />
-            &bull; Instaurar las demandas originadas en actuaciones de terceros que contravengan la ley y la norma en
-            detrimento de los intereses del Municipio.<br />
-            &bull; Realizar los procesos de an&aacute;lisis y validaci&oacute;n de los t&iacute;tulos de propiedad de
-            bienes p&uacute;blicos y fiscales y, construir el archivo correspondiente.</p>
+          <p>
+            • Celebrar contratos y convenios. <br>
+            • Aprobar las garantías o pólizas. <br>
+            • Aprobar las cuentas. <br>
+            • Apoyar a las demás dependencias en los procesos contractuales. <br>
+            • Realizar los informes para los diferentes órganos de control. <br>
+            • Publicar las convocatorias públicas en el PUC '- SECOP. <br>
+            • Brindar la Información requerida de contratación a la comunidad. <br>
+          </p>
         </div>
       </div>
     </div>

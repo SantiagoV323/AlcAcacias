@@ -55,7 +55,7 @@
 
   .titulo-cilindro h3 {
     font-size: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0;
     font-family: 'Work Sans', sans-serif !important;
     font-weight: bold;
   }
@@ -69,7 +69,9 @@
     color: #333;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
     min-width: 300px;
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .info_cont01 {
@@ -93,7 +95,9 @@
     color: #fff;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
     min-width: 300px;
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .inf_cont02 {
@@ -105,9 +109,11 @@
   }
 
   .logo-alcaldia {
-    margin-top: 0;
+    margin-top: 6%;
+    margin-bottom: 35px;
     text-align: center;
   }
+
 
   .nombre_c01 {
     margin-top: 20px;
@@ -116,12 +122,14 @@
 
   .descripcion p,
   .alcaldia p {
-    font-size: 12px;
+    margin-top: 50px;
+    font-size: 16px;
     text-align: justify;
   }
 
   .descripcion_01 p {
-    font-size: 14px;
+    margin: 50px 0;
+    font-size: 15px;
     text-align: justify;
   }
 
@@ -139,7 +147,9 @@
 
   .foto-persona img {
     width: 100%;
-    height: 120%;
+    height: 100%;
+    padding-top: 8px;
+    padding-left: 4px;
     object-fit: cover;
     background-color: #fff;
   }
@@ -155,7 +165,7 @@
   }
 
   .titulo_c01 h3 {
-    margin-bottom: 20px;
+    margin: 50px 0;
     font-family: 'Work Sans', sans-serif !important;
     font-weight: bold;
     font-size: 20px !important;
@@ -175,12 +185,16 @@
   }
 
   .nombre-persona {
-    margin-bottom: 10px;
+    /* margin-top: 56%; */
+    margin-bottom: 32px;
     font-family: 'Work Sans', sans-serif;
     font-weight: bold;
   }
-
+.nombre-persona > p{
+  margin: 0px;
+}
   .alcaldia_c01 {
+    /* margin-top: 76px; */
     font-family: 'Work Sans', sans-serif;
     font-weight: bold;
   }
@@ -275,7 +289,7 @@
   .row_c02 {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: auto;
     z-index: 1;
   }
 
@@ -354,7 +368,7 @@
 
   @media (max-width: 767px) {
     .navbar .nav-link.btn {
-      display: block;
+      /* display: block; */
       width: 100%;
       text-align: left; /* Asegurarse de que estén alineados a la izquierda */
     }
@@ -377,11 +391,11 @@
   <div class="container_ps">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <!-- Botón inicio que puede llevar al home -->
-      <!-- <a class="navbar-brand" href="#">Inicio</a>
+      <!-- <a class="navbar-brand" href="#">Inicio</a> -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     
-      </button> -->
+      </button>
     
       
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -410,39 +424,51 @@
     </nav>
 
     <div class="row_c01">
-      <div class="col-xs-12 col-sm-6 blanco_c01">
-        <div class="nombre_c01">
-          <h2 style="margin-bottom: 10px">Franki Alexander Gómez Sánchez</h2>
+      <div class="col-xs-12 col-md-6 blanco_c01">
+        
+        <div>
+          <div class="nombre_c01">
+            <h2 style="margin-bottom: 10px">Sandra Patricia Fonseca Avella</h2>
+          </div>
+  
+          <div class="descripcion">
+            <p>Abogada, mag&iacute;ster en derecho administrativo y especialista en derecho urbano. Cuenta con m&aacute;s
+              de 18 a&ntilde;os de experiencia profesional en el sector p&uacute;blico, asesorando jur&iacute;dicamente y
+              ejerciendo cargos de nivel directivo, se ha desempe&ntilde;ado profesionalmente en entidades p&uacute;blicas
+              de diferente orden como la Secretar&iacute;a Distrital de Planeaci&oacute;n, la Unidad Administrativa
+              Especial de Catastro Distrital, la Corporaci&oacute;n Aut&oacute;noma Regional de Cundinamarca, la
+              Superintendencia de Servicios P&uacute;blicos Domiciliarios, Central de Inversiones S.A.<br />
+              <br />
+              Tiene experiencia y conocimiento en el marco de la gesti&oacute;n jur&iacute;dica, administrativa,
+              urban&iacute;stica, de ordenamiento territorial, integraci&oacute;n y asociatividad territorial, as&iacute;
+              como en temas catastrales y ambientales.
+            </p>
+          </div>
         </div>
-
-        <div class="descripcion">
-          <p>Abogado egresado de la Universidad La Gran Colombia, especialista en derecho administrativo de la Universidad del Rosario, especialista en derecho minero energético de la Universidad Externado de Colombia, especialista en contratación estatal y magíster en contratación estatal de la Universidad de La Sabana, cuenta con más de 10 años de experiencia profesional y trayectoria en el sector público y privado.<br />
-            <br />
-            Ha trabajado en entidades del orden Nacional, Departamental y Distrital como el Instituto Nacional de Vías, la Corporación Autónoma Regional de Cundinamarca y la Alcaldía Mayor de Bogotá, liderando equipos jurídicos en Derecho Ambiental, Derecho Administrativo y Contratación Estatal.
-          </p>
-        </div>
-
         <div class="logo-alcaldia"><img alt="Logo de la Alcaldía"
             src="https://www.acacias.gov.co/info/acacias_se/media/galeria11942.png"
-            style="height:50px; margin-top:40%" /></div>
+            style="height:50px;  margin-bottom: 1rem;" />
+        </div>
       </div>
 
-      <div class="col-xs-12 col-sm-6 azul_c01">
-        <div class="foto-persona">
-          <div class="franja-oscura">&nbsp;</div>
-          <img alt="Foto de la Persona" src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png" />
+      <div class="col-xs-12 col-md-6 azul_c01">
+        
+        <div>
+          <div class="foto-persona">
+            <div class="franja-oscura">&nbsp;</div>
+            <img alt="Foto de la Persona" src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png" />
+          </div>
+  
+          <div class="titulo_c01">
+            <h3 style="color: white">OFICINA<br />
+              JUR&Iacute;DICA</h3>
+          </div>
+  
+          <div class="titulo-cilindro">
+            <h3 style="color: white"><span>EQUIPO DE</span><br />
+              GOBIERNO</h3>
+          </div>
         </div>
-
-        <div class="titulo_c01">
-          <h3 style="color: white">OFICINA<br />
-            DE CONTRATACIÓN</h3>
-        </div>
-
-        <div class="titulo-cilindro">
-          <h3 style="color: white"><span>EQUIPO DE</span><br />
-            GOBIERNO</h3>
-        </div>
-
         <div class="nombre-persona">
           <p><span class="alcaldia_c01">CARLOS JULIO<br />
               PLATA BECERRA<br />
@@ -452,7 +478,7 @@
     </div>
 
     <div class="row_c02">
-      <div class="col-xs-12 col-sm-6 info_cont01">
+      <div class="col-xs-12 col-md-6 info_cont01">
         <div class="contenido_inf">
           <div class="info_c01">
             <h2 style="margin-bottom: 10px">Misi&oacute;n</h2>
@@ -476,11 +502,11 @@
 
           <div class="logo-alcaldia"><img alt="Logo de la Alcaldía"
               src="https://www.acacias.gov.co/info/acacias_se/media/galeria11942.png"
-              style="height:50px; margin-top:40%" /></div>
+              style="height:50px;" /></div>
         </div>
       </div>
 
-      <div class="col-xs-12 col-sm-6 inf_cont02">
+      <div class="col-xs-12 col-md-6 inf_cont02">
         <div class="info_c03">
           <h2 style="margin-bottom: 10px">Funciones</h2>
         </div>
