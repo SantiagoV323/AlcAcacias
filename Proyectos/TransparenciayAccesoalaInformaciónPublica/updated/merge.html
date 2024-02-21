@@ -98,6 +98,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <style>
+
+        .enunciado {
+            display: flex;
+            justify-content: center;
+        }
         .header-content {
             padding: 30px;
             /* text-align: center; */
@@ -128,6 +133,7 @@
 
         .dropdown-menu {
             padding-left: 20px;
+            padding-right: 20px;
         }
 
         .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
@@ -156,11 +162,31 @@
             padding-left: 66px;
         }
 
+        .header-content>.card-header>ul{
+            background: #3462ad;
+            border-radius: 25px;
+            color: white;
+            padding: 30px;
+        }
+
 
     </style>
 </head>
 
 <body >
+    <div class="enunciado">
+        <div class="header-content">
+            <div class="card-header">
+                <ul>
+                    <li>
+                        De acuerdo a la Ley 1712 de 2014, y resolución 3564 de 2015 de MinTIC la Alcaldía Municipal de Acacías Meta pone a disposición de la ciudadanía la sección de Transparencia y Acceso a la Información Pública Nacional, donde podrán conocer de primera mano toda la información.<br> <br>
+                        Según lo dicta la Ley, la información generada por las entidades del Estado no podrá ser reservada o limitada, por el contrario es de carácter público.<br> <br>
+                        En este sitio se proporciona y facilita el acceso a la misma en los términos más amplios posibles en el momento.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
     <div class="container">
         <h2>Dropdown update</h2>
