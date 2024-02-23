@@ -93,6 +93,28 @@
             padding: 15px;
         }
 
+        #buscador {
+            display: flex;
+            justify-content: right;
+            margin-bottom: 20px;
+        }
+
+        #searchInput {
+            border-radius: 10px 0px 0px 10px;
+        }
+
+        .btn, 
+        .btn-default {
+            border-radius: 0px 10px 10px 0px;
+        }
+
+        .search-box {
+            margin: 15px 0px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
         @media (max-width: 568px) {
             #introduccion {
                 font-size: 16px;
@@ -111,14 +133,26 @@
                 font-size: 17px;
             }
         }
+
+        @media (max-width: 768px) {
+            .search-box {
+                margin: 8px -15px;
+                padding: 10px 15px;
+                
+            }
+        }
     </style>
 </head>
 
 <body>
 
-    <div class="search-box">
-        <input type="text" id="searchInput" placeholder="Buscar sub-elemento..." />
-        <button onclick="searchItem()">Buscar</button>
+    <div id="buscador">
+        <div class="col-md-3">
+            <div class="search-box">
+                <input class="form-control" type="text" id="searchInput" placeholder="Buscar sub-elemento..." />
+                <button class="btn btn-default" onclick="searchItem()"><i class="glyphicon glyphicon-search"></i>  BUSCAR</button>
+            </div>
+        </div>
     </div>
 
     <div class="custom-container"> <!-- Use custom container for centered content -->
@@ -580,25 +614,6 @@
 
     </script>
 
-
-    <!-- <script>
-        $(document).ready(function () {
-            // Detectar clics fuera de los paneles del acordeón
-            $(document).click(function (event) {
-                // Comprobar si el clic fue fuera de los paneles del acordeón
-                if (!$(event.target).closest('.panel').length) {
-                    // Colapsar todos los paneles del acordeón abiertos
-                    $('.panel-collapse.in').collapse('hide');
-                }
-            });
-
-            // Evitar que los clics dentro del acordeón propaguen al documento
-            $('.panel').click(function (event) {
-                event.stopPropagation();
-            });
-        });
-    </script> -->
-
     <script>
         $(document).ready(function () {
             // Detectar clics fuera de los paneles del acordeón y colapsar los que están abiertos
@@ -619,7 +634,7 @@
         });
 
         function searchItem() {
-            
+
             const input = $("#searchInput").val();
             const filter = input.toUpperCase();
 
@@ -628,14 +643,14 @@
                     return item.title.toUpperCase().includes(filter);
                 }).length > 0;
             });
-            
+
             if (panels.length > 0) {
-                
+
                 panels.forEach((panel) => {
                     const panelId = panel.id;
                     const scroll = $(`#${panelId}`).offset().top;
                     const panelCollapse = $(`#${panelId}`);
-                    
+
                     panelCollapse.collapse('show');
                     $('html, body').animate({
                         scrollTop: scroll
@@ -671,7 +686,7 @@
                     { title: '2.1.3- Normativa aplicable', link: '/8642' },
                     { title: '2.1.4- Diario Oficial', link: '/9653' },
                     { title: '2.1.5- Política, lineamientos y manuales', link: '/7502' },
-                    { title: '2.1.6- Agenda Regulatoria', link: '/9659'},
+                    { title: '2.1.6- Agenda Regulatoria', link: '/9659' },
                     { title: '2.2- Busqueda de Normas', link: '' },
                     { title: '2.2.1- Sistema Único de Información Normativa', link: '/9642/' },
                     { title: '2.2.2- Sistema de búsquedas de normas', link: '/' },
@@ -750,7 +765,7 @@
                     { title: '7.1.4.4- Plan de Preservacion Digital', link: '/7521' },
                     { title: '7.1.4.5- Plan de conservación de documentos', link: '/7522' },
                     { title: '7.1.4.6- Politica de Gestión Documental', link: '/7523' },
-                    {title: '7.1.4.7- Inventarios Documentales', link: '/7524' },
+                    { title: '7.1.4.7- Inventarios Documentales', link: '/7524' },
                     { title: '7.1.5- Tablas de retención documental', link: '/7549' },
                     { title: '7.1.6- Registro de Publicaciones', link: '/7550' },
                     { title: '7.1.7- Plan institucional de archivos', link: '/7525' },
@@ -795,5 +810,6 @@
             }
         ]
     </script>
+</body>
 
 </html>
