@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap 3 Accordion - Start Collapsed</title>
+    <title>Transparencia y Acceso a la Información Pública</title>
+    <link rel="shortcut icon" href="https://www.acacias.gov.co/info/acacias_se/web/portal/img/favicon.png" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <style>
         * {
@@ -103,7 +104,7 @@
             border-radius: 10px 0px 0px 10px;
         }
 
-        .btn, 
+        .btn,
         .btn-default {
             border-radius: 0px 10px 10px 0px;
         }
@@ -138,7 +139,7 @@
             .search-box {
                 margin: 8px -15px;
                 padding: 10px 15px;
-                
+
             }
         }
     </style>
@@ -150,7 +151,8 @@
         <div class="col-md-3">
             <div class="search-box">
                 <input class="form-control" type="text" id="searchInput" placeholder="Buscar sub-elemento..." />
-                <button class="btn btn-default" onclick="searchItem()"><i class="glyphicon glyphicon-search"></i>  BUSCAR</button>
+                <button class="btn btn-default" onclick="searchItem()"><i class="glyphicon glyphicon-search"></i>
+                    BUSCAR</button>
             </div>
         </div>
     </div>
@@ -582,34 +584,32 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script>
+
         function searchItem() {
             var input, filter, panels, titles, found = false;
             input = document.getElementById('searchInput');
-            filter = input.value.toUpperCase().trim(); // Remover espacios al principio y al final
+            filter = input.value.toUpperCase().trim();
             panels = document.getElementById('accordion').getElementsByClassName('panel');
 
-            for (var i = 0; i < panels.length && !found; i++) {
-                // Incluir both second-level y third-level titles en la búsqueda
+            for (var i = 0; i < panels.length; i++) {
                 titles = panels[i].querySelectorAll('.second-level-titles, .third-level-titles');
-                for (var j = 0; j < titles.length && !found; j++) {
-                    var a = titles[j].getElementsByTagName("a")[0];
-                    if (a) {
-                        var txtValue = a.textContent || a.innerText;
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                            // Expandir el acordeón correspondiente
-                            $(panels[i].getElementsByClassName('panel-collapse')[0]).collapse('show');
-                            // Scroll suave hacia el elemento
-                            $('html, body').animate({
-                                scrollTop: $(titles[j]).offset().top
-                            }, 500);
-                            found = true; // Marcamos como encontrado y salimos del bucle
-                        }
+                for (var j = 0; j < titles.length; j++) {
+                    var a = titles[j].querySelector("a");
+                    if (a && a.textContent.toUpperCase().indexOf(filter) > -1) {
+                        $(panels[i].getElementsByClassName('panel-collapse')[0]).collapse('show');
+                        $('html, body').animate({
+                            scrollTop: $(titles[j]).offset().top - 20
+                        }, 500);
+                        found = true;
+                        break; // Break out of the inner loop on the first match
                     }
                 }
+                if (found) break; // Break out of the outer loop if a match has been found
             }
 
             if (!found) alert('Sub-elemento no encontrado.');
         }
+
 
 
     </script>
@@ -633,34 +633,6 @@
             });
         });
 
-        function searchItem() {
-
-            const input = $("#searchInput").val();
-            const filter = input.toUpperCase();
-
-            const panels = resolutions.filter((resolution) => {
-                return resolution.items.filter((item) => {
-                    return item.title.toUpperCase().includes(filter);
-                }).length > 0;
-            });
-
-            if (panels.length > 0) {
-
-                panels.forEach((panel) => {
-                    const panelId = panel.id;
-                    const scroll = $(`#${panelId}`).offset().top;
-                    const panelCollapse = $(`#${panelId}`);
-
-                    panelCollapse.collapse('show');
-                    $('html, body').animate({
-                        scrollTop: scroll
-                    }, 500);
-                });
-
-            } else {
-                alert('Sub-elemento no encontrado.');
-            }
-        }
 
 
         const resolutions = [
