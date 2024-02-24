@@ -1,0 +1,564 @@
+<!-- Pendiente: Agreagar colores de la bandera como el navbar original -->
+<!-- Realizar un dropdown en el navbar -->
+
+<html lang="en">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+<!-- Add the Bootstrap CSS link -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+
+<style type="text/css">
+    .principal_cont {
+        margin: 0;
+        padding: 0;
+    }
+
+    .blanco_c01,
+    .azul_c01 {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .info_cont01,
+    .inf_cont02 {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .titulo-cilindro {
+        text-align: center;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .container_ps {
+        width: 80%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .botones_container {
+        width: 100%;
+        padding-right: 7.5px;
+        padding-left: 0%;
+        margin-right: auto;
+        margin-left: auto;
+        /* display: flex; */
+        flex: 1;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px
+    }
+
+    .titulo-cilindro h3 {
+        font-size: 20px;
+        margin: 20px 0;
+        font-family: 'Work Sans', sans-serif !important;
+        font-weight: bold;
+    }
+
+    .titulo-cilindro span {
+        font-size: 16px;
+    }
+
+    .blanco_c01 {
+        background-color: #ebebeb;
+        color: #333;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .info_cont01 {
+        background-color: #ebebeb;
+        color: #333;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        flex: 1;
+    }
+
+    .inf_cont02 {
+        background-color: #ebebeb;
+        color: #333;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        flex: 1;
+    }
+
+    .azul_c01 {
+        background-color: #3462ad;
+        color: #fff;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .inf_cont02 {
+        background-color: #3462ad;
+        color: #fff;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        flex: 1;
+    }
+
+    .logo-alcaldia {
+        margin-top: 6%;
+        margin-bottom: 35px;
+        text-align: center;
+    }
+
+
+    .nombre_c01 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .descripcion p,
+    .alcaldia p {
+        margin-top: 50px;
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .descripcion_01 p {
+        margin: 50px 0;
+        font-size: 15px;
+        text-align: justify;
+    }
+
+    .foto-persona {
+        position: relative;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 20px;
+        width: 200px;
+        height: 200px;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .foto-persona img {
+        width: 103%;
+        height: 100%;
+        padding-left: 4px;
+        object-fit: cover;
+        background-color: #fff;
+    }
+
+    .franja-oscura {
+        position: absolute;
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+        top: 5px;
+        left: 5px;
+        border: 5px solid #2c3e50;
+        border-radius: 80%;
+    }
+
+    .titulo_c01 h3 {
+        margin: 50px 0;
+        font-family: 'Work Sans', sans-serif !important;
+        font-weight: bold;
+        font-size: 20px !important;
+    }
+
+    .titulo-cilindro {
+        background-color: #2c3e50;
+        color: #fff;
+        padding: 1px;
+        border-radius: 60px 0px 0px 60px;
+        margin-bottom: 20px;
+        margin-right: 0;
+        letter-spacing: -1px;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: bold;
+        position: relative;
+    }
+
+    .nombre-persona {
+        /* margin-top: 56%; */
+        margin-bottom: 32px;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: bold;
+    }
+
+    .nombre-persona>p {
+        margin: 0px;
+    }
+
+    .alcaldia_c01 {
+        /* margin-top: 76px; */
+        font-family: 'Work Sans', sans-serif;
+        font-weight: bold;
+    }
+
+    .row_c01 {
+        font-family: Arial, sans-serif;
+        max-width: 1200px;
+        margin: auto;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #ffffff;
+    }
+
+    .row_c02 {
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        max-width: 1200px;
+        margin: auto;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #ffffff;
+    }
+
+    .principal_cont {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* .botones_container {
+    justify-content: center;
+    position: absolute;
+  } */
+
+    .cont_btns {
+
+        display: flex;
+        /* justify-content: center; */
+        padding-right: 0px;
+        gap: 28px;
+        align-items: center;
+
+    }
+
+    @keyframes slideInFromRight {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideOutToLeft {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+    @keyframes slideInFromLeft {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideOutToRight {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+
+
+    .row_c01,
+    .row_c02 {
+        position: relative;
+        width: 100%;
+        height: auto;
+        z-index: 1;
+    }
+
+    .row_c01 {
+        animation: slideInFromRight 1s ease-out forwards;
+    }
+
+    .row_c02 {
+        animation: slideInFromLeft 1s ease-out forwards;
+        display: none;
+    }
+
+    .boton {
+        margin: 0 10px;
+    }
+
+    .btn-primary {
+        color: black;
+        font-weight: 600;
+        background-color: transparent;
+        border-color: transparent;
+
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        background-color: transparent;
+        color: black;
+        font-weight: 600;
+        display: inline-block;
+    }
+
+    .navbar-expand-lg .navbar-nav .dropdown-menu {
+        position: absolute;
+        border-radius: 8px;
+        background-color: #ebebeb;
+    }
+
+    .navbar {
+        border-top: 5px solid #fbbb00;
+        border-bottom: 5px solid #078930;
+        margin: 20 0;
+    }
+
+    /* Estilos existentes para los enlaces del navbar */
+    .navbar-nav>li>a {
+        color: black;
+        /* O el color original de tus enlaces */
+        padding-left: 8px;
+
+    }
+
+    /* Agregar estilos para el hover */
+    .navbar-nav>li>a:hover {
+        /* Cambiar al color azul deseado */
+        background-color: #3462ad;
+        /* Cambiar el color del texto a blanco */
+        color: white;
+    }
+
+    .desplegable {
+        color: black;
+        font-weight: 600;
+        background-color: transparent;
+    }
+
+    .navbar-collapse {
+        align-items: center;
+    }
+
+    .nav-link {
+        width: 100%;
+        text-align: left;
+        padding-left: 8px
+    }
+
+
+    @media (max-width: 767px) {
+        .navbar .nav-link.btn {
+            /* display: block; */
+            width: 100%;
+            text-align: left;
+            /* Asegurarse de que estén alineados a la izquierda */
+        }
+    }
+
+    .navbar-light .navbar-nav .nav-link.btn:hover {
+        background-color: #3462ad;
+        /* Color de fondo azul cuando se hace hover */
+        color: white;
+        /* Color de texto blanco cuando se hace hover */
+    }
+
+    #navContent,
+    #navbarDropdownMenuLink {
+        padding-left: 8px;
+    }
+</style>
+
+
+<div class="principal_cont">
+    <div class="container_ps">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!-- Botón inicio que puede llevar al home -->
+            <!-- <a class="navbar-brand" href="#">Inicio</a> -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link btn btn-primary nav-link jefe boton_01" id="navContent"
+                            href="javascript:void(0);">Secretario <span class="sr-only">(current)</span></a>
+                        <!-- <a class="btn btn-primary nav-link jefe boton_01" href="javascript:void(0);">Jefe</a> -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary nav-link info boton_02" href="javascript:void(0);"
+                            id="navContent">Información</a>
+                        <!-- <a href="javascript:void(0);" class="btn btn-primary nav-link info boton_02">Información</a> -->
+
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Acción 1</a>
+                            <a class="dropdown-item" href="#">Acción 2</a>
+                            <a class="dropdown-item" href="#">Algo más aquí</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="row_c01">
+            <div class="col-xs-12 col-md-6 blanco_c01">
+
+                <div>
+                    <div class="nombre_c01">
+                        <h2 style="margin-bottom: 10px">Mario Aurelio Pedroza Sandoval</h2>
+                    </div>
+
+                    <div class="descripcion">
+                        <p>Coronel (r) oficial de la Policía Nacional de Colombia, administrador de empresas de la
+                            Escuela de Administración de Negocios (EAN), especialista en seguridad pública y privada de
+                            la Escuela de Cadetes de Policía General Santander y especialista en elementos gerenciales
+                            de administración. Con más de 28 años de experiencia en cargos públicos, administrativos,
+                            operativos, inteligencia e investigación criminal.<br />
+                            <br />
+                            Durante su carrera profesional como oficial de la Policía Nacional se desempeñó como comandante de estación, comandante de distrito, y comandante operativo en diferentes departamentos del país. Igualmente ejerció los cargos de subcomandante y comandante de la Policía Metropolitana de Cartagena, comandante del Departamento de Policía en Santander y por disposición del Gobierno Nacional fue asignado como agregado de policía en la Embajada de Colombia en Francia. En el Instituto Nacional Penitenciario y Carcelario (INPEC) se desempeñó como inspector especial de alta seguridad, director de Establecimiento Carcelario, subdirector de la Escuela Penitenciaria y asesor en seguridad del Director General. Por su excelente servicio a los ciudadanos y la patria ha recibido cientos de felicitaciones y condecoraciones meritorias.
+                        </p>
+                    </div>
+                </div>
+                <div class="logo-alcaldia"><img alt="Logo de la Alcaldía"
+                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria11942.png"
+                        style="height:50px;  margin-bottom: 1rem;" />
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 azul_c01">
+
+                <div>
+                    <div class="foto-persona">
+                        <div class="franja-oscura">&nbsp;</div>
+                        <img alt="Foto de la Persona"
+                            src="https://www.acacias.gov.co/info/acacias_se/media/galeria11952.png" />
+                    </div>
+
+                    <div class="titulo_c01">
+                        <h3 style="color: white">OFICINA<br />
+                            JUR&Iacute;DICA</h3>
+                    </div>
+
+                    <div class="titulo-cilindro">
+                        <h3 style="color: white"><span>SECRETARIO</span><br />
+                            PRIVADO</h3>
+                    </div>
+                </div>
+                <div class="nombre-persona">
+                    <p><span class="alcaldia_c01">CARLOS JULIO<br />
+                            PLATA BECERRA<br />
+                            Alcalde</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row_c02">
+            <div class="col-xs-12 col-md-6 info_cont01">
+                <div class="contenido_inf">
+                    <div class="info_c01">
+                        <h2 style="margin-bottom: 10px">Misi&oacute;n</h2>
+                    </div>
+
+                    <div class="descripcion_01">
+                        <p>
+                            La Secretaría privada tiene por misión prestar el apoyo técnico, administrativo, protocolario, logístico y de seguridad al Alcalde con el propósito de contribuir a la efectiva conducción de los asuntos municipales.</p>
+                    </div>
+
+                    <div class="info_c02">
+                        <h2 style="margin-bottom: 10px">Objetivos</h2>
+                    </div>
+
+                    <div class="descripcion_01">
+                        <p>1. Direccionar, formular políticas institucionales y adoptar planes, programas y proyectos tendientes al cumplimiento de los objetivos y metas del Plan de Desarrollo Municipal.</p>
+                    </div>
+
+                    <div class="logo-alcaldia"><img alt="Logo de la Alcaldía"
+                            src="https://www.acacias.gov.co/info/acacias_se/media/galeria11942.png"
+                            style="height:50px;" /></div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 inf_cont02">
+                <div class="info_c03">
+                    <h2 style="margin-bottom: 10px">Funciones</h2>
+                </div>
+
+                <div class="descripcion_01">
+                    <p>
+                        • Coordinar actividades con otras dependencias para lograr mayor rendimiento y eficacia en el desarrollo de los procesos requeridos. <br>
+                        • Programar el trabajo diario con el fin de prestar un buen servicio y agilidad en los procesos requeridos, mediante el manejo del Cronograma de Actividades de las citas. <br>
+                        • Recibir y comunicar oportunamente la información telefónica atendiendo formalmente al interlocutor e informando al interesado. <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Optional JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    function mostrarContenido(id) {
+        console.log('Mostrar contenido con id:', id);
+    }
+
+    $(document).ready(function () {
+        $(".boton_01").click(function () {
+            if ($(".row_c02").is(":visible")) {
+                $(".row_c02").css("animation", "slideOutToRight 1s ease-out forwards");
+                $(".row_c01").css("animation", "slideInFromLeft 1s ease-out forwards");
+
+                $(".row_c02").one('animationend', function () {
+                    $(this).hide();
+                    $(".row_c01").show().css("display", "flex");
+                });
+            }
+        });
+
+        $(".boton_02").click(function () {
+            if ($(".row_c01").is(":visible")) {
+                $(".row_c01").css("animation", "slideOutToLeft 1s ease-out forwards");
+                $(".row_c02").css("animation", "slideInFromRight 1s ease-out forwards");
+
+                $(".row_c01").one('animationend', function () {
+                    $(this).hide();
+                    $(".row_c02").show().css("display", "flex");
+                });
+            }
+        });
+    });
+</script>

@@ -1,0 +1,659 @@
+<html lang="en">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<!-- Add the Bootstrap CSS link -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+
+<style type="text/css">
+    .principal_cont {
+        margin: 0;
+        padding: 0;
+    }
+
+    .blanco_c01,
+    .azul_c01 {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .info_cont01,
+    .inf_cont02 {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .titulo-cilindro {
+        text-align: center;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .container_ps {
+        width: 80%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .botones_container {
+        width: 100%;
+        padding-right: 7.5px;
+        padding-left: 0%;
+        margin-right: auto;
+        margin-left: auto;
+        /* display: flex; */
+        flex: 1;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px
+    }
+
+    .titulo-cilindro h3 {
+        font-size: 20px;
+        margin: 20px 0;
+        font-family: 'Work Sans', sans-serif !important;
+        font-weight: bold;
+    }
+
+    .titulo-cilindro span {
+        font-size: 16px;
+    }
+
+    .blanco_c01 {
+        background-color: #ebebeb;
+        color: #333;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .info_cont01 {
+        background-color: #ebebeb;
+        color: #333;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        flex: 1;
+    }
+
+    .inf_cont02 {
+        background-color: #ebebeb;
+        color: #333;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        flex: 1;
+    }
+
+    .azul_c01 {
+        background-color: #3462ad;
+        color: #fff;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .inf_cont02 {
+        background-color: #3462ad;
+        color: #fff;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        flex: 1;
+    }
+
+    .logo-alcaldia {
+        margin-top: 6%;
+        margin-bottom: 35px;
+        text-align: center;
+    }
+
+
+    .nombre_c01 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .descripcion p,
+    .alcaldia p {
+        margin-top: 50px;
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .descripcion_01 p {
+        margin: 50px 0;
+        font-size: 15px;
+        text-align: justify;
+    }
+
+    .foto-persona {
+        position: relative;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 20px;
+        width: 200px;
+        height: 200px;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .foto-persona img {
+        width: 100%;
+        height: 100%;
+        padding-right: 6px;
+        object-fit: cover;
+        background-color: #fff;
+    }
+
+    .franja-oscura {
+        position: absolute;
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+        top: 5px;
+        left: 5px;
+        border: 5px solid #2c3e50;
+        border-radius: 80%;
+    }
+
+    .titulo_c01 h3 {
+        margin: 50px 0;
+        font-family: 'Work Sans', sans-serif !important;
+        font-weight: bold;
+        font-size: 20px !important;
+    }
+
+    .titulo-cilindro {
+        background-color: #2c3e50;
+        color: #fff;
+        padding: 1px;
+        border-radius: 60px 0px 0px 60px;
+        margin-bottom: 20px;
+        margin-right: 0;
+        letter-spacing: -1px;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: bold;
+        position: relative;
+    }
+
+    .nombre-persona {
+        /* margin-top: 56%; */
+        margin-bottom: 32px;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: bold;
+    }
+
+    .nombre-persona>p {
+        margin: 0px;
+    }
+
+    .alcaldia_c01 {
+        /* margin-top: 76px; */
+        font-family: 'Work Sans', sans-serif;
+        font-weight: bold;
+    }
+
+    .row_c01 {
+        font-family: Arial, sans-serif;
+        max-width: 1200px;
+        margin: auto;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #ffffff;
+    }
+
+    .row_c02 {
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        max-width: 1200px;
+        margin: auto;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #ffffff;
+    }
+
+    .principal_cont {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* .botones_container {
+    justify-content: center;
+    position: absolute;
+  } */
+
+    .cont_btns {
+
+        display: flex;
+        /* justify-content: center; */
+        padding-right: 0px;
+        gap: 28px;
+        align-items: center;
+
+    }
+
+    @keyframes slideInFromRight {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideOutToLeft {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+    @keyframes slideInFromLeft {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideOutToRight {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+
+
+    .row_c01,
+    .row_c02 {
+        position: relative;
+        width: 100%;
+        height: auto;
+        z-index: 1;
+    }
+
+    .row_c01 {
+        animation: slideInFromRight 1s ease-out forwards;
+    }
+
+    .row_c02 {
+        animation: slideInFromLeft 1s ease-out forwards;
+        display: none;
+    }
+
+    .boton {
+        margin: 0 10px;
+    }
+
+    .btn-primary {
+        color: black;
+        font-weight: 600;
+        background-color: transparent;
+        border-color: transparent;
+
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        background-color: transparent;
+        color: black;
+        font-weight: 600;
+        display: inline-block;
+    }
+
+    .navbar-expand-lg .navbar-nav .dropdown-menu {
+        position: absolute;
+        border-radius: 8px;
+        background-color: #ebebeb;
+    }
+
+    .navbar {
+        border-top: 5px solid #fbbb00;
+        border-bottom: 5px solid #078930;
+        margin: 20 0;
+    }
+
+    /* Estilos existentes para los enlaces del navbar */
+    .navbar-nav>li>a {
+        color: black;
+        /* O el color original de tus enlaces */
+        padding-left: 8px;
+
+    }
+
+    /* Agregar estilos para el hover */
+    .navbar-nav>li>a:hover {
+        /* Cambiar al color azul deseado */
+        background-color: #3462ad;
+        /* Cambiar el color del texto a blanco */
+        color: white;
+    }
+
+    .desplegable {
+        color: black;
+        font-weight: 600;
+        background-color: transparent;
+    }
+
+    .navbar-collapse {
+        align-items: center;
+    }
+
+    .nav-link {
+        width: 100%;
+        text-align: left;
+        padding-left: 8px
+    }
+
+
+    @media (max-width: 767px) {
+        .navbar .nav-link.btn {
+            /* display: block; */
+            width: 100%;
+            text-align: left;
+            /* Asegurarse de que estén alineados a la izquierda */
+        }
+    }
+
+    .navbar-light .navbar-nav .nav-link.btn:hover {
+        background-color: #3462ad;
+        /* Color de fondo azul cuando se hace hover */
+        color: white;
+        /* Color de texto blanco cuando se hace hover */
+    }
+
+    #navContent,
+    #navbarDropdownMenuLink {
+        padding-left: 8px;
+    }
+</style>
+
+
+<div class="principal_cont">
+    <div class="container_ps">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!-- Botón inicio que puede llevar al home -->
+            <!-- <a class="navbar-brand" href="#">Inicio</a> -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link btn btn-primary nav-link jefe boton_01" id="navContent"
+                            href="javascript:void(0);">Jefe <span class="sr-only">(current)</span></a>
+                        <!-- <a class="btn btn-primary nav-link jefe boton_01" href="javascript:void(0);">Jefe</a> -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary nav-link info boton_02" href="javascript:void(0);"
+                            id="navContent">Información</a>
+                        <!-- <a href="javascript:void(0);" class="btn btn-primary nav-link info boton_02">Información</a> -->
+
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Acción 1</a>
+                            <a class="dropdown-item" href="#">Acción 2</a>
+                            <a class="dropdown-item" href="#">Algo más aquí</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="row_c01">
+            <div class="col-xs-12 col-md-6 blanco_c01">
+
+                <div>
+                    <div class="nombre_c01">
+                        <h2 style="margin-bottom: 10px">Iván Mauricio Rojas Novoa</h2>
+                    </div>
+
+                    <div class="descripcion">
+                        <p>Ingeniero civil de la Universidad La Gran Colombia, especialista en gobierno y gerencia
+                            pública de la Universidad EAN, también en dirección de proyectos de ingeniería de la Escuela
+                            Abierta de Desarrollo en Ingeniería y Construcción EADIC.
+                            Cuenta con más de 12 años de experiencia en su profesión, ha ejercido como interventor,
+                            director de obras y contratista en importantes empresas a nivel nacional. Perteneció al
+                            Grupo Líder Social que fundó la Asociación de Profesionales del Meta COORPROMETA.<br />
+                        </p>
+                    </div>
+                </div>
+                <div class="logo-alcaldia"><img alt="Logo de la Alcaldía"
+                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria11942.png"
+                        style="height:50px;  margin-bottom: 1rem;" />
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 azul_c01">
+
+                <div>
+                    <div class="foto-persona">
+                        <div class="franja-oscura">&nbsp;</div>
+                        <img alt="Foto de la Persona"
+                            src="https://www.acacias.gov.co/info/acacias_se/media/galeria11937.png" />
+                    </div>
+
+                    <div class="titulo_c01">
+                        <h3 style="color: white">SECRETARÍA<br />
+                            DE INFRAESTRUCTURA<br /></h3>
+                    </div>
+
+                    <div class="titulo-cilindro">
+                        <h3 style="color: white"><span>EQUIPO DE</span><br />
+                            GOBIERNO</h3>
+                    </div>
+                </div>
+                <div class="nombre-persona">
+                    <p><span class="alcaldia_c01">CARLOS JULIO<br />
+                            PLATA BECERRA<br />
+                            Alcalde</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row_c02">
+            <div class="col-xs-12 col-md-6 info_cont01">
+                <div class="contenido_inf">
+                    <div class="info_c01">
+                        <h2 style="margin-bottom: 10px">Misi&oacute;n</h2>
+                    </div>
+
+                    <div class="descripcion_01">
+                        <p>La secretaría tiene como misión la construcción, mantenimiento, y conservación de las obras
+                            públicas que demande el progreso local, ya sea directamente o por delegación. En todo caso
+                            ejercerá la supervisión de la interventoría externa o directamente cuando se requiera. Para
+                            lograr lo anterior formula los proyectos, elabora las fichas, y construirá el componente
+                            técnico de los términos de referencia para la contratación de los estudios de
+                            prefactibilidad, factibilidad, diseño, interventoría y la ejecución u operación de las obras
+                            y proyectos. <br>
+                            Es responsable por la administración y funcionamiento del Banco de Maquinaria municipal.
+                            Ejerce el control de tutela sobre la Empresa de Servicios Públicos de Acacias.
+                        </p>
+                    </div>
+
+                    <div class="info_c02">
+                        <h2 style="margin-bottom: 10px">Objetivos</h2>
+                    </div>
+
+                    <div class="descripcion_01">
+                        <p>
+                            Dirigir, organizar, planear y ejecutar obras civiles de conformidad con las políticas y plan
+                            de desarrollo Municipal.
+                        </p>
+                    </div>
+
+                    <div class="info_c03">
+                        <h2 style="margin-bottom: 10px">Funciones</h2>
+                    </div>
+                    <div class="descripcion_01">
+                        <p>
+                            • Coordinar con la Oficina Asesora de Planeación Municipal la elaboración de programas de
+                            proyectos de Obras Públicas Municipales. <br>
+                            • Asistir a las reuniones del Consejo de Gobierno y Juntas Municipales en el cual sea
+                            integrante. <br>
+                            • Elaborar el programa de inversión y gastos de la Secretaría. <br>
+                            • Coordinar con los Secretarios de Despacho las necesidades y conveniencias del desarrollo
+                            de las obras, previo concepto de la Secretaría Administrativa y Financiera sobre la
+                            disponibilidad presupuestal. <br>
+                            • Vigilar la ejecución presupuestal de la dependencia. <br>
+                            • Coordinar la elaboración y ejecución de proyectos de mantenimiento físico de plantas
+                            escolares, instalaciones deportivas, centros de salud y demás instituciones de primer nivel
+                            de atención médica. <br>
+                        </p>
+                    </div>
+
+                    <div class="info_c03">
+                        <h2 style="margin-bottom: 10px">Programas y Proyectos</h2>
+                    </div>
+                    <div class="info_c03">
+                        <h2 style=" margin-top: 45px; font-style: italic; font-size: 20px; text-align: left">
+                            Programas
+                        </h2>
+                    </div>
+                    <div class="descripcion_01">
+                        <p style="margin-top: 25px;">
+                            (No hay programas relacionados)
+                        </p>
+                    </div>
+
+                    <div class="info_c03">
+                        <h2 style=" margin-top: 45px; font-style: italic; font-size: 20px; text-align: left">
+                            Proyectos
+                        </h2>
+                    </div>
+                    <div class="descripcion_01">
+                        <p style="margin-top: 25px;">
+                            • Adecuación, instalación y mejoramiento de zonas urbanas localizadas para la recreación y aprovechamiento del tiempo libre en el Municipio de Acacías, Meta, Orinoquía. <br>
+                            • Adecuación y mejoramiento de las instalaciones del Centro de Desarrollo Infantil del Municipio de Acacías. <br>
+                            • Construcción de placas huellas para la vía en las veredas Alto Acaciitas y San Cristóbal en el Municipio de Acacias, Departamento del Meta. <br>
+                            • Construcción de placas huellas, estructuras de drenaje y protección para las vías en las veredas La Pradera, Lomas de San Juan, Lomas del Pañuelo, Vistahermosa, Brisas del Guayuriba, San Pablo, Manzanares, Portachuelo, Alto Acaciitas y La Palma en el Mun. <br>
+                            • Construcción del carril adicional en la intersección de la Calle 18 con la Avenida 23 (vía nacional) del Municipio de Acacias - Meta. <br>
+                            • Construcción de celda para disposición final de residuos sólidos 100 x 150 vereda Montelibano Acacias, Meta, Orinoquía. <br>
+                            • Construcción de parque para la práctica de actividades deportivas extremas urbanas y mejoramiento de instalaciones específicas de la Villa Olímpica en el Municipio de Acacias. <br>
+                            • Construcción de puente vehicular sobre el río El Playón en la vereda Rancho Grande del Municipio de Acacias - Meta. <br>
+                            • Construcción de alcantarillado sanitario en la Carrera 13 entre Calles 11 y 12 en el Municipio de Acacias. <br>
+                            • Construcción de aulas y batería sanitaria de la Institución Educativa Gabriela Mistral Sede San Nicolás en el Municipio de Acacias Meta Acacias. <br>
+                            • Construcción de box coulvert sector Barrio La Alborada ubicado en la Carrera 14 entre Calles 20 y 20A Municipio de Acacias. <br>
+                            • Construcción de cancha multifuncional en el Barrio Nuevo Jerusalén del Municipio de Acacias. <br>
+                            • Construcción de cuarto frío en la dependencia de la Secretaría de Salud Municipal en conformidad con el Programa PAI en el Municipio de Acacias. <br>
+                            • Construcción de obras de protección y obras mecánicas para los ríos Acacias, Acaciitas, Caño Colepato, Caño Conejo y Caño El Playón en jurisdicción del Municipio de Acacias - Meta. <br>
+                            • Construcción de placas huellas para las vías en las veredas Fresco Valle y El Playón en el Municipio de Acacias - Meta. <br>
+                        </p>
+                    </div>
+
+                    <div class="logo-alcaldia"><img alt="Logo de la Alcaldía"
+                            src="https://www.acacias.gov.co/info/acacias_se/media/galeria11942.png"
+                            style="height:50px;" /></div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 inf_cont02">
+                <div class="descripcion_01">
+                    <p>
+                        • Construcción de puente vehicular y demolición del puente existente sobre el Rio Acacias en el sector La Chorrera en la vía que conduce a la vereda San Nicolás del Municipio de Acacias.<br>
+                        • Construcción de redes de distribución y comercialización de Gas Natural Domiciliario en las veredas ubicadas al SurOriente y SurOeste Acacias, Meta, Orinoquía.<br>
+                        • Construcción de vías en concreto rígido y obras complementarias en el Barrio Bachué del Municipio de Acacias, Departamento del Meta.<br>
+                        • Construcción de vías en concreto rígido, redes de alcantarillado y obras complementarias en diferentes vías urbanas y del centro poblado de Dinamarca del Municipio de Acacias, Meta.<br>
+                        • Construcción del alcantarillado sanitario en la Calle 17 entre Carreras 20 y 15 con descole en la Calle 18 del Municipio de Acacias.<br>
+                        • Construcción polideportivo en el Barrio Morichal del Municipio de Acacias.<br>
+                        • Construcción de puente sobre el Caño Hondo, Via Acacias - Dinamarca en el Municipio de Acacias, Meta, Orinoquía.<br>
+                        • Construcción Red Alcantarillado sanitario y pluvial en los Barrios Centro, Don Bosco, Pablo Emilio Riveros, Palermo, Independencia en Acacias, Meta, Orinoquía.<br>
+                        • Construcción Red de Alcantarillado Pluvial en la Calle 12 entre Carrera 11 y 12 del Barrio Juan MellaO del Municipio de Acacias - Meta.<br>
+                        • Construcción Tercera Etapa del Paseo Peatonal y Cicloruta, para la población estudiantil del Colegio Juan Rozo y comunidad en general Acacias, Meta, Orinoquía.<br>
+                        • Diagnóstico y caracterización de vías terciarias en el Municipio de Acacias, Meta, Orinoquía.<br>
+                        • Diseño para la ampliación de cobertura del sistema de acueducto urbano a partir de la quebrada Las Blancas a las zonas rurales Acacias, Meta, Orinoquía.<br>
+                        • Diseño planta de tratamiento de lixiviados para la PTRS Acacias, Meta, Orinoquía.<br>
+                        • Estudio y diseños de cinco (5) puentes vehiculares ubicados en los Barrios Palermo, San Cristobal, Mancera y Colinas. Sobre el Río Acaciitas en el Municipio de Acacias.<br>
+                        • Estudios ; Diseños definitivos y gerencia inmobiliaria para la construcción de la primera etapa del anillo vial en el Municipio de Acacias Meta.<br>
+                        • Estudios catastro y modelación de las redes de acueducto y alcantarillado de la zona urbana del municipio de Acacias, Meta, Orinoquía.<br>
+                        • Estudios y diseños de detalle para la actualización tecnológica y optimización de la Planta de Tratamiento de Aguas Residuales en el Municipio de Acacias- Meta.<br>
+                        • Implementación clausura de celdas para disposición final de residuos sólidos en la Planta de Tratamiento de Residuos Sólidos del Municipio de Acacias, Meta, Orinoquía.<br>
+                        • Implementación del sistema de gestión de calidad para la administración pública del Municipio de Acacias, Meta, Orinoquía.<br>
+                        • Impreso el 26 de octubre de 2016 Construcción de polideportivo en el Barrio Nueva Jerusalén del Municipio Acacias, Meta, Orinoquía.<br>
+                        • Mantenimiento de la infraestructura física del sector deportivo en el área urbana y rural del Municipio de Acacias, Meta, Orinoquía.<br>
+                        • Mantenimiento y conservación de los caminos en las veredas ubicadas en parte alta de la cordillera en Acacias, Meta, Orinoquía.<br>
+                        • Mejoramiento del área de rayos x en el hospital municipal y adecuación de los puestos de salud Chichimene, Montelíbano y Dinamarca en el Municipio de Acacias, Meta, Orinoquía.<br>
+                        • Mejoramiento y adecuación de instituciones educativas oficiales en diferentes sectores del área urbana y rural del municipio de Acacias.<br>
+                        • Mejoramiento y adecuación de las I.E 20 de Julio Sede Principal, Juan Rozo, Sede Enrrique Daniels, Juan Humberto Baquero Sede Principal, Pablo Emilio Riveros Sede el Dorado; Sagrado Corazon de Jesus y Luis Carlos Galan de Acacias, Meta.<br>
+                        • Mejoramiento y adecuación de obras de infraestructura con el fin de mejorar el manejo, tratamiento y disposición final de residuos Acacias, Meta, Orinoquía.<br>
+                        • Mejoramiento y adecuación del parque ubicado en la carrera 14 entre calles 24b y 24c barrio La Esperanza en el municipio de Acacias, Meta, Orinoquía.<br>
+                        • Mejoramiento y adecuación sede antigua EMVIVA en el Municipio de Acacias, Meta, Orinoquía.<br>
+                        • Mejoramiento y rehabilitación de vías específicas en el área urbana en el Municipio de Acacias Meta.<br>
+                        • Recuperación de rondas de río y cuerpos de agua mediante la demolición de la Planta de Beneficio Animal "Benjamin Poveda" y tres viviendas ubicadas en el Barrio Las Vegas del Municipio de Acacias.<br>
+                        • Recuperación y adecuación del predio identificado con matrícula inmobiliaria 232-45058, localizado en la parte posterior del edificio principal de la Alcaldía Municipal de Acacias.<br>
+                        • Rehabilitación de la malla vial que se encuentra conformada por material de arrastre en el área urbana y rural del municipio de Acacias, Meta, Orinoquía.<br>
+                        • Rehabilitación de la vía que conduce a través del malecón turístico de Acacias, Meta, Orinoquía.<br>
+                        • Rehabilitación de vías urbanas en el Municipio de Acacias, Meta, Orinoquía.<br>
+                        • Rehabilitación mediante concreto rígido y asfáltico, de la malla vial urbana del Municipio de Acacias, Meta, Orinoquía.<br>
+                        • Reparación y reforzamiento de los puentes sobre el río Acacias y Orotoy en la antigua vía Guamal - Acacias.<br>
+                        • Suministro e instalación de rejillas para alcantarillado pluvial en el área urbana del municipio de Acacias, Meta, Orinoquía.<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Optional JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    function mostrarContenido(id) {
+        console.log('Mostrar contenido con id:', id);
+    }
+
+    $(document).ready(function () {
+        $(".boton_01").click(function () {
+            if ($(".row_c02").is(":visible")) {
+                $(".row_c02").css("animation", "slideOutToRight 1s ease-out forwards");
+                $(".row_c01").css("animation", "slideInFromLeft 1s ease-out forwards");
+
+                $(".row_c02").one('animationend', function () {
+                    $(this).hide();
+                    $(".row_c01").show().css("display", "flex");
+                });
+            }
+        });
+
+        $(".boton_02").click(function () {
+            if ($(".row_c01").is(":visible")) {
+                $(".row_c01").css("animation", "slideOutToLeft 1s ease-out forwards");
+                $(".row_c02").css("animation", "slideInFromRight 1s ease-out forwards");
+
+                $(".row_c01").one('animationend', function () {
+                    $(this).hide();
+                    $(".row_c02").show().css("display", "flex");
+                });
+            }
+        });
+    });
+</script>

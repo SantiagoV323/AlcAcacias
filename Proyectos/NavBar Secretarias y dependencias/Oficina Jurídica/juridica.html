@@ -4,6 +4,7 @@
 <html lang="en">
 
 <meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 
 <!-- Add the Bootstrap CSS link -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -55,7 +56,7 @@
 
   .titulo-cilindro h3 {
     font-size: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0;
     font-family: 'Work Sans', sans-serif !important;
     font-weight: bold;
   }
@@ -69,7 +70,9 @@
     color: #333;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
     min-width: 300px;
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .info_cont01 {
@@ -93,7 +96,9 @@
     color: #fff;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
     min-width: 300px;
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .inf_cont02 {
@@ -105,9 +110,11 @@
   }
 
   .logo-alcaldia {
-    margin-top: 0;
+    margin-top: 6%;
+    margin-bottom: 35px;
     text-align: center;
   }
+
 
   .nombre_c01 {
     margin-top: 20px;
@@ -116,12 +123,14 @@
 
   .descripcion p,
   .alcaldia p {
-    font-size: 12px;
+    margin-top: 50px;
+    font-size: 16px;
     text-align: justify;
   }
 
   .descripcion_01 p {
-    font-size: 14px;
+    margin: 50px 0;
+    font-size: 16px;
     text-align: justify;
   }
 
@@ -139,7 +148,9 @@
 
   .foto-persona img {
     width: 100%;
-    height: 120%;
+    height: 100%;
+    padding-top: 8px;
+    padding-left: 4px;
     object-fit: cover;
     background-color: #fff;
   }
@@ -155,7 +166,7 @@
   }
 
   .titulo_c01 h3 {
-    margin-bottom: 20px;
+    margin: 50px 0;
     font-family: 'Work Sans', sans-serif !important;
     font-weight: bold;
     font-size: 20px !important;
@@ -175,12 +186,18 @@
   }
 
   .nombre-persona {
-    margin-bottom: 10px;
+    /* margin-top: 56%; */
+    margin-bottom: 32px;
     font-family: 'Work Sans', sans-serif;
     font-weight: bold;
   }
 
+  .nombre-persona>p {
+    margin: 0px;
+  }
+
   .alcaldia_c01 {
+    /* margin-top: 76px; */
     font-family: 'Work Sans', sans-serif;
     font-weight: bold;
   }
@@ -189,6 +206,7 @@
     font-family: Arial, sans-serif;
     max-width: 1200px;
     margin: auto;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -268,11 +286,13 @@
     }
   }
 
+
+
   .row_c01,
   .row_c02 {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: auto;
     z-index: 1;
   }
 
@@ -298,108 +318,179 @@
   }
 
   .navbar-light .navbar-nav .nav-link {
+    background-color: transparent;
     color: black;
     font-weight: 600;
-}
+    display: inline-block;
+  }
 
   .navbar-expand-lg .navbar-nav .dropdown-menu {
     position: absolute;
+    border-radius: 8px;
     background-color: #ebebeb;
   }
 
   .navbar {
     border-top: 5px solid #fbbb00;
     border-bottom: 5px solid #078930;
+    margin: 20 0;
   }
 
+  /* Estilos existentes para los enlaces del navbar */
+  .navbar-nav>li>a {
+    color: black;
+    /* O el color original de tus enlaces */
+    padding-left: 8px;
+
+  }
+
+  /* Agregar estilos para el hover */
+  .navbar-nav>li>a:hover {
+    /* Cambiar al color azul deseado */
+    background-color: #3462ad;
+    /* Cambiar el color del texto a blanco */
+    color: white;
+  }
+
+  .desplegable {
+    color: black;
+    font-weight: 600;
+    background-color: transparent;
+  }
+
+  .navbar-collapse {
+    align-items: center;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: left;
+    padding-left: 8px
+  }
+
+
+  @media (max-width: 767px) {
+    .navbar .nav-link.btn {
+      /* display: block; */
+      width: 100%;
+      text-align: left;
+      /* Asegurarse de que estén alineados a la izquierda */
+    }
+  }
+
+  .navbar-light .navbar-nav .nav-link.btn:hover {
+    background-color: #3462ad;
+    /* Color de fondo azul cuando se hace hover */
+    color: white;
+    /* Color de texto blanco cuando se hace hover */
+  }
+
+  #navContent,
+  #navbarDropdownMenuLink {
+    padding-left: 8px;
+  }
 </style>
 
 
 <div class="principal_cont">
   <div class="container_ps">
-    <nav
-      class="navbar navbar-expand-lg col-xs-12 col-sm-12 botones_container navbar navbar-expand-lg navbar-light bg-light">
-      <div class="cont_btns">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!-- Botón inicio que puede llevar al home -->
+      <!-- <a class="navbar-brand" href="#">Inicio</a> -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
 
-        <!-- dropdown button in NavBar -->
-        
+      </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Desplegable
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-          </ul>
-        </div>
 
-        <a href="{link_to_page_1}" class="btn btn-primary nav-link">Jefe</a>
-        <a href="{link_to_page_2}" class="btn btn-primary nav-link">Información</a>
-        <a href="{link_to_page_2}" class="btn btn-primary nav-link">Información</a>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link btn btn-primary nav-link jefe boton_01" id="navContent" href="javascript:void(0);">Jefe
+              <span class="sr-only">(current)</span></a>
+            <!-- <a class="btn btn-primary nav-link jefe boton_01" href="javascript:void(0);">Jefe</a> -->
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-primary nav-link info boton_02" href="javascript:void(0);" id="navContent">Información</a>
+            <!-- <a href="javascript:void(0);" class="btn btn-primary nav-link info boton_02">Información</a> -->
 
-        <!-- Add more links as needed -->
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Acción 1</a>
+              <a class="dropdown-item" href="#">Acción 2</a>
+              <a class="dropdown-item" href="#">Algo más aquí</a>
+            </div>
+          </li>
+        </ul>
       </div>
     </nav>
 
     <div class="row_c01">
-      <div class="col-xs-12 col-sm-6 blanco_c01">
-        <div class="nombre_c01">
-          <h2 style="margin-bottom: 10px">Sandra Patricia Fonseca Avella</h2>
-        </div>
+      <div class="col-xs-12 col-md-6 blanco_c01">
 
-        <div class="descripcion">
-          <p>Abogada, mag&iacute;ster en derecho administrativo y especialista en derecho urbano. Cuenta con m&aacute;s
-            de 18 a&ntilde;os de experiencia profesional en el sector p&uacute;blico, asesorando jur&iacute;dicamente y
-            ejerciendo cargos de nivel directivo, se ha desempe&ntilde;ado profesionalmente en entidades p&uacute;blicas
-            de diferente orden como la Secretar&iacute;a Distrital de Planeaci&oacute;n, la Unidad Administrativa
-            Especial de Catastro Distrital, la Corporaci&oacute;n Aut&oacute;noma Regional de Cundinamarca, la
-            Superintendencia de Servicios P&uacute;blicos Domiciliarios, Central de Inversiones S.A.<br />
-            <br />
-            Tiene experiencia y conocimiento en el marco de la gesti&oacute;n jur&iacute;dica, administrativa,
-            urban&iacute;stica, de ordenamiento territorial, integraci&oacute;n y asociatividad territorial, as&iacute;
-            como en temas catastrales y ambientales.
-          </p>
-        </div>
+        <div>
+          <div class="nombre_c01">
+            <h2 style="margin-bottom: 10px">Sandra Patricia Fonseca Avella</h2>
+          </div>
 
+          <div class="descripcion">
+            <p>Abogada, mag&iacute;ster en derecho administrativo y especialista en derecho urbano. Cuenta con
+              m&aacute;s
+              de 18 a&ntilde;os de experiencia profesional en el sector p&uacute;blico, asesorando jur&iacute;dicamente
+              y
+              ejerciendo cargos de nivel directivo, se ha desempe&ntilde;ado profesionalmente en entidades
+              p&uacute;blicas
+              de diferente orden como la Secretar&iacute;a Distrital de Planeaci&oacute;n, la Unidad Administrativa
+              Especial de Catastro Distrital, la Corporaci&oacute;n Aut&oacute;noma Regional de Cundinamarca, la
+              Superintendencia de Servicios P&uacute;blicos Domiciliarios, Central de Inversiones S.A.<br />
+              <br />
+              Tiene experiencia y conocimiento en el marco de la gesti&oacute;n jur&iacute;dica, administrativa,
+              urban&iacute;stica, de ordenamiento territorial, integraci&oacute;n y asociatividad territorial,
+              as&iacute;
+              como en temas catastrales y ambientales.
+            </p>
+          </div>
+        </div>
         <div class="logo-alcaldia"><img alt="Logo de la Alcaldía"
             src="https://www.acacias.gov.co/info/acacias_se/media/galeria11942.png"
-            style="height:50px; margin-top:40%" /></div>
+            style="height:50px;  margin-bottom: 1rem;" />
+        </div>
       </div>
 
-      <div class="col-xs-12 col-sm-6 azul_c01">
-        <div class="foto-persona">
-          <div class="franja-oscura">&nbsp;</div>
-          <img alt="Foto de la Persona" src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png" />
-        </div>
+      <div class="col-xs-12 col-md-6 azul_c01">
 
-        <div class="titulo_c01">
-          <h3 style="color: white">OFICINA<br />
-            JUR&Iacute;DICA</h3>
-        </div>
+        <div>
+          <div class="foto-persona">
+            <div class="franja-oscura">&nbsp;</div>
+            <img alt="Foto de la Persona" src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png" />
+          </div>
 
-        <div class="titulo-cilindro">
-          <h3 style="color: white"><span>EQUIPO DE</span><br />
-            GOBIERNO</h3>
-        </div>
+          <div class="titulo_c01">
+            <h3 style="color: white">OFICINA<br />
+              JUR&Iacute;DICA</h3>
+          </div>
 
+          <div class="titulo-cilindro">
+            <h3 style="color: white"><span>EQUIPO DE</span><br />
+              GOBIERNO</h3>
+          </div>
+        </div>
         <div class="nombre-persona">
           <p><span class="alcaldia_c01">CARLOS JULIO<br />
               PLATA BECERRA<br />
-              ----Alcalde----</span></p>
+              Alcalde</span></p>
         </div>
       </div>
     </div>
 
     <div class="row_c02">
-      <div class="col-xs-12 col-sm-6 info_cont01">
+      <div class="col-xs-12 col-md-6 info_cont01">
         <div class="contenido_inf">
           <div class="info_c01">
             <h2 style="margin-bottom: 10px">Misi&oacute;n</h2>
@@ -422,12 +513,11 @@
           </div>
 
           <div class="logo-alcaldia"><img alt="Logo de la Alcaldía"
-              src="https://www.acacias.gov.co/info/acacias_se/media/galeria11942.png"
-              style="height:50px; margin-top:40%" /></div>
+              src="https://www.acacias.gov.co/info/acacias_se/media/galeria11942.png" style="height:50px;" /></div>
         </div>
       </div>
 
-      <div class="col-xs-12 col-sm-6 inf_cont02">
+      <div class="col-xs-12 col-md-6 inf_cont02">
         <div class="info_c03">
           <h2 style="margin-bottom: 10px">Funciones</h2>
         </div>
@@ -446,16 +536,9 @@
       </div>
     </div>
   </div>
-
-  <div class="col-xs-12 col-sm-12 botones_container">
-    <div class="cont_btns"><button class="boton boton_01" onclick="mostrarContenido('buttn_01')">Jefe</button><button
-        class="boton boton_02" onclick="mostrarContenido('buttn_02')">Informaci&oacute;n</button></div>
-  </div>
 </div>
 
 <!-- Optional JavaScript -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
