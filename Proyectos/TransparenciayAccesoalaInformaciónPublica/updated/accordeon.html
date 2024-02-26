@@ -16,18 +16,11 @@
             cursor: pointer;
         }
 
-        .panel-heading .accordion-toggle:after {
-            /* symbol for "opening" panels */
-            font-family: 'Glyphicons Halflings';
-            /* essential for enabling glyphicon */
-            content: "\e114";
-            /* adjust as needed, taken from bootstrap.css */
-            float: right;
-            /* adjust as needed */
-            color: grey;
-            /* adjust as needed */
+        .panel-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-
         .panel-heading .accordion-toggle.collapsed:after {
             /* symbol for "collapsed" panels */
             content: "\e080";
@@ -148,7 +141,7 @@
 <body>
 
     <div id="buscador">
-        <div class="col-md-3">
+        <div class="col-sm-12">
             <div class="search-box">
                 <input class="form-control" type="text" id="searchInput" placeholder="Buscar sub-elemento..." />
                 <button class="btn btn-default" onclick="searchItem()"><i class="glyphicon glyphicon-search"></i>
@@ -182,12 +175,13 @@
         <div class="container">
             <div class="panel-group" id="accordion">
                 <div class="panel panel-default">
-                    <div class="panel-heading">
+                    <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion">
                         <h4 class="panel-title">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion">
+                            <a >
                                 1. INFORMACIÓN DE LA ENTIDAD
                             </a>
                         </h4>
+                        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                     </div>
                     <div id="collapseOne" class="panel-collapse collapse">
                         <div class="panel-body">
