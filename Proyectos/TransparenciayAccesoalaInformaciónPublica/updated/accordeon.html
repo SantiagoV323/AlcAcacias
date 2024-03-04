@@ -12,22 +12,45 @@
             list-style-type: none;
         }
 
+        .nav-pills>li+li {
+            display: none;
+        }
+
+        .scroll-to-top, 
+        .show-scrollTop,
+        .block,
+        .block--gov-accessibility {
+            display: none;
+        }
+
+        span.govco-icon{
+            font-size: 2.5rem!important;
+        }
+
+        span.govco-icon>p {
+            font-size: 14px!important;
+        }
+
+        h1 {
+            font-size: 31px!important;
+            color: #048;
+            font-weight: 600;
+        }
+
+        .btn-default:hover, .open>.dropdown-toggle.btn-default {
+            background-color: #e6e6e6!important;
+            border-color: #adadad!important;
+        }
+
         .accordion-toggle {
             cursor: pointer;
         }
 
-        .panel-heading .accordion-toggle:after {
-            /* symbol for "opening" panels */
-            font-family: 'Glyphicons Halflings';
-            /* essential for enabling glyphicon */
-            content: "\e114";
-            /* adjust as needed, taken from bootstrap.css */
-            float: right;
-            /* adjust as needed */
-            color: grey;
-            /* adjust as needed */
+        .panel-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-
         .panel-heading .accordion-toggle.collapsed:after {
             /* symbol for "collapsed" panels */
             content: "\e080";
@@ -102,6 +125,7 @@
 
         #searchInput {
             border-radius: 10px 0px 0px 10px;
+            margin: unset;
         }
 
         .btn,
@@ -148,7 +172,7 @@
 <body>
 
     <div id="buscador">
-        <div class="col-md-3">
+        <div class="col-sm-12">
             <div class="search-box">
                 <input class="form-control" type="text" id="searchInput" placeholder="Buscar sub-elemento..." />
                 <button class="btn btn-default" onclick="searchItem()"><i class="glyphicon glyphicon-search"></i>
@@ -182,12 +206,13 @@
         <div class="container">
             <div class="panel-group" id="accordion">
                 <div class="panel panel-default">
-                    <div class="panel-heading">
+                    <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion">
                         <h4 class="panel-title">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion">
+                            <a >
                                 1. INFORMACIÓN DE LA ENTIDAD
                             </a>
                         </h4>
+                        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                     </div>
                     <div id="collapseOne" class="panel-collapse collapse">
                         <div class="panel-body">
@@ -207,12 +232,13 @@
                 </div>
 
                 <div class="panel panel-default">
-                    <div class="panel-heading">
+                    <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion">
                         <h4 class="panel-title">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion">
+                            <a>
                                 2. NORMATIVA
                             </a>
                         </h4>
+                        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                     </div>
                     <div id="collapseTwo" class="panel-collapse collapse">
                         <div class="panel-body">
@@ -245,12 +271,13 @@
                 </div>
 
                 <div class="panel panel-default">
-                    <div class="panel-heading">
+                    <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion">
                         <h4 class="panel-title">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion">
+                            <a>
                                 3. CONTRATACIÓN
                             </a>
                         </h4>
+                        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                     </div>
                     <div id="collapseThree" class="panel-collapse collapse">
                         <div class="panel-body">
@@ -276,13 +303,13 @@
                 </div>
 
                 <div class="panel panel-default">
-                    <div class="panel-heading">
+                    <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion">
                         <h4 class="panel-title">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion">
+                            <a>
                                 4. PLANEACIÓN, PRESUPUESTO E INFORMES
-
                             </a>
                         </h4>
+                        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                     </div>
                     <div id="collapseFour" class="panel-collapse collapse">
                         <div class="panel-body">
@@ -325,12 +352,13 @@
                 </div>
 
                 <div class="panel panel-default">
-                    <div class="panel-heading">
+                    <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion">
                         <h4 class="panel-title">
                             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion">
                                 5. TRÁMITES
                             </a>
                         </h4>
+                        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                     </div>
                     <div id="collapseFive" class="panel-collapse collapse">
                         <div class="panel-body">
@@ -347,12 +375,13 @@
                 </div>
 
                 <div class="panel panel-default">
-                    <div class="panel-heading">
+                    <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion">
                         <h4 class="panel-title">
                             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion">
                                 6. PARTICIPA
                             </a>
                         </h4>
+                        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                     </div>
                     <div id="collapseSix" class="panel-collapse collapse">
                         <div class="panel-body">
@@ -377,12 +406,13 @@
                 </div>
 
                 <div class="panel panel-default">
-                    <div class="panel-heading">
+                    <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion">
                         <h4 class="panel-title">
                             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion">
                                 7. DATOS ABIERTOS
                             </a>
                         </h4>
+                        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                     </div>
                     <div id="collapseSeven" class="panel-collapse collapse">
                         <div class="panel-body">
@@ -444,12 +474,13 @@
                 </div>
 
                 <div class="panel panel-default">
-                    <div class="panel-heading">
+                    <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion">
                         <h4 class="panel-title">
                             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion">
                                 8. INFORMACIÓN ESPECÍFICA PARA GRUPOS DE INTERÉS
                             </a>
                         </h4>
+                        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                     </div>
                     <div id="collapseEight" class="panel-collapse collapse">
                         <div class="panel-body">
@@ -468,12 +499,13 @@
                 </div>
 
                 <div class="panel panel-default">
-                    <div class="panel-heading">
+                    <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion">
                         <h4 class="panel-title">
                             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion">
                                 9. OBLIGACIÓN DE REPORTE DE INFORMACIÓN
                             </a>
                         </h4>
+                        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                     </div>
                     <div id="collapseNine" class="panel-collapse collapse">
                         <div class="panel-body">
@@ -494,12 +526,13 @@
                 </div>
 
                 <div class="panel panel-default">
-                    <div class="panel-heading">
+                    <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion">
                         <h4 class="panel-title">
                             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion">
                                 10. INFORMACIÓN TRIBUTARIA
                             </a>
                         </h4>
+                        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                     </div>
                     <div id="collapseTen" class="panel-collapse collapse">
                         <div class="panel-body">
@@ -507,68 +540,6 @@
                                 <li class="second-level-titles"><a href="/8841">10.1- Procesos de recaudo de rentas
                                         locales</a></li>
                                 <li class="second-level-titles"><a href="/9186">10.2- Informaci&oacute;n tributaria</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion">
-                                3. CONTRATACIÓN
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseEleven" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <ul class="subtitles">
-                                <li class="second-level-titles"><a href="/7533">3.1- Plan Anual de Adquisiciones</a>
-                                </li>
-                                <li class="third-level-titles" id="second"><a href="/9654">3.1.1- Link SECOP </a></li>
-                                <li class="second-level-titles" id="second"><a href="/8706">3.2- Publicaci&oacute;n de
-                                        la
-                                        informaci&oacute;n contractual </a></li>
-                                <li class="second-level-titles" id="second"><a href="/7500">3.3- Publicaci&oacute;n de
-                                        la
-                                        ejecuci&oacute;n de los contratos</a></li>
-                                <li class="second-level-titles" id="second"><a href="/7501">3.4- Manual de
-                                        contrataci&oacute;n,
-                                        adquisici&oacute;n y/o compras</a></li>
-                                <li class="second-level-titles"><a href="/9656">3.5- Formatos o modelos de contratos o
-                                        pliegos tipo</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion">
-                                3. CONTRATACIÓN
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseTwelve" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <ul class="subtitles">
-                                <li class="second-level-titles"><a href="/7533">3.1- Plan Anual de Adquisiciones</a>
-                                </li>
-                                <li class="third-level-titles" id="second"><a href="/9654">3.1.1- Link SECOP </a></li>
-                                <li class="second-level-titles" id="second"><a href="/8706">3.2- Publicaci&oacute;n de
-                                        la
-                                        informaci&oacute;n contractual </a></li>
-                                <li class="second-level-titles" id="second"><a href="/7500">3.3- Publicaci&oacute;n de
-                                        la
-                                        ejecuci&oacute;n de los contratos</a></li>
-                                <li class="second-level-titles" id="second"><a href="/7501">3.4- Manual de
-                                        contrataci&oacute;n,
-                                        adquisici&oacute;n y/o compras</a></li>
-                                <li class="second-level-titles"><a href="/9656">3.5- Formatos o modelos de contratos o
-                                        pliegos tipo</a>
                                 </li>
                             </ul>
                         </div>
