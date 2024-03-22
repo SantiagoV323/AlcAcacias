@@ -2,10 +2,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <!-- Latest compiled and minified CSS -->
-<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <!-- Add the Bootstrap CSS link --><!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
 <style type="text/css">
+    .h2,
+    h2 {
+        font-size: 30px !important;
+    }
+
+    .h3 {
+        font-size: 24px !important;
+    }
+
     .principal_cont {
         margin: 0;
         padding: 0;
@@ -26,6 +35,7 @@
     .titulo-cilindro {
         text-align: center;
         box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        margin-top: 80px;
     }
 
     .container_ps {
@@ -242,6 +252,11 @@ position: absolute;
 
     }
 
+    .titulosBlancos,
+    .subtitulosBlancos {
+        color: white;
+    }
+
     @keyframes slideInFromRight {
         from {
             opacity: 0;
@@ -292,14 +307,10 @@ position: absolute;
         z-index: 1;
     }
 
-    .row_c01 {
+    .row_c01, .row_c02, .row_c03,.row_c04, .row_c05 {
         animation: slideInFromRight 1s ease-out forwards;
     }
 
-    .row_c02 {
-        animation: slideInFromLeft 1s ease-out forwards;
-        display: none;
-    }
 
     .boton {
         margin: 0 10px;
@@ -332,10 +343,11 @@ position: absolute;
         font-weight: 600;
         display: inline-block;
     }
-    .open>.dropdown-menu{
+
+    .open>.dropdown-menu {
         min-width: auto;
     }
-    
+
 
     .navbar-expand-lg .navbar-nav .dropdown-menu {
         position: absolute;
@@ -348,6 +360,7 @@ position: absolute;
     .btn-nav .dropdown-menu>li>a {
         text-decoration: none;
     }
+
     .navbar {
         display: flex;
         flex-direction: column;
@@ -399,11 +412,16 @@ position: absolute;
         }
     }
 
+    #navContent {
+        margin: 0px 6px;
+    }
+
     #navContent,
     #navbarDropdownMenuLink {
         padding-left: 8px;
     }
-    .navbar .navbar-toggle{
+
+    .navbar .navbar-toggle {
         margin: 0px;
         float: left;
     }
@@ -414,26 +432,27 @@ position: absolute;
         background-color: transparent;
         border-color: transparent;
         text-decoration: none;
-    } 
+    }
+
     .btn-nav:hover {
         text-decoration: underline;
-    }  
+    }
 </style>
 <div class="principal_cont">
     <div class="container_ps">
         <nav class="sub-nav navbar navbar-expand-lg navbar-light bg-light">
             <!-- Botón inicio que puede llevar al home --><!-- <a class="navbar-brand" href="#">Inicio</a> -->
-            <button type="button"  class="btn-nav navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarNavDropdown" aria-expanded="false">
+            <button type="button" class="btn-nav navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#navbarNavDropdown" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span style="font-size: 30px;" class="glyphicon glyphicon-menu-hamburger"></span>
             </button>
-            
-            
-            
+
+
+
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
-                    <li class="nav-item active"><a class="btn-nav nav-link btn-primary nav-link jefe boton_01"
-                            href="javascript:void(0);" id="navContent">Jefe <span class="sr-only">(current)</span></a>
+                    <li class="nav-item active"><a class="btn-nav nav-link btn-primary nav-link jefe boton_01" href="javascript:void(0);" id="navContent">Jefe <span class="sr-only">(current)</span></a>
                         <!-- <a class="btn btn-primary nav-link jefe boton_01" href="javascript:void(0);">Jefe</a> -->
                     </li>
                     <li class="nav-item"><a class="btn-nav btn-primary nav-link boton_02" href="javascript:void(0);"
@@ -444,18 +463,28 @@ position: absolute;
                         <div class="dropdown">
                             <button class="btn-nav btn-default dropdown-toggle" type="button" id="dropdownMenu1"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                Servicios
+                                Publicaciones
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                <li><a href="#">Contratistas</a></li>
-                                <li><a href="#">Sobre nosotros</a></li>
-                                <li><a href="#">Publicaciones</a></li>
-                                <li><a
-                                        href="https://www.acacias.gov.co/publicaciones/12142/notificaciones/">Notificaciones</a>
+                                <li><a href="#">Edictos</a></li>
+                                <li>
+                                    <a class="btn-nav btn-primary nav-link boton_03" href="javascript:void(0);" id="navContent">
+                                        Notificaciones
+                                    </a>
                                 </li>
                             </ul>
                         </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn-nav btn-primary nav-link boton_04" href="javascript:void(0);" id="navContent">
+                            Proyectos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn-nav btn-primary nav-link boton_05" href="javascript:void(0);" id="navContent">
+                            Nuestro equipo
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -566,19 +595,7 @@ position: absolute;
                             10. Asegurar que las diferentes unidades y dependencias generen informaci&oacute;n oportuna
                             y confiable, con el fin de analizarla y entregarla como valor agregado para la toma de
                             decisiones y el ajuste de las pol&iacute;ticas p&uacute;blicas.<br />
-                            11. Afianzar metodolog&iacute;as para el seguimiento y evaluaci&oacute;n del Plan de
-                            Desarrollo y del Plan B&aacute;sico de Ordenamiento Territorial, los Planes Parciales,
-                            zonales, as&iacute; como la participaci&oacute;n ciudadana en el proceso de
-                            planeaci&oacute;n.<br />
-                            12. Formular el Plan Operativo Anual de Inversiones.<br />
-                            13. Coordinar la acci&oacute;n de las entidades municipales, departamentales y nacionales en
-                            el municipio con miras al cumplimiento del plan municipal.<br />
-                            14. Elaborar el Plan Anual y Plurianual de Inversiones del Municipio.<br />
-                            15. Dirigir, organizar y sistematizar el banco de programas y proyectos de inversi&oacute;n
-                            municipal.<br />
-                            16. Proponer y guiar la aplicaci&oacute;n de los instrumentos de estratificaci&oacute;n, a
-                            fin de propender por el modelo mas equitativo para el Municipio.<br />
-                            17. Guiar la planeaci&oacute;n financiera dentro de los par&aacute;metros legales.</p>
+                        </p>
                     </div>
                     <!-- <div class="info_c03">
                     <h2 style="margin-bottom: 10px">Funciones</h2>
@@ -599,6 +616,19 @@ position: absolute;
                 <div class="descripcion_01">
                     <p><br />
                         <br />
+                        11. Afianzar metodolog&iacute;as para el seguimiento y evaluaci&oacute;n del Plan de
+                        Desarrollo y del Plan B&aacute;sico de Ordenamiento Territorial, los Planes Parciales,
+                        zonales, as&iacute; como la participaci&oacute;n ciudadana en el proceso de
+                        planeaci&oacute;n.<br />
+                        12. Formular el Plan Operativo Anual de Inversiones.<br />
+                        13. Coordinar la acci&oacute;n de las entidades municipales, departamentales y nacionales en
+                        el municipio con miras al cumplimiento del plan municipal.<br />
+                        14. Elaborar el Plan Anual y Plurianual de Inversiones del Municipio.<br />
+                        15. Dirigir, organizar y sistematizar el banco de programas y proyectos de inversi&oacute;n
+                        municipal.<br />
+                        16. Proponer y guiar la aplicaci&oacute;n de los instrumentos de estratificaci&oacute;n, a
+                        fin de propender por el modelo mas equitativo para el Municipio.<br />
+                        17. Guiar la planeaci&oacute;n financiera dentro de los par&aacute;metros legales.
                         18. Guiar la estructura organizacional de mediano y largo plazo que permita adaptarla a los
                         nuevos retos de la localizaci&oacute;n, identificar las tendencias y procesos de cambio en el
                         contexto regional, nacional que inciden o determinan las condiciones de desarrollo de la ciudad
@@ -613,7 +643,7 @@ position: absolute;
                     </p>
                 </div>
 
-                <h2 style="margin-bottom: 10px">Funciones</h2>
+                <h2 class="titulosBlancos" style="margin-bottom: 10px;">Funciones</h2>
 
                 <div class="descripcion_01">
                     <p>1. Formular las pol&iacute;ticas p&uacute;blicas del municipio de acacias.<br />
@@ -627,35 +657,146 @@ position: absolute;
                         7. Verificar que el desarrollo territorial del municipio se realice conforme a la normatividad
                         vigente. (PBOT).</p>
                 </div>
+            </div>
+        </div>
 
-                <h2 style="margin-bottom: 10px">Programas y proyectos</h2>
-                &nbsp;
+        <div class="row_c03">
+            <div class="col-xs-12 col-md-6 blanco_c01">
+                <div>
+                    <div class="nombre_c03">
+                        <h2 style="margin-bottom: 10px">Este es el 3</h2>
+                    </div>
 
-                <h3 style="margin-bottom: 10px; text-align:left">Programas</h3>
+                    <div class="descripcion">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ratione animi neque mollitia. Ipsam magni sed accusamus nostrum dolore atque beatae inventore at omnis, aliquam eum quos quis numquam provident.<br />
+                            <br />
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis tempora dolor vero corporis aliquid maiores ipsum quo voluptatibus quia dolores veritatis inventore, velit ipsa. Voluptatibus vitae molestiae non accusamus facere?
+                        </p>
+                    </div>
+                </div>
 
-                <p style="text-align: left;">No hay programas relacionados</p>
-                &nbsp;
+                <div class="logo-alcaldia"><img alt="Logo de la Alcaldía"
+                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria11942.png"
+                        style="height:50px; margin-bottom:1rem" /></div>
+            </div>
 
-                <h3 style="margin-bottom: 5px; text-align:left">Proyectos</h3>
+            <div class="col-xs-12 col-md-6 azul_c01">
+                <div>
+                    <div class="foto-persona">
+                        <div class="franja-oscura">&nbsp;</div>
+                        <img alt="Foto de la Persona"
+                            src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png" />
+                    </div>
 
-                <div class="descripcion_01">
-                    <p>1. Construcci&oacute;n y adecuaci&oacute;n de la sala de necropsia cementerio central del
-                        municipio de Acac&iacute;as, Meta, Orinoqu&iacute;a.<br />
-                        2. Adquisici&oacute;n de predios para el desarrollo de los programas de vivienda de la
-                        administracion municipal en e municipio de Acac&iacute;as, Meta, Orinoqu&iacute;a.<br />
-                        3. Capacitaci&oacute;n y formacion para el empleo y generacion de empresa en el Municipio de
-                        Acac&iacute;as, Meta, Orinoqu&iacute;a.<br />
-                        4. Construcci&oacute;n obras de urbanismo proyecto de vivienda de inter&eacute;s social, para
-                        vivir bien, en el municipio de Acac&iacute;as.<br />
-                        5. Desarrollo de acciones con enfoque diferencial conducentes a brindar atenci&oacute;n,
-                        asistencia y reparaci&oacute;n integral a las v&iacute;ctimas en el municipio de Acac&iacute;as,
-                        Meta.<br />
-                        7. Fortalecimiento de la democracia e interlocuci&oacute;n entre la administraci&oacute;n
-                        municipal y la comunidad del municipio de Acacias, Meta.<br />
-                        8. Fortalecimiento institucional para mejorar la gesti&oacute;n de la administraci&oacute;n del
-                        municipio de Acac&iacute;as de acuerdo con sus competecias legales.<br />
-                        9. Subsidio vigencia 2017 a los usuarios de los servicios publicos de acueducto, alcantarillado
-                        y aseo de los estratos uno, dos y tres del municipio de Acac&iacute;as, Meta.</p>
+                    <div class="titulo_c03">
+                        <h3 style="color: white">SECRETAR&Iacute;A<br />
+                            DE PLANEACI&Oacute;N Y VIVIENDA</h3>
+                    </div>
+
+                    <div class="titulo-cilindro">
+                        <h3 style="color: white"><span>EQUIPO DE</span><br />
+                            GOBIERNO</h3>
+                    </div>
+                </div>
+
+                <div class="nombre-persona">
+                    <p><span class="alcaldia_c01">CARLOS JULIO<br />
+                            PLATA BECERRA<br />
+                            Alcalde</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row_c04">
+            <div class="col-xs-12 col-md-6 blanco_c01">
+                <div>
+                    <div class="nombre_c01">
+                        <h2 style="margin-bottom: 10px">Este es el 4</h2>
+                    </div>
+
+                    <div class="descripcion">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ratione animi neque mollitia. Ipsam magni sed accusamus nostrum dolore atque beatae inventore at omnis, aliquam eum quos quis numquam provident.<br />
+                            <br />
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis tempora dolor vero corporis aliquid maiores ipsum quo voluptatibus quia dolores veritatis inventore, velit ipsa. Voluptatibus vitae molestiae non accusamus facere?
+                        </p>
+                    </div>
+                </div>
+
+                <div class="logo-alcaldia"><img alt="Logo de la Alcaldía"
+                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria11942.png"
+                        style="height:50px; margin-bottom:1rem" /></div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 azul_c01">
+                <div>
+                    <div class="foto-persona">
+                        <div class="franja-oscura">&nbsp;</div>
+                        <img alt="Foto de la Persona"
+                            src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png" />
+                    </div>
+
+                    <div class="titulo_c01">
+                        <h3 style="color: white">SECRETAR&Iacute;A<br />
+                            DE PLANEACI&Oacute;N Y VIVIENDA</h3>
+                    </div>
+
+                    <div class="titulo-cilindro">
+                        <h3 style="color: white"><span>EQUIPO DE</span><br />
+                            GOBIERNO</h3>
+                    </div>
+                </div>
+
+                <div class="nombre-persona">
+                    <p><span class="alcaldia_c01">CARLOS JULIO<br />
+                            PLATA BECERRA<br />
+                            Alcalde</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row_c05">
+            <div class="col-xs-12 col-md-6 blanco_c01">
+                <div>
+                    <div class="nombre_c01">
+                        <h2 style="margin-bottom: 10px">Andres Santiago Vega Franco 5</h2>
+                    </div>
+
+                    <div class="descripcion">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ratione animi neque mollitia. Ipsam magni sed accusamus nostrum dolore atque beatae inventore at omnis, aliquam eum quos quis numquam provident.<br />
+                            <br />
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis tempora dolor vero corporis aliquid maiores ipsum quo voluptatibus quia dolores veritatis inventore, velit ipsa. Voluptatibus vitae molestiae non accusamus facere?
+                        </p>
+                    </div>
+                </div>
+
+                <div class="logo-alcaldia"><img alt="Logo de la Alcaldía"
+                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria11942.png"
+                        style="height:50px; margin-bottom:1rem" /></div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 azul_c01">
+                <div>
+                    <div class="foto-persona">
+                        <div class="franja-oscura">&nbsp;</div>
+                        <img alt="Foto de la Persona"
+                            src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png" />
+                    </div>
+
+                    <div class="titulo_c01">
+                        <h3 style="color: white">SECRETAR&Iacute;A<br />
+                            DE PLANEACI&Oacute;N Y VIVIENDA</h3>
+                    </div>
+
+                    <div class="titulo-cilindro">
+                        <h3 style="color: white"><span>EQUIPO DE</span><br />
+                            GOBIERNO</h3>
+                    </div>
+                </div>
+
+                <div class="nombre-persona">
+                    <p><span class="alcaldia_c01">CARLOS JULIO<br />
+                            PLATA BECERRA<br />
+                            Alcalde</span></p>
                 </div>
             </div>
         </div>
@@ -672,27 +813,56 @@ position: absolute;
 
     $(document).ready(function () {
         $(".boton_01").click(function () {
-            if ($(".row_c02").is(":visible")) {
-                $(".row_c02").css("animation", "slideOutToRight 1s ease-out forwards");
-                $(".row_c01").css("animation", "slideInFromLeft 1s ease-out forwards");
-
-                $(".row_c02").one('animationend', function () {
-                    $(this).hide();
+           
+                    $(".row_c02").hide();
+                    $(".row_c03").hide();
+                    $(".row_c04").hide();
+                    $(".row_c05").hide();
                     $(".row_c01").show().css("display", "flex");
-                });
-            }
+            
         });
 
         $(".boton_02").click(function () {
-            if ($(".row_c01").is(":visible")) {
-                $(".row_c01").css("animation", "slideOutToLeft 1s ease-out forwards");
-                $(".row_c02").css("animation", "slideInFromRight 1s ease-out forwards");
-
-                $(".row_c01").one('animationend', function () {
-                    $(this).hide();
+            
+                $(".row_c01").hide();
+                    $(".row_c03").hide();
+                    $(".row_c04").hide();
+                    $(".row_c05").hide();
                     $(".row_c02").show().css("display", "flex");
-                });
-            }
+            
+        });
+
+        $(".boton_03").click(function () {
+            
+                
+            $(".row_c01").hide();
+                $(".row_c02").hide();
+                $(".row_c04").hide();
+                $(".row_c05").hide();
+                $(".row_c03").show().css("display", "flex");
+        
+    });
+
+        $(".boton_04").click(function () {
+            
+                
+                $(".row_c01").hide();
+                    $(".row_c02").hide();
+                    $(".row_c03").hide();
+                    $(".row_c05").hide();
+                    $(".row_c04").show().css("display", "flex");
+            
+        });
+        $(".boton_05").click(function () {
+            
+               
+                    $(".row_c01").hide();
+                    $(".row_c02").hide();
+                    $(".row_c03").hide();
+                    $(".row_c04").hide();
+                    $(".row_c05").show().css("display", "flex");
+                
+            
         });
     });
 </script>
