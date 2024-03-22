@@ -1,15 +1,10 @@
-<!-- Pendiente: Agreagar colores de la bandera como el navbar original -->
-<!-- Realizar un dropdown en el navbar -->
-
-<html lang="en">
-
+<!-- Pendiente: Agreagar colores de la bandera como el navbar original --><!-- Realizar un dropdown en el navbar -->
 <meta charset="UTF-8">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-
-<!-- Add the Bootstrap CSS link -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
-
+<!-- Latest compiled and minified CSS -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+<!-- Add the Bootstrap CSS link --><!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
 <style type="text/css">
     .principal_cont {
         margin: 0;
@@ -233,9 +228,9 @@
     }
 
     /* .botones_container {
-    justify-content: center;
-    position: absolute;
-  } */
+justify-content: center;
+position: absolute;
+} */
 
     .cont_btns {
 
@@ -318,20 +313,45 @@
 
     }
 
+    .sub-nav .navbar-nav {
+        display: flex;
+        padding: 10px;
+        flex-wrap: wrap;
+        justify-content: left;
+        align-items: center;
+    }
+
+    .nav-item {
+        list-style: none;
+    }
+
     .navbar-light .navbar-nav .nav-link {
         background-color: transparent;
+
         color: black;
         font-weight: 600;
         display: inline-block;
     }
+    .open>.dropdown-menu{
+        min-width: auto;
+    }
+    
 
     .navbar-expand-lg .navbar-nav .dropdown-menu {
         position: absolute;
         border-radius: 8px;
         background-color: #ebebeb;
+        min-width: none;
+
     }
 
+    .btn-nav .dropdown-menu>li>a {
+        text-decoration: none;
+    }
     .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
         border-top: 5px solid #fbbb00;
         border-bottom: 5px solid #078930;
         margin: 20 0;
@@ -379,56 +399,62 @@
         }
     }
 
-    .navbar-light .navbar-nav .nav-link.btn:hover {
-        background-color: #3462ad;
-        /* Color de fondo azul cuando se hace hover */
-        color: white;
-        /* Color de texto blanco cuando se hace hover */
-    }
-
     #navContent,
     #navbarDropdownMenuLink {
         padding-left: 8px;
     }
+    .navbar .navbar-toggle{
+        margin: 0px;
+        float: left;
+    }
+
+    .btn-nav {
+        color: black;
+        font-weight: 600;
+        background-color: transparent;
+        border-color: transparent;
+        text-decoration: none;
+    } 
+    .btn-nav:hover {
+        text-decoration: underline;
+    }  
 </style>
-
-
 <div class="principal_cont">
     <div class="container_ps">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <!-- Botón inicio que puede llevar al home -->
-            <!-- <a class="navbar-brand" href="#">Inicio</a> -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-
+        <nav class="sub-nav navbar navbar-expand-lg navbar-light bg-light">
+            <!-- Botón inicio que puede llevar al home --><!-- <a class="navbar-brand" href="#">Inicio</a> -->
+            <button type="button"  class="btn-nav navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarNavDropdown" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span style="font-size: 30px;" class="glyphicon glyphicon-menu-hamburger"></span>
             </button>
-
-
+            
+            
+            
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link btn btn-primary nav-link jefe boton_01" id="navContent"
-                            href="javascript:void(0);">Jefe
-                            <span class="sr-only">(current)</span></a>
+                    <li class="nav-item active"><a class="btn-nav nav-link btn-primary nav-link jefe boton_01"
+                            href="javascript:void(0);" id="navContent">Jefe <span class="sr-only">(current)</span></a>
                         <!-- <a class="btn btn-primary nav-link jefe boton_01" href="javascript:void(0);">Jefe</a> -->
                     </li>
-                    <li class="nav-item">
-                        <a class="btn btn-primary nav-link info boton_02" href="javascript:void(0);"
-                            id="navContent">Información de la secretaría</a>
+                    <li class="nav-item"><a class="btn-nav btn-primary nav-link boton_02" href="javascript:void(0);"
+                            id="navContent">Informaci&oacute;n de la secretar&iacute;a</a>
                         <!-- <a href="javascript:void(0);" class="btn btn-primary nav-link info boton_02">Información</a> -->
-
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Servicios
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Contratistas</a>
-                            <a class="dropdown-item" href="#">Sobre nosotros</a>
-                            <a class="dropdown-item" href="#">Publicaciones</a>
-                            <a class="dropdown-item" href="#">Notificaciones</a>
+                    <li class="btn-nav nav-item dropdown">
+                        <div class="dropdown">
+                            <button class="btn-nav btn-default dropdown-toggle" type="button" id="dropdownMenu1"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                Servicios
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a href="#">Contratistas</a></li>
+                                <li><a href="#">Sobre nosotros</a></li>
+                                <li><a href="#">Publicaciones</a></li>
+                                <li><a
+                                        href="https://www.acacias.gov.co/publicaciones/12142/notificaciones/">Notificaciones</a>
+                                </li>
+                            </ul>
                         </div>
                     </li>
                 </ul>
@@ -437,7 +463,6 @@
 
         <div class="row_c01">
             <div class="col-xs-12 col-md-6 blanco_c01">
-
                 <div>
                     <div class="nombre_c01">
                         <h2 style="margin-bottom: 10px">Sandra Patricia Fonseca Avella</h2>
@@ -445,37 +470,27 @@
 
                     <div class="descripcion">
                         <p>Abogada, mag&iacute;ster en derecho administrativo y especialista en derecho urbano. Cuenta
-                            con
-                            m&aacute;s
-                            de 18 a&ntilde;os de experiencia profesional en el sector p&uacute;blico, asesorando
-                            jur&iacute;dicamente
-                            y
-                            ejerciendo cargos de nivel directivo, se ha desempe&ntilde;ado profesionalmente en entidades
-                            p&uacute;blicas
-                            de diferente orden como la Secretar&iacute;a Distrital de Planeaci&oacute;n, la Unidad
-                            Administrativa
-                            Especial de Catastro Distrital, la Corporaci&oacute;n Aut&oacute;noma Regional de
-                            Cundinamarca, la
+                            con m&aacute;s de 18 a&ntilde;os de experiencia profesional en el sector p&uacute;blico,
+                            asesorando jur&iacute;dicamente y ejerciendo cargos de nivel directivo, se ha
+                            desempe&ntilde;ado profesionalmente en entidades p&uacute;blicas de diferente orden como la
+                            Secretar&iacute;a Distrital de Planeaci&oacute;n, la Unidad Administrativa Especial de
+                            Catastro Distrital, la Corporaci&oacute;n Aut&oacute;noma Regional de Cundinamarca, la
                             Superintendencia de Servicios P&uacute;blicos Domiciliarios, Central de Inversiones
                             S.A.<br />
                             <br />
                             Tiene experiencia y conocimiento en el marco de la gesti&oacute;n jur&iacute;dica,
-                            administrativa,
-                            urban&iacute;stica, de ordenamiento territorial, integraci&oacute;n y asociatividad
-                            territorial,
-                            as&iacute;
-                            como en temas catastrales y ambientales.
+                            administrativa, urban&iacute;stica, de ordenamiento territorial, integraci&oacute;n y
+                            asociatividad territorial, as&iacute; como en temas catastrales y ambientales.
                         </p>
                     </div>
                 </div>
+
                 <div class="logo-alcaldia"><img alt="Logo de la Alcaldía"
                         src="https://www.acacias.gov.co/info/acacias_se/media/galeria11942.png"
-                        style="height:50px;  margin-bottom: 1rem;" />
-                </div>
+                        style="height:50px; margin-bottom:1rem" /></div>
             </div>
 
             <div class="col-xs-12 col-md-6 azul_c01">
-
                 <div>
                     <div class="foto-persona">
                         <div class="franja-oscura">&nbsp;</div>
@@ -484,8 +499,8 @@
                     </div>
 
                     <div class="titulo_c01">
-                        <h3 style="color: white">SECRETARÍA<br />
-                            DE PLANEACIÓN Y VIVIENDA</h3>
+                        <h3 style="color: white">SECRETAR&Iacute;A<br />
+                            DE PLANEACI&Oacute;N Y VIVIENDA</h3>
                     </div>
 
                     <div class="titulo-cilindro">
@@ -493,6 +508,7 @@
                             GOBIERNO</h3>
                     </div>
                 </div>
+
                 <div class="nombre-persona">
                     <p><span class="alcaldia_c01">CARLOS JULIO<br />
                             PLATA BECERRA<br />
@@ -510,16 +526,12 @@
 
                     <div class="descripcion_01">
                         <p>Formular directrices de desarrollo del municipio de Acac&iacute;as para que le permita al
-                            sector p&uacute;blico y
-                            privado visualizar una imagen objetivo de municipio deseado, proyectando el futuro y
-                            actuando ordenadamente para
-                            alcanzarlo; para el logro de su misi&oacute;n, la oficina asesora de planeaci&oacute;n
-                            formular&aacute; las
-                            pol&iacute;ticas p&uacute;blicas, coordinar&aacute; la acci&oacute;n p&uacute;blica
-                            municipal, controlar&aacute; y
-                            evaluar&aacute; su gesti&oacute;n y alcanzar&aacute; un sistema de gesti&oacute;n
-                            p&uacute;blica de alta
-                            responsabilidad.</p>
+                            sector p&uacute;blico y privado visualizar una imagen objetivo de municipio deseado,
+                            proyectando el futuro y actuando ordenadamente para alcanzarlo; para el logro de su
+                            misi&oacute;n, la oficina asesora de planeaci&oacute;n formular&aacute; las pol&iacute;ticas
+                            p&uacute;blicas, coordinar&aacute; la acci&oacute;n p&uacute;blica municipal,
+                            controlar&aacute; y evaluar&aacute; su gesti&oacute;n y alcanzar&aacute; un sistema de
+                            gesti&oacute;n p&uacute;blica de alta responsabilidad.</p>
                     </div>
 
                     <div class="info_c02">
@@ -527,162 +539,132 @@
                     </div>
 
                     <div class="descripcion_01">
-                        <p>
-                            1. Establecer procedimientos y mecanismos para la elaboraci&oacute;n, aprobaci&oacute;n,
-                            ejecuci&oacute;n,
-                            seguimiento, evaluaci&oacute;n y control del Plan de Desarrollo y el Plan B&aacute;sico de
-                            Ordenamiento
-                            Territorial, con una visi&oacute;n prospectiva y en armon&iacute;a con los planes nacional y
-                            departamental.
-                            <br>
+                        <p>1. Establecer procedimientos y mecanismos para la elaboraci&oacute;n, aprobaci&oacute;n,
+                            ejecuci&oacute;n, seguimiento, evaluaci&oacute;n y control del Plan de Desarrollo y el Plan
+                            B&aacute;sico de Ordenamiento Territorial, con una visi&oacute;n prospectiva y en
+                            armon&iacute;a con los planes nacional y departamental.<br />
                             2. Direccionar la formulaci&oacute;n de los planes parciales, zonales, y de acci&oacute;n de
-                            conformidad con la
-                            legislaci&oacute;n vigente y lo dispuesto en el Plan de Desarrollo de Acacias.
-                            <br>
+                            conformidad con la legislaci&oacute;n vigente y lo dispuesto en el Plan de Desarrollo de
+                            Acacias.<br />
                             3. Proyectar al Municipio de Acacias en su entorno regional, nacional y definir mecanismos
-                            de articulaci&oacute;n.
-                            <br>
+                            de articulaci&oacute;n.<br />
                             4. Proponer la estructura de la organizaci&oacute;n municipal con base en una visi&oacute;n
-                            prospectiva, que consulte la din&aacute;mica y cambios del entorno.
-                            <br>
+                            prospectiva, que consulte la din&aacute;mica y cambios del entorno.<br />
                             5. Direccionar el modelo de desarrollo para confrontar lo deseable con lo posible, y
-                            concretar un municipio con desarrollo integral y sostenible.
-                            <br>
+                            concretar un municipio con desarrollo integral y sostenible.<br />
                             6. Asesorar al Alcalde, y a las entidades del orden municipal en la toma de decisiones de
-                            conformidad con las normas y los planes del orden nacional, departamental y municipal.
-                            <br>
+                            conformidad con las normas y los planes del orden nacional, departamental y municipal.<br />
                             7. Planificar el desarrollo socioecon&oacute;mico del territorio como insumo b&aacute;sico
                             para la elaboraci&oacute;n de los diferentes planes y programas, as&iacute; como la
-                            generaci&oacute;n de indicadores y adopci&oacute;n de nuevas pol&iacute;ticas.
-                            <br>
+                            generaci&oacute;n de indicadores y adopci&oacute;n de nuevas pol&iacute;ticas.<br />
                             8. Direccionar la formulaci&oacute;n de los proyectos que deben realizar las diferentes
                             secretar&iacute;as e institutos descentralizados del orden municipal, con el fin de cumplir
-                            con lo dispuesto en los Planes de Desarrollo y Ordenamiento Territorial.
-                            <br>
+                            con lo dispuesto en los Planes de Desarrollo y Ordenamiento Territorial.<br />
                             9. Proponer mecanismos modernos de evaluaci&oacute;n en lo pertinente al desarrollo social,
                             econ&oacute;mico y f&iacute;sico, el espacio p&uacute;blico, los usos del suelo y la
-                            gesti&oacute;n urban&iacute;stica de las curadur&iacute;as.
-                            <br>
+                            gesti&oacute;n urban&iacute;stica de las curadur&iacute;as.<br />
                             10. Asegurar que las diferentes unidades y dependencias generen informaci&oacute;n oportuna
                             y confiable, con el fin de analizarla y entregarla como valor agregado para la toma de
-                            decisiones y el ajuste de las pol&iacute;ticas p&uacute;blicas.
-                            <br>
+                            decisiones y el ajuste de las pol&iacute;ticas p&uacute;blicas.<br />
                             11. Afianzar metodolog&iacute;as para el seguimiento y evaluaci&oacute;n del Plan de
                             Desarrollo y del Plan B&aacute;sico de Ordenamiento Territorial, los Planes Parciales,
                             zonales, as&iacute; como la participaci&oacute;n ciudadana en el proceso de
-                            planeaci&oacute;n.
-                            <br>
-                            12. Formular el Plan Operativo Anual de Inversiones.
-                            <br>
+                            planeaci&oacute;n.<br />
+                            12. Formular el Plan Operativo Anual de Inversiones.<br />
                             13. Coordinar la acci&oacute;n de las entidades municipales, departamentales y nacionales en
-                            el municipio con miras al cumplimiento del plan municipal.
-                            <br>
-                            14. Elaborar el Plan Anual y Plurianual de Inversiones del Municipio.
-                            <br>
+                            el municipio con miras al cumplimiento del plan municipal.<br />
+                            14. Elaborar el Plan Anual y Plurianual de Inversiones del Municipio.<br />
                             15. Dirigir, organizar y sistematizar el banco de programas y proyectos de inversi&oacute;n
-                            municipal.
-                            <br>
+                            municipal.<br />
                             16. Proponer y guiar la aplicaci&oacute;n de los instrumentos de estratificaci&oacute;n, a
-                            fin de propender por el modelo mas equitativo para el Municipio.
-                            <br>
-                            17. Guiar la planeaci&oacute;n financiera dentro de los par&aacute;metros legales.
-                            <br>
-                        </p>
+                            fin de propender por el modelo mas equitativo para el Municipio.<br />
+                            17. Guiar la planeaci&oacute;n financiera dentro de los par&aacute;metros legales.</p>
                     </div>
-
                     <!-- <div class="info_c03">
-                        <h2 style="margin-bottom: 10px">Funciones</h2>
-                    </div>
-                    <div class="descripcion_01">
-                        <p>
-                            ELIMINAR
-                        </p>
-                    </div> -->
+                    <h2 style="margin-bottom: 10px">Funciones</h2>
+                </div>
+                <div class="descripcion_01">
+                    <p>
+                        ELIMINAR
+                    </p>
+                </div> -->
 
                     <div class="logo-alcaldia"><img alt="Logo de la Alcaldía"
                             src="https://www.acacias.gov.co/info/acacias_se/media/galeria11942.png"
-                            style="height:50px;" /></div>
+                            style="height:50px" /></div>
                 </div>
             </div>
 
             <div class="col-xs-12 col-md-6 inf_cont02">
                 <div class="descripcion_01">
-                    <p>
-                        <br> <br>
-
+                    <p><br />
+                        <br />
                         18. Guiar la estructura organizacional de mediano y largo plazo que permita adaptarla a los
                         nuevos retos de la localizaci&oacute;n, identificar las tendencias y procesos de cambio en el
                         contexto regional, nacional que inciden o determinan las condiciones de desarrollo de la ciudad
-                        y su poblaci&oacute;n, para ser incorporadas en la formulaci&oacute;n de escenarios
-                        de futuro y proyectos de largo plazo.
-                        <br>
-                        19. Guiar la demanda de informaci&oacute;n de los usuarios, sobre aspectos de naturaleza
-                        social, econ&oacute;mica, demogr&aacute;fica, f&iacute;sico espacial, ambiental, y legal,
-                        relacionados con los procesos de gesti&oacute;n, planeaci&oacute;n, investigaci&oacute;n y
-                        desarrollo del Municipio de Acacias.
-                        <br>
+                        y su poblaci&oacute;n, para ser incorporadas en la formulaci&oacute;n de escenarios de futuro y
+                        proyectos de largo plazo.<br />
+                        19. Guiar la demanda de informaci&oacute;n de los usuarios, sobre aspectos de naturaleza social,
+                        econ&oacute;mica, demogr&aacute;fica, f&iacute;sico espacial, ambiental, y legal, relacionados
+                        con los procesos de gesti&oacute;n, planeaci&oacute;n, investigaci&oacute;n y desarrollo del
+                        Municipio de Acacias.<br />
                         20. Formular, desarrollar y direccionar la implementaci&oacute;n de los sistemas de
                         gesti&oacute;n administrativos
                     </p>
                 </div>
+
                 <h2 style="margin-bottom: 10px">Funciones</h2>
+
                 <div class="descripcion_01">
-                    <p>
-                        1. Formular las pol&iacute;ticas p&uacute;blicas del municipio de acacias.<br>
-                        2. Formular, planes, programas y proyectos.<br>
+                    <p>1. Formular las pol&iacute;ticas p&uacute;blicas del municipio de acacias.<br />
+                        2. Formular, planes, programas y proyectos.<br />
                         3. Coordinar la acci&oacute;n de las entidades p&uacute;blicas de los niveles nacional,
-                        departamental y municipal.<br>
-                        4. Hacer el seguimiento del plan de desarrollo municipal.<br>
-                        5. Evaluar la gesti&oacute;n y resultados de las entidades p&uacute;blicas municipales.<br>
+                        departamental y municipal.<br />
+                        4. Hacer el seguimiento del plan de desarrollo municipal.<br />
+                        5. Evaluar la gesti&oacute;n y resultados de las entidades p&uacute;blicas municipales.<br />
                         6. Desarrollar y aplicar los instrumentos de ley para lograr un desarrollo urbano y rural
-                        ordenado.<br>
+                        ordenado.<br />
                         7. Verificar que el desarrollo territorial del municipio se realice conforme a la normatividad
-                        vigente. (PBOT).<br>
-                    </p>
+                        vigente. (PBOT).</p>
                 </div>
+
                 <h2 style="margin-bottom: 10px">Programas y proyectos</h2>
-                <br>
+                &nbsp;
+
                 <h3 style="margin-bottom: 10px; text-align:left">Programas</h3>
+
                 <p style="text-align: left;">No hay programas relacionados</p>
-                <br>
+                &nbsp;
+
                 <h3 style="margin-bottom: 5px; text-align:left">Proyectos</h3>
+
                 <div class="descripcion_01">
-                    <p>
-                        1. Construcci&oacute;n y adecuaci&oacute;n de la sala de necropsia cementerio central del
-                        municipio de Acac&iacute;as, Meta, Orinoqu&iacute;a.
-                        <br>
+                    <p>1. Construcci&oacute;n y adecuaci&oacute;n de la sala de necropsia cementerio central del
+                        municipio de Acac&iacute;as, Meta, Orinoqu&iacute;a.<br />
                         2. Adquisici&oacute;n de predios para el desarrollo de los programas de vivienda de la
-                        administracion municipal en e municipio de Acac&iacute;as, Meta, Orinoqu&iacute;a.
-                        <br>
+                        administracion municipal en e municipio de Acac&iacute;as, Meta, Orinoqu&iacute;a.<br />
                         3. Capacitaci&oacute;n y formacion para el empleo y generacion de empresa en el Municipio de
-                        Acac&iacute;as, Meta, Orinoqu&iacute;a.
-                        <br>
-                        4. Construcción obras de urbanismo proyecto de vivienda de interés social, para vivir bien, en
-                        el municipio de Acacías.
-                        <br>
-                        5. Desarrollo de acciones con enfoque diferencial conducentes a brindar atención, asistencia y
-                        reparación integral a las víctimas en el municipio de Acacías, Meta.
-                        <br>
-                        7. Fortalecimiento de la democracia e interlocución entre la administración municipal y la
-                        comunidad del municipio de Acacias, Meta.
-                        <br>
-                        8. Fortalecimiento institucional para mejorar la gestión de la administración del municipio de
-                        Acacías de acuerdo con sus competecias legales.
-                        <br>
+                        Acac&iacute;as, Meta, Orinoqu&iacute;a.<br />
+                        4. Construcci&oacute;n obras de urbanismo proyecto de vivienda de inter&eacute;s social, para
+                        vivir bien, en el municipio de Acac&iacute;as.<br />
+                        5. Desarrollo de acciones con enfoque diferencial conducentes a brindar atenci&oacute;n,
+                        asistencia y reparaci&oacute;n integral a las v&iacute;ctimas en el municipio de Acac&iacute;as,
+                        Meta.<br />
+                        7. Fortalecimiento de la democracia e interlocuci&oacute;n entre la administraci&oacute;n
+                        municipal y la comunidad del municipio de Acacias, Meta.<br />
+                        8. Fortalecimiento institucional para mejorar la gesti&oacute;n de la administraci&oacute;n del
+                        municipio de Acac&iacute;as de acuerdo con sus competecias legales.<br />
                         9. Subsidio vigencia 2017 a los usuarios de los servicios publicos de acueducto, alcantarillado
-                        y aseo de los estratos uno, dos y tres del municipio de Acacías, Meta.
-                    </p>
+                        y aseo de los estratos uno, dos y tres del municipio de Acac&iacute;as, Meta.</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 <!-- Optional JavaScript -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 <script>
     function mostrarContenido(id) {
         console.log('Mostrar contenido con id:', id);
