@@ -1,0 +1,790 @@
+<!-- Pendiente: Agreagar colores de la bandera como el navbar original --><!-- Realizar un dropdown en el navbar -->
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Add the Bootstrap CSS link --><!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+<style type="text/css">
+    .h2,
+    h2 {
+        font-size: 30px !important;
+    }
+
+    .h3 {
+        font-size: 24px !important;
+    }
+
+    .principal_cont {
+        margin: 0;
+        padding: 0;
+    }
+
+    .blanco_c01,
+    .azul_c01 {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .info_cont01,
+    .inf_cont02 {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .titulo-cilindro {
+        text-align: center;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        margin-top: 80px;
+    }
+
+    .container_ps {
+        width: 80%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .botones_container {
+        width: 100%;
+        padding-right: 7.5px;
+        padding-left: 0%;
+        margin-right: auto;
+        margin-left: auto;
+        /* display: flex; */
+        flex: 1;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px
+    }
+
+    .titulo-cilindro h3 {
+        font-size: 20px;
+        margin: 20px 0;
+        font-family: 'Work Sans', sans-serif !important;
+        font-weight: bold;
+    }
+
+    .titulo-cilindro span {
+        font-size: 16px;
+    }
+
+    .blanco_c01 {
+        background-color: #ebebeb;
+        color: #333;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .info_cont01 {
+        background-color: #ebebeb;
+        color: #333;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        flex: 1;
+    }
+
+    .inf_cont02 {
+        background-color: #ebebeb;
+        color: #333;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        flex: 1;
+    }
+
+    .azul_c01 {
+        background-color: #3462ad;
+        color: #fff;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .inf_cont02 {
+        background-color: #3462ad;
+        color: #fff;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        flex: 1;
+    }
+
+    .logo-alcaldia {
+        margin-top: 6%;
+        margin-bottom: 35px;
+        text-align: center;
+    }
+
+
+    .nombre_c01 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .descripcion p,
+    .alcaldia p {
+        margin-top: 50px;
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .descripcion_01 p {
+        margin: 50px 0;
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .foto-persona {
+        position: relative;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 20px;
+        width: 200px;
+        height: 200px;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .foto-persona img {
+        width: 100%;
+        height: 100%;
+        padding-top: 8px;
+        padding-left: 4px;
+        object-fit: cover;
+        background-color: #fff;
+    }
+
+    .franja-oscura {
+        position: absolute;
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+        top: 5px;
+        left: 5px;
+        border: 5px solid #2c3e50;
+        border-radius: 80%;
+    }
+
+    .titulo_c01 h3 {
+        margin: 50px 0;
+        font-family: 'Work Sans', sans-serif !important;
+        font-weight: bold;
+        font-size: 20px !important;
+    }
+
+    .titulo-cilindro {
+        background-color: #2c3e50;
+        color: #fff;
+        padding: 1px;
+        border-radius: 60px 0px 0px 60px;
+        margin-bottom: 20px;
+        margin-right: 0;
+        letter-spacing: -1px;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: bold;
+        position: relative;
+    }
+
+    .nombre-persona {
+        /* margin-top: 56%; */
+        margin-bottom: 32px;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: bold;
+    }
+
+    .nombre-persona>p {
+        margin: 0px;
+    }
+
+    .alcaldia_c01 {
+        /* margin-top: 76px; */
+        font-family: 'Work Sans', sans-serif;
+        font-weight: bold;
+    }
+
+    .row_c01 {
+        font-family: Arial, sans-serif;
+        max-width: 1200px;
+        margin: auto;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #ffffff;
+    }
+
+    .row_c02 {
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        max-width: 1200px;
+        margin: auto;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #ffffff;
+    }
+
+    .principal_cont {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* .botones_container {
+justify-content: center;
+position: absolute;
+} */
+
+    .cont_btns {
+
+        display: flex;
+        /* justify-content: center; */
+        padding-right: 0px;
+        gap: 28px;
+        align-items: center;
+
+    }
+
+    .titulosBlancos,
+    .subtitulosBlancos {
+        color: white;
+    }
+
+    @keyframes slideInFromRight {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideOutToLeft {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+    @keyframes slideInFromLeft {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideOutToRight {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+
+
+    .row_c02,
+    .row_c03,
+    .row_c04,
+    .row_c05{
+        display: none;
+    }
+    .row_c01,
+    .row_c02,
+    .row_c03,
+    .row_c04,
+    .row_c05 {
+        
+        position: relative;
+        width: 100%;
+        height: auto;
+        z-index: 1;
+    }
+
+    .row_c01, .row_c02, .row_c03,.row_c04, .row_c05 {
+        animation: slideInFromRight 1s ease-out forwards;
+    }
+
+
+    .boton {
+        margin: 0 10px;
+    }
+
+    .btn-primary {
+        color: black;
+        font-weight: 600;
+        background-color: transparent;
+        border-color: transparent;
+
+    }
+
+    .sub-nav .navbar-nav {
+        display: flex;
+        padding: 10px;
+        flex-wrap: wrap;
+        justify-content: left;
+        align-items: center;
+    }
+
+    .nav-item {
+        list-style: none;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        background-color: transparent;
+
+        color: black;
+        font-weight: 600;
+        display: inline-block;
+    }
+
+    .open>.dropdown-menu {
+        min-width: auto;
+    }
+
+
+    .navbar-expand-lg .navbar-nav .dropdown-menu {
+        position: absolute;
+        border-radius: 8px;
+        background-color: #ebebeb;
+        min-width: none;
+
+    }
+
+    .btn-nav .dropdown-menu>li>a {
+        text-decoration: none;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        border-top: 5px solid #fbbb00;
+        border-bottom: 5px solid #078930;
+        margin: 20 0;
+    }
+
+    /* Estilos existentes para los enlaces del navbar */
+    .navbar-nav>li>a {
+        color: black;
+        /* O el color original de tus enlaces */
+        padding-left: 8px;
+
+    }
+
+    /* Agregar estilos para el hover */
+    .navbar-nav>li>a:hover {
+        /* Cambiar al color azul deseado */
+        background-color: #3462ad;
+        /* Cambiar el color del texto a blanco */
+        color: white;
+    }
+
+    .desplegable {
+        color: black;
+        font-weight: 600;
+        background-color: transparent;
+    }
+
+    .navbar-collapse {
+        align-items: center;
+    }
+
+    .nav-link {
+        width: 100%;
+        text-align: left;
+        padding-left: 8px
+    }
+
+    .contenido-micrositio {
+        margin-top: 50px;
+    }
+
+    .contenido-micrositio p {
+        font-size: large;
+    }
+
+
+    @media (max-width: 767px) {
+        .navbar .nav-link.btn {
+            /* display: block; */
+            width: 100%;
+            text-align: left;
+            /* Asegurarse de que estén alineados a la izquierda */
+        }
+    }
+
+    #navContent {
+        margin: 0px 6px;
+    }
+
+    #navContent,
+    #navbarDropdownMenuLink {
+        padding-left: 8px;
+    }
+
+    .navbar .navbar-toggle {
+        margin: 0px;
+        float: left;
+    }
+
+    .btn-nav {
+        color: black;
+        font-weight: 600;
+        background-color: transparent;
+        border-color: transparent;
+        text-decoration: none;
+    }
+
+    .btn-nav:hover {
+        text-decoration: underline;
+    }
+</style>
+<div class="principal_cont">
+    <div class="container_ps">
+        <nav class="sub-nav navbar navbar-expand-lg navbar-light bg-light">
+            <!-- Botón inicio que puede llevar al home --><!-- <a class="navbar-brand" href="#">Inicio</a> -->
+            <button type="button" class="btn-nav navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#navbarNavDropdown" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span style="font-size: 30px;" class="glyphicon glyphicon-menu-hamburger"></span>
+            </button>
+
+
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active"><a class="btn-nav nav-link btn-primary nav-link jefe boton_01"
+                            href="javascript:void(0);" id="navContent">Jefe <span class="sr-only">(current)</span></a>
+                        <!-- <a class="btn btn-primary nav-link jefe boton_01" href="javascript:void(0);">Jefe</a> -->
+                    </li>
+                    <li class="nav-item"><a class="btn-nav btn-primary nav-link boton_02" href="javascript:void(0);"
+                            id="navContent">Informaci&oacute;n de la oficina</a>
+                        <!-- <a href="javascript:void(0);" class="btn btn-primary nav-link info boton_02">Información</a> -->
+                    </li>
+                    <!-- <li class="btn-nav nav-item dropdown">
+                        <div class="dropdown">
+                            <button class="btn-nav btn-default dropdown-toggle" type="button" id="dropdownMenu1"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                Publicaciones
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a href="#">Edictos</a></li>
+                                <li>
+                                    <a class="btn-nav btn-primary nav-link boton_03" href="javascript:void(0);"
+                                        id="navContent">
+                                        Notificaciones
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="btn-nav btn-primary nav-link boton_04" href="javascript:void(0);" id="navContent">
+                            Proyectos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn-nav btn-primary nav-link boton_05" href="javascript:void(0);" id="navContent">
+                            Nuestro equipo
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn-nav btn-primary nav-link boton_06" href="javascript:void(0);" id="navContent">
+                            Encuéntranos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn-nav btn-primary nav-link boton_07" href="javascript:void(0);" id="navContent">
+                            Puntos VIVE DIGITAL
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="row_c01">
+            <div class="col-xs-12 col-md-6 blanco_c01">
+                <div>
+                    <div class="nombre_c01">
+                        <h2 style="margin-bottom: 10px">Martin Darío Vega Márquez</h2>
+                    </div>
+
+                    <div class="descripcion">
+                        <p>Ingeniero de sistemas de la universidad UNAD, especialista en gestión de proyectos de la
+                            Universidad de Los Llanos y maestría en innovación de la Fundación Universitaria del Área
+                            Andina, con más de 28 años de experiencia en proyectos relacionados con el acceso, uso y
+                            apropiación de Tecnologías de la Información y Comunicación, TIC. Se ha desempeñado como
+                            secretario y asesor TIC en varias entidades del Gobierno, asesor y secretario en varios
+                            municipios del Meta y fue gerente de Gobierno Digital en la Gobernación del Meta, liderando
+                            iniciativas significativas en el ámbito de las tecnologías digitales.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="logo-alcaldia"><img alt="Logo de la Alcaldía"
+                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria11942.png"
+                        style="height:50px; margin-bottom:1rem" /></div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 azul_c01">
+                <div>
+                    <div class="foto-persona">
+                        <div class="franja-oscura">&nbsp;</div>
+                        <img alt="Foto de la Persona"
+                            src="https://www.acacias.gov.co/info/acacias_se/media/galeria11939.png" />
+                    </div>
+
+                    <div class="titulo_c01">
+                        <h3 style="color: white">OFICINA DE TECNOLOGÍAS<br />
+                            DE LA INFORMACIÓN<br />Y LAS TELECOMUNICACIONES</h3>
+                    </div>
+
+                    <div class="titulo-cilindro">
+                        <h3 style="color: white"><span>EQUIPO DE</span><br />
+                            GOBIERNO</h3>
+                    </div>
+                </div>
+
+                <div class="nombre-persona">
+                    <p><span class="alcaldia_c01">CARLOS JULIO<br />
+                            PLATA BECERRA<br />
+                            Alcalde</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row_c02">
+            <div class="col-xs-12 col-md-6 info_cont01">
+                <div class="contenido_inf">
+                    <div class="info_c01">
+                        <h2 style="margin-bottom: 10px">Misi&oacute;n</h2>
+                    </div>
+
+                    <div class="descripcion_01">
+                        <p>Promover el acceso, uso efectivo y apropiación masivos de las TIC, a través de políticas y
+                            programas, para mejorar la calidad de vida de cada acacireño.</p>
+                    </div>
+
+                    <div class="info_c02">
+                        <h2 style="margin-bottom: 10px">Objetivos</h2>
+                    </div>
+
+                    <div class="descripcion_01">
+                        <p>1. Diseñar, formular, adoptar y promover las políticas, planes, programas y proyectos del
+                            Sector de Tecnologías de la Información y las Comunicaciones, en correspondencia con la
+                            Constitución Política ,la ley entre otras disposiciones del Ministerio de Tecnologías de la
+                            Información y las Comunicaciones, con el fin de contribuir al desarrollo económico, social y
+                            político de la Nación y elevar el bienestar de los acacireños.<br>
+                            2. Promover el uso y apropiación de las Tecnologías de la Información y las Comunicaciones
+                            entre los ciudadanos, las empresas, la administración municipal y demás instancias.<br>
+                            3. Impulsar el desarrollo y fortalecimiento del Sector de Tecnologías de la Información y
+                            las Comunicaciones, promover la investigación e innovación, buscando su competitividad y
+                            avance tecnológico conforme al entorno municipal.<br />
+                        </p>
+                    </div>
+                    <div class="info_c03">
+                    <h2 style="margin-bottom: 10px">Funciones</h2>
+                </div>
+                <div class="descripcion_01">
+                    <p>
+                        • Asesorar a la Alcaldía y sus dependencias en la elaboración de políticas y lineamientos
+                        estratégicos para el desarrollo y uso de los sistemas de información y las telecomunicaciones,
+                        TIC, en la gestión municipal y en el fortalecimiento del gobierno en línea.<br>
+                        • Planear y garantizar el uso de manera integral y coordinada de las tecnologías de la
+                        información y las telecomunicaciones, TIC, como soporte básico de la gestión municipal y de los
+                        Sistemas de Gestión de la Calidad y Desarrollo Administrativo de las dependencias del
+                        Municipio.<br>
+                        • Apoyar y dar soporte a las dependencias de la Alcaldía para implantar sistemas de información
+                        que permitan el desarrollo de programas y proyectos de gobierno en línea, de manera articulada e
+                        integrada, con el propósito de asegurar la creación de canales de comunicación, servicios y
+                        trámites interactivos con la comunidad.<br />
+                        
+                    </p>
+                </div>
+
+                    <div class="logo-alcaldia"><img alt="Logo de la Alcaldía"
+                            src="https://www.acacias.gov.co/info/acacias_se/media/galeria11942.png"
+                            style="height:50px" /></div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 inf_cont02">
+                <!-- <div class="descripcion_01">
+                    <p><br />
+                    </p>
+                </div> -->
+
+                <h2 class="titulosBlancos" style="margin-bottom: 10px;">‎</h2>
+
+                <div class="descripcion_01">
+                    <p>
+                        • Emitir conceptos técnicos relacionados con las nuevas tecnologías y acompañar los procesos de
+                        adquisiciones, sistematización, operación, soporte, Interventoría y formación que requieran la
+                        Administración Municipal y sus entidades, así como el manejo de bases de datos, archivos y
+                        documentos electrónicos.<br>
+                        • Administrar la infraestructura tecnológica y de comunicaciones, asegurando su disponibilidad, correcto funcionamiento y la adecuada utilización y aprovechamiento de los recursos informáticos y tecnológicos. Lo anterior incluye conservar o asesorar la custodia de los archivos electrónicos y la memoria institucional de la gestión municipal.<br>
+                        • Evaluar y actualizar de manera permanente los sistemas ya implementados, o la creación de
+                        nuevos sistemas, de acuerdo con los cambios tecnológicos, organizacionales y las necesidades de servicios ofrecidos o demandados por el Municipio o la ciudadanía.<br>
+                        • Planear y fortalecer el funcionamiento de servicios por la Intranet en la Alcaldía y sus
+                        dependencias, para mejorar la toma de decisiones, trabajos en equipo y el desarrollo de
+                        funciones intersectoriales.<br>
+                        • Apoyar el cambio de los flujos documentales en papel por soportes y medios electrónicos,
+                        utilizando las herramientas que brindan las TIC.<br>
+                        • Apoyar los procesos informáticos de la Alcaldía y el mantenimiento de la base computacional y de telecomunicaciones.<br>
+                        • Verificar el adecuado cumplimiento de los requisitos técnicos establecidos para el software,
+                        hardware, y de sistemas de comunicaciones de forma que se ajusten a las necesidades de la
+                        Alcaldía y dentro de los estándares de mercado.<br>
+                        • Propender por el buen funcionamiento y disponibilidad del hardware y software funcional de la
+                        Alcaldía.<br>
+                        • Administrar, mantener y actualizar los servicios y plataformas informáticas de acuerdo con el
+                        desarrollo de las TIC, las necesidades de la comunidad educativa y la comunidad en general.<br>
+                        • Liderar la masificación de las tecnologías de la información y las telecomunicaciones en la
+                        comunidad.<br>
+                        • Mantener permanente comunicación con entidades del sector de las comunicaciones en el nivel
+                        nacional, departamental y local y promover la aplicación de las políticas públicas en materia de
+                        tecnologías de la información y las telecomunicaciones.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row_c03">
+            <h2>Notificaciones</h2>
+        </div>
+
+        <div class="row_c04">
+            <div class="titulo-micrositio">
+                <h2>Proyectos</h2>
+            </div>
+            <div class=" contenido-micrositio">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, corporis obcaecati hic sequi deserunt molestias eius! Consequuntur, repellat deserunt natus saepe reiciendis modi, id suscipit dolorum sint nulla iusto placeat?</p>
+            </div>
+        </div>
+
+        <div class="row_c05">
+            <div class="titulo-micrositio">
+                <h2>Nuestro equipo</h2>
+            </div>
+            <div class="contenido-micrositio">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, corporis obcaecati hic sequi deserunt molestias eius! Consequuntur, repellat deserunt natus saepe reiciendis modi, id suscipit dolorum sint nulla iusto placeat?</p>
+            </div>
+            
+        </div>
+
+        <div class="row_c06">
+            <div class="titulo-micrositio">
+                <h2>Encuéntranos</h2>
+            </div>
+            <div class="contenido-micrositio">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, corporis obcaecati hic sequi deserunt molestias eius! Consequuntur, repellat deserunt natus saepe reiciendis modi, id suscipit dolorum sint nulla iusto placeat?</p>
+            </div>
+            
+        </div>
+
+        <div class="row_c07">
+            <div class="titulo-micrositio">
+                <h2>Puntos Vive Digital</h2>
+            </div>
+            <div class="contenido-micrositio">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, corporis obcaecati hic sequi deserunt molestias eius! Consequuntur, repellat deserunt natus saepe reiciendis modi, id suscipit dolorum sint nulla iusto placeat?</p>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!-- Optional JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function mostrarContenido(id) {
+        console.log('Mostrar contenido con id:', id);
+    }
+
+    $(document).ready(function () {
+        $(".boton_01").click(function () {
+            $(".row_c02").hide();
+            $(".row_c03").hide();
+            $(".row_c04").hide();
+            $(".row_c05").hide();
+            $(".row_c06").hide();
+            $(".row_c07").hide();
+            $(".row_c01").show().css("display", "flex");
+
+        });
+
+        $(".boton_02").click(function () {
+            $(".row_c01").hide();
+            $(".row_c03").hide();
+            $(".row_c04").hide();
+            $(".row_c05").hide();
+            $(".row_c06").hide();
+            $(".row_c07").hide();
+            $(".row_c02").show().css("display", "flex");
+        });
+
+        $(".boton_03").click(function () {
+            $(".row_c01").hide();
+            $(".row_c02").hide();
+            $(".row_c04").hide();
+            $(".row_c05").hide();
+            $(".row_c06").hide();
+            $(".row_c07").hide();
+            $(".row_c03").show().css("display", "flex");
+        });
+
+        $(".boton_04").click(function () {
+            $(".row_c01").hide();
+            $(".row_c02").hide();
+            $(".row_c03").hide();
+            $(".row_c05").hide();
+            $(".row_c06").hide();
+            $(".row_c07").hide();
+            $(".row_c04").show().css("display", "block");
+        });
+        $(".boton_05").click(function () {
+            $(".row_c01").hide();
+            $(".row_c02").hide();
+            $(".row_c03").hide();
+            $(".row_c04").hide();
+            $(".row_c06").hide();
+            $(".row_c07").hide();
+            $(".row_c05").show().css("display", "block");
+        });
+        $(".boton_06").click(function () {
+            $(".row_c01").hide();
+            $(".row_c02").hide();
+            $(".row_c03").hide();
+            $(".row_c04").hide();
+            $(".row_c05").hide();
+            $(".row_c07").hide();
+            $(".row_c06").show().css("display", "block");
+        });
+        $(".boton_07").click(function () {
+            $(".row_c01").hide();
+            $(".row_c02").hide();
+            $(".row_c03").hide();
+            $(".row_c04").hide();
+            $(".row_c05").hide();
+            $(".row_c06").hide();
+            $(".row_c07").show().css("display", "block");
+        });
+    });
+</script>
