@@ -1,0 +1,769 @@
+<!-- Pendiente: Agreagar colores de la bandera como el navbar original --><!-- Realizar un dropdown en el navbar -->
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Add the Bootstrap CSS link --><!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+<style type="text/css">
+    .h2,
+    h2 {
+        font-size: 30px !important;
+    }
+
+    .h3 {
+        font-size: 24px !important;
+    }
+
+    .principal_cont {
+        margin: 0;
+        padding: 0;
+    }
+
+    .blanco_c01,
+    .azul_c01 {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .info_cont01,
+    .inf_cont02 {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .titulo-cilindro {
+        text-align: center;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        margin-top: 80px;
+    }
+
+    .container_ps {
+        width: 80%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .botones_container {
+        width: 100%;
+        padding-right: 7.5px;
+        padding-left: 0%;
+        margin-right: auto;
+        margin-left: auto;
+        /* display: flex; */
+        flex: 1;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px
+    }
+
+    .titulo-cilindro h3 {
+        font-size: 20px;
+        margin: 20px 0;
+        font-family: 'Work Sans', sans-serif !important;
+        font-weight: bold;
+    }
+
+    .titulo-cilindro span {
+        font-size: 16px;
+    }
+
+    .blanco_c01 {
+        background-color: #ebebeb;
+        color: #333;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .info_cont01 {
+        background-color: #ebebeb;
+        color: #333;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        flex: 1;
+    }
+
+    .inf_cont02 {
+        background-color: #ebebeb;
+        color: #333;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        flex: 1;
+    }
+
+    .azul_c01 {
+        background-color: #3462ad;
+        color: #fff;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .inf_cont02 {
+        background-color: #3462ad;
+        color: #fff;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        flex: 1;
+    }
+
+    .logo-alcaldia {
+        margin-top: 6%;
+        margin-bottom: 35px;
+        text-align: center;
+    }
+
+
+    .nombre_c01 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .descripcion p,
+    .alcaldia p {
+        margin-top: 50px;
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .descripcion_01 p {
+        margin: 50px 0;
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .foto-persona {
+        position: relative;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 20px;
+        width: 200px;
+        height: 200px;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .foto-persona img {
+        width: 100%;
+        height: 100%;
+        padding-top: 0px;
+        padding-bottom: 8px;
+        padding-left: 8px;
+        object-fit: cover;
+        background-color: #fff;
+    }
+
+    .franja-oscura {
+        position: absolute;
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+        top: 5px;
+        left: 5px;
+        border: 5px solid #2c3e50;
+        border-radius: 80%;
+    }
+
+    .titulo_c01 h3 {
+        margin: 50px 0;
+        font-family: 'Work Sans', sans-serif !important;
+        font-weight: bold;
+        font-size: 20px !important;
+    }
+
+    .titulo-cilindro {
+        background-color: #2c3e50;
+        color: #fff;
+        padding: 1px;
+        border-radius: 60px 0px 0px 60px;
+        margin-bottom: 20px;
+        margin-right: 0;
+        letter-spacing: -1px;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: bold;
+        position: relative;
+    }
+
+    .nombre-persona {
+        /* margin-top: 56%; */
+        margin-bottom: 32px;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: bold;
+    }
+
+    .nombre-persona>p {
+        margin: 0px;
+    }
+
+    .alcaldia_c01 {
+        /* margin-top: 76px; */
+        font-family: 'Work Sans', sans-serif;
+        font-weight: bold;
+    }
+
+    .row_c01 {
+        font-family: Arial, sans-serif;
+        max-width: 1200px;
+        margin: auto;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #ffffff;
+    }
+
+    .row_c02 {
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        max-width: 1200px;
+        margin: auto;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #ffffff;
+    }
+
+    .principal_cont {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* .botones_container {
+justify-content: center;
+position: absolute;
+} */
+
+    .cont_btns {
+
+        display: flex;
+        /* justify-content: center; */
+        padding-right: 0px;
+        gap: 28px;
+        align-items: center;
+
+    }
+
+    .titulosBlancos,
+    .subtitulosBlancos {
+        color: white;
+    }
+
+    @keyframes slideInFromRight {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideOutToLeft {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+    @keyframes slideInFromLeft {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideOutToRight {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+
+    .row_c02,
+    .row_c03,
+    .row_c04,
+    .row_c05{
+        display: none;
+    }
+    .row_c01,
+    .row_c02,
+    .row_c03,
+    .row_c04,
+    .row_c05 {
+        
+        position: relative;
+        width: 100%;
+        height: auto;
+        z-index: 1;
+    }
+
+    .row_c01, .row_c02, .row_c03,.row_c04, .row_c05 {
+        animation: slideInFromRight 1s ease-out forwards;
+    }
+
+
+    .boton {
+        margin: 0 10px;
+    }
+
+    .btn-primary {
+        color: black;
+        font-weight: 600;
+        background-color: transparent;
+        border-color: transparent;
+
+    }
+
+    .sub-nav .navbar-nav {
+        display: flex;
+        padding: 10px;
+        flex-wrap: wrap;
+        justify-content: left;
+        align-items: center;
+    }
+
+    .nav-item {
+        list-style: none;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        background-color: transparent;
+
+        color: black;
+        font-weight: 600;
+        display: inline-block;
+    }
+
+    .open>.dropdown-menu {
+        min-width: auto;
+    }
+
+
+    .navbar-expand-lg .navbar-nav .dropdown-menu {
+        position: absolute;
+        border-radius: 8px;
+        background-color: #ebebeb;
+        min-width: none;
+
+    }
+
+    .btn-nav .dropdown-menu>li>a {
+        text-decoration: none;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        border-top: 5px solid #fbbb00;
+        border-bottom: 5px solid #078930;
+        margin: 20 0;
+    }
+
+    /* Estilos existentes para los enlaces del navbar */
+    .navbar-nav>li>a {
+        color: black;
+        /* O el color original de tus enlaces */
+        padding-left: 8px;
+
+    }
+
+    /* Agregar estilos para el hover */
+    .navbar-nav>li>a:hover {
+        /* Cambiar al color azul deseado */
+        background-color: #3462ad;
+        /* Cambiar el color del texto a blanco */
+        color: white;
+    }
+
+    .desplegable {
+        color: black;
+        font-weight: 600;
+        background-color: transparent;
+    }
+
+    .navbar-collapse {
+        align-items: center;
+    }
+
+    .nav-link {
+        width: 100%;
+        text-align: left;
+        padding-left: 8px
+    }
+
+    .contenido-micrositio {
+        margin-top: 50px;
+    }
+
+    .contenido-micrositio p {
+        font-size: large;
+    }
+
+
+    @media (max-width: 767px) {
+        .navbar .nav-link.btn {
+            /* display: block; */
+            width: 100%;
+            text-align: left;
+            /* Asegurarse de que estén alineados a la izquierda */
+        }
+    }
+
+    #navContent {
+        margin: 0px 6px;
+    }
+
+    #navContent,
+    #navbarDropdownMenuLink {
+        padding-left: 8px;
+    }
+
+    .navbar .navbar-toggle {
+        margin: 0px;
+        float: left;
+    }
+
+    .btn-nav {
+        color: black;
+        font-weight: 600;
+        background-color: transparent;
+        border-color: transparent;
+        text-decoration: none;
+    }
+
+    .btn-nav:hover {
+        text-decoration: underline;
+    }
+</style>
+<div class="principal_cont">
+    <div class="container_ps">
+        <nav class="sub-nav navbar navbar-expand-lg navbar-light bg-light">
+            <!-- Botón inicio que puede llevar al home --><!-- <a class="navbar-brand" href="#">Inicio</a> -->
+            <button type="button" class="btn-nav navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#navbarNavDropdown" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span style="font-size: 30px;" class="glyphicon glyphicon-menu-hamburger"></span>
+            </button>
+
+
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active"><a class="btn-nav nav-link btn-primary nav-link jefe boton_01" href="javascript:void(0);" id="navContent">Jefe <span class="sr-only">(current)</span></a>
+                        <!-- <a class="btn btn-primary nav-link jefe boton_01" href="javascript:void(0);">Jefe</a> -->
+                    </li>
+                    <li class="nav-item"><a class="btn-nav btn-primary nav-link boton_02" href="javascript:void(0);"
+                            id="navContent">Informaci&oacute;n de la secretar&iacute;a</a>
+                        <!-- <a href="javascript:void(0);" class="btn btn-primary nav-link info boton_02">Información</a> -->
+                    </li>
+                    <li class="btn-nav nav-item dropdown">
+                        <div class="dropdown">
+                            <button class="btn-nav btn-default dropdown-toggle" type="button" id="dropdownMenu1"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                Publicaciones
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a href="#">Edictos</a></li>
+                                <li>
+                                    <a class="btn-nav btn-primary nav-link boton_03" href="javascript:void(0);" id="navContent">
+                                        Notificaciones
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn-nav btn-primary nav-link boton_04" href="javascript:void(0);" id="navContent">
+                            Proyectos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn-nav btn-primary nav-link boton_05" href="javascript:void(0);" id="navContent">
+                            Nuestro equipo
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="row_c01">
+            <div class="col-xs-12 col-md-6 blanco_c01">
+                <div>
+                    <div class="nombre_c01">
+                        <h2 style="margin-bottom: 10px">Sandra Patricia Fonseca Avella</h2>
+                    </div>
+
+                    <div class="descripcion">
+                        <p>Abogada, mag&iacute;ster en derecho administrativo y especialista en derecho urbano. Cuenta
+                            con m&aacute;s de 18 a&ntilde;os de experiencia profesional en el sector p&uacute;blico,
+                            asesorando jur&iacute;dicamente y ejerciendo cargos de nivel directivo, se ha
+                            desempe&ntilde;ado profesionalmente en entidades p&uacute;blicas de diferente orden como la
+                            Secretar&iacute;a Distrital de Planeaci&oacute;n, la Unidad Administrativa Especial de
+                            Catastro Distrital, la Corporaci&oacute;n Aut&oacute;noma Regional de Cundinamarca, la
+                            Superintendencia de Servicios P&uacute;blicos Domiciliarios, Central de Inversiones
+                            S.A.<br />
+                            <br />
+                            Tiene experiencia y conocimiento en el marco de la gesti&oacute;n jur&iacute;dica,
+                            administrativa, urban&iacute;stica, de ordenamiento territorial, integraci&oacute;n y
+                            asociatividad territorial, as&iacute; como en temas catastrales y ambientales.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="logo-alcaldia"><img alt="Logo de la Alcaldía"
+                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria11942.png"
+                        style="height:50px; margin-bottom:1rem" /></div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 azul_c01">
+                <div>
+                    <div class="foto-persona">
+                        <div class="franja-oscura">&nbsp;</div>
+                        <img alt="Foto de la Persona"
+                            src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png" />
+                    </div>
+
+                    <div class="titulo_c01">
+                        <h3 style="color: white">SECRETAR&Iacute;A<br />
+                            DE PLANEACI&Oacute;N Y VIVIENDA</h3>
+                    </div>
+
+                    <div class="titulo-cilindro">
+                        <h3 style="color: white"><span>EQUIPO DE</span><br />
+                            GOBIERNO</h3>
+                    </div>
+                </div>
+
+                <div class="nombre-persona">
+                    <p><span class="alcaldia_c01">CARLOS JULIO<br />
+                            PLATA BECERRA<br />
+                            Alcalde</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row_c02">
+            <div class="col-xs-12 col-md-6 info_cont01">
+                <div class="contenido_inf">
+                    <div class="info_c01">
+                        <h2 style="margin-bottom: 10px">Misi&oacute;n</h2>
+                    </div>
+
+                    <div class="descripcion_01">
+                        <p>Formular directrices de desarrollo del municipio de Acac&iacute;as para que le permita al
+                            sector p&uacute;blico y privado visualizar una imagen objetivo de municipio deseado,
+                            proyectando el futuro y actuando ordenadamente para alcanzarlo; para el logro de su
+                            misi&oacute;n, la oficina asesora de planeaci&oacute;n formular&aacute; las pol&iacute;ticas
+                            p&uacute;blicas, coordinar&aacute; la acci&oacute;n p&uacute;blica municipal,
+                            controlar&aacute; y evaluar&aacute; su gesti&oacute;n y alcanzar&aacute; un sistema de
+                            gesti&oacute;n p&uacute;blica de alta responsabilidad.</p>
+                    </div>
+
+                    <div class="info_c02">
+                        <h2 style="margin-bottom: 10px">Objetivos</h2>
+                    </div>
+
+                    <div class="descripcion_01">
+                        <p>1. Establecer procedimientos y mecanismos para la elaboraci&oacute;n, aprobaci&oacute;n,
+                            ejecuci&oacute;n, seguimiento, evaluaci&oacute;n y control del Plan de Desarrollo y el Plan
+                            B&aacute;sico de Ordenamiento Territorial, con una visi&oacute;n prospectiva y en
+                            armon&iacute;a con los planes nacional y departamental.<br />
+                            2. Direccionar la formulaci&oacute;n de los planes parciales, zonales, y de acci&oacute;n de
+                            conformidad con la legislaci&oacute;n vigente y lo dispuesto en el Plan de Desarrollo de
+                            Acacias.<br />
+                            3. Proyectar al Municipio de Acacias en su entorno regional, nacional y definir mecanismos
+                            de articulaci&oacute;n.<br />
+                            4. Proponer la estructura de la organizaci&oacute;n municipal con base en una visi&oacute;n
+                            prospectiva, que consulte la din&aacute;mica y cambios del entorno.<br />
+                            5. Direccionar el modelo de desarrollo para confrontar lo deseable con lo posible, y
+                            concretar un municipio con desarrollo integral y sostenible.<br />
+                            6. Asesorar al Alcalde, y a las entidades del orden municipal en la toma de decisiones de
+                            conformidad con las normas y los planes del orden nacional, departamental y municipal.<br />
+                            7. Planificar el desarrollo socioecon&oacute;mico del territorio como insumo b&aacute;sico
+                            para la elaboraci&oacute;n de los diferentes planes y programas, as&iacute; como la
+                            generaci&oacute;n de indicadores y adopci&oacute;n de nuevas pol&iacute;ticas.<br />
+                            8. Direccionar la formulaci&oacute;n de los proyectos que deben realizar las diferentes
+                            secretar&iacute;as e institutos descentralizados del orden municipal, con el fin de cumplir
+                            con lo dispuesto en los Planes de Desarrollo y Ordenamiento Territorial.<br />
+                            9. Proponer mecanismos modernos de evaluaci&oacute;n en lo pertinente al desarrollo social,
+                            econ&oacute;mico y f&iacute;sico, el espacio p&uacute;blico, los usos del suelo y la
+                            gesti&oacute;n urban&iacute;stica de las curadur&iacute;as.<br />
+                            10. Asegurar que las diferentes unidades y dependencias generen informaci&oacute;n oportuna
+                            y confiable, con el fin de analizarla y entregarla como valor agregado para la toma de
+                            decisiones y el ajuste de las pol&iacute;ticas p&uacute;blicas.<br />
+                        </p>
+                    </div>
+                    <!-- <div class="info_c03">
+                    <h2 style="margin-bottom: 10px">Funciones</h2>
+                </div>
+                <div class="descripcion_01">
+                    <p>
+                        ELIMINAR
+                    </p>
+                </div> -->
+
+                    <div class="logo-alcaldia"><img alt="Logo de la Alcaldía"
+                            src="https://www.acacias.gov.co/info/acacias_se/media/galeria11942.png"
+                            style="height:50px" /></div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 inf_cont02">
+                <div class="descripcion_01">
+                    <p><br />
+                        <br />
+                        11. Afianzar metodolog&iacute;as para el seguimiento y evaluaci&oacute;n del Plan de
+                        Desarrollo y del Plan B&aacute;sico de Ordenamiento Territorial, los Planes Parciales,
+                        zonales, as&iacute; como la participaci&oacute;n ciudadana en el proceso de
+                        planeaci&oacute;n.<br />
+                        12. Formular el Plan Operativo Anual de Inversiones.<br />
+                        13. Coordinar la acci&oacute;n de las entidades municipales, departamentales y nacionales en
+                        el municipio con miras al cumplimiento del plan municipal.<br />
+                        14. Elaborar el Plan Anual y Plurianual de Inversiones del Municipio.<br />
+                        15. Dirigir, organizar y sistematizar el banco de programas y proyectos de inversi&oacute;n
+                        municipal.<br />
+                        16. Proponer y guiar la aplicaci&oacute;n de los instrumentos de estratificaci&oacute;n, a
+                        fin de propender por el modelo mas equitativo para el Municipio.<br />
+                        17. Guiar la planeaci&oacute;n financiera dentro de los par&aacute;metros legales.
+                        18. Guiar la estructura organizacional de mediano y largo plazo que permita adaptarla a los
+                        nuevos retos de la localizaci&oacute;n, identificar las tendencias y procesos de cambio en el
+                        contexto regional, nacional que inciden o determinan las condiciones de desarrollo de la ciudad
+                        y su poblaci&oacute;n, para ser incorporadas en la formulaci&oacute;n de escenarios de futuro y
+                        proyectos de largo plazo.<br />
+                        19. Guiar la demanda de informaci&oacute;n de los usuarios, sobre aspectos de naturaleza social,
+                        econ&oacute;mica, demogr&aacute;fica, f&iacute;sico espacial, ambiental, y legal, relacionados
+                        con los procesos de gesti&oacute;n, planeaci&oacute;n, investigaci&oacute;n y desarrollo del
+                        Municipio de Acacias.<br />
+                        20. Formular, desarrollar y direccionar la implementaci&oacute;n de los sistemas de
+                        gesti&oacute;n administrativos
+                    </p>
+                </div>
+
+                <h2 class="titulosBlancos" style="margin-bottom: 10px;">Funciones</h2>
+
+                <div class="descripcion_01">
+                    <p>1. Formular las pol&iacute;ticas p&uacute;blicas del municipio de acacias.<br />
+                        2. Formular, planes, programas y proyectos.<br />
+                        3. Coordinar la acci&oacute;n de las entidades p&uacute;blicas de los niveles nacional,
+                        departamental y municipal.<br />
+                        4. Hacer el seguimiento del plan de desarrollo municipal.<br />
+                        5. Evaluar la gesti&oacute;n y resultados de las entidades p&uacute;blicas municipales.<br />
+                        6. Desarrollar y aplicar los instrumentos de ley para lograr un desarrollo urbano y rural
+                        ordenado.<br />
+                        7. Verificar que el desarrollo territorial del municipio se realice conforme a la normatividad
+                        vigente. (PBOT).</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row_c03">
+            <h2>Notificaciones</h2>
+        </div>
+
+        <div class="row_c04">
+            <div class="titulo-micrositio">
+                <h2>Proyectos</h2>
+            </div>
+            <div class=" contenido-micrositio">
+                <p>1. Construcci&oacute;n y adecuaci&oacute;n de la sala de necropsia cementerio central del
+                    municipio de Acac&iacute;as, Meta, Orinoqu&iacute;a.<br />
+                    2. Adquisici&oacute;n de predios para el desarrollo de los programas de vivienda de la
+                    administracion municipal en e municipio de Acac&iacute;as, Meta, Orinoqu&iacute;a.<br />
+                    3. Capacitaci&oacute;n y formacion para el empleo y generacion de empresa en el Municipio de
+                    Acac&iacute;as, Meta, Orinoqu&iacute;a.<br />
+                    4. Construcci&oacute;n obras de urbanismo proyecto de vivienda de inter&eacute;s social, para
+                    vivir bien, en el municipio de Acac&iacute;as.<br />
+                    5. Desarrollo de acciones con enfoque diferencial conducentes a brindar atenci&oacute;n,
+                    asistencia y reparaci&oacute;n integral a las v&iacute;ctimas en el municipio de Acac&iacute;as,
+                    Meta.<br />
+                    7. Fortalecimiento de la democracia e interlocuci&oacute;n entre la administraci&oacute;n
+                    municipal y la comunidad del municipio de Acacias, Meta.<br />
+                    8. Fortalecimiento institucional para mejorar la gesti&oacute;n de la administraci&oacute;n del
+                    municipio de Acac&iacute;as de acuerdo con sus competecias legales.<br />
+                    9. Subsidio vigencia 2017 a los usuarios de los servicios publicos de acueducto, alcantarillado
+                    y aseo de los estratos uno, dos y tres del municipio de Acac&iacute;as, Meta.</p>
+            </div>
+        </div>
+
+        <div class="row_c05">
+            <div class="titulo-micrositio">
+                <h2>Nuestro equipo</h2>
+            </div>
+            <div class="contenido-micrositio">
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Optional JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function mostrarContenido(id) {
+        console.log('Mostrar contenido con id:', id);
+    }
+
+    $(document).ready(function () {
+        $(".boton_01").click(function () {           
+                    $(".row_c02").hide();
+                    $(".row_c03").hide();
+                    $(".row_c04").hide();
+                    $(".row_c05").hide();
+                    $(".row_c01").show().css("display", "flex");
+            
+        });
+
+        $(".boton_02").click(function () {            
+                $(".row_c01").hide();
+                    $(".row_c03").hide();
+                    $(".row_c04").hide();
+                    $(".row_c05").hide();
+                    $(".row_c02").show().css("display", "flex");            
+        });
+
+        $(".boton_03").click(function () {                            
+            $(".row_c01").hide();
+                $(".row_c02").hide();
+                $(".row_c04").hide();
+                $(".row_c05").hide();
+                $(".row_c03").show().css("display", "inline-block");        
+    });
+
+        $(".boton_04").click(function () {                            
+                $(".row_c01").hide();
+                    $(".row_c02").hide();
+                    $(".row_c03").hide();
+                    $(".row_c05").hide();
+                    $(".row_c04").show().css("display", "inline-block");            
+        });
+        $(".boton_05").click(function () {
+                    $(".row_c01").hide();
+                    $(".row_c02").hide();
+                    $(".row_c03").hide();
+                    $(".row_c04").hide();
+                    $(".row_c05").show().css("display", "inline-block");
+        });
+    });
+</script>

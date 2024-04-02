@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Team - TIC Office</title>
+    <!-- Bootstrap 3.3.7 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .header-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 50px;
+        }
+        .team-section {
+            padding: 50px 0;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .carousel-inner .item {
+            text-align: center;
+        }
+        .team-card {
+            display: inline-block;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            margin: 10px;
+            width: 300px; /* Adjust based on your preference */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .team-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .team-card h3, .team-card p {
+            margin: 0;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<img src="header_image_url.jpg" alt="Our Office" class="header-image">
+
+<div class="container team-section">
+    <h2 class="text-center" style="margin-bottom: 30px;">Meet Our Team</h2>
+    <div id="team-carousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#team-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#team-carousel" data-slide-to="1"></li>
+            <li data-target="#team-carousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <!-- Team Member Card -->
+                <div class="team-card">
+                    <img src="member1_picture_url.jpg" alt="Team Member">
+                    <h3>Member Name</h3>
+                    <p>Job Title</p>
+                </div>
+                <!-- More cards can be added here for the same slide -->
+            </div>
+            <div class="item">
+                <!-- Another Team Member Card -->
+                <div class="team-card">
+                    <img src="Modified.png" alt="Team Member">
+                    <h3>Andrés Santiago Vega Franco</h3>
+                    <p>QA & Desarrollador Frontend</p>
+                </div>
+                <!-- Repeat the structure for more members or slides -->
+            </div>
+            <!-- Additional items -->
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#team-carousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#team-carousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
