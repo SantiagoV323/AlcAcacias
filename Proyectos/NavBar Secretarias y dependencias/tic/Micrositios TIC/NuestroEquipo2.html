@@ -8,7 +8,9 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #eee;
+            /* background-color: #eee; */
+            background: rgb(34, 193, 195);
+            background: linear-gradient(0deg, rgba(34, 193, 195, 0.5354516806722689) 0%, rgba(244, 241, 247, 0.44861694677871145) 98%, rgba(244, 241, 247, 0.44861694677871145) 100%);
         }
 
         .team-section {
@@ -16,6 +18,12 @@
         }
 
         .team-member {
+            display: flex;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* Esto ayuda a empujar el lorem ipsum hacia abajo */
+
             background: rgba(255, 255, 255, 0.12);
             border-radius: 16px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -25,13 +33,15 @@
         }
 
         .team-member img {
-            max-height: 220px;
+            height: 220px;
             width: auto;
+            display: block;
             margin: 0 auto 15px;
             border-radius: 4px;
         }
 
         .team-member h3 {
+            min-height: 60px;
             margin: 15px 0 5px;
             font-size: 24px;
         }
@@ -70,14 +80,30 @@
         }
 
         .contenedor-supervisores {
-            display: flex;
+            display: grid;
+            justify-content: start;
+            justify-items: center; /*centrar las tarjetas */
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
-            margin: 0 20px;
+            /* margin: 0 auto; ESTO HACE QUE SE CENTREN LAS CARDS EN RESOLUCIONES GRANDES */
+            padding: 0 20px;
+            max-width: 100%;
         }
 
         .col-sm-4 {
             width: auto;
             max-width: 300px;
+        }
+
+        .juntar-cards {
+            /*justify-content: center;*/ /*para ubicar a la izquierda las cards en resoluciones pequeñas*/
+            display: flex; 
+        }
+
+        @media (max-width: 459px){
+            .juntar-cards{
+                justify-content: center;
+            }
         }
     </style>
 </head>
@@ -107,70 +133,71 @@
             <div>
                 <h3 class="subtitulo">Planta</h3>
             </div>
-            <!-- SUPERVISORES -->
-
-            <div class="contenedor-supervisores">
-                <div class="row text-center tarjetas-supervisores">
-                    <div class="col-sm-4">
-                        <div class="team-member">
-                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12802.png"
-                                alt="Rodolfo Díaz clavijo" class="img-responsive center-block">
-                            <h3>Rodolfo Díaz clavijo</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+            <!-- Planta -->
+            <div class="juntar-cards">
+                <div class="contenedor-supervisores">
+                    <div class="row text-center tarjetas-supervisores">
+                        <div class="col-sm-4">
+                            <div class="team-member">
+                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12802.png"
+                                    alt="Rodolfo Díaz clavijo" class="img-responsive center-block">
+                                <h3>Rodolfo Díaz clavijo</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row text-center tarjetas-supervisores">
-                    <div class="col-sm-4">
-                        <div class="team-member">
-                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12804.png"
-                                alt="Carlos Armando Castro Reyes" class="img-responsive center-block">
-                            <h3>Carlos Armando Castro Reyes</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                    <div class="row text-center tarjetas-supervisores">
+                        <div class="col-sm-4">
+                            <div class="team-member">
+                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12804.png"
+                                    alt="Carlos Armando Castro Reyes" class="img-responsive center-block">
+                                <h3>Carlos Armando Castro Reyes</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row text-center tarjetas-supervisores">
-                    <div class="col-sm-4">
-                        <div class="team-member">
-                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
-                                alt="SETH GREENE" class="img-responsive center-block">
-                            <h3>SETH GREENE</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                    <div class="row text-center tarjetas-supervisores">
+                        <div class="col-sm-4">
+                            <div class="team-member">
+                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
+                                    alt="SETH GREENE" class="img-responsive center-block">
+                                <h3>SETH GREENE</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row text-center tarjetas-supervisores">
-                    <div class="col-sm-4">
-                        <div class="team-member">
-                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
-                                alt="SETH GREENE" class="img-responsive center-block">
-                            <h3>SETH GREENE</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                    <div class="row text-center tarjetas-supervisores">
+                        <div class="col-sm-4">
+                            <div class="team-member">
+                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
+                                    alt="SETH GREENE" class="img-responsive center-block">
+                                <h3>SETH GREENE</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row text-center tarjetas-supervisores">
-                    <div class="col-sm-4">
-                        <div class="team-member">
-                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
-                                alt="SETH GREENE" class="img-responsive center-block">
-                            <h3>SETH GREENE</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                    <div class="row text-center tarjetas-supervisores">
+                        <div class="col-sm-4">
+                            <div class="team-member">
+                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
+                                    alt="SETH GREENE" class="img-responsive center-block">
+                                <h3>SETH GREENE</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row text-center tarjetas-supervisores">
-                    <div class="col-sm-4">
-                        <div class="team-member">
-                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
-                                alt="SETH GREENE" class="img-responsive center-block">
-                            <h3>SETH GREENE</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                    <div class="row text-center tarjetas-supervisores">
+                        <div class="col-sm-4">
+                            <div class="team-member">
+                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
+                                    alt="SETH GREENE" class="img-responsive center-block">
+                                <h3>SETH GREENE</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                            </div>
                         </div>
                     </div>
+    
                 </div>
-
             </div>
         </div>
 
@@ -179,69 +206,70 @@
                 <h3 class="subtitulo">Supervisores</h3>
             </div>
             <!-- SUPERVISORES -->
-
-            <div class="contenedor-supervisores">
-                <div class="row text-center tarjetas-supervisores">
-                    <div class="col-sm-4">
-                        <div class="team-member">
-                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12798.png"
-                                alt="SETH GREENE" class="img-responsive center-block">
-                            <h3>Luis Alexander Castaño Reyes</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+            <div class="juntar-cards">
+                <div class="contenedor-supervisores">
+                    <div class="row text-center tarjetas-supervisores">
+                        <div class="col-sm-4">
+                            <div class="team-member">
+                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12798.png"
+                                    alt="SETH GREENE" class="img-responsive center-block">
+                                <h3>Luis Alexander Castaño Reyes</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row text-center tarjetas-supervisores">
-                    <div class="col-sm-4">
-                        <div class="team-member">
-                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12820.png"
-                                alt="SETH GREENE" class="img-responsive center-block">
-                            <h3>María Alejandra Albarracin Mosquera</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                    <div class="row text-center tarjetas-supervisores">
+                        <div class="col-sm-4">
+                            <div class="team-member">
+                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12820.png"
+                                    alt="SETH GREENE" class="img-responsive center-block">
+                                <h3>María Alejandra Albarracin Mosquera</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row text-center tarjetas-supervisores">
-                    <div class="col-sm-4">
-                        <div class="team-member">
-                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12801.png"
-                                alt="SETH GREENE" class="img-responsive center-block">
-                            <h3>Didier Ahimelec Castro Castro</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                    <!-- <div class="row text-center tarjetas-supervisores">
+                        <div class="col-sm-4">
+                            <div class="team-member">
+                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12801.png"
+                                    alt="Pineda" class="img-responsive center-block">
+                                <h3>Pineda</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- <div class="row text-center tarjetas-supervisores">
+                        <div class="col-sm-4">
+                            <div class="team-member">
+                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
+                                    alt="SETH GREENE" class="img-responsive center-block">
+                                <h3>Pineda</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row text-center tarjetas-supervisores">
-                    <div class="col-sm-4">
-                        <div class="team-member">
-                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
-                                alt="SETH GREENE" class="img-responsive center-block">
-                            <h3>Pineda</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                    <div class="row text-center tarjetas-supervisores">
+                        <div class="col-sm-4">
+                            <div class="team-member">
+                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
+                                    alt="SETH GREENE" class="img-responsive center-block">
+                                <h3>SETH GREENE</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row text-center tarjetas-supervisores">
-                    <div class="col-sm-4">
-                        <div class="team-member">
-                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
-                                alt="SETH GREENE" class="img-responsive center-block">
-                            <h3>SETH GREENE</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                    <div class="row text-center tarjetas-supervisores">
+                        <div class="col-sm-4">
+                            <div class="team-member">
+                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
+                                    alt="SETH GREENE" class="img-responsive center-block">
+                                <h3>SETH GREENE</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                            </div>
                         </div>
-                    </div>
+                    </div> -->
+    
                 </div>
-                <div class="row text-center tarjetas-supervisores">
-                    <div class="col-sm-4">
-                        <div class="team-member">
-                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
-                                alt="SETH GREENE" class="img-responsive center-block">
-                            <h3>SETH GREENE</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
 
@@ -254,68 +282,39 @@
                     <h3 class="subtitulo">Equipo de desarrollo</h3>
                 </div>
                 <!-- cards -->
-                <div class="contenedor-supervisores">
-                    <div class="row text-center tarjetas-supervisores">
-                        <div class="col-sm-4">
-                            <div class="team-member">
-                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12798.png"
-                                    alt="SETH GREENE" class="img-responsive center-block">
-                                <h3>Luis Alexander Castaño Reyes</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                <div class="juntar-cards">
+                    <div class="contenedor-supervisores">
+                        <div class="row text-center tarjetas-supervisores">
+                            <div class="col-sm-4">
+                                <div class="team-member">
+                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12798.png"
+                                        alt="SETH GREENE" class="img-responsive center-block">
+                                    <h3>Luis Alexander Castaño Reyes</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row text-center tarjetas-supervisores">
+                            <div class="col-sm-4">
+                                <div class="team-member">
+                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12821.png"
+                                        alt="Andrés Santiago Vega Franco" class="img-responsive center-block">
+                                    <h3>Andrés Santiago Vega Franco</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row text-center tarjetas-supervisores">
+                            <div class="col-sm-4">
+                                <div class="team-member">
+                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12816.png"
+                                        alt="Julián Rojas Avila" class="img-responsive center-block">
+                                    <h3>Julián Rojas Avila</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row text-center tarjetas-supervisores">
-                        <div class="col-sm-4">
-                            <div class="team-member">
-                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12820.png"
-                                    alt="SETH GREENE" class="img-responsive center-block">
-                                <h3>María Alejandra Albarracin Mosquera</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row text-center tarjetas-supervisores">
-                        <div class="col-sm-4">
-                            <div class="team-member">
-                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12801.png"
-                                    alt="SETH GREENE" class="img-responsive center-block">
-                                <h3>Didier Ahimelec Castro Castro</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row text-center tarjetas-supervisores">
-                        <div class="col-sm-4">
-                            <div class="team-member">
-                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
-                                    alt="SETH GREENE" class="img-responsive center-block">
-                                <h3>Pineda</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row text-center tarjetas-supervisores">
-                        <div class="col-sm-4">
-                            <div class="team-member">
-                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
-                                    alt="SETH GREENE" class="img-responsive center-block">
-                                <h3>SETH GREENE</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row text-center tarjetas-supervisores">
-                        <div class="col-sm-4">
-                            <div class="team-member">
-                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
-                                    alt="SETH GREENE" class="img-responsive center-block">
-                                <h3>SETH GREENE</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
-                            </div>
-                        </div>
-                    </div>
-    
                 </div>
 
                 <!-- Equipo de jurídico -->
@@ -323,68 +322,50 @@
                     <h3 class="subtitulo">Equipo jurídico</h3>
                 </div>
                 <!-- cards -->
-                <div class="contenedor-supervisores">
-                    <div class="row text-center tarjetas-supervisores">
-                        <div class="col-sm-4">
-                            <div class="team-member">
-                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12798.png"
-                                    alt="SETH GREENE" class="img-responsive center-block">
-                                <h3>Luis Alexander Castaño Reyes</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                <div class="juntar-cards">
+                    <div class="contenedor-supervisores">
+                        <div class="row text-center tarjetas-supervisores">
+                            <div class="col-sm-4">
+                                <div class="team-member">
+                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12820.png"
+                                        alt="María Alejandra Albarracin Mosquera" class="img-responsive center-block">
+                                    <h3>María Alejandra Albarracin Mosquera</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row text-center tarjetas-supervisores">
-                        <div class="col-sm-4">
-                            <div class="team-member">
-                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12820.png"
-                                    alt="SETH GREENE" class="img-responsive center-block">
-                                <h3>María Alejandra Albarracin Mosquera</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                        <div class="row text-center tarjetas-supervisores">
+                            <div class="col-sm-4">
+                                <div class="team-member">
+                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12813.png"
+                                        alt="Orley Mínela Riveros Parra" class="img-responsive center-block">
+                                    <h3>Orley Mínela Riveros Parra</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row text-center tarjetas-supervisores">
-                        <div class="col-sm-4">
-                            <div class="team-member">
-                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12801.png"
-                                    alt="SETH GREENE" class="img-responsive center-block">
-                                <h3>Didier Ahimelec Castro Castro</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                        <div class="row text-center tarjetas-supervisores">
+                            <div class="col-sm-4">
+                                <div class="team-member">
+                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12808.png"
+                                        alt="Sandra Liliana garces pinzon" class="img-responsive center-block">
+                                    <h3>Sandra Liliana garces pinzon</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row text-center tarjetas-supervisores">
-                        <div class="col-sm-4">
-                            <div class="team-member">
-                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
-                                    alt="SETH GREENE" class="img-responsive center-block">
-                                <h3>Pineda</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                        <div class="row text-center tarjetas-supervisores">
+                            <div class="col-sm-4">
+                                <div class="team-member">
+                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12812.png"
+                                        alt="Marinela Forero Totena" class="img-responsive center-block">
+                                    <h3>Marinela Forero Totena</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row text-center tarjetas-supervisores">
-                        <div class="col-sm-4">
-                            <div class="team-member">
-                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
-                                    alt="SETH GREENE" class="img-responsive center-block">
-                                <h3>SETH GREENE</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row text-center tarjetas-supervisores">
-                        <div class="col-sm-4">
-                            <div class="team-member">
-                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
-                                    alt="SETH GREENE" class="img-responsive center-block">
-                                <h3>SETH GREENE</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
-                            </div>
-                        </div>
-                    </div>
     
+                    </div>
                 </div>
 
                 <!-- Equipo de redes -->
@@ -392,68 +373,141 @@
                     <h3 class="subtitulo">Equipo de redes</h3>
                 </div>
                 <!-- cards -->
-                <div class="contenedor-supervisores">
-                    <div class="row text-center tarjetas-supervisores">
-                        <div class="col-sm-4">
-                            <div class="team-member">
-                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12798.png"
-                                    alt="SETH GREENE" class="img-responsive center-block">
-                                <h3>Luis Alexander Castaño Reyes</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                <div class="juntar-cards">
+                    <div class="contenedor-supervisores">
+                        <div class="row text-center tarjetas-supervisores">
+                            <div class="col-sm-4">
+                                <div class="team-member">
+                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12798.png"
+                                        alt="SETH GREENE" class="img-responsive center-block">
+                                    <h3>Luis Alexander Castaño Reyes</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row text-center tarjetas-supervisores">
-                        <div class="col-sm-4">
-                            <div class="team-member">
-                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12820.png"
-                                    alt="SETH GREENE" class="img-responsive center-block">
-                                <h3>María Alejandra Albarracin Mosquera</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                        <div class="row text-center tarjetas-supervisores">
+                            <div class="col-sm-4">
+                                <div class="team-member">
+                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12820.png"
+                                        alt="SETH GREENE" class="img-responsive center-block">
+                                    <h3>María Alejandra Albarracin Mosquera</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row text-center tarjetas-supervisores">
-                        <div class="col-sm-4">
-                            <div class="team-member">
-                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12801.png"
-                                    alt="SETH GREENE" class="img-responsive center-block">
-                                <h3>Didier Ahimelec Castro Castro</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                        <div class="row text-center tarjetas-supervisores">
+                            <div class="col-sm-4">
+                                <div class="team-member">
+                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12801.png"
+                                        alt="SETH GREENE" class="img-responsive center-block">
+                                    <h3>Didier Ahimelec Castro Castro</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row text-center tarjetas-supervisores">
-                        <div class="col-sm-4">
-                            <div class="team-member">
-                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
-                                    alt="SETH GREENE" class="img-responsive center-block">
-                                <h3>Pineda</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                        <div class="row text-center tarjetas-supervisores">
+                            <div class="col-sm-4">
+                                <div class="team-member">
+                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
+                                        alt="SETH GREENE" class="img-responsive center-block">
+                                    <h3>Pineda</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row text-center tarjetas-supervisores">
-                        <div class="col-sm-4">
-                            <div class="team-member">
-                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
-                                    alt="SETH GREENE" class="img-responsive center-block">
-                                <h3>SETH GREENE</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                        <div class="row text-center tarjetas-supervisores">
+                            <div class="col-sm-4">
+                                <div class="team-member">
+                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
+                                        alt="SETH GREENE" class="img-responsive center-block">
+                                    <h3>SETH GREENE</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row text-center tarjetas-supervisores">
-                        <div class="col-sm-4">
-                            <div class="team-member">
-                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
-                                    alt="SETH GREENE" class="img-responsive center-block">
-                                <h3>SETH GREENE</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                        <div class="row text-center tarjetas-supervisores">
+                            <div class="col-sm-4">
+                                <div class="team-member">
+                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
+                                        alt="SETH GREENE" class="img-responsive center-block">
+                                    <h3>SETH GREENE</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
     
+                    </div>
+                </div>
+
+                <!-- Equipo de conectividad -->
+                <div>
+                    <h3 class="subtitulo">Equipo de conectividad</h3>
+                </div>
+                <!-- cards -->
+                <div class="juntar-cards">
+                    <div class="contenedor-supervisores">
+                        <!-- <div class="row text-center tarjetas-supervisores">
+                            <div class="col-sm-4">
+                                <div class="team-member">
+                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12798.png"
+                                        alt="Pineda" class="img-responsive center-block">
+                                    <h3>Pineda</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="row text-center tarjetas-supervisores">
+                            <div class="col-sm-4">
+                                <div class="team-member">
+                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12803.png"
+                                        alt="Michelle Daniela Pérez Parra" class="img-responsive center-block">
+                                    <h3>Michelle Daniela Pérez Parra</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row text-center tarjetas-supervisores">
+                            <div class="col-sm-4">
+                                <div class="team-member">
+                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12801.png"
+                                        alt="SETH GREENE" class="img-responsive center-block">
+                                    <h3>Didier Ahimelec Castro Castro</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row text-center tarjetas-supervisores">
+                            <div class="col-sm-4">
+                                <div class="team-member">
+                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
+                                        alt="SETH GREENE" class="img-responsive center-block">
+                                    <h3>Pineda</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row text-center tarjetas-supervisores">
+                            <div class="col-sm-4">
+                                <div class="team-member">
+                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
+                                        alt="SETH GREENE" class="img-responsive center-block">
+                                    <h3>SETH GREENE</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row text-center tarjetas-supervisores">
+                            <div class="col-sm-4">
+                                <div class="team-member">
+                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
+                                        alt="SETH GREENE" class="img-responsive center-block">
+                                    <h3>SETH GREENE</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
                 </div>
 
                 <!-- Equipo de prensa -->
@@ -461,68 +515,70 @@
                     <h3 class="subtitulo">Equipo de prensa</h3>
                 </div>
                 <!-- cards -->
-                <div class="contenedor-supervisores">
-                    <div class="row text-center tarjetas-supervisores">
-                        <div class="col-sm-4">
-                            <div class="team-member">
-                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12798.png"
-                                    alt="SETH GREENE" class="img-responsive center-block">
-                                <h3>Luis Alexander Castaño Reyes</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                <div class="juntar-cards">
+                    <div class="contenedor-supervisores">
+                        <div class="row text-center tarjetas-supervisores">
+                            <div class="col-sm-4">
+                                <div class="team-member">
+                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12798.png"
+                                        alt="SETH GREENE" class="img-responsive center-block">
+                                    <h3>Luis Alexander Castaño Reyes</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row text-center tarjetas-supervisores">
-                        <div class="col-sm-4">
-                            <div class="team-member">
-                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12820.png"
-                                    alt="SETH GREENE" class="img-responsive center-block">
-                                <h3>María Alejandra Albarracin Mosquera</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                        <div class="row text-center tarjetas-supervisores">
+                            <div class="col-sm-4">
+                                <div class="team-member">
+                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12820.png"
+                                        alt="SETH GREENE" class="img-responsive center-block">
+                                    <h3>María Alejandra Albarracin Mosquera</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row text-center tarjetas-supervisores">
-                        <div class="col-sm-4">
-                            <div class="team-member">
-                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12801.png"
-                                    alt="SETH GREENE" class="img-responsive center-block">
-                                <h3>Didier Ahimelec Castro Castro</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                        <div class="row text-center tarjetas-supervisores">
+                            <div class="col-sm-4">
+                                <div class="team-member">
+                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12801.png"
+                                        alt="SETH GREENE" class="img-responsive center-block">
+                                    <h3>Didier Ahimelec Castro Castro</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row text-center tarjetas-supervisores">
-                        <div class="col-sm-4">
-                            <div class="team-member">
-                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
-                                    alt="SETH GREENE" class="img-responsive center-block">
-                                <h3>Pineda</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                        <div class="row text-center tarjetas-supervisores">
+                            <div class="col-sm-4">
+                                <div class="team-member">
+                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
+                                        alt="SETH GREENE" class="img-responsive center-block">
+                                    <h3>Pineda</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row text-center tarjetas-supervisores">
-                        <div class="col-sm-4">
-                            <div class="team-member">
-                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
-                                    alt="SETH GREENE" class="img-responsive center-block">
-                                <h3>SETH GREENE</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                        <div class="row text-center tarjetas-supervisores">
+                            <div class="col-sm-4">
+                                <div class="team-member">
+                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
+                                        alt="SETH GREENE" class="img-responsive center-block">
+                                    <h3>SETH GREENE</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row text-center tarjetas-supervisores">
-                        <div class="col-sm-4">
-                            <div class="team-member">
-                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
-                                    alt="SETH GREENE" class="img-responsive center-block">
-                                <h3>SETH GREENE</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                        <div class="row text-center tarjetas-supervisores">
+                            <div class="col-sm-4">
+                                <div class="team-member">
+                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
+                                        alt="SETH GREENE" class="img-responsive center-block">
+                                    <h3>SETH GREENE</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
     
+                    </div>
                 </div>
             </div>
 
