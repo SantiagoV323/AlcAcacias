@@ -6,6 +6,10 @@
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <!-- Add the Bootstrap CSS link --><!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
 <style type="text/css">
+    .headline-l-govco, h3 {
+        color: #4B4B4B;
+    }
+    
     .h2,
     h2 {
         font-size: 30px !important;
@@ -296,6 +300,10 @@ position: absolute;
         }
     }
 
+    .titulo-micrositio>h2{
+        padding: 20px;
+        text-align: left;
+    }
 
 
     .row_c02,
@@ -415,9 +423,9 @@ position: absolute;
         padding-left: 8px
     }
 
-    .contenido-micrositio {
+    /* .contenido-micrositio {
         margin-top: 50px;
-    }
+    } */
 
     .contenido-micrositio p {
         font-size: large;
@@ -458,6 +466,111 @@ position: absolute;
     .btn-nav:hover {
         text-decoration: underline;
     }
+
+    /* CONTENIDO NUESTRO EQUIPO */
+    .row_c05 {
+            /* background-color: #eee; */
+            background: rgb(34, 193, 195);
+            background: linear-gradient(0deg, rgba(34, 193, 195, 0.5354516806722689) 0%, rgba(244, 241, 247, 0.44861694677871145) 98%, rgba(244, 241, 247, 0.44861694677871145) 100%);
+            border-radius: 10px;
+        }
+
+        .team-section {
+            /* padding: 40px 0; */
+            width: auto;
+        }
+
+        .team-member {
+            display: flex;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* Esto ayuda a empujar el lorem ipsum hacia abajo */
+
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            min-height: 390px;
+        }
+
+        .team-member img {
+            height: 220px;
+            width: auto;
+            display: block;
+            margin: 0 auto 15px;
+            border-radius: 4px;
+        }
+
+        .team-member h3 {
+            min-height: 60px;
+            margin: 15px 0 5px;
+            font-size: 24px;
+        }
+
+        .team-member p {
+            font-size: 14px;
+            color: #666;
+            padding: 0 5px;
+        }
+
+        .team-quote {
+            margin: 40px 0;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .team-quote p {
+            font-size: 18px;
+            color: #333;
+        }
+
+
+        .jefe {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .subtitulo-jefe {
+            margin-top: 40px;
+        }
+
+        .subtitulo {
+            margin-top: 75px;
+            margin-bottom: 30px;
+            margin-left: 20px;
+        }
+
+        .contenedor-supervisores {
+            display: grid;
+            justify-content: start;
+            justify-items: center; /*centrar las tarjetas */
+            grid-template-columns: repeat(auto-fill, minmax(247.5px, 1fr));
+            gap: 20px 0;
+            /* margin: 0 auto; ESTO HACE QUE SE CENTREN LAS CARDS EN RESOLUCIONES GRANDES */
+            /* padding: 0 20px; */
+            max-width: 100%;
+        }
+
+        .col-sm-4 {
+            width: 247.5px;
+            margin: 0 auto;
+            /* max-width: 300px; */
+        }
+
+        .juntar-cards {
+            /*justify-content: center;*/ /*para ubicar a la izquierda las cards en resoluciones pequeñas*/
+            display: flex; 
+        }
+
+        @media (max-width: 459px){
+            .juntar-cards{
+                justify-content: center;
+            }
+        }
 </style>
 <div class="principal_cont">
     <div class="container_ps">
@@ -687,7 +800,530 @@ position: absolute;
                 <h2>Nuestro equipo</h2>
             </div>
             <div class="contenido-micrositio">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, corporis obcaecati hic sequi deserunt molestias eius! Consequuntur, repellat deserunt natus saepe reiciendis modi, id suscipit dolorum sint nulla iusto placeat?</p>
+                <div class="container team-section">
+                    <!-- Subtítulo jefe -->
+                    <div>
+                        <h3 class="text-center subtitulo-jefe">Jefe de oficina</h3>
+                    </div>
+                    <!-- Bloque de la tarjeta de jefe -->
+                    <div class="row text-center jefe">
+                        <div class="col-sm-4">
+                            <div class="team-member">
+                                <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11939.png" alt="LOIS MOORE"
+                                    class="img-responsive center-block">
+                                <h3>MARTÍN DARÍO VEGA MARQUEZ</h3>
+                                <p style="font-weight:bold;">Ingeniero de sistemas. <br>Jefe de la oficina de Tecnologías de la información y las
+                                    comunicaciones.</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="seccion">
+                        <div>
+                            <h3 class="subtitulo">Secretaría</h3>
+                        </div>
+                        <!-- Planta -->
+                        <div class="juntar-cards">
+                            <div class="contenedor-supervisores">
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12799.png"
+                                                alt="Erika Alexandra Córdoba Rodriguez" class="img-responsive center-block">
+                                            <h3>Erika Alexandra Córdoba Rodriguez</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="seccion">
+                        <div>
+                            <h3 class="subtitulo">Contratación y jurídico</h3>
+                        </div>
+                        <!-- Planta -->
+                        <div class="juntar-cards">
+                            <div class="contenedor-supervisores">
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12820.png"
+                                                alt="María Alejandra Albarracín Mosquera" class="img-responsive center-block">
+                                            <h3>María Alejandra Albarracín Mosquera</h3>
+                                            <p>Líder de equipo. Abogada.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12808.png"
+                                                alt="Sandra Liliana garces pinzon" class="img-responsive center-block">
+                                            <h3>Sandra Liliana garces pinzon</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12812.png"
+                                                alt="Marinela Forero Totena" class="img-responsive center-block">
+                                            <h3>Marinela Forero Totena</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="seccion">
+                        <div>
+                            <h3 class="subtitulo">Gobierno digital</h3>
+                        </div>
+                        <!-- Planta -->
+                        <div class="juntar-cards">
+                            <div class="contenedor-supervisores">
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12822.png"
+                                                alt="Ernesto Pineda Dueñas" class="img-responsive center-block">
+                                            <h3>Ernesto Pineda Dueñas</h3>
+                                            <p>CPS. Ingeniero de sistemas. Líder de proyecto Gobierno digital, líder de equipo.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12813.png"
+                                                alt="Orley Mínela Riveros Parra" class="img-responsive center-block">
+                                            <h3>Orley Mínela Riveros Parra</h3>
+                                            <p>CPS. Ingeniera de sistemas.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="seccion">
+                        <div>
+                            <h3 class="subtitulo">Transformación digital</h3>
+                        </div>
+                        <!-- Planta -->
+                        <div class="juntar-cards">
+                            <div class="contenedor-supervisores">
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12801.png"
+                                                alt="Didier Ahimelec Castro Castro" class="img-responsive center-block">
+                                            <h3>Didier Ahimelec Castro Castro</h3>
+                                            <p>CPS. Ingeniero de sistemas. Lider de equipo transformación digital.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12804.png"
+                                                alt="Carlos Armando Castro Reyes" class="img-responsive center-block">
+                                            <h3>Carlos Armando Castro Reyes</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="seccion">
+                        <div>
+                            <h3 class="subtitulo">Desarrollo web</h3>
+                        </div>
+                        <!-- Planta -->
+                        <div class="juntar-cards">
+                            <div class="contenedor-supervisores">
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12798.png"
+                                                alt="Luis Alexander Castaño Reyes" class="img-responsive center-block">
+                                            <h3>Luis Alexander Castaño Reyes</h3>
+                                            <p>CPS. Ingeniero de sistemas. Líder de equipo de desarrollo. Desarrollador fullstack.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12821.png"
+                                                alt="Andrés Santiago Vega Franco" class="img-responsive center-block">
+                                            <h3>Andrés Santiago Vega Franco</h3>
+                                            <p>CPS. Tecnólogo, est. ingeniería de sistemas. QA, Desarrollador frontend.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12816.png"
+                                                alt="Julián Rojas Avila" class="img-responsive center-block">
+                                            <h3>Julián Rojas Avila</h3>
+                                            <p>CPS. Tecnólogo, est. ingeniería de sistemas. Desarrollador backend. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="seccion">
+                        <div>
+                            <h3 class="subtitulo">Apropiación TIC</h3>
+                        </div>
+                        <!-- Planta -->
+                        <div class="juntar-cards">
+                            <div class="contenedor-supervisores">
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12823.png"
+                                                alt="Beatriz Adriana Reyes Herrera" class="img-responsive center-block">
+                                            <h3>Beatriz Adriana Reyes Herrera</h3>
+                                            <p>CPS. Licenciada con magister en tecnologías digitales aplicadas a la educación.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12809.png"
+                                                alt="Duby Vanessa Castro Rojas" class="img-responsive center-block">
+                                            <h3>Duby Vanessa Castro Rojas</h3>
+                                            <p>CPS, Tecnóloga.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12810.png"
+                                                alt="Yulieth Tatiana Suárez Pastrana" class="img-responsive center-block">
+                                            <h3>Yulieth Tatiana Suárez Pastrana</h3>
+                                            <p>CPS. Técnico en sistemas con énfasis en comunity management.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12822.png"
+                                                alt="Ruth Mireya Martínez González" class="img-responsive center-block">
+                                            <h3>Ruth Mireya Martínez González</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12818.png"
+                                                alt="Yanelith Xiomara Bohórquez Bedoya" class="img-responsive center-block">
+                                            <h3>Yanelith Xiomara Bohórquez Bedoya</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ACÁ DEBERÍA IR UN SALTO DE FILA PARA REPRESENTAR EL SALTO DE JERARQUÍA -->
+                                <!-- <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png"
+                                                alt="SETH GREENE" class="img-responsive center-block">
+                                            <h3>SETH GREENE</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="seccion">
+                        <div>
+                            <h4 class="subtitulo">Puntos Vive Digital</h3>
+                        </div>
+                        <!-- Planta -->
+                        <div class="juntar-cards">
+                            <div class="contenedor-supervisores">
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12825.png"
+                                                alt="David Santiago Mesa Hernández" class="img-responsive center-block">
+                                            <h3>David Santiago Mesa Hernández</h3>
+                                            <p>CPS.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12824.png"
+                                                alt="Ingrid Alejandra Polo Correa" class="img-responsive center-block">
+                                            <h3>Ingrid Alejandra Polo Correa</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12822.png"
+                                                alt="Sandy Disneys Morales Mondragón" class="img-responsive center-block">
+                                            <h3>Sandy Disneys Morales Mondragón</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12822.png"
+                                                alt="Martha Viviana Medina Palacios" class="img-responsive center-block">
+                                            <h3>Martha Viviana Medina Palacios</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="seccion">
+                        <div>
+                            <h3 class="subtitulo">REAIICA</h3>
+                        </div>
+                        <!-- Planta -->
+                        <div class="juntar-cards">
+                            <div class="contenedor-supervisores">
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12822.png"
+                                                alt="Hardy Leonardo Cortés Sabogal" class="img-responsive center-block">
+                                            <h3>Hardy Leonardo Cortés Sabogal</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12822.png"
+                                                alt="Cristian Rodrigo Rojas Olaya" class="img-responsive center-block">
+                                            <h3>Cristian Rodrigo Rojas Olaya</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12803.png"
+                                                alt="Michelle Daniela Pérez Parra" class="img-responsive center-block">
+                                            <h3>Michelle Daniela Pérez Parra</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12815.png"
+                                                alt="María Cristina Guecha Castro" class="img-responsive center-block">
+                                            <h3>María Cristina Guecha Castro</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="seccion">
+                        <div>
+                            <h3 class="subtitulo">Soporte mesa de ayuda</h3>
+                        </div>
+                        <!-- Planta -->
+                        <div class="juntar-cards">
+                            <div class="contenedor-supervisores">
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12804.png"
+                                                alt="Carlos Armando Castro Reyes" class="img-responsive center-block">
+                                            <h3>Carlos Armando Castro Reyes</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12805.png"
+                                                alt="Cristian Miguel Castro Baquero" class="img-responsive center-block">
+                                            <h3>Cristian Miguel Castro Baquero</h3>
+                                            <p>Ingeniero de sistemas.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12819.png"
+                                                alt="Wilmer Iván Chavez Garrido" class="img-responsive center-block">
+                                            <h3>Wilmer Iván Chavez Garrido</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="seccion">
+                        <div>
+                            <h3 class="subtitulo">Sistemas de información</h3>
+                        </div>
+                        <!-- Planta -->
+                        <div class="juntar-cards">
+                            <div class="contenedor-supervisores">
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12802.png"
+                                                alt="Rodolfo Díaz clavijo" class="img-responsive center-block">
+                                            <h3>Rodolfo Díaz clavijo</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12807.png"
+                                                alt="Carlos Armando Castro Reyes" class="img-responsive center-block">
+                                            <h3>Julián Ricardo Herrera Fuentes</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="seccion">
+                        <div>
+                            <h3 class="subtitulo">Prensa</h3>
+                        </div>
+                        <!-- Planta -->
+                        <div class="juntar-cards">
+                            <div class="contenedor-supervisores">
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12822.png"
+                                                alt="Javier Mauricio Rodríguez Guzmán" class="img-responsive center-block">
+                                            <h3>Javier Mauricio Rodríguez Guzmán</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12822.png"
+                                                alt="Deisy Johana Olaya Quintero" class="img-responsive center-block">
+                                            <h3>Deisy Johana Olaya Quintero</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12822.png"
+                                                alt="Laura Daniela Pinzón Cabanzo" class="img-responsive center-block">
+                                            <h3>Laura Daniela Pinzón Cabanzo</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12806.png"
+                                                alt="Leonardo Bustos Caballero" class="img-responsive center-block">
+                                            <h3>Leonardo Bustos Caballero</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12811.png"
+                                                alt="Cindy Sorley Herrera Latorre" class="img-responsive center-block">
+                                            <h3>Cindy Sorley Herrera Latorre</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12830.png"
+                                                alt="Jenny Catalina Mora Jiménez" class="img-responsive center-block">
+                                            <h3>Jenny Catalina Mora Jiménez</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row text-center tarjetas-supervisores">
+                                    <div class="col-sm-4">
+                                        <div class="team-member">
+                                            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria12822.png"
+                                                alt="Cristian Camilo Parra Gonzáles" class="img-responsive center-block">
+                                            <h3>Cristian Camilo Parra Gonzáles</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+            
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <div class="team-quote">
+                            <p>
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat."
+                            </p>
+                        </div>
+                    </div>
+                </div>  
             </div>
             
         </div>
