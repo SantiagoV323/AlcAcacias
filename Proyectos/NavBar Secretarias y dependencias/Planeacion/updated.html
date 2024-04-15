@@ -301,22 +301,27 @@ position: absolute;
     .row_c02,
     .row_c03,
     .row_c04,
-    .row_c05{
+    .row_c05 {
         display: none;
     }
+
     .row_c01,
     .row_c02,
     .row_c03,
     .row_c04,
     .row_c05 {
-        
+
         position: relative;
         width: 100%;
         height: auto;
         z-index: 1;
     }
 
-    .row_c01, .row_c02, .row_c03,.row_c04, .row_c05 {
+    .row_c01,
+    .row_c02,
+    .row_c03,
+    .row_c04,
+    .row_c05 {
         animation: slideInFromRight 1s ease-out forwards;
     }
 
@@ -428,7 +433,7 @@ position: absolute;
             /* Asegurarse de que estén alineados a la izquierda */
         }
     }
-
+    
     #navContent {
         margin: 0px 6px;
     }
@@ -454,6 +459,50 @@ position: absolute;
     .btn-nav:hover {
         text-decoration: underline;
     }
+
+    /* Display documents */
+    input[id^="spoiler"] {
+        display: none;
+    }
+
+
+    input[id^="spoiler"]+label {
+        width: 180px;
+        padding: 5px 20px;
+        background: #048;
+        color: white;
+        text-align: center;
+        font-size: 18px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    input[id^="spoiler"]:checked+label {
+        color: #333;
+        background: #ccc;
+    }
+
+    input[id^="spoiler"]~.spoiler {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        margin: 10px auto 0;
+        padding: 10px;
+        border-radius: 8px;
+        transition: all .6s;
+        margin-bottom: 12px;
+    }
+
+    input[id^="spoiler"]:checked+label+.spoiler {
+        height: auto;
+        opacity: 1;
+        padding: 10px;
+    }
+
+    .container-notificaciones {
+        max-width: fit-content;
+    }
 </style>
 <div class="principal_cont">
     <div class="container_ps">
@@ -469,7 +518,8 @@ position: absolute;
 
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
-                    <li class="nav-item active"><a class="btn-nav nav-link btn-primary nav-link jefe boton_01" href="javascript:void(0);" id="navContent">Jefe <span class="sr-only">(current)</span></a>
+                    <li class="nav-item active"><a class="btn-nav nav-link btn-primary nav-link jefe boton_01"
+                            href="javascript:void(0);" id="navContent">Jefe <span class="sr-only">(current)</span></a>
                         <!-- <a class="btn btn-primary nav-link jefe boton_01" href="javascript:void(0);">Jefe</a> -->
                     </li>
                     <li class="nav-item"><a class="btn-nav btn-primary nav-link boton_02" href="javascript:void(0);"
@@ -484,9 +534,12 @@ position: absolute;
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                <li><a href="#">Edictos</a></li>
+                                <li><a
+                                        href="www.acacias.gov.co/publicaciones/9130/secretaria-de-planeacion-y-vivienda/publicaciones/12142/edictos/">Edictos</a>
+                                </li>
                                 <li>
-                                    <a class="btn-nav btn-primary nav-link boton_03" href="javascript:void(0);" id="navContent">
+                                    <a class="btn-nav btn-primary nav-link boton_03" href="javascript:void(0);"
+                                        id="navContent">
                                         Notificaciones
                                     </a>
                                 </li>
@@ -679,6 +732,21 @@ position: absolute;
 
         <div class="row_c03">
             <h2>Notificaciones</h2>
+            <div class="tabla de conenedores">
+                <div class="container-notificaciones">
+                    <input id="spoiler1" type="checkbox" />
+                    <label for="spoiler1">
+                        Vigencia 2024
+                    </label>
+                    <div class="spoiler">
+                        <div class="row">
+                            <div class="col-md-12" style="margin-top: 12px;">
+                                <p>DISPLAYDOCUMENTOS(1491)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="row_c04">
@@ -726,44 +794,44 @@ position: absolute;
     }
 
     $(document).ready(function () {
-        $(".boton_01").click(function () {           
-                    $(".row_c02").hide();
-                    $(".row_c03").hide();
-                    $(".row_c04").hide();
-                    $(".row_c05").hide();
-                    $(".row_c01").show().css("display", "flex");
-            
+        $(".boton_01").click(function () {
+            $(".row_c02").hide();
+            $(".row_c03").hide();
+            $(".row_c04").hide();
+            $(".row_c05").hide();
+            $(".row_c01").show().css("display", "flex");
+
         });
 
-        $(".boton_02").click(function () {            
-                $(".row_c01").hide();
-                    $(".row_c03").hide();
-                    $(".row_c04").hide();
-                    $(".row_c05").hide();
-                    $(".row_c02").show().css("display", "flex");            
-        });
-
-        $(".boton_03").click(function () {                            
+        $(".boton_02").click(function () {
             $(".row_c01").hide();
-                $(".row_c02").hide();
-                $(".row_c04").hide();
-                $(".row_c05").hide();
-                $(".row_c03").show().css("display", "inline-block");        
-    });
+            $(".row_c03").hide();
+            $(".row_c04").hide();
+            $(".row_c05").hide();
+            $(".row_c02").show().css("display", "flex");
+        });
 
-        $(".boton_04").click(function () {                            
-                $(".row_c01").hide();
-                    $(".row_c02").hide();
-                    $(".row_c03").hide();
-                    $(".row_c05").hide();
-                    $(".row_c04").show().css("display", "inline-block");            
+        $(".boton_03").click(function () {
+            $(".row_c01").hide();
+            $(".row_c02").hide();
+            $(".row_c04").hide();
+            $(".row_c05").hide();
+            $(".row_c03").show().css("display", "inline-block");
+        });
+
+        $(".boton_04").click(function () {
+            $(".row_c01").hide();
+            $(".row_c02").hide();
+            $(".row_c03").hide();
+            $(".row_c05").hide();
+            $(".row_c04").show().css("display", "inline-block");
         });
         $(".boton_05").click(function () {
-                    $(".row_c01").hide();
-                    $(".row_c02").hide();
-                    $(".row_c03").hide();
-                    $(".row_c04").hide();
-                    $(".row_c05").show().css("display", "inline-block");
+            $(".row_c01").hide();
+            $(".row_c02").hide();
+            $(".row_c03").hide();
+            $(".row_c04").hide();
+            $(".row_c05").show().css("display", "inline-block");
         });
     });
 </script>
