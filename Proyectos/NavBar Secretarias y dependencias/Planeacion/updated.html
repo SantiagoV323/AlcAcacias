@@ -358,12 +358,12 @@ position: absolute;
         display: inline-block;
     }
 
-    .open>.dropdown-menu {
+    .open>.dropdown-menu-personalizado {
         min-width: auto;
     }
 
 
-    .navbar-expand-lg .navbar-nav .dropdown-menu {
+    .navbar-expand-lg .navbar-nav .dropdown-menu-personalizado {
         position: absolute;
         border-radius: 8px;
         background-color: #ebebeb;
@@ -371,7 +371,7 @@ position: absolute;
 
     }
 
-    .btn-nav .dropdown-menu>li>a {
+    .btn-nav .dropdown-menu-personalizado>li>a {
         text-decoration: none;
     }
 
@@ -406,7 +406,7 @@ position: absolute;
         background-color: transparent;
     }
 
-    .navbar-collapse {
+    .navbar-personalizado {
         align-items: center;
     }
 
@@ -433,7 +433,7 @@ position: absolute;
             /* Asegurarse de que estén alineados a la izquierda */
         }
     }
-    
+
     #navContent {
         margin: 0px 6px;
     }
@@ -516,9 +516,9 @@ position: absolute;
 
 
 
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <div class="collapse navbar-collapse navbar-personalizado" id="navbarNavDropdown">
                 <ul class="navbar-nav">
-                    <li class="nav-item active"><a class="btn-nav nav-link btn-primary nav-link jefe boton_01"
+                    <li class="nav-item nav-personalizado active"><a class="btn-nav nav-link btn-primary nav-link jefe boton_01"
                             href="javascript:void(0);" id="navContent">Jefe <span class="sr-only">(current)</span></a>
                         <!-- <a class="btn btn-primary nav-link jefe boton_01" href="javascript:void(0);">Jefe</a> -->
                     </li>
@@ -533,14 +533,22 @@ position: absolute;
                                 Publicaciones
                                 <span class="caret"></span>
                             </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                <li><a
-                                        href="www.acacias.gov.co/publicaciones/9130/secretaria-de-planeacion-y-vivienda/publicaciones/12142/edictos/">Edictos</a>
+                            <ul class="dropdown-menu dropdown-menu-personalizado" aria-labelledby="dropdownMenu1">
+                                <li>
+                                    <a
+                                        href="www.acacias.gov.co/publicaciones/9130/secretaria-de-planeacion-y-vivienda/publicaciones/12142/edictos/">Edictos
+                                    </a>
                                 </li>
                                 <li>
-                                    <a class="btn-nav btn-primary nav-link boton_03" href="javascript:void(0);"
+                                    <a style="font-weight: 500;" class="btn-nav btn-primary nav-link boton_03" href="javascript:void(0);"
                                         id="navContent">
                                         Notificaciones
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/12279"
+                                        id="navContent">
+                                        Citaciones
                                     </a>
                                 </li>
                             </ul>
