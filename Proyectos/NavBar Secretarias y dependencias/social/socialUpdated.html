@@ -1,0 +1,890 @@
+<!-- Pendiente: Agreagar colores de la bandera como el navbar original --><!-- Realizar un dropdown en el navbar -->
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Add the Bootstrap CSS link --><!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+<style type="text/css">
+    .h2,
+    h2 {
+        font-size: 30px !important;
+    }
+
+    .h3 {
+        font-size: 24px !important;
+    }
+
+    .principal_cont {
+        margin: 0;
+        padding: 0;
+    }
+
+    .blanco_c01,
+    .azul_c01 {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .info_cont01,
+    .inf_cont02 {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .titulo-cilindro {
+        text-align: center;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        margin-top: 80px;
+    }
+
+    .container_ps {
+        width: 80%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .botones_container {
+        width: 100%;
+        padding-right: 7.5px;
+        padding-left: 0%;
+        margin-right: auto;
+        margin-left: auto;
+        /* display: flex; */
+        flex: 1;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px
+    }
+
+    .titulo-cilindro h3 {
+        font-size: 20px;
+        margin: 20px 0;
+        font-family: 'Work Sans', sans-serif !important;
+        font-weight: bold;
+    }
+
+    .titulo-cilindro span {
+        font-size: 16px;
+    }
+
+    .blanco_c01 {
+        background-color: #ebebeb;
+        color: #333;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .info_cont01 {
+        background-color: #ebebeb;
+        color: #333;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        flex: 1;
+    }
+
+    .inf_cont02 {
+        background-color: #ebebeb;
+        color: #333;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        flex: 1;
+    }
+
+    .azul_c01 {
+        background-color: #3462ad;
+        color: #fff;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .inf_cont02 {
+        background-color: #3462ad;
+        color: #fff;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        flex: 1;
+    }
+
+    .logo-alcaldia {
+        margin-top: 6%;
+        margin-bottom: 35px;
+        text-align: center;
+    }
+
+
+    .nombre_c01 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .descripcion p,
+    .alcaldia p {
+        margin-top: 50px;
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .descripcion_01 p {
+        margin: 50px 0;
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .foto-persona {
+        position: relative;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 20px;
+        width: 200px;
+        height: 200px;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .foto-persona img {
+        width: 100%;
+        height: 100%;
+        padding-top: 4px;
+        padding-bottom: 0px;
+        padding-left: 8px;
+        object-fit: cover;
+        background-color: #fff;
+    }
+
+    .franja-oscura {
+        position: absolute;
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+        top: 5px;
+        left: 5px;
+        border: 5px solid #2c3e50;
+        border-radius: 80%;
+    }
+
+    .titulo_c01 h3 {
+        margin: 50px 0;
+        font-family: 'Work Sans', sans-serif !important;
+        font-weight: bold;
+        font-size: 20px !important;
+    }
+
+    .titulo-cilindro {
+        background-color: #2c3e50;
+        color: #fff;
+        padding: 1px;
+        border-radius: 60px 0px 0px 60px;
+        margin-bottom: 20px;
+        margin-right: 0;
+        letter-spacing: -1px;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: bold;
+        position: relative;
+    }
+
+    .nombre-persona {
+        /* margin-top: 56%; */
+        margin-bottom: 32px;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: bold;
+    }
+
+    .nombre-persona>p {
+        margin: 0px;
+    }
+
+    .alcaldia_c01 {
+        /* margin-top: 76px; */
+        font-family: 'Work Sans', sans-serif;
+        font-weight: bold;
+    }
+
+    .row_c01 {
+        font-family: Arial, sans-serif;
+        max-width: 1200px;
+        margin: auto;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #ffffff;
+    }
+
+    .row_c02 {
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        max-width: 1200px;
+        margin: auto;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #ffffff;
+    }
+
+    .principal_cont {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* .botones_container {
+justify-content: center;
+position: absolute;
+} */
+
+    .cont_btns {
+
+        display: flex;
+        /* justify-content: center; */
+        padding-right: 0px;
+        gap: 28px;
+        align-items: center;
+
+    }
+
+    .titulosBlancos,
+    .subtitulosBlancos {
+        color: white;
+    }
+
+    @keyframes slideInFromRight {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideOutToLeft {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+    @keyframes slideInFromLeft {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideOutToRight {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+
+    .row_c02,
+    .row_c03,
+    .row_c04,
+    .row_c05 {
+        display: none;
+    }
+
+    .row_c01,
+    .row_c02,
+    .row_c03,
+    .row_c04,
+    .row_c05 {
+
+        position: relative;
+        width: 100%;
+        height: auto;
+        z-index: 1;
+    }
+
+    .row_c01,
+    .row_c02,
+    .row_c03,
+    .row_c04,
+    .row_c05 {
+        animation: slideInFromRight 1s ease-out forwards;
+    }
+
+
+    .boton {
+        margin: 0 10px;
+    }
+
+    .btn-primary {
+        color: black;
+        font-weight: 600;
+        background-color: transparent;
+        border-color: transparent;
+
+    }
+
+    .btn-convivencia {
+        color: white;
+        background-color: #337ab7;
+        margin-top: 10px;
+    }
+
+    .sub-nav .navbar-nav {
+        display: flex;
+        padding: 10px;
+        flex-wrap: wrap;
+        justify-content: left;
+        align-items: center;
+    }
+
+    .nav-item {
+        list-style: none;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        background-color: transparent;
+
+        color: black;
+        font-weight: 600;
+        display: inline-block;
+    }
+
+    .open>.dropdown-menu-personalizado {
+        min-width: auto;
+    }
+
+
+    .navbar-expand-lg .navbar-nav .dropdown-menu-personalizado {
+        position: absolute;
+        border-radius: 8px;
+        background-color: #ebebeb;
+        min-width: none;
+
+    }
+
+    .btn-nav .dropdown-menu-personalizado>li>a {
+        text-decoration: none;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        border-top: 5px solid #fbbb00;
+        border-bottom: 5px solid #078930;
+        margin: 20 0;
+    }
+
+    /* Estilos existentes para los enlaces del navbar */
+    .navbar-nav>li>a {
+        color: black;
+        /* O el color original de tus enlaces */
+        padding-left: 8px;
+
+    }
+
+    /* Agregar estilos para el hover */
+    .navbar-nav>li>a:hover {
+        /* Cambiar al color azul deseado */
+        background-color: #3462ad;
+        /* Cambiar el color del texto a blanco */
+        color: white;
+    }
+
+    .desplegable {
+        color: black;
+        font-weight: 600;
+        background-color: transparent;
+    }
+
+    .navbar-personalizado {
+        align-items: center;
+    }
+
+    .nav-link {
+        width: 100%;
+        text-align: left;
+        padding-left: 8px
+    }
+
+    .contenido-micrositio {
+        margin-top: 50px;
+    }
+
+    .contenido-micrositio p {
+        font-size: large;
+    }
+
+
+    @media (max-width: 767px) {
+        .navbar .nav-link.btn {
+            /* display: block; */
+            width: 100%;
+            text-align: left;
+            /* Asegurarse de que estén alineados a la izquierda */
+        }
+    }
+
+    #navContent {
+        margin: 0px 6px;
+    }
+
+    #navContent,
+    #navbarDropdownMenuLink {
+        padding-left: 8px;
+    }
+
+    .navbar .navbar-toggle {
+        margin: 0px;
+        float: left;
+    }
+
+    .btn-nav {
+        color: black;
+        font-weight: 600;
+        background-color: transparent;
+        border-color: transparent;
+        text-decoration: none;
+    }
+
+    .btn-nav:hover {
+        text-decoration: underline;
+    }
+
+    /* Display documents */
+    input[id^="spoiler"] {
+        display: none;
+    }
+
+
+    input[id^="spoiler"]+label {
+        width: 180px;
+        padding: 5px 20px;
+        background: #048;
+        color: white;
+        text-align: center;
+        font-size: 18px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    input[id^="spoiler"]:checked+label {
+        color: #333;
+        background: #ccc;
+    }
+
+    input[id^="spoiler"]~.spoiler {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        margin: 10px auto 0;
+        padding: 10px;
+        border-radius: 8px;
+        transition: all .6s;
+        margin-bottom: 12px;
+    }
+
+    input[id^="spoiler"]:checked+label+.spoiler {
+        height: auto;
+        opacity: 1;
+        padding: 10px;
+    }
+
+    .container-notificaciones {
+        max-width: fit-content;
+    }
+
+    .mid {
+        margin: 60px 0;
+    }
+    
+    .subIndices {
+        margin-left: 20px;
+    }
+
+    .btn-info:hover {
+        background-color: #31b0d5 !important;
+    }
+</style>
+<div class="principal_cont">
+    <div class="container_ps">
+        <nav class="sub-nav navbar navbar-expand-lg navbar-light bg-light">
+            <!-- Botón inicio que puede llevar al home --><!-- <a class="navbar-brand" href="#">Inicio</a> -->
+            <button type="button" class="btn-nav navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#navbarNavDropdown" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span style="font-size: 30px;" class="glyphicon glyphicon-menu-hamburger"></span>
+            </button>
+
+
+
+            <div class="collapse navbar-collapse navbar-personalizado" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item nav-personalizado active"><a
+                            class="btn-nav nav-link btn-primary nav-link jefe boton_01" href="javascript:void(0);"
+                            id="navContent">Jefe <span class="sr-only">(current)</span></a>
+                        <!-- <a class="btn btn-primary nav-link jefe boton_01" href="javascript:void(0);">Jefe</a> -->
+                    </li>
+                    <li class="nav-item"><a class="btn-nav btn-primary nav-link boton_02" href="javascript:void(0);"
+                            id="navContent">Informaci&oacute;n de la secretar&iacute;a</a>
+                        <!-- <a href="javascript:void(0);" class="btn btn-primary nav-link info boton_02">Información</a> -->
+                    </li>
+                    <!-- <li class="btn-nav nav-item dropdown">
+                        <div class="dropdown">
+                            <button class="btn-nav btn-default dropdown-toggle" type="button" id="dropdownMenu1"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                Publicaciones
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-personalizado" aria-labelledby="dropdownMenu1">
+                                <li>
+                                    <a
+                                        href="www.acacias.gov.co/publicaciones/9130/secretaria-de-planeacion-y-vivienda/publicaciones/12142/edictos/">Edictos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a style="font-weight: 500;" class="btn-nav btn-primary nav-link boton_03"
+                                        href="javascript:void(0);" id="navContent">
+                                        Notificaciones
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/12279" id="navContent">
+                                        Citaciones
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="btn-nav btn-primary nav-link boton_04" href="javascript:void(0);" id="navContent">
+                            Proyectos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn-nav btn-primary nav-link boton_05" href="javascript:void(0);" id="navContent">
+                            Convivencia escolar
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="row_c01">
+            <div class="col-xs-12 col-md-6 blanco_c01">
+                <div>
+                    <div class="nombre_c01">
+                        <h2 style="margin-bottom: 10px">Angela Gutiérrez Bustamante</h2>
+                    </div>
+
+                    <div class="descripcion">
+                        <p>
+                            Licenciada en psicología educativa de la Universidad de La Sabana, con más de 10 años de
+                            experiencia en el sector público, se ha desempeñado en la Alcaldía de Acacías como directora
+                            del Hogar San José, directora operativa de Protección Social y Bienestar al Ciudadano,
+                            profesional de la Secretaría de Desarrollo Económico, gerente de Bienestar Social, jefe de
+                            Sección Comunitaria y Social.<br />
+                            <br />
+                            También trabajó con el INPEC, la Gobernación del Meta, la Universidad de Los Llanos y la
+                            UNAD. Se certificó como auditora interna de gestión de calidad del Instituto Colombiano de
+                            Normas Técnicas y certificación ICONTEC.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="logo-alcaldia"><img alt="Logo de la Alcaldía"
+                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria11942.png"
+                        style="height:50px; margin-bottom:1rem" /></div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 azul_c01">
+                <div>
+                    <div class="foto-persona">
+                        <div class="franja-oscura">&nbsp;</div>
+                        <img alt="Foto de la Persona"
+                            src="https://www.acacias.gov.co/info/acacias_se/media/galeria11934.png" />
+                    </div>
+
+                    <div class="titulo_c01">
+                        <h3 style="color: white">SECRETARÍA SOCIAL<br />
+                            DE EDUCACIÓN,<br>CULTURA Y DEPORTE</h3>
+                    </div>
+
+                    <div class="titulo-cilindro">
+                        <h3 style="color: white"><span>EQUIPO DE</span><br />
+                            GOBIERNO</h3>
+                    </div>
+                </div>
+
+                <div class="nombre-persona">
+                    <p><span class="alcaldia_c01">CARLOS JULIO<br />
+                            PLATA BECERRA<br />
+                            Alcalde</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row_c02">
+            <div class="col-xs-12 col-md-6 info_cont01">
+                <div class="contenido_inf">
+                    <div class="info_c01">
+                        <h2 style="margin-bottom: 10px">Misi&oacute;n</h2>
+                    </div>
+
+                    <div class="descripcion_01">
+                        <p>
+                            Es misión de la Secretaría desarrollar las competencias asignadas en la Ley 715 de 2001 para
+                            los municipios no certificados establecidas en el artículo 8°. Una vez adquirida la
+                            certificación desarrollará las competencias establecidas en el artículo 7° de la misma Ley.
+                            De igual manera es misión de la secretaría planear, dirigir y controlar la ejecución de los
+                            programas y proyectos que se adelanten en recreación y deporte.
+                            Le corresponde programar y controlar la ejecución de los programas y proyectos que en
+                            materia educativa desarrolle el municipio dentro del Plan de Desarrollo. Es responsable por
+                            la administración directa o por terceros del servicio de la biblioteca municipal.
+                            Le corresponde ejercer el control de tutela del Instituto de Cultura y Turismo de Acacias.
+                        </p>
+                    </div>
+
+                    <div class="info_c02">
+                        <h2 style="margin-bottom: 10px">Objetivos</h2>
+                    </div>
+
+                    <div class="descripcion_01">
+                        <p>
+                            Administrar y coordinar el servicio educativo en el Municipio; así como promover el
+                            desarrollo de la educación, la ciencia, deporte y la cultura en el Municipio de Acacías,
+                            priorizando la conservación de acervo cultural, folclórico y la mejora de la calidad de la
+                            educación de la población.
+                        </p>
+                    </div>
+                    <!-- <div class="info_c03">
+                        <h2 style="margin-bottom: 10px">Funciones</h2>
+                    </div> -->
+                    <!-- <div class="descripcion_01">
+                    <p>
+                        1. Planear, organizar, dirigir y controlar el cumplimiento de la misión de la dependencia de la cual es responsable y garantizar la ejecución de su misión, planes, programas y proyectos. <br>
+                        2. Planificar la política educativa en el Municipio. <br>
+                        3. Coordinar la prestación del servicio público educativo, recreación y deporte, en condiciones de calidad, eficiencia y cobertura del sistema. <br>
+                        4. 
+
+                    </p>
+                </div> -->
+
+                    <div class="logo-alcaldia"><img alt="Logo de la Alcaldía"
+                            src="https://www.acacias.gov.co/info/acacias_se/media/galeria11942.png"
+                            style="height:50px" /></div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 inf_cont02">
+                <h2 class="titulosBlancos" style="margin-bottom: 10px;">Funciones</h2>
+
+                <div class="descripcion_01">
+                    <p><br />
+                        <br />
+                        1. Planear, organizar, dirigir y controlar el cumplimiento de la misión de la dependencia de la
+                        cual es responsable y garantizar la ejecución de su misión, planes, programas y proyectos.<br />
+                        2. Planificar la política educativa en el Municipio. <br>
+                        3. Coordinar la prestación del servicio público educativo, recreación y deporte, en condiciones
+                        de calidad, eficiencia y cobertura del sistema. <br>
+                        4. Presentar los proyectos de distribución de los recursos financieros del Sistema General de
+                        Participaciones entre los establecimientos educativos a cargo del Estado. <br>
+                        5. Mantener la actual cobertura y propender por su ampliación. <br>
+                    </p>
+                </div>
+
+                <h2 class="titulosBlancos" style="margin-bottom: 10px;">Programas</h2>
+
+                <div class="descripcion_01">
+                    <p>
+                        1. Calidad y fortalecimiento de la educación inicial, preescolar, básica y media. <br>
+                        2. Fomento a la actividad física y el deporte. <br>
+                        3. Cultura centenaria. <br>
+                        4. Inclusión y protección social para el adulto mayor. <br>
+                        5. Apoyo a los programas nacionales. <br>
+                        6. Desarrollo integral de niños, niñas, adolescentes y fortalecimiento familiar. <br>
+                        7. Inclusión, igualdad y equidad con la mujer. <br>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row_c03">
+            <h2>Notificaciones</h2>
+            <div class="tabla de conenedores">
+                <div class="container-notificaciones">
+                    <input id="spoiler1" type="checkbox" />
+                    <label for="spoiler1">
+                        Vigencia 2024
+                    </label>
+                    <div class="spoiler">
+                        <div class="row">
+                            <div class="col-md-12" style="margin-top: 12px;">
+                                <p>DISPLAYDOCUMENTOS(1491)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row_c04">
+            <div class="titulo-micrositio">
+                <h2>Proyectos</h2>
+            </div>
+            <div class=" contenido-micrositio">
+                <p>
+                    1. Aprovechamiento del tiempo libre a través de los programas de formación deportiva y actividades de integración familiar y social en el municipio de Acacías, Meta.<br />
+                    2. Suministro de complemento nutricional para contribuir con el acceso y la permanencia de los estudiantes de las instituciones educativas oficiales del municipio de Acacías, Meta.<br />
+                    3. Apoyo para el mejoramiento de la calidad de la educación mediante la provisión del componente recurso físico de canasta educativa en instituciones educativas oficiales del municipio de Acacías, Meta.<br />
+                    4. Apoyo al fortalecimiento de la identidad cultural, mediante la implementación de programas de formación artística y difusión cultural en el municipio de Acacías.<br />
+                    5. Fortalecimiento de los procesos bibliotecarios, como herramienta dinamizadora para la transformación social, intelectual y cultural en el municipio de Acacías, Meta.<br />
+                    7. Fortalecimiento de programas para la inclusión social, el envejecimiento activo y el aprovechamiento del tiempo libre en la población adulta mayor en el municipio de Acacías, Meta.<br />
+                    8. Implementación de acciones con orientación gerontológica para la población adulto mayor en condición de vulnerabilidad del municipio de Acacías.<br />
+                    9. Apoyo a las estrategias y programas nacionales para la superación de la pobreza y pobreza extrema en la población focalizada del municipio de Acacías, Meta. <br>
+                    10. Fortalecimiento de las acciones de prevención, promoción y protección de los derechos de niños, niñas, adolescentes y familia del municipio de Acacías, Meta. <br>
+                    11. Fortalecimiento de las estrategias que garanticen la equidad de género, la no discriminación y la lucha contra la violencia basada en género en el municipio de Acacías, Meta. <br>
+                    12. Fortalecimiento a la primera infancia con estrategias de crianza en los hogares comunitarios y familiares del municipio de Acacías, Meta.
+                </p>
+            </div>
+        </div>
+
+        <div class="row_c05">
+            <div class="titulo-micrositio">
+                <h2>Convivencia escolar</h2>
+            </div>
+            <div class="contenido-micrositio">
+                <div class="elmnts-cnvvncia-escolar first">
+                    <h3>Ley de convivencia escolar</h3>
+                    <a class="btn btn-primary btn-convivencia" href="https://www.mineducacion.gov.co/1780/w3-article-322486.html?_noredirect=1" role="button" target="_blank">Click aquí para saber más</a>
+                </div>
+                <div class="elmnts-cnvvncia-escolar mid">
+                    <h3>Ruta de Atención  Integral para la Convivencia Escolar</h3>
+                    <a class="btn btn-primary btn-convivencia" href="https://www.mineducacion.gov.co/1780/articles-322486_archivo_pdf_ruta.pdf" role="button" target="_blank">Click aquí para saber más</a>
+                </div>
+                <div class="elmnts-cnvvncia-escolar mid">
+                    <h3>Kit de herramientas para la convivencia escolar</h3>
+                    <a class="btn btn-primary btn-convivencia" href="https://www.colombiaaprende.edu.co/contenidos/coleccion/kit-de-herramientas-para-la-convivencia-escolar" role="button" target="_blank">Click aquí para saber más</a>
+                </div>
+                <div class="elmnts-cnvvncia-escolar mid">
+                    <h3>Protocolos para la acción y seguimiento</h3>
+                    <div class="subIndices">
+                        <h4 style="margin-top: 40px;">Racismo y xenofobia</h4>
+                        <a class="btn btn-info btn-convivencia-2" href="https://www.colombiaaprende.edu.co/sites/default/files/files_public/2022-09/Racismo%20y%20Xenofobia_compressed-min.pdf" role="button" target="_blank">Click aquí para saber más</a>
+                        <h4 style="margin-top: 40px;">Los protocolos hacen énfasis en las violencias basadas en el género, el consumo de sustancias psicoactivas, la conducta suicida y el ciberacoso.</h4>
+                        <a class="btn btn-info btn-convivencia-2" href="https://www.colombiaaprende.edu.co/sites/default/files/files_public/2021-04/PEQ_Abordaje%20pedag%C3%B3gico%20de%20situaciones%20de%20riesgo.pdf" role="button" target="_blank">Click aquí para saber más</a>
+                    </div>
+                </div>
+                <div class="elmnts-cnvvncia-escolar mid">
+                    <h3>Prevención de ciberacoso y delitos en medios digitales</h3>
+                    <a class="btn btn-primary btn-convivencia" href="https://www.colombiaaprende.edu.co/sites/default/files/files_public/2021-04/PEQ_protocolo%20ciberacoso.pdf" role="button" target="_blank">Click aquí para saber más</a>
+                </div>
+                <div class="elmnts-cnvvncia-escolar mid">
+                    <h3>Módulo 1: Para la Acción y el seguimiento.</h3>
+                    <div class="subIndices">
+                        <h4 style="margin-top: 40px;">Videos para la acción y el seguimiento.</h4>
+                        <a class="btn btn-info btn-convivencia-2" href="https://www.colombiaaprende.edu.co/recurso-coleccion/videos-para-la-accion-y-el-seguimiento" role="button" target="_blank">Click aquí para saber más</a>
+                        <h4 style="margin-top: 40px;">Protocolos para la acción y seguimiento.</h4>
+                        <a class="btn btn-info btn-convivencia-2" href="https://www.colombiaaprende.edu.co/recurso-coleccion/protocolos-para-la-accion-y-seguimiento" role="button" target="_blank">Click aquí para saber más</a>
+                    </div>
+                </div>
+                <div class="elmnts-cnvvncia-escolar mid">
+                    <h3>Módulo 2: Para la prevención</h3>
+                    <div class="subIndices">
+                        <h4 style="margin-top: 40px;">Prevención de Consumo de SPA.</h4>
+                        <a class="btn btn-info btn-convivencia-2" href="https://www.colombiaaprende.edu.co/recurso-coleccion/prevencion-de-consumo-de-spa" role="button" target="_blank">Click aquí para saber más</a>
+                        <h4 style="margin-top: 40px;">Prevención del Suicidio.</h4>
+                        <a class="btn btn-info btn-convivencia-2" href="https://www.colombiaaprende.edu.co/recurso-coleccion/prevencion-del-suicidio" role="button" target="_blank">Click aquí para saber más</a>
+                        <h4 style="margin-top: 40px;">Prevención de las Violencias Basadas en el Género.</h4>
+                        <a class="btn btn-info btn-convivencia-2" href="https://www.colombiaaprende.edu.co/recurso-coleccion/prevencion-de-las-violencias-basadas-en-el-genero" role="button" target="_blank">Click aquí para saber más</a>
+                        <h4 style="margin-top: 40px;">Prevención de la Xenofobia.</h4>
+                        <a class="btn btn-info btn-convivencia-2" href="https://www.colombiaaprende.edu.co/recurso-coleccion/prevencion-de-la-xenofobia" role="button" target="_blank">Click aquí para saber más</a>
+                        <h4 style="margin-top: 40px;">Prevención de Racismo.</h4>
+                        <a class="btn btn-info btn-convivencia-2" href="https://www.colombiaaprende.edu.co/recurso-coleccion/prevencion-de-racismo" role="button" target="_blank">Click aquí para saber más</a>
+                        <h4 style="margin-top: 40px;">Prevención del Ciberacoso y Delitos en medios digitales.</h4>
+                        <a class="btn btn-info btn-convivencia-2" href="https://www.colombiaaprende.edu.co/recurso-coleccion/prevencion-del-ciberacoso-y-delitos-en-medios-digitales" role="button" target="_blank">Click aquí para saber más</a>
+                        <h4 style="margin-top: 40px;">Contenidos para la prevención - Para todos y todas.</h4>
+                        <a class="btn btn-info btn-convivencia-2" href="https://www.colombiaaprende.edu.co/recurso-coleccion/contenidos-para-la-prevencion-para-todos-y-todas" role="button" target="_blank">Click aquí para saber más</a>
+                    </div>
+                    <div class="elmnts-cnvvncia-escolar mid">
+                        <h3>Módulo 3: Para el buen trato a niñas, niños y adolescentes.</h3>
+                        <div class="subIndices">
+                            <h4 style="margin-top: 40px;">Material pedagógico para prevenir el Maltrato Infantil.</h4>
+                            <a class="btn btn-info btn-convivencia-2" href="https://www.colombiaaprende.edu.co/recurso-coleccion/material-pedagogico-para-prevenir-el-maltrato-infantil" role="button" target="_blank">Click aquí para saber más</a>
+                            <h4 style="margin-top: 40px;">Guía para familia y cuidadores en el uso del material del kit de herramientas.</h4>
+                            <a class="btn btn-info btn-convivencia-2" href="https://www.colombiaaprende.edu.co/recurso-coleccion/guia-para-familia-y-cuidadores-en-el-uso-del-material-del-kit-de-herramientas" role="button" target="_blank">Click aquí para saber más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Optional JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function mostrarContenido(id) {
+        console.log('Mostrar contenido con id:', id);
+    }
+
+    $(document).ready(function () {
+        $(".boton_01").click(function () {
+            $(".row_c02").hide();
+            $(".row_c03").hide();
+            $(".row_c04").hide();
+            $(".row_c05").hide();
+            $(".row_c01").show().css("display", "flex");
+
+        });
+
+        $(".boton_02").click(function () {
+            $(".row_c01").hide();
+            $(".row_c03").hide();
+            $(".row_c04").hide();
+            $(".row_c05").hide();
+            $(".row_c02").show().css("display", "flex");
+        });
+
+        $(".boton_03").click(function () {
+            $(".row_c01").hide();
+            $(".row_c02").hide();
+            $(".row_c04").hide();
+            $(".row_c05").hide();
+            $(".row_c03").show().css("display", "inline-block");
+        });
+
+        $(".boton_04").click(function () {
+            $(".row_c01").hide();
+            $(".row_c02").hide();
+            $(".row_c03").hide();
+            $(".row_c05").hide();
+            $(".row_c04").show().css("display", "inline-block");
+        });
+        $(".boton_05").click(function () {
+            $(".row_c01").hide();
+            $(".row_c02").hide();
+            $(".row_c03").hide();
+            $(".row_c04").hide();
+            $(".row_c05").show().css("display", "inline-block");
+        });
+    });
+</script>
