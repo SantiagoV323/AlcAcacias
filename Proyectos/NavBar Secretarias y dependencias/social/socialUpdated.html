@@ -523,303 +523,7 @@ position: absolute;
     }
 
     /* Estilos micrositio */
-    .card {
-        background-color: #fff;
-        border: 1px solid transparent;
-        border-radius: 6px;
-    }
-
-    .card>.card-link {
-        color: #333;
-    }
-
-    .card>.card-link:hover {
-        text-decoration: none;
-    }
-
-    .card>.card-link .card-img img {
-        border-radius: 6px 6px 0 0;
-    }
-
-    .card .card-img {
-        position: relative;
-        padding: 0;
-        display: table;
-    }
-
-    .card .card-img .card-caption {
-        position: absolute;
-        right: 0;
-        bottom: 16px;
-        left: 0;
-    }
-
-    .card .card-body {
-        display: table;
-        width: 100%;
-        padding: 12px;
-    }
-
-    .card .card-header {
-        width: 100%;
-        border-radius: 6px 6px 0 0;
-        padding: 8px;
-
-    }
-
-    .card .card-footer {
-        border-radius: 0 0 6px 6px;
-        padding: 8px;
-    }
-
-    .card .card-left {
-        position: relative;
-        float: left;
-        padding: 0 0 8px 0;
-    }
-
-    .card .card-right {
-        position: relative;
-        float: left;
-        padding: 8px 0 0 0;
-    }
-
-    .card .card-body h1:first-child,
-    .card .card-body h2:first-child,
-    .card .card-body h3:first-child,
-    .card .card-body h4:first-child,
-    .card .card-body .h1,
-    .card .card-body .h2,
-    .card .card-body .h3,
-    .card .card-body .h4 {
-        margin-top: 0;
-    }
-
-    .card .card-body .heading {
-        display: block;
-    }
-
-    .card .card-body .heading:last-child {
-        margin-bottom: 0;
-    }
-
-    .card .card-body .lead {
-        text-align: center;
-    }
-
-    @media(min-width: 768px) {
-        .card .card-left {
-            float: left;
-            padding: 0 8px 0 0;
-        }
-
-        .card .card-right {
-            float: left;
-            padding: 0 0 0 8px;
-        }
-
-        .card .card-4-8 .card-left {
-            width: 33.33333333%;
-        }
-
-        .card .card-4-8 .card-right {
-            width: 66.66666667%;
-        }
-
-        .card .card-5-7 .card-left {
-            width: 41.66666667%;
-        }
-
-        .card .card-5-7 .card-right {
-            width: 58.33333333%;
-        }
-
-        .card .card-6-6 .card-left {
-            width: 50%;
-        }
-
-        .card .card-6-6 .card-right {
-            width: 50%;
-        }
-
-        .card .card-7-5 .card-left {
-            width: 58.33333333%;
-        }
-
-        .card .card-7-5 .card-right {
-            width: 41.66666667%;
-        }
-
-        .card .card-8-4 .card-left {
-            width: 66.66666667%;
-        }
-
-        .card .card-8-4 .card-right {
-            width: 33.33333333%;
-        }
-    }
-
-    .card-default {
-        border-color: #ddd;
-        background-color: #fff;
-    }
-
-    .card-default>.card-header,
-    .card-default>.card-footer {
-        color: #333;
-        background-color: #ddd;
-    }
-
-    .card-header {
-        color: #333;
-        background-color: #ddd;
-    }
-
-
-    .card-header {
-        border-bottom: 1px solid #ddd;
-        padding: 8px;
-    }
-
-    .card-default>.card-footer {
-        border-top: 1px solid #ddd;
-        padding: 8px;
-    }
-
-    .card-default>.card-img:first-child img {
-        border-radius: 6px 6px 0 0;
-    }
-
-    .card-default>.card-left {
-        padding-right: 4px;
-    }
-
-    .card-default>.card-right {
-        padding-left: 4px;
-    }
-
-    .card-default p:last-child {
-        margin-bottom: 0;
-    }
-
-    .card-default .card-caption {
-        color: #fff;
-        text-align: center;
-        text-transform: uppercase;
-    }
-
-
-    .card-price {
-        border-color: #999;
-        background-color: #ededed;
-        margin-bottom: 24px;
-    }
-
-    .card-price>.card-heading,
-    .card-price>.card-footer {
-        color: #333;
-        background-color: #fdfdfd;
-    }
-
-    .card-price>.card-heading {
-        border-bottom: 1px solid #ddd;
-        padding: 8px;
-    }
-
-    .card-price>.card-footer {
-        border-top: 1px solid #ddd;
-        padding: 8px;
-    }
-
-    .card-price>.card-img:first-child img {
-        border-radius: 6px 6px 0 0;
-    }
-
-    .card-price>.card-left {
-        padding-right: 4px;
-    }
-
-    .card-price>.card-right {
-        padding-left: 4px;
-    }
-
-    .card-price .card-caption {
-        color: #fff;
-        text-align: center;
-        text-transform: uppercase;
-    }
-
-    .card-price p:last-child {
-        margin-bottom: 0;
-    }
-
-    .card-price .price {
-        text-align: center;
-        color: #337ab7;
-        font-size: 3em;
-        text-transform: uppercase;
-        line-height: 0.7em;
-        margin: 24px 0 16px;
-    }
-
-    .card-price .price small {
-        font-size: 0.4em;
-        color: #66a5da;
-    }
-
-    .card-price .details {
-        list-style: none;
-        margin-bottom: 24px;
-        padding: 0 18px;
-    }
-
-    .card-price .details li {
-        text-align: center;
-        margin-bottom: 8px;
-    }
-
-    .card-price .buy-now {
-        text-transform: uppercase;
-    }
-
-    .card-price table .price {
-        font-size: 1.2em;
-        font-weight: 700;
-        text-align: left;
-    }
-
-    .card-price table .note {
-        color: #666;
-        font-size: 0.8em;
-    }
-
-    .center-text {
-        text-align: center;
-        font-size: 1.7em;
-        width: 100%;
-        min-height: 85px;
-        max-height: 85px;
-    }
-
-    .boton-footer {
-        color: #333;
-        background-color: #e6e6e6;
-        border-color: #e6e6e6;
-        font-size: 1.5em;
-        font-weight: 500;
-    }
-
-    .btn-default:hover {
-        color: #333;
-        background-color: #ddd;
-        border-color: #e6e6e6;
-        font-size: 1.6em;
-        /* font-weight: bold; */
-    }
-
-
-
-
+    /* Estilos micrositio */
     .card {
         background-color: #fff;
         border: 1px solid transparent;
@@ -827,6 +531,8 @@ position: absolute;
         transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
         overflow: hidden;
         cursor: pointer;
+        display: flex;
+        flex-direction: column;
     }
 
     .card:hover {
@@ -836,7 +542,6 @@ position: absolute;
 
     .card img {
         transition: transform 0.3s ease-in-out;
-        /* transición */
         display: block;
         width: 100%;
         height: auto;
@@ -847,20 +552,51 @@ position: absolute;
         transform: scale(1.05);
     }
 
+    .card .card-body {
+        width: 100%;
+        padding: 12px;
+        flex: 1;
+    }
+
+    .card-header {
+        color: #333 m !important;
+        background-color: #ddd !important;
+        border-bottom: 1px solid #ddd;
+        padding: 8px;
+        word-wrap: break-word;
+        /* Permite que el texto largo se divida en varias líneas */
+        white-space: normal;
+        /* Asegura que el texto se ajuste y no se desborde */
+    }
+
+    .boton-footer {
+        color: #333;
+        background-color: #e6e6e6;
+        border-color: #e6e6e6;
+        font-size: 1.3em !important;
+        font-weight: 500;
+    }
+
+    .btn-default:hover {
+        color: #333 !important;
+        background-color: #ddd !important;
+        border-color: #e6e6e6 !important;
+        font-size: 1.5em !important;
+    }
+
+    .center-text {
+        text-align: center;
+        font-size: 1.7em;
+        width: 100%;
+        min-height: 85px;
+        /* max-height: 85px; */
+        max-height: fit-content;
+    }
+
     .subtitulo-cards {
         margin-bottom: 6rem;
     }
 
-    .subtitulo2-cards {
-        margin-bottom: 6rem;
-        margin-left: 4rem;
-    }
-
-    /* .equal-height {
-            display: flex;
-            height: 100%;
-            flex-wrap: wrap;
-        } */
     .card-grid {
         max-width: 1152px;
         margin: 0 auto;
@@ -868,13 +604,13 @@ position: absolute;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 16px;
         margin-bottom: 7rem;
-
     }
 
     .card-display-content {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        height: 100%;
     }
 
     h3 {
@@ -883,6 +619,10 @@ position: absolute;
 
     .card-default p:last-child {
         text-align: justify;
+    }
+
+    .btn-primary:visited, .btn:visited {
+    color: #333;
     }
 </style>
 <div class="principal_cont">
@@ -1171,7 +911,7 @@ position: absolute;
                             </div>
                             <a href="https://www.mineducacion.gov.co/1780/w3-article-322486.html?_noredirect=1"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre ley de convivencia escolar">Click para saber más</a>
+                                aria-label="Más sobre ley de convivencia escolar" target="_blank">Ver más información</a>
                         </div>
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="ruta-atencion">
@@ -1193,7 +933,7 @@ position: absolute;
                             </div>
                             <a href="https://www.mineducacion.gov.co/1780/w3-article-322486.html?_noredirect=1"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre ley de convivencia escolar">Click para saber más</a>
+                                aria-label="Más sobre ley de convivencia escolar" target="_blank">Ver más información</a>
                         </div>
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="kit-herramientas">
@@ -1219,8 +959,8 @@ position: absolute;
                             </div>
                             <a href="https://www.colombiaaprende.edu.co/contenidos/coleccion/kit-de-herramientas-para-la-convivencia-escolar"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre las herramientas para la convivencia escolar">Click para saber
-                                más</a>
+                                aria-label="Más sobre las herramientas para la convivencia escolar" target="_blank">Ver más
+                                información</a>
                         </div>
                     </div>
                     <!-- Subtitulo 2 -->
@@ -1249,7 +989,7 @@ position: absolute;
                             </div>
                             <a href="https://www.mineducacion.gov.co/1780/w3-article-322486.html?_noredirect=1"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre ley de convivencia escolar">Click para saber más</a>
+                                aria-label="Más sobre ley de convivencia escolar" target="_blank">Ver más información</a>
                         </div>
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="ruta-atencion">
@@ -1274,7 +1014,7 @@ position: absolute;
                             </div>
                             <a href="https://www.mineducacion.gov.co/1780/w3-article-322486.html?_noredirect=1"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre ley de convivencia escolar">Click para saber más</a>
+                                aria-label="Más sobre ley de convivencia escolar" target="_blank">Ver más información</a>
                         </div>
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="convivencia-escolar">
@@ -1302,7 +1042,7 @@ position: absolute;
                             </div>
                             <a href="https://www.mineducacion.gov.co/1780/w3-article-322486.html?_noredirect=1"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre ley de convivencia escolar">Click para saber más</a>
+                                aria-label="Más sobre ley de convivencia escolar" target="_blank">Ver más información</a>
                         </div>
                     </div>
                     <!-- subtitulo 3-->
@@ -1322,21 +1062,18 @@ position: absolute;
                                 </div>
                                 <div class="card-body">
                                     <p>
-                                        El ciberacoso escolar y los delitos tecnológicos, que han aumentado
-                                        dramáticamente en
-                                        prevalencia, están vinculados a la creciente accesibilidad de los medios
-                                        digitales,
-                                        especialmente importantes para la generación digital que los utiliza
-                                        constantemente como su
-                                        principal forma de interacción.
+                                        Aquí encontrarás videos y protocolos que describen dos herramientas del Sistema
+                                        Nacional de Convivencia Escolar: <br>
+                                        1) La Ruta de Atención Integral para la convivencia escolar y, <br>
+                                        2) Sistema de Información Unificado para la Convivencia Escolar (SIUCE) <br>
                                     </p>
                                 </div>
 
                             </div>
                             <a href="https://www.colombiaaprende.edu.co/recurso-coleccion/videos-para-la-accion-y-el-seguimiento"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre ley de convivencia escolar" target="_blank">Click para saber
-                                más</a>
+                                aria-label="Más sobre ley de convivencia escolar" target="_blank">Ver más
+                                información</a>
                         </div>
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="ruta-atencion">
@@ -1351,14 +1088,14 @@ position: absolute;
                                     <h3>Secretaria social, de cultura y deportes</h3>
                                 </div>
                                 <div class="card-body">
-                                    <p>La ruta que necesitas conocer para el desarrollo del plan de convivencia escolar.
+                                    <p>Protocolos para el abordaje pedagógico de situaciones de riesgo en el marco de la ruta de atención integral para la convivencia escolar
                                     </p>
                                 </div>
 
                             </div>
                             <a href="https://www.colombiaaprende.edu.co/recurso-coleccion/protocolos-para-la-accion-y-seguimiento"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre ley de convivencia escolar">Click para saber más</a>
+                                aria-label="Más sobre ley de convivencia escolar" target="_blank">Ver más información</a>
                         </div>
                     </div>
                     <!-- subtitulo 4 -->
@@ -1375,16 +1112,14 @@ position: absolute;
                                 </div>
                                 <div class="card-body">
                                     <p>
-                                        Protocolos para el abordaje pedagógico de situaciones de riesgo en el marco de
-                                        la ruta de
-                                        atención integral para la convivencia escolar.
+                                        Las infografías dirigidas a estudiantes permiten desarrollar competencias socioemocionales que protegen contra el consumo de SPA en la infancia y la adolescencia e invitan a garantizar los derechos de las personas que ya están consumiendo, evitando la estigmatización, discriminación y exclusión dentro del sistema educativo.
                                     </p>
                                 </div>
 
                             </div>
                             <a href="https://www.colombiaaprende.edu.co/recurso-coleccion/prevencion-de-consumo-de-spa"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre ley de convivencia escolar">Click para saber más</a>
+                                aria-label="Más sobre ley de convivencia escolar" target="_blank">Ver más información</a>
                         </div>
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="ruta-atencion">
@@ -1396,14 +1131,14 @@ position: absolute;
                                         class="img-responsive" alt="convivencia escolar">
                                 </div>
                                 <div class="card-body">
-                                    <p>La ruta que necesitas conocer para el desarrollo del plan de convivencia escolar.
+                                    <p>El protocolo y estas infografías son herramientas útiles que indican una ruta clara y operativa que se sugiere seguir para la prevención y la atención de conductas suicidas en el escenario escolar y el seguimiento posterior que debe realizarse.
                                     </p>
                                 </div>
 
                             </div>
                             <a href="https://www.colombiaaprende.edu.co/recurso-coleccion/prevencion-del-suicidio"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre ley de convivencia escolar">Click para saber más</a>
+                                aria-label="Más sobre ley de convivencia escolar" target="_blank">Ver más información</a>
                         </div>
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="kit-herramientas">
@@ -1415,19 +1150,16 @@ position: absolute;
                                         class="img-responsive" alt="herramientas para la convivencia escolar">
                                 </div>
                                 <div class="card-body">
-                                    <p>Materiales y recursos para estudiantes, docentes y familias que permitirán la
-                                        divulgación de
-                                        información relevante para adelantar prácticas pedagógicas e interacciones
-                                        orientadas a
-                                        promover la convivencia escolar.
+                                    <p>
+                                        Las infografías, basadas en el protocolo, informan, de una manera sencilla y fácil de comprender, sobre qué son las violencias de género, las cuales pueden ser violencia sexual, física, psicológica o simbólica, cómo prevenirlas y qué hacer en caso de identificar una víctima o ser víctima de estas agresiones.
                                     </p>
                                 </div>
 
                             </div>
                             <a href="https://www.colombiaaprende.edu.co/recurso-coleccion/prevencion-de-las-violencias-basadas-en-el-genero"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre las herramientas para la convivencia escolar">Click para saber
-                                más</a>
+                                aria-label="Más sobre las herramientas para la convivencia escolar" target="_blank">Ver más
+                                información</a>
                         </div>
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="kit-herramientas">
@@ -1439,19 +1171,16 @@ position: absolute;
                                         class="img-responsive" alt="herramientas para la convivencia escolar">
                                 </div>
                                 <div class="card-body">
-                                    <p>Materiales y recursos para estudiantes, docentes y familias que permitirán la
-                                        divulgación de
-                                        información relevante para adelantar prácticas pedagógicas e interacciones
-                                        orientadas a
-                                        promover la convivencia escolar.
+                                    <p>
+                                        Las infografías orientan las acciones que deben desarrollarse en el entorno escolar frente a situaciones que inciten o configuren actos de xenofobia, exclusión o estigmatización en contra de niñas, niños, y adolescentes migrantes.
                                     </p>
                                 </div>
 
                             </div>
                             <a href="https://www.colombiaaprende.edu.co/recurso-coleccion/prevencion-de-la-xenofobia"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre las herramientas para la convivencia escolar">Click para saber
-                                más</a>
+                                aria-label="Más sobre las herramientas para la convivencia escolar" target="_blank">Ver más
+                                información</a>
                         </div>
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="kit-herramientas">
@@ -1463,19 +1192,16 @@ position: absolute;
                                         class="img-responsive" alt="herramientas para la convivencia escolar">
                                 </div>
                                 <div class="card-body">
-                                    <p>Materiales y recursos para estudiantes, docentes y familias que permitirán la
-                                        divulgación de
-                                        información relevante para adelantar prácticas pedagógicas e interacciones
-                                        orientadas a
-                                        promover la convivencia escolar.
+                                    <p>
+                                        se constituye en una hoja de ruta para dar respuesta desde un perspectiva integral a situaciones en las que se presente discriminación por aspectos étnicos y raciales o que promuevan actos excluyentes o de estigmatización en contra de niñas, niños, y  adolescentes por causa de su pertenencia étnica o racial.
                                     </p>
                                 </div>
 
                             </div>
                             <a href="https://www.colombiaaprende.edu.co/recurso-coleccion/prevencion-de-racismo"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre las herramientas para la convivencia escolar">Click para saber
-                                más</a>
+                                aria-label="Más sobre las herramientas para la convivencia escolar" target="_blank">Ver más
+                                información</a>
                         </div>
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="kit-herramientas">
@@ -1487,19 +1213,16 @@ position: absolute;
                                         class="img-responsive" alt="herramientas para la convivencia escolar">
                                 </div>
                                 <div class="card-body">
-                                    <p>Materiales y recursos para estudiantes, docentes y familias que permitirán la
-                                        divulgación de
-                                        información relevante para adelantar prácticas pedagógicas e interacciones
-                                        orientadas a
-                                        promover la convivencia escolar.
+                                    <p>
+                                        Este protocolo y sus infografías son aún más relevantes cuando se observa que el ciberacoso escolar y los delitos tecnológicos se han convertido en las “nuevas formas” de realizar agresiones entre pares, notándose un incremento dramático en su prevalencia durante los últimos años.
                                     </p>
                                 </div>
 
                             </div>
                             <a href="https://www.colombiaaprende.edu.co/recurso-coleccion/prevencion-del-ciberacoso-y-delitos-en-medios-digitales"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre las herramientas para la convivencia escolar">Click para saber
-                                más</a>
+                                aria-label="Más sobre las herramientas para la convivencia escolar" target="_blank">Ver más
+                                información</a>
                         </div>
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="kit-herramientas">
@@ -1511,19 +1234,16 @@ position: absolute;
                                         class="img-responsive" alt="herramientas para la convivencia escolar">
                                 </div>
                                 <div class="card-body">
-                                    <p>Materiales y recursos para estudiantes, docentes y familias que permitirán la
-                                        divulgación de
-                                        información relevante para adelantar prácticas pedagógicas e interacciones
-                                        orientadas a
-                                        promover la convivencia escolar.
+                                    <p>
+                                        Tres micro videos que permiten conocer temas relacionados con la atención de la violencia sexual, la prevención del suicidio y la prevención de consumo de SPA
                                     </p>
                                 </div>
 
                             </div>
                             <a href="https://www.colombiaaprende.edu.co/recurso-coleccion/contenidos-para-la-prevencion-para-todos-y-todas"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre las herramientas para la convivencia escolar">Click para saber
-                                más</a>
+                                aria-label="Más sobre las herramientas para la convivencia escolar" target="_blank">Ver más
+                                información</a>
                         </div>
                     </div>
                     <!-- Subtitulo 5 -->
@@ -1540,16 +1260,14 @@ position: absolute;
                                 </div>
                                 <div class="card-body">
                                     <p>
-                                        Protocolos para el abordaje pedagógico de situaciones de riesgo en el marco de
-                                        la ruta de
-                                        atención integral para la convivencia escolar.
+                                        Un material pedagógico de prevención del maltrato infantil, para que ellas y ellos se reconozcan a sí mismos(as) como las y los integrantes más importantes de nuestra sociedad, al ser sujetos de derecho de especial protección cuyo interés superior está protegido por el Estado, la sociedad y la familia.
                                     </p>
                                 </div>
 
                             </div>
                             <a href="https://www.colombiaaprende.edu.co/recurso-coleccion/material-pedagogico-para-prevenir-el-maltrato-infantil"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre ley de convivencia escolar">Click para saber más</a>
+                                aria-label="Más sobre ley de convivencia escolar" target="_blank">Ver más información</a>
                         </div>
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="ruta-atencion">
@@ -1563,14 +1281,14 @@ position: absolute;
                                         class="img-responsive" alt="convivencia escolar">
                                 </div>
                                 <div class="card-body">
-                                    <p>La ruta que necesitas conocer para el desarrollo del plan de convivencia escolar.
+                                    <p>Guía para familia y cuidadores en el uso del material del kit de herramientas.
                                     </p>
                                 </div>
 
                             </div>
                             <a href="https://www.colombiaaprende.edu.co/recurso-coleccion/guia-para-familia-y-cuidadores-en-el-uso-del-material-del-kit-de-herramientas"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre ley de convivencia escolar">Click para saber más</a>
+                                aria-label="Más sobre ley de convivencia escolar" target="_blank">Ver más información</a>
                         </div>
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="kit-herramientas">
@@ -1584,19 +1302,16 @@ position: absolute;
                                         class="img-responsive" alt="herramientas para la convivencia escolar">
                                 </div>
                                 <div class="card-body">
-                                    <p>Materiales y recursos para estudiantes, docentes y familias que permitirán la
-                                        divulgación de
-                                        información relevante para adelantar prácticas pedagógicas e interacciones
-                                        orientadas a
-                                        promover la convivencia escolar.
+                                    <p>
+                                        Aquí encontrarás recursos creativos para promover una convivencia escolar positiva y el trato adecuado hacia los niños y adolescentes.
                                     </p>
                                 </div>
 
                             </div>
                             <a href="https://especiales.colombiaaprende.edu.co/convivencia-escolar/"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre las herramientas para la convivencia escolar">Click para saber
-                                más</a>
+                                aria-label="Más sobre las herramientas para la convivencia escolar" target="_blank">Ver más
+                                información</a>
                         </div>
                     </div>
 
@@ -1613,16 +1328,14 @@ position: absolute;
                                 </div>
                                 <div class="card-body">
                                     <p>
-                                        Protocolos para el abordaje pedagógico de situaciones de riesgo en el marco de
-                                        la ruta
-                                        de atención integral para la convivencia escolar.
+                                        Aquí se encuentran los video tutoriales para Directivos Docentes y Docentes que permiten conocer funcionalidades para el manejo del SIUCE, así como para programar acciones que posibiliten el mejoramiento de la convivencia escolar con la comunidad educativa a través de acciones de prevención, promoción, atención y seguimiento.
                                     </p>
                                 </div>
 
                             </div>
                             <a href="https://especiales.colombiaaprende.edu.co/convivencia-escolar/module-1.html"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre ley de convivencia escolar">Click para saber más</a>
+                                aria-label="Más sobre ley de convivencia escolar" target="_blank">Ver más información</a>
                         </div>
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="ruta-atencion">
@@ -1635,14 +1348,15 @@ position: absolute;
                                         class="img-responsive" alt="convivencia escolar">
                                 </div>
                                 <div class="card-body">
-                                    <p>La ruta que necesitas conocer para el desarrollo del plan de convivencia escolar.
+                                    <p>
+                                        En este módulo encontrará herramientas con información relevante para adelantar acciones de prevención ante diferentes factores de riesgo que afectan la convivencia escolar.
                                     </p>
                                 </div>
 
                             </div>
                             <a href="https://especiales.colombiaaprende.edu.co/convivencia-escolar/module-2.html"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre ley de convivencia escolar">Click para saber más</a>
+                                aria-label="Más sobre ley de convivencia escolar" target="_blank">Ver más información</a>
                         </div>
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="kit-herramientas">
@@ -1655,19 +1369,16 @@ position: absolute;
                                         class="img-responsive" alt="herramientas para la convivencia escolar">
                                 </div>
                                 <div class="card-body">
-                                    <p>Materiales y recursos para estudiantes, docentes y familias que permitirán la
-                                        divulgación
-                                        de información relevante para adelantar prácticas pedagógicas e interacciones
-                                        orientadas
-                                        a promover la convivencia escolar.
+                                    <p>
+                                        Aquí encuentran material pedagógico para la prevención del maltrato infantil, para que los niños, las niñas y adolescentes se reconozcan a sí mismos (as) como sujetos con derechos, capaces de incidir en las situaciones que les ocurren y en su desarrollo.
                                     </p>
                                 </div>
 
                             </div>
                             <a href="https://especiales.colombiaaprende.edu.co/convivencia-escolar/module-3.html"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre las herramientas para la convivencia escolar">Click para saber
-                                más</a>
+                                aria-label="Más sobre las herramientas para la convivencia escolar" target="_blank">Ver más
+                                información</a>
                         </div>
                     </div>
 
@@ -1684,16 +1395,14 @@ position: absolute;
                                 </div>
                                 <div class="card-body">
                                     <p>
-                                        Protocolos para el abordaje pedagógico de situaciones de riesgo en el marco de
-                                        la ruta
-                                        de atención integral para la convivencia escolar.
+                                        Es un sistema nacional creado por la Ley 1620 de 2013 para la identificación, registro y seguimiento de los casos de acoso, violencia escolar y de vulneración de los derechos humanos, sexuales y reproductivos de niñas, niños y adolescentes de los establecimientos educativos oficiales y no oficiales de Colombia.
                                     </p>
                                 </div>
 
                             </div>
                             <a href="https://www.mineducacion.gov.co/portal/salaprensa/Noticias/404764:Sistema-de-Informacion-Unificado-de-Convivencia-Escolar-SIUCE"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre ley de convivencia escolar">Click para saber más</a>
+                                aria-label="Más sobre ley de convivencia escolar" target="_blank">Ver más información</a>
                         </div>
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="ruta-atencion">
@@ -1707,14 +1416,15 @@ position: absolute;
                                         class="img-responsive" alt="convivencia escolar">
                                 </div>
                                 <div class="card-body">
-                                    <p>La ruta que necesitas conocer para el desarrollo del plan de convivencia escolar.
+                                    <p>
+                                        Aquí puedes acceder a la plataforma SIUCE para SiA3 para casos de convivencia escolar.
                                     </p>
                                 </div>
 
                             </div>
                             <a href="http://siuce.mineducacion.gov.co/siuce-angular2/"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre ley de convivencia escolar">Click para saber más</a>
+                                aria-label="Más sobre ley de convivencia escolar" target="_blank">Ver más información</a>
                         </div>
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="kit-herramientas">
@@ -1726,19 +1436,16 @@ position: absolute;
                                         class="img-responsive" alt="herramientas para la convivencia escolar">
                                 </div>
                                 <div class="card-body">
-                                    <p>Materiales y recursos para estudiantes, docentes y familias que permitirán la
-                                        divulgación
-                                        de información relevante para adelantar prácticas pedagógicas e interacciones
-                                        orientadas
-                                        a promover la convivencia escolar.
+                                    <p>
+                                        Aquí puedes acceder a la plataforma SIUCE para reportar casos anónimos.
                                     </p>
                                 </div>
 
                             </div>
                             <a href="http://siuce.mineducacion.gov.co/siuceanonimo-angular2/"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre las herramientas para la convivencia escolar">Click para saber
-                                más</a>
+                                aria-label="Más sobre las herramientas para la convivencia escolar" target="_blank">Ver más
+                                información</a>
                         </div>
                     </div>
                 </div>
