@@ -1,0 +1,448 @@
+<style type="text/css">
+    .principal_cont {
+        margin: 0;
+        padding: 0;
+    }
+
+    .blanco_c01,
+    .azul_c01 {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .info_cont01,
+    .inf_cont02 {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .titulo-cilindro {
+        text-align: center;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .container_ps {
+        width: 80%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .botones_container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        /* display: flex; */
+        flex: 1;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .titulo-cilindro h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+        font-family: 'Work Sans', sans-serif !important;
+        font-weight: bold;
+    }
+
+    .titulo-cilindro span {
+        font-size: 16px;
+    }
+
+    .blanco_c01 {
+        background-color: #ebebeb;
+        color: #333;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        flex: 1;
+    }
+
+    .info_cont01 {
+        background-color: #ebebeb;
+        color: #333;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        flex: 1;
+    }
+
+    .inf_cont02 {
+        background-color: #ebebeb;
+        color: #333;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        flex: 1;
+    }
+
+    .azul_c01 {
+        background-color: #3462ad;
+        color: #fff;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        flex: 1;
+    }
+
+    .inf_cont02 {
+        background-color: #3462ad;
+        color: #fff;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        flex: 1;
+    }
+
+    .logo-alcaldia {
+        margin-top: 0;
+        text-align: center;
+    }
+
+    .nombre_c01 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .descripcion p,
+    .alcaldia p {
+        font-size: 12px;
+        text-align: justify;
+    }
+
+    .descripcion_01 p {
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    .foto-persona {
+        position: relative;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 20px;
+        width: 200px;
+        height: 200px;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .foto-persona img {
+        width: 100%;
+        height: 120%;
+        object-fit: cover;
+        background-color: #fff;
+    }
+
+    .franja-oscura {
+        position: absolute;
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+        top: 5px;
+        left: 5px;
+        border: 5px solid #2c3e50;
+        border-radius: 80%;
+    }
+
+    .titulo_c01 h3 {
+        margin-bottom: 20px;
+        font-family: 'Work Sans', sans-serif !important;
+        font-weight: bold;
+        font-size: 20px !important;
+    }
+
+    .titulo-cilindro {
+        background-color: #2c3e50;
+        color: #fff;
+        padding: 1px;
+        border-radius: 60px 0px 0px 60px;
+        margin-bottom: 20px;
+        margin-right: 0;
+        letter-spacing: -1px;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: bold;
+        position: relative;
+    }
+
+    .nombre-persona {
+        margin-bottom: 10px;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: bold;
+    }
+
+    .alcaldia_c01 {
+        font-family: 'Work Sans', sans-serif;
+        font-weight: bold;
+    }
+
+    .row_c01 {
+        font-family: Arial, sans-serif;
+        max-width: 1200px;
+        margin: auto;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #ffffff;
+    }
+
+    .row_c02 {
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        max-width: 1200px;
+        margin: auto;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #ffffff;
+    }
+
+    @keyframes slideInFromRight {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideOutToLeft {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+    @keyframes slideInFromLeft {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideOutToRight {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+    .row_c01,
+    .row_c02 {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .row_c01 {
+        animation: slideInFromRight 1s ease-out forwards;
+    }
+
+    .row_c02 {
+        animation: slideInFromLeft 1s ease-out forwards;
+        display: none;
+    }
+
+    .boton {
+        margin: 0 10px;
+    }
+</style>
+<div class="principal_cont">
+    <div class="container_ps">
+        <div class="row_c01">
+            <div class="col-xs-12 col-sm-6 blanco_c01">
+                <div class="nombre_c01">
+                    <h2 style="margin-bottom: 10px">Aldemar Armando Baquero Bonilla</h2>
+                </div>
+
+                <div class="descripcion">
+                    <p>Ingeniero Industrial de profesi&oacute;n, especialista en gobierno y gesti&oacute;n
+                        p&uacute;blica territoriales, de la pontifica Universidad Javeriana, especialista en gerencia
+                        ambiental de la universidad Sergio arboleda, con m&aacute;s de 10 a&ntilde;os de experiencia en
+                        el sector p&uacute;blico.<br />
+                        <br />
+                        Se desempe&ntilde;&oacute; como director regional en el departamento administrativo para la
+                        prosperidad social de la Presidencia de la Rep&uacute;blica Delegado para el Meta,
+                        tambi&eacute;n ha ejercido cargos como: Secretario General para la Contralor&iacute;a
+                        Departamental del Meta, Secretario de Recursos Humanos para la Gobernaci&oacute;n del Meta,
+                        Director Administrativo de Planeaci&oacute;n Educativa para la Gobernaci&oacute;n del Meta,
+                        Gerente General de la Empresa de Servicios P&uacute;blicos de Acacias ESPA, entre otros, ha
+                        dedicado la mayor parte de su vida laboral al servicio publico y a la comunidad.
+                    </p>
+                </div>
+
+                <div class="logo-alcaldia"><img alt="Logo de la Alcaldía"
+                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria11942.png"
+                        style="height:50px; margin-top:40%" /></div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 azul_c01">
+                <div class="foto-persona">
+                    <div class="franja-oscura">&nbsp;</div>
+                    <img alt="Foto de la Persona"
+                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria11931.png" />
+                </div>
+
+                <div class="titulo_c01">
+                    <h3 style="color: white">SECRETAR&Iacute;A<br />
+                        ADMINISTRATIVA<br />
+                        Y FINANCIERA</h3>
+                </div>
+
+                <div class="titulo-cilindro">
+                    <h3 style="color: white"><span>EQUIPO DE</span><br />
+                        GOBIERNO</h3>
+                </div>
+
+                <div class="nombre-persona">
+                    <p><span class="alcaldia_c01">CARLOS JULIO<br />
+                            PLATA BECERRA<br />
+                            ----Alcalde----</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row_c02">
+            <div class="col-xs-12 col-sm-6 info_cont01">
+                <div class="contenido_inf">
+                    <div class="info_c01">
+                        <h2 style="margin-bottom: 10px">Misi&oacute;n</h2>
+                    </div>
+
+                    <div class="descripcion_01">
+                        <p>Corresponde a la Secretar&iacute;a Administrativa y Financiera desarrollar procesos y
+                            actividades necesarias para la consolidaci&oacute;n y el fortalecimiento institucional. Es
+                            responsable por formular e implementar pol&iacute;ticas financieras para el municipio,
+                            administrar los recursos econ&oacute;micos para la ejecuci&oacute;n de los diferentes
+                            proyectos de desarrollo, para lo cual organiza y desarrolla las funciones de presupuesto,
+                            contabilidad e informaci&oacute;n financiera, y ejecuta las funciones de recaudo y pago de
+                            las obligaciones municipales. Dirige, organiza y supervisa la prestaci&oacute;n de los
+                            servicios de suministro, correspondencia, archivo y patrimonio documental al igual que la
+                            administraci&oacute;n de los recursos f&iacute;sicos y materiales, del funcionamiento del
+                            software de Operaci&oacute;n financiera, al igual que mantener actualizado el inventario
+                            general del municipio. Le compete la direcci&oacute;n, ejecuci&oacute;n y control de los
+                            procesos de administraci&oacute;n del recurso humano al servicio del municipio, y la
+                            aplicaci&oacute;n del sistema de Carrera Administrativa.</p>
+                    </div>
+
+                    <div class="info_c02">
+                        <h2 style="margin-bottom: 10px">Objetivos</h2>
+                    </div>
+
+                    <div class="descripcion_01">
+                        <p>1. Coordinar y dirigir las &aacute;reas que componen la Secretar&iacute;a Administrativa y
+                            Financiera en el logro de sus objetivos, a trav&eacute;s de acciones orientadas al
+                            desarrollo integral de los colaboradores, en un clima laboral que garantice &oacute;ptimos
+                            niveles de productividad, proporcionando los elementos e infraestructura adecuada; todo
+                            ello, como producto de una adecuada distribuci&oacute;n de los recursos sujetos a los
+                            principios de equidad, igualdad y transparencia.</p>
+                    </div>
+
+                    <div class="logo-alcaldia"><img alt="Logo de la Alcaldía"
+                            src="https://www.acacias.gov.co/info/acacias_se/media/galeria11942.png"
+                            style="height:50px; margin-top:30%" /></div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 inf_cont02">
+                <div class="info_c03">
+                    <h2 style="margin-bottom: 10px">Funciones</h2>
+                </div>
+
+                <div class="descripcion_01">
+                    <p>&bull; Planear, dirigir, coordinar y controlar el funcionamiento de los procesos de
+                        administraci&oacute;n de personal, presupuesto, tesorer&iacute;a, rentas y contabilidad, de
+                        conformidad con las pol&iacute;ticas de la administraci&oacute;n.<br />
+                        &bull; Expedir los proyectos de los actos administrativos relacionados con la Secretar&iacute;a
+                        Administrativa y Financiera, de acuerdo con las directrices de la Administraci&oacute;n
+                        Municipal y las normas vigentes que lo faculte.<br />
+                        &bull; Implantar pol&iacute;ticas generales tendientes a regular la determinaci&oacute;n,
+                        obtenci&oacute;n, administraci&oacute;n y distribuci&oacute;n de los recursos financieros con
+                        que cuenta el Municipio.<br />
+                        &bull; Elaborar y dirigir la aplicaci&oacute;n del Plan de Acci&oacute;n de la Secretar&iacute;a
+                        Administrativa y Financiera.</p>
+                </div>
+
+                <div class="info_c03">
+                    <h2 style="margin-bottom: 10px">Programas y Proyectos</h2>
+                </div>
+
+                <div class="info_c03" style="text-align: left">
+                    <h2 style="margin-bottom: 10px; font-style: italic; font-size: 20px; text-align: left">Programas
+                    </h2>
+                </div>
+
+                <div class="descripcion_01">
+                    <p>(No hay programas relacionados)</p>
+                </div>
+
+                <div class="info_c03" style="text-align: left">
+                    <h2 style="margin-bottom: 10px; font-style: italic; font-size: 20px; text-align: left">Proyectos
+                    </h2>
+                </div>
+
+                <div class="descripcion_01">
+                    <p>&bull; Adquisici&oacute;n de elementos tecnol&oacute;gicos dirigidos a la modernizaci&oacute;n
+                        institucional para servicios eficientes en el municipio de Acacias.<br />
+                        &bull; Estudio t&eacute;cnico de proceso para la modernizaci&oacute;n institucional en la
+                        administraci&oacute;n central del Municipio de Acac&iacute;as, Meta, Orinoqu&iacute;a.<br />
+                        &bull; Fortalecimiento institucional para el mejoramiento de la gesti&oacute;n fiscal del
+                        municipio de Acacias.<br />
+                        &bull; Fortalecimiento institucional para el mejoramiento de la gesti&oacute;n fiscal del
+                        municipio de Acacias.<br />
+                        &bull; Mejoramiento mediante el suministro de mobiliario y elementos tecnol&oacute;gicos para
+                        las dependencias de la administraci&oacute;n del municipio de Acacias.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 botones_container">
+        <div class="cont_btns"><button class="boton boton_01"
+                onclick="mostrarContenido('buttn_01')">Secretario</button><button class="boton boton_02"
+                onclick="mostrarContenido('buttn_02')">Informaci&oacute;n</button></div>
+    </div>
+</div>
+<script>
+
+    function mostrarContenido(id) {
+        console.log('Mostrar contenido con id:', id);
+    }
+
+    $(document).ready(function () {
+        $(".boton_01").click(function () {
+            if ($(".row_c02").is(":visible")) {
+                $(".row_c02").css("animation", "slideOutToRight 1s ease-out forwards");
+                $(".row_c01").css("animation", "slideInFromLeft 1s ease-out forwards");
+
+                $(".row_c02").one('animationend', function () {
+                    $(this).hide();
+                    $(".row_c01").show().css("display", "flex");
+                });
+            }
+        });
+
+        $(".boton_02").click(function () {
+            if ($(".row_c01").is(":visible")) {
+                $(".row_c01").css("animation", "slideOutToLeft 1s ease-out forwards");
+                $(".row_c02").css("animation", "slideInFromRight 1s ease-out forwards");
+
+                $(".row_c01").one('animationend', function () {
+                    $(this).hide();
+                    $(".row_c02").show().css("display", "flex");
+                });
+            }
+        });
+    });
+
+</script>
