@@ -1,0 +1,76 @@
+<script>
+    $(function () {
+
+        // botón a deshabilitar
+        var btn = document.getElementById('btn');
+        var checkbox = document.getElementById('check');
+
+        function validateBtn() {
+
+            var date = new Date();
+            // dia actual
+            var day = date.getDay();
+            // hora actual
+            var hour = date.getHours();
+
+            // se deshabilita el botón por defecto
+            btn.disabled = true;
+            // lunes = 1, viernes = 5
+            if (day >= 1 && day <= 5) {
+                // de 8 am a 12 pm - 2 pm a 5 pm
+                if (((hour >= 8 && hour <= 12) || (hour >= 14 && hour <= 16)) && checkbox.checked) {
+                    // se habilita el botón
+                    btn.disabled = false;
+                }
+            }
+        }
+
+        checkbox.addEventListener('change', function () {
+            validateBtn();
+        });
+
+        validateBtn();
+    });
+</script>
+<table border="0" cellpadding="1" cellspacing="1">
+    <tbody>
+        <tr>
+            <td style="width: 60%;">
+                <p>A trav&eacute;s de este canal podr&aacute; recibir orientaci&oacute;n general acerca de los
+                    tr&aacute;mites y servicios que ofrece la Alcald&iacute;a de Acac&iacute;as. El horario de
+                    atenci&oacute;n de este servicio es de <strong>lunes a viernes de 2:00 pm. a 4:00 pm.&nbsp;</strong>
+                </p>
+
+                <p>Le recordamos que &eacute;ste canal <strong>NO</strong> es v&aacute;lido para la radicaci&oacute;n de
+                    derechos de petici&oacute;n, en ninguna modalidad. Si es su prop&oacute;sito es radicar una
+                    <strong>PQRSD</strong>, haga clic aqu&iacute;:&nbsp;<a href="/8998">SISTEMA PQRSD</a></p>
+
+                <p><strong>Autorizaci&oacute;n de Tratamiento de Datos Personales:</strong></p>
+
+                <p>Con el fin de dar cumplimiento al Manual de Pol&iacute;tica de Protecci&oacute;n de Datos Personales
+                    de la Alcald&iacute;a de Acac&iacute;as, la Ley 1581 de 2012, el Decreto 1377 de 2013 y la Ley 1712
+                    de 2014, la Alcald&iacute;a de Acac&iacute;as, NIT 892.001.457-3, email&nbsp;<a
+                        href="mailto:contactenos@acacias.gov.co">contactenos@acacias.gov.co</a>, con domicilio principal
+                    en la Cra 14 No. 13-30 Centro, en la ciudad de Acac&iacute;as, le indica que la informaci&oacute;n
+                    por usted suministrada ser&aacute; recolectada con la finalidad de mejorar el servicio al ciudadano
+                    a trav&eacute;s de los tr&aacute;mites, servicios y otros procedimientos administrativos que ofrece
+                    la entidad.</p>
+
+                <p><input checked="checked" id="check" type="checkbox" />&nbsp; &nbsp;Al ingresar al chat usted
+                    est&aacute; aceptando la Pol&iacute;tica de Tratamiento de Datos Personales (<em><a href="/1"
+                            target="_blank">Ver Pol&iacute;ticas</a></em>).</p>
+
+                <p>&nbsp;</p>
+
+                <p style="text-align: center;"><button id="btn"
+                        onclick="window.location='https://www.acacias.gov.co/chat/chat?locale=es'"
+                        type="button">Ingresar al chat</button></p>
+            </td>
+            <td style="width: 40%;vertical-align: top;"><img alt="Chat alcaldía de acacías" id="2363"
+                    longdesc="Chat alcaldía de acacías" src="info/acacias_se/media/galeria2363.jpg"
+                    style="height:412px; margin:0 0 0 30px; width:400px" title="Chat alcaldía de acacías" /></td>
+        </tr>
+    </tbody>
+</table>
+
+<p>&nbsp;</p>
