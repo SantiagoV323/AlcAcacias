@@ -1,0 +1,643 @@
+<style type="text/css">
+    header .u-menu .nav-menu .dropdown-menu a strong {
+        font-size: 15px !important;
+        font-weight: 400 !important;
+    }
+
+    header .u-menu .nav-menu ul.megamenu>li>a {
+        font-size: 12.8px !important;
+    }
+
+    .nav-pills>li+li {
+        display: none;
+    }
+
+    .scroll-to-top,
+    .show-scrollTop,
+    .block,
+    .block--gov-accessibility {
+        display: none;
+    }
+
+    span.govco-icon {
+        font-size: 2.5rem !important;
+    }
+
+    span.govco-icon>p {
+        font-size: 14px !important;
+    }
+
+    h1 {
+        font-size: 31px !important;
+        color: #048;
+        font-weight: 600;
+    }
+
+    .btn-default:hover,
+    .open>.dropdown-toggle.btn-default {
+        background-color: #e6e6e6 !important;
+        border-color: #adadad !important;
+    }
+
+    .accordion-toggle {
+        cursor: pointer;
+    }
+
+    .panel-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .panel-heading .accordion-toggle.collapsed:after {
+        /* symbol for "collapsed" panels */
+        content: "e080";
+        /* adjust as needed, taken from bootstrap.css */
+    }
+
+    .accordion-toggle,
+    .accordion-toggle:hover,
+    .accordion-toggle:focus {
+        text-decoration: none;
+    }
+
+    .container-accordion {
+        max-width: 800px;
+        padding: 0px 30px 0px 25px;
+    }
+
+    #introduccion {
+        font-size: 1.2rem;
+        color: darkslategray;
+    }
+
+    .header-content>.card-header>ul {
+        background: transparent;
+        border-radius: 25px;
+        color: darkgrey;
+        padding: 30px 0;
+    }
+
+    .second-level-titles,
+    .fourth-level-titles {
+        font-size: 16px;
+    }
+
+    .third-level-titles {
+        font-size: 16px;
+        padding-left: 30px;
+    }
+
+    .second-level-titles,
+    .third-level-titles {
+        margin-bottom: 6px;
+    }
+
+    .fourth-level-titles {
+        padding-left: 60px;
+    }
+
+    a {
+        color: gray;
+        text-decoration: none;
+    }
+
+    a:focus,
+    a:hover {
+        color: #23527c;
+        text-decoration: none;
+    }
+
+    /* Centering everything with a max-width */
+    .custom-container {
+        max-width: 838px;
+        margin: auto;
+        padding: 15px;
+    }
+
+    #buscador {
+        display: flex;
+        justify-content: right;
+        margin-bottom: 20px;
+    }
+
+    #searchInput {
+        border-radius: 10px 0px 0px 10px;
+        margin: unset;
+    }
+
+    .btn,
+    .btn-default {
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    .search-box {
+        margin: 15px 0px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    @media (max-width: 568px) {
+        #introduccion {
+            font-size: 16px;
+        }
+
+        .panel-title {
+            font-size: 14px;
+        }
+
+        .second-level-titles {
+            font-size: 16px;
+        }
+
+        .third-level-titles,
+        .fourth-level-titles {
+            font-size: 17px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .search-box {
+            margin: 8px -15px;
+            padding: 10px 15px;
+
+        }
+    }
+
+    /* estilos del formulario */
+    legend {
+        font-size: 31px !important;
+        color: #048;
+        font-weight: 600;
+        line-height: 1.4em !important;
+    }
+
+    fieldset {
+        margin-top: 5rem;
+    }
+</style>
+<p>&nbsp;</p>
+
+<!-- <p><span style="font-size:1em; text-align:justify">Los datos abiertos hacen parte de la informaci&oacute;n
+        p&uacute;blica y representan un gran potencial para el desarrollo de procesos de Gobierno Abierto (Open
+        Government), en la medida en que permiten reutilizar informaci&oacute;n de diversas fuentes, sin restricciones
+        de uso y en formatos de f&aacute;cil lectura y an&aacute;lisis, de tal manera que se habilitan nuevas formas de
+        tomar decisiones, de resolver problemas p&uacute;blicos, de entender determinados comportamientos y hasta
+        generar valor no solo social sino econ&oacute;mico a trav&eacute;s de la innovaci&oacute;n.</span></p>
+
+<p>Por ende, la Alcald&iacute;a de Acac&iacute;as a trav&eacute;s de la Oficina de las Tecnolog&iacute;as de la
+    Informaci&oacute;n y las Telecomunicaciones, ha venido implementando la Pol&iacute;tica de Gobierno Digital (Antes
+    Estrategia Gobierno en L&iacute;nea) del Ministerio de las TIC, donde uno de sus prop&oacute;sitos es la TOMA DE
+    DECISIONES BASADAS EN DATOS, para lo cual se ha abierto al p&uacute;blico una agenda de datos abiertos en el
+    cat&aacute;logo nacional disponible para todos en el portal de datos abiertos del estado colombiano <a
+        href="http://www.datos.gov.co" target="_blank">www.datos.gov.co</a>, el cual permite administrar la oferta y
+    demanda de los datos de acceso p&uacute;blico que actualmente poseen las entidades del Estado colombiano.
+    Acac&iacute;as cuenta actualmente con m&aacute;s de 40 data set en el cat&aacute;logo de datos abiertos que el
+    Gobierno nacional tiene dispuesto en la p&aacute;gina web mencionada anteriormente, con el fin de apoyar la
+    competitividad, transparencia, eficiencia y calidad de vida de la ciudadan&iacute;a. A continuaci&oacute;n pueden
+    evidenciarse los datos abiertos al servicio de la comunidad en general:</p>
+
+<div class="contenedor">
+    <div class="cotenido">
+        <section>
+            <div class="contenido-section">
+                <div class="titulo-section">
+                    <p>Datos Abiertos</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</div> -->
+
+<div id="buscador">
+    <div class="col-sm-12">
+        <div class="enunciado">
+            <div class="header-content">
+                <div class="card-header">
+                    <ul>
+                        <li id="introduccion">
+                            Los datos abiertos hacen parte de la informaci&oacute;n
+                            p&uacute;blica y representan un gran potencial para el desarrollo de procesos de Gobierno
+                            Abierto (Open
+                            Government), en la medida en que permiten reutilizar informaci&oacute;n de diversas fuentes,
+                            sin restricciones
+                            de uso y en formatos de f&aacute;cil lectura y an&aacute;lisis, de tal manera que se
+                            habilitan nuevas formas de
+                            tomar decisiones, de resolver problemas p&uacute;blicos, de entender determinados
+                            comportamientos y hasta
+                            generar valor no solo social sino econ&oacute;mico a trav&eacute;s de la
+                            innovaci&oacute;n.<br />
+                            <br />
+                            Por ende, la Alcald&iacute;a de Acac&iacute;as a trav&eacute;s de la Oficina de las
+                            Tecnolog&iacute;as de la
+                            Informaci&oacute;n y las Telecomunicaciones, ha venido implementando la Pol&iacute;tica de
+                            Gobierno Digital (Antes
+                            Estrategia Gobierno en L&iacute;nea) del Ministerio de las TIC, donde uno de sus
+                            prop&oacute;sitos es la TOMA DE
+                            DECISIONES BASADAS EN DATOS, para lo cual se ha abierto al p&uacute;blico una agenda de
+                            datos abiertos en el
+                            cat&aacute;logo nacional disponible para todos en el portal de datos abiertos del estado
+                            colombiano <a href="http://www.datos.gov.co" target="_blank">www.datos.gov.co</a>, el cual
+                            permite administrar la oferta y
+                            demanda de los datos de acceso p&uacute;blico que actualmente poseen las entidades del
+                            Estado colombiano.
+                            Acac&iacute;as cuenta actualmente con m&aacute;s de 40 data set en el cat&aacute;logo de
+                            datos abiertos que el
+                            Gobierno nacional tiene dispuesto en la p&aacute;gina web mencionada anteriormente, con el
+                            fin de apoyar la
+                            competitividad, transparencia, eficiencia y calidad de vida de la ciudadan&iacute;a. A
+                            continuaci&oacute;n pueden
+                            evidenciarse los datos abiertos al servicio de la comunidad en general:<br />
+                            <br />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="search-box"><input class="form-control buscadorSV" id="searchInput"
+            placeholder="Buscar sub-elemento..." type="text" />
+            <button class="btn btn-default" onclick="searchItem()">BUSCAR</button>
+        </div>
+    </div>
+</div>
+
+<h3>Datos abiertos</h3>
+<div class="custom-container"><!-- Use custom container for centered content -->
+    <div class="container-accordion">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading accordion-toggle" data-parent="#accordion" data-toggle="collapse">
+                    <h4 class="panel-title"><a> 1. OFICINA TIC </a></h4>
+                </div>
+                
+                <div class="panel-collapse collapse" id="collapseOne">
+                    <div class="panel-body">
+                        <ul class="subtitles">
+                            <li class="second-level-titles"><a
+                                    href="https://www.datos.gov.co/Econom-a-y-Finanzas/Sitios-de-interes-del-Municipio-de-Acacias/d856-btkz">1.1-
+                                    Sitios de Interes del Municipio de Acacías</a></li>
+                            <li class="second-level-titles"><a
+                                    href="https://www.datos.gov.co/Ciencia-Tecnolog%C3%ADa-e-Innovaci%C3%B3n/Zonas-Wifi-Gratis-Municipio-de-Acac%C3%ADas/r7mn-ty3w">1.2-
+                                    Zonas Wifi Gratis Municipio Acacías</a></li>
+                            <li class="second-level-titles"><a
+                                    href="https://www.datos.gov.co/Ciencia-Tecnolog-a-e-Innovaci-n/INVENTARIO-ACTIVOS-DE-INFORMACI-N-ALCALD-A-MUNICIP/mnb4-7rcs">1.3-
+                                    Inventario Activos de Información</a></li>
+                            <li class="second-level-titles"><a
+                                    href="https://www.datos.gov.co/Ciencia-Tecnolog-a-e-Innovaci-n/Promedio-de-tr-fico-y-conexiones-en-zonas-digitale/drfm-i22d">1.4-
+                                    Promedio de Trafico y Conexiones en Zonas Digitales de Acacías</a>
+                            </li>
+                            <li class="second-level-titles"><a
+                                    href="https://www.datos.gov.co/Ciencia-Tecnolog-a-e-Innovaci-n/Usuarios-de-los-Centros-de-apropiaci-n-TIC-del-Mun/3kda-jhhq">1.4-
+                                    Usuarios de los Centros de Apropiación TIC del Municipio de
+                                    Acacías</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading accordion-toggle" data-parent="#accordion" data-toggle="collapse">
+                    <h4 class="panel-title"><a> 2. SECRETARÍA ADMINISTRATIVA Y FINANCIERA </a></h4>
+                </div>
+
+                <div class="panel-collapse collapse" id="collapseTwo">
+                    <div class="panel-body">
+                        <ul class="subtitles">
+                            <li class="second-level-titles"> <a
+                                    href="https://www.datos.gov.co/Funci-n-p-blica/Directorio-Funcionarios-P-blicos-Alcald-a-Acacias/ns84-zuj6">
+                                    2.1- Directorio Funcionarios Públicos Alcaldía Acacías</a></li>
+                            <li class="second-level-titles"> <a
+                                    href="https://www.datos.gov.co/Inclusi-n-Social-y-Reconciliaci-n/Tr-mites-Inscritos-en-el-Municipio-de-Acac-as/bpwr-yyj8">
+                                    2.2- Trámites Inscritos en el Municipio de Acacías</a></li>
+                            <li class="second-level-titles"> <a
+                                    href="https://www.datos.gov.co/Funci-n-p-blica/Sedes-de-la-Alcald-a-de-Acacias/mjet-yv8b">
+                                    2.3- Sedes de la Alcaldía de Acacías</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading accordion-toggle" data-parent="#accordion" data-toggle="collapse">
+                    <h4 class="panel-title"><a> 3. SECRETARÍA DE PLANEACIÓN Y VIVIENDA </a></h4>
+                </div>
+
+                <div class="panel-collapse collapse" id="collapseThree">
+                    <div class="panel-body">
+                        <ul class="subtitles">
+                            <li class="second-level-titles"><a
+                                    href="https://www.datos.gov.co/Vivienda-Ciudad-y-Territorio/LICENCIAS-DE-COSTRUCCION-APROBADAS-POR-A-O/4bhj-4ydn">3.1-
+                                    Licencias de Construccion Aprobadas por Año</a></li>
+                            <li class="second-level-titles" id="second"><a
+                                    href="https://www.datos.gov.co/Ordenamiento-Territorial/Coordenadas-de-Barrios-y-Veredas-del-Municipio-de-/ujvc-hqy8">3.2-
+                                    Coordenadas de Barrios y Veredas del Municipio de Acacías </a></li>
+                            <!-- <li class="second-level-titles" id="second"><a href="/7500">3.3- Publicaci&oacute;n de la
+                                    ejecuci&oacute;n de los contratos</a></li>
+                            <li class="second-level-titles" id="second"><a href="/7501">3.4- Manual de
+                                    contrataci&oacute;n, adquisici&oacute;n y/o compras</a></li>
+                            <li class="second-level-titles"><a href="/9656">3.5- Formatos o modelos de contratos o
+                                    pliegos tipo</a></li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading accordion-toggle" data-parent="#accordion" data-toggle="collapse">
+                    <h4 class="panel-title"><a> 4. SECRETARÍA DE EDUCACIÓN CULTURA Y DEPORTE </a></h4>
+                </div>
+
+                <div class="panel-collapse collapse" id="collapseFour">
+                    <div class="panel-body">
+                        <ul class="subtitles">
+                            <li class="second-level-titles"><a
+                                    href="https://www.datos.gov.co/Educaci%C3%B3n/Directorio-Instituciones-Educativas-Acac%C3%ADas-Meta/7wuh-vu4h">4.1-
+                                    Directorio Instituciones Educativas Acacías Meta</a></li>
+                            <li class="second-level-titles" id="second"><a
+                                    href="https://www.datos.gov.co/Educaci-n/POBLACI-N-GRADUADA-MUNICIPIO-DE-ACAC-AS/mtjt-drj7">4.2-
+                                    Población Graduada Municipio de Acacías</a></li>
+                            <li class="second-level-titles" id="second"><a
+                                    href="https://www.datos.gov.co/Salud-y-Protecci-n-Social/Hogares-Fami/hipk-k74y">4.3-
+                                    Hogares Fami </a></li>
+                            <li class="second-level-titles" id="second"><a
+                                    href="https://www.datos.gov.co/Deporte-y-Recreaci-n/Escenarios-Deportivos-del-Municipio-de-Acac-as/jxgd-qg9s"
+                                    target="_blank">4.4- Escenarios Deportivos Municipio Acacías</a>
+                            </li>
+                            <li class="second-level-titles" id="second"><a
+                                    href="https://www.datos.gov.co/Educaci-n/Usuarios-de-la-Biblioteca-Municipal-de-Acac-as/dedq-xrhv"
+                                    target="_blank">4.5- Usuarios de la Biblioteca Municipal de
+                                    Acacías</a></li>
+                            <li class="second-level-titles" id="second"><a
+                                    href="https://www.datos.gov.co/Ambiente-y-Desarrollo-Sostenible/Humedales-Municipio-Acacias/mfzj-3yiw">4.6-
+                                    Humedales Municipio Acacías</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading accordion-toggle" data-parent="#accordion" data-toggle="collapse">
+                    <h4 class="panel-title"><a class="accordion-toggle" data-parent="#accordion" data-toggle="collapse">
+                            5. SECRETARÍA DE SALUD </a></h4>
+                </div>
+
+                <div class="panel-collapse collapse" id="collapseFive">
+                    <div class="panel-body">
+                        <ul class="subtitles">
+                            <li class="second-level-titles"><a
+                                    href="https://www.datos.gov.co/Salud-y-Protecci-n-Social/AFILIADOS-AL-REGIMEN-SUBSIDIADO-Y-CONTRIBUTIVO-DEL/x72s-gxui">5.1-
+                                    Afiliados al Regimen Subsidiado y Contributivo del Municipio de
+                                    Acacías</a></li>
+                            <li class="second-level-titles" id="second"><a
+                                    href="https://www.datos.gov.co/Salud-y-Protecci-n-Social/Embarazos-en-Adolescentes-Municipio-Acacias/jjci-n3my">5.2-
+                                    Embarazos en Adolescentes Municipio Acacías</a></li>
+                            <li class="second-level-titles" id="second"><a
+                                    href="https://www.datos.gov.co/Salud-y-Protecci-n-Social/CAUSAS-DE-MORBILIDAD-VISUAL-EN-POBLACI-N-ESTUDIANT/avj7-t8ff">5.3-
+                                    Causas de Morbilidad Visual en Población Estudiantil del Municipio
+                                    de Acacías </a></li>
+                            <li class="second-level-titles" id="second"><a
+                                    href="https://www.datos.gov.co/Salud-y-Protecci-n-Social/Nacidos-vivos-en-el-Municipio-de-Acac-as/7ifb-wrqs"
+                                    target="_blank">5.4- Nacidos vivos en el Municipio de Acacías</a>
+                            </li>
+                            <li class="second-level-titles" id="second"><a
+                                    href="https://www.datos.gov.co/Salud-y-Protecci-n-Social/Defunciones-en-el-Municipio-de-Acac-as/qjfc-yg4f"
+                                    target="_blank">5.5- Defunciones en el Municipio de Acacías</a></li>
+                            <li class="second-level-titles" id="second"><a
+                                    href="https://www.datos.gov.co/Salud-y-Protecci-n-Social/Eventos-de-inter-s-en-salud-p-blica-registrados-en/wkxg-beax">5.6-
+                                    Eventos de interes en salúd pública registrados en el Municipio de
+                                    Acacías</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading accordion-toggle" data-parent="#accordion" data-toggle="collapse">
+                    <h4 class="panel-title"><a class="accordion-toggle" data-parent="#accordion" data-toggle="collapse">
+                            6. INSTITUTO DE TRÁNSITO Y TRANSPORTE </a></h4>
+                </div>
+
+                <div class="panel-collapse collapse" id="collapseSix">
+                    <div class="panel-body">
+                        <ul class="subtitles">
+                            <li class="second-level-titles"><a
+                                    href="https://www.datos.gov.co/Transporte/Tarifas-del-servicio-de-transporte-p-blico-individ/n4rc-4ysg">6.1-
+                                    Tarifas del Servicio de Transporte Público Individual de Pasajeros
+                                    en Acacías</a></li>
+                            <li class="second-level-titles" id="second"><a
+                                    href="https://www.datos.gov.co/Transporte/Comparendos-de-tr-nsito-realizados-en-el-Municipio/en2f-vzzr">6.2-
+                                    Comparendos de Tránsito Realizados en el Municipio de Acacías</a>
+                            </li>
+                            <li class="second-level-titles" id="second"><a
+                                    href="https://www.datos.gov.co/Transporte/Incidentes-viales-registrados-en-el-Municipio-de-A/747h-496x">6.3-
+                                    Incidentes viales registrados en el Municipio de Acacías</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end container -->
+</div>
+
+<p>DISPLAYFORMULARIO(96)</p>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script>
+
+    function searchItem() {
+        var input, filter, panels, titles, found = false;
+        input = document.getElementById('searchInput');
+        filter = input.value.toUpperCase().trim();
+        panels = document.getElementById('accordion').getElementsByClassName('panel');
+
+        for (var i = 0; i < panels.length; i++) {
+            titles = panels[i].querySelectorAll('.second-level-titles, .third-level-titles');
+            for (var j = 0; j < titles.length; j++) {
+                var a = titles[j].querySelector("a");
+                if (a && a.textContent.toUpperCase().indexOf(filter) > -1) {
+                    $(panels[i].getElementsByClassName('panel-collapse')[0]).collapse('show');
+                    $('html, body').animate({
+                        scrollTop: $(titles[j]).offset().top - 20
+                    }, 500);
+                    found = true;
+                    break; // Break out of the inner loop on the first match
+                }
+            }
+            if (found) break; // Break out of the outer loop if a match has been found
+        }
+
+        if (!found) alert('Sub-elemento no encontrado.');
+    }
+
+
+
+</script>
+<script>
+    $(document).ready(function () {
+        // Detectar clics fuera de los paneles del acordeón y colapsar los que están abiertos
+        $(document).click(function (event) {
+            if (!$(event.target).closest('.panel').length) {
+                $('.panel-collapse.in').collapse('hide');
+            }
+        });
+
+        // Agregar evento click a los toggles del acordeón para expandir/cerrar los paneles
+        $('.accordion-toggle').click(function (e) {
+            e.stopPropagation(); // Prevenir que el evento se propague y cause el cierre inmediato
+            var $this = $(this);
+            var $collapse = $this.closest('.panel').find('.panel-collapse');
+
+            $collapse.collapse('toggle'); // Alternar el estado de colapso del panel
+        });
+    });
+
+
+
+    const resolutions = [
+        {
+            id: 'collapseOne',
+            title: '1. INFORMACIÓN DE LA ENTIDAD',
+            items: [
+                { title: '1.1- Misión, Visión Funciones y Deberes', link: '/7491' },
+                { title: '1.2- Estructura Orgánica', link: '/7493' },
+                { title: '1.3- Mapas y Cartas descriptivas de los procesos', link: '/7494' },
+                { title: '1.4- Directorio Institucional', link: '/7495' }
+            ]
+
+        },
+
+        {
+            id: 'collapseTwo',
+            title: '2. NORMATIVA',
+            items: [
+                { title: '2.1- Normativa de la entidad o autoridad', link: '' },
+                { title: '2.1.1- Leyes', link: '/8647' },
+                { title: '2.1.2- Decreto unico reglamentario', link: '/9664' },
+                { title: '2.1.3- Normativa aplicable', link: '/8642' },
+                { title: '2.1.4- Diario Oficial', link: '/9653' },
+                { title: '2.1.5- Política, lineamientos y manuales', link: '/7502' },
+                { title: '2.1.6- Agenda Regulatoria', link: '/9659' },
+                { title: '2.2- Busqueda de Normas', link: '' },
+                { title: '2.2.1- Sistema Único de Información Normativa', link: '/9642/' },
+                { title: '2.2.2- Sistema de búsquedas de normas', link: '/' },
+                { title: '2.3- Proyecto de Normas', link: '' },
+                { title: '2.3.1- SUCOP', link: '/9643' }
+            ]
+        },
+
+        {
+            id: 'collapseThree',
+            title: '3. CONTRATACIÓN',
+            items: [
+                { title: '3.1- Plan Anual de Adquisiciones', link: '/7533' },
+                { title: '3.1.1- Link SECOP', link: '/9654' },
+                { title: '3.2- Publicación de la información contractual', link: '/8706' },
+                { title: '3.3- Publicación de la ejecución de los contratos', link: '/7500' },
+                { title: '3.4- Manual de contratación, adquisición y/o compras', link: '/7501' },
+                { title: '3.5- Formatos o modelos de contratos o pliegos tipo', link: '/9656' }
+            ]
+        },
+
+        {
+            id: 'collapseFour',
+            title: '4. PLANEACIÓN, PRESUPUESTO E INFORMES',
+            items: [
+                { title: '4.1- Presupuesto general de ingresos, gastos e inversión', link: '/7984' },
+                { title: '4.2- Ejecución Presupuestal', link: '/8709' },
+                { title: '4.3- Plan de Acción', link: '/8321' },
+                { title: '4.4- Proyectos de Inversión', link: 'https://principales.acacias.gov.co/planeacion/proyectos/vistasu.php' },
+                { title: '4.5- Informes de empalme', link: '/7503' },
+                { title: '4.6- Información pública y/o relevante', link: '/8709' },
+                { title: '4.7- Informes de gestión, evaluación y auditoría', link: '/7548' },
+                { title: '4.8- Informes de la Oficina de Control Interno', link: '/8814' },
+                { title: '4.9- Informe sobre Defensa Pública y Prevención del Daño Antijurídico', link: '/7505' },
+                { title: '4.10- Informes trimestrales sobre acceso a información, quejas y reclamos', link: '/7506' },
+                { title: '4.11- Indicadores de Gestión', link: '/8003' },
+                { title: '4.12- Plan Básico de Ordenamiento Territorial', link: '/10011' }
+            ]
+        },
+
+        {
+            id: 'collapseFive',
+            title: '5. TRÁMITES',
+            items: [
+                { title: '5.1- Trámites y Servicios', link: 'https://acacias.gov.co/tramites/' },
+                { title: '5.2- Trámites y servicios portal Gov.co', link: '/9657' }
+            ]
+        },
+
+        {
+            id: 'collapseSix',
+            title: '6. PARTICIPA',
+            items: [
+                { title: '6.1- Participación para la identificación de problemas y diagnóstico de necesidades', link: '/9086' },
+                { title: '6.2- Planeación y/o presupuesto participativo', link: '/9087' },
+                { title: '6.3- Consulta ciudadana', link: '/9088' },
+                { title: '6.4- Colaboración e innovación', link: '/9089' },
+                { title: '6.5- Rendición de cuentas', link: '/9090' },
+                { title: '6.6- Control social', link: '/9091' },
+                { title: '6.7- Participación social', link: '/9077' }
+            ]
+        },
+
+        {
+            id: 'collapseSeven',
+            title: '7. DATOS ABIERTOS',
+            items: [
+                { title: '7.1- Instrumentos de gestión de la información', link: '' },
+                { title: '7.1.1- Registro de Activos de Información', link: '/7514' },
+                { title: '7.1.2- Índice de información clasificada y reservada', link: '/7515' },
+                { title: '7.1.3- Esquema de Publicación', link: '/7516' },
+                { title: '7.1.4- Programa gestión documental', link: '/7517' },
+                { title: '7.1.4.1- Programa Reprografia', link: '/7518' },
+                { title: '7.1.4.2- Plan Institucional del Archivo', link: '/7525' },
+                { title: '7.1.4.3- Banco Terminológico,', link: '/7520' },
+                { title: '7.1.4.4- Plan de Preservacion Digital', link: '/7521' },
+                { title: '7.1.4.5- Plan de conservación de documentos', link: '/7522' },
+                { title: '7.1.4.6- Politica de Gestión Documental', link: '/7523' },
+                { title: '7.1.4.7- Inventarios Documentales', link: '/7524' },
+                { title: '7.1.5- Tablas de retención documental', link: '/7549' },
+                { title: '7.1.6- Registro de Publicaciones', link: '/7550' },
+                { title: '7.1.7- Plan institucional de archivos', link: '/7525' },
+                { title: '7.1.8- Sistema Integrado de Conservación', link: '/7526' },
+                { title: '7.1.9- Plan de preservación digital', link: '/7527' },
+                { title: '7.1.10- Plan de conservación de documentos', link: '/7528' },
+                { title: '7.1.11- Acto administrativo sobre costos de reproducción de información pública', link: '/7529' },
+                { title: '7.2- Sección de Datos Abiertos', link: '/7530' }
+
+            ]
+        },
+
+        {
+            id: 'collapseEight',
+            title: '8. INFORMACIÓN ESPECÍFICA PARA GRUPOS DE INTERÉS',
+            items: [
+                { title: '8.1- Información para niños, niñas y adolescentes', link: '/7531' },
+                { title: '8.2- Información para Mujeres', link: '/9566' },
+                { title: '8.3- Otros de grupos de interés', link: '/9662' },
+                { title: '8.4- Videos de interés', link: '/9663' }
+            ]
+        },
+
+        {
+            id: 'collapseNine',
+            title: '9. OBLIGACIÓN DE REPORTE DE INFORMACIÓN',
+            items: [
+                { title: '9.1- Estudios, investigaciones y otras publicaciones', link: '' },
+                { title: '9.1.1- Información Turistica de Acacías', link: 'https://acaciasparaquetequedes.com/' },
+                { title: '9.1.2- Informe de diagnóstico de ciudades y territorios inteligentes', link: 'https://drive.google.com/file/d/17n-J3eNVZ0nqM7hSDBGehDgCnoua2GOb/view' },
+                { title: '9.2- Convocatorias', link: '/7551' }
+            ]
+        },
+
+        {
+            id: 'collapseTen',
+            title: '10. INFORMACIÓN TRIBUTARIA',
+            items: [
+                { title: '10.1- Procesos de recaudo de rentas locales', link: '/8841' },
+                { title: '10.2- Información tributaria', link: '/9186' }
+            ]
+        }
+    ]
+</script>
