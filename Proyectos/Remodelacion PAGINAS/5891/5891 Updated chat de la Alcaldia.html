@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat de la Alcaldía</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .chat-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+        .chat-content {
+            width: 60%;
+        }
+        .chat-image {
+            width: 40%;
+            text-align: center;
+        }
+        .chat-image img {
+            height: 412px;
+            width: 400px;
+            margin-left: 30px;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .btn-custom {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn-custom:disabled {
+            background-color: #d6d6d6;
+        }
+        .checkbox-custom {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-content">
+            <p>A través de este canal podrá recibir orientación general acerca de los trámites y servicios que ofrece la Alcaldía de Acacías. El horario de atención de este servicio es de <strong>lunes a viernes de 2:00 pm a 4:00 pm.</strong></p>
+
+            <p>Le recordamos que este canal <strong>NO</strong> es válido para la radicación de derechos de petición, en ninguna modalidad. Si su propósito es radicar una <strong>PQRSD</strong>, haga clic aquí: <a href="/8998">SISTEMA PQRSD</a></p>
+
+            <p><strong>Autorización de Tratamiento de Datos Personales:</strong></p>
+
+            <p>Con el fin de dar cumplimiento al Manual de Política de Protección de Datos Personales de la Alcaldía de Acacías, la Ley 1581 de 2012, el Decreto 1377 de 2013 y la Ley 1712 de 2014, la Alcaldía de Acacías, NIT 892.001.457-3, email <a href="mailto:contactenos@acacias.gov.co">contactenos@acacias.gov.co</a>, con domicilio principal en la Cra 14 No. 13-30 Centro, en la ciudad de Acacías, le indica que la información por usted suministrada será recolectada con la finalidad de mejorar el servicio al ciudadano a través de los trámites, servicios y otros procedimientos administrativos que ofrece la entidad.</p>
+
+            <div class="checkbox-custom">
+                <input checked="checked" id="check" type="checkbox">
+                <label for="check">Al ingresar al chat usted está aceptando la Política de Tratamiento de Datos Personales (<a href="/1" target="_blank">Ver Políticas</a>).</label>
+            </div>
+
+            <div class="button-container">
+                <button id="btn" class="btn-custom" onclick="window.location='https://www.acacias.gov.co/chat/chat?locale=es'" type="button">Ingresar al chat</button>
+            </div>
+        </div>
+        <div class="chat-image">
+            <img alt="Chat alcaldía de acacías" src="info/acacias_se/media/galeria13461.png" title="Chat alcaldía de acacías">
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            var btn = document.getElementById('btn');
+            var checkbox = document.getElementById('check');
+
+            function validateBtn() {
+                var date = new Date();
+                var day = date.getDay();
+                var hour = date.getHours();
+
+                btn.disabled = true;
+                if (day >= 1 && day <= 5) {
+                    if (((hour >= 8 && hour <= 12) || (hour >= 14 && hour <= 16)) && checkbox.checked) {
+                        btn.disabled = false;
+                    }
+                }
+            }
+
+            checkbox.addEventListener('change', function () {
+                validateBtn();
+            });
+
+            validateBtn();
+        });
+    </script>
+</body>
+</html>
