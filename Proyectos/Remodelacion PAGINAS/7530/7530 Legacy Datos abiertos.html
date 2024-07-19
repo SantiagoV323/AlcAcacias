@@ -1,0 +1,743 @@
+<style type="text/css">
+    .contenedor {
+        max-width: 1250px;
+        margin: 0 auto;
+    }
+
+    .titulo-section {
+        font-size: 26px;
+        /*background: #009688;*/
+        color: #333;
+        padding: 15px;
+        overflow: auto;
+        text-align: center;
+    }
+
+    .titulo-section p {
+        clear: both;
+        font-size: 30px;
+        margin: 0px;
+        margin-top: 10px;
+        margin-left: 15px;
+        text-align: center;
+        color: #650638;
+    }
+
+    .titulo-section img {
+        width: 50px;
+    }
+
+    .tabs {
+        list-style: none;
+        padding: 0;
+    }
+
+    .tabs li {
+        position: relative;
+    }
+
+    .tabs ul li {
+        padding: 10px 0;
+    }
+
+    .tabs .link-tabs img {
+        width: 15px;
+        margin-right: 7px;
+        position: absolute;
+        right: 50%;
+        bottom: 5px;
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        rotation: 90deg;
+        filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+
+    }
+
+    .tabs .link-tabs {
+        text-decoration: none;
+        font-size: 20px;
+        padding: 10px;
+        display: block;
+        color: #fff;
+        background: #650638;
+        margin: 2px 0px;
+        text-align: center;
+        text-transform: uppercase;
+        height: 60px;
+        position: relative;
+    }
+
+    .tabs .titulo {
+        color: #650638;
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    .tabs a:hover {
+        text-decoration: none;
+        color: #cc3385
+    }
+
+    .tabs .contenido-tabs li {
+        padding: 10px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .contenido-tabs {
+        display: none;
+        padding-left: 15px;
+        text-align: left;
+    }
+
+    table {
+        border-spacing: 0px;
+    }
+
+    td {
+
+        padding: 10px;
+    }
+
+    .cerrar {
+        -webkit-transform: rotate(-90deg) !important;
+        -moz-transform: rotate(-90deg) !important;
+        rotation: -90deg !important;
+    }
+
+    img {
+        width: 30%;
+    }
+
+    /* MODAL */
+    .open-modal {
+        font-weight: bold;
+        background: var(--blue);
+        color: var(--white);
+        padding: 0.75rem 1.75rem;
+        margin-bottom: 1rem;
+        border-radius: 5px;
+    }
+
+    .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        background: var(--black);
+        cursor: pointer;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.35s ease-in;
+    }
+
+    .modal.is-visible {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .modal-dialog {
+        position: relative;
+        max-width: 1200px;
+        max-height: 800px;
+        border-radius: 5px;
+        background: var(--white);
+        overflow: auto;
+        cursor: default;
+    }
+
+    .modal-dialog>* {
+        padding: 1rem;
+    }
+
+    .modal-header,
+    .modal-footer {
+        background: var(--lightgray);
+    }
+
+    .modal-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .modal-header .close-modal {
+        font-size: 1.5rem;
+    }
+</style>
+<p>&nbsp;</p>
+
+<p><span style="font-size:1em; text-align:justify">Los datos abiertos hacen parte de la informaci&oacute;n
+        p&uacute;blica y representan un gran potencial para el desarrollo de procesos de Gobierno Abierto (Open
+        Government), en la medida en que permiten reutilizar informaci&oacute;n de diversas fuentes, sin restricciones
+        de uso y en formatos de f&aacute;cil lectura y an&aacute;lisis, de tal manera que se habilitan nuevas formas de
+        tomar decisiones, de resolver problemas p&uacute;blicos, de entender determinados comportamientos y hasta
+        generar valor no solo social sino econ&oacute;mico a trav&eacute;s de la innovaci&oacute;n.</span></p>
+
+<p>Por ende, la Alcald&iacute;a de Acac&iacute;as a trav&eacute;s de la Oficina de las Tecnolog&iacute;as de la
+    Informaci&oacute;n y las Telecomunicaciones, ha venido implementando la Pol&iacute;tica de Gobierno Digital (Antes
+    Estrategia Gobierno en L&iacute;nea) del Ministerio de las TIC, donde uno de sus prop&oacute;sitos es la TOMA DE
+    DECISIONES BASADAS EN DATOS, para lo cual se ha abierto al p&uacute;blico una agenda de datos abiertos en el
+    cat&aacute;logo nacional disponible para todos en el portal de datos abiertos del estado colombiano <a
+        href="http://www.datos.gov.co" target="_blank">www.datos.gov.co</a>, el cual permite administrar la oferta y
+    demanda de los datos de acceso p&uacute;blico que actualmente poseen las entidades del Estado colombiano.
+    Acac&iacute;as cuenta actualmente con m&aacute;s de 40 data set en el cat&aacute;logo de datos abiertos que el
+    Gobierno nacional tiene dispuesto en la p&aacute;gina web mencionada anteriormente, con el fin de apoyar la
+    competitividad, transparencia, eficiencia y calidad de vida de la ciudadan&iacute;a. A continuaci&oacute;n pueden
+    evidenciarse los datos abiertos al servicio de la comunidad en general:</p>
+
+<div class="contenedor">
+    <div class="cotenido">
+        <section>
+            <div class="contenido-section">
+                <div class="titulo-section">
+                    <p>Datos Abiertos</p>
+                </div>
+
+                <ul class="tabs">
+                    <li><a class="link-tabs" target="_blank"><img
+                                src="https://www.acacias.gov.co/info/acacias_se/media/galeria1541.png" />Oficina TIC</a>
+
+                        <div class="contenido-tabs">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>N&ordm;</td>
+                                        <td>Nombre</td>
+                                        <td>Categor&iacute;a Dato</td>
+                                        <td>Dato Abierto</td>
+                                        <td>Sello de Excelencia</td>
+                                        <td>Publicado</td>
+                                        <td>Visualizar Dato</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr height="34">
+                                        <td align="rigth">1</td>
+                                        <td><a>Sitios de Interes del Municipio de Acac&iacute;as</a></td>
+                                        <td>Secretar&iacute;a Fomento</td>
+                                        <td><a href="https://www.datos.gov.co/Econom-a-y-Finanzas/Sitios-de-interes-del-Municipio-de-Acacias/d856-btkz"
+                                                target="_blank">Ver</a></td>
+                                        <td><a>Pendiente</a></td>
+                                        <td align="rigth">14/07/2016</td>
+                                        <td><a>Pendiente</a></td>
+                                    </tr>
+                                    <!--<tr height="34">
+              <td align="rigth">2</td>
+              <td>Ubicacion Zonas Wifi Municipio Acac&iacute;as</td>
+              <td>Ciencia, Tecnolog&iacute;a e Innovaci&oacute;n</td>
+              <td><a href="https://www.datos.gov.co/Ciencia-Tecnolog%C3%ADa-e-Innovaci%C3%B3n/Ubicaci%C3%B3n-Zonas-Wifi-municipio-de-Acac%C3%ADas/wf5f-ruv7" target="_blank">Ver</a></td>
+              <td><a>Pendiente</a></td>
+              <td align="rigth">21/12/2017</td>
+              <td><a><span class="fa fa-search" data-open="modal5">&nbsp;</span></a></td>
+          </tr>-->
+                                    <tr height="34">
+                                        <td align="rigth">2</td>
+                                        <td>Zonas Wifi Gratis Municipio Acac&iacute;as</td>
+                                        <td>Ciencia, Tecnolog&iacute;a e Innovaci&oacute;n</td>
+                                        <td><a href="https://www.datos.gov.co/Ciencia-Tecnolog%C3%ADa-e-Innovaci%C3%B3n/Zonas-Wifi-Gratis-Municipio-de-Acac%C3%ADas/r7mn-ty3w"
+                                                target="_blank">Ver</a></td>
+                                        <td><a href="https://sellodeexcelencia.gov.co/detalle/2155" target="_blank"><img
+                                                    src="https://www.acacias.gov.co/info/acacias_se/media/galeria3122.png" /></a>
+                                        </td>
+                                        <td align="rigth">06/10/2017</td>
+                                        <td><a>Pendiente</a></td>
+                                    </tr>
+                                    <tr height="34">
+                                        <td align="rigth">3</td>
+                                        <td>Inventario Activos de Informaci&oacute;n</td>
+                                        <td>Ciencia, Tecnolog&iacute;a e Innovaci&oacute;n</td>
+                                        <td><a href="https://www.datos.gov.co/Ciencia-Tecnolog-a-e-Innovaci-n/INVENTARIO-ACTIVOS-DE-INFORMACI-N-ALCALD-A-MUNICIP/mnb4-7rcs"
+                                                target="_blank">Ver</a></td>
+                                        <td><a>Pendiente</a></td>
+                                        <td align="rigth">23/10/2020</td>
+                                        <td><a>Pendiente</a></td>
+                                    </tr>
+                                    <tr height="34">
+                                        <td align="rigth">4</td>
+                                        <td>Promedio de Trafico y Conexiones en Zonas Digitales de Acac&iacute;as</td>
+                                        <td>Oficina TIC</td>
+                                        <td><a href="https://www.datos.gov.co/Ciencia-Tecnolog-a-e-Innovaci-n/Promedio-de-tr-fico-y-conexiones-en-zonas-digitale/drfm-i22d"
+                                                target="_blank">Ver</a></td>
+                                        <td><a>Pendiente</a></td>
+                                        <td align="rigth">04/11/2020</td>
+                                        <td><a>Pendiente</a></td>
+                                    </tr>
+                                    <tr height="34">
+                                        <td align="rigth">5</td>
+                                        <td>Usuarios de los Centros de Apropiaci&oacute;n TIC del Municipio de
+                                            Acac&iacute;as</td>
+                                        <td>Oficina TIC</td>
+                                        <td><a href="https://www.datos.gov.co/Ciencia-Tecnolog-a-e-Innovaci-n/Usuarios-de-los-Centros-de-apropiaci-n-TIC-del-Mun/3kda-jhhq"
+                                                target="_blank">Ver</a></td>
+                                        <td><a>Pendiente</a></td>
+                                        <td align="rigth">15/07/2021</td>
+                                        <td><a>Pendiente</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <li><a class="link-tabs" target="_blank"><img
+                                src="https://www.acacias.gov.co/info/acacias_se/media/galeria1541.png" />Secretar&iacute;a
+                            Administrativa y Financiera</a>
+                        <div class="contenido-tabs">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>N&ordm;</td>
+                                        <td>Nombre</td>
+                                        <td>Categor&iacute;a Dato</td>
+                                        <td>Dato Abierto</td>
+                                        <td>Sello de Excelencia</td>
+                                        <td>Publicado</td>
+                                        <td>Visualizar Dato</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr height="34">
+                                        <td align="rigth">6</td>
+                                        <td>Directorio Funcionarios P&uacute;blicos Alcald&iacute;a Acac&iacute;as</td>
+                                        <td>Funci&oacute;n Publica</td>
+                                        <td><a href="https://www.datos.gov.co/Funci-n-p-blica/Directorio-Funcionarios-P-blicos-Alcald-a-Acacias/ns84-zuj6"
+                                                target="_blank">Ver</a></td>
+                                        <td><a>Pendiente</a></td>
+                                        <td align="rigth">14/12/2018</td>
+                                        <td><a>Pendiente</a></td>
+                                    </tr>
+                                    <tr height="34">
+                                        <td align="rigth">7</td>
+                                        <td>Tr&aacute;mites Inscritos en el Municipio de Acac&iacute;as</td>
+                                        <td>Funci&oacute;n Publica</td>
+                                        <td><a href="https://www.datos.gov.co/Inclusi-n-Social-y-Reconciliaci-n/Tr-mites-Inscritos-en-el-Municipio-de-Acac-as/bpwr-yyj8"
+                                                target="_blank">Ver</a></td>
+                                        <td><a>Pendiente</a></td>
+                                        <td align="rigth">14/07/2016</td>
+                                        <td><a>Pendiente</a></td>
+                                    </tr>
+                                    <tr height="34">
+                                        <td align="rigth">8</td>
+                                        <td>Sedes de la Alcald&iacute;a de Acac&iacute;as</td>
+                                        <td>Funci&oacute;n Publica</td>
+                                        <td><a href="https://www.datos.gov.co/Funci-n-p-blica/Sedes-de-la-Alcald-a-de-Acacias/mjet-yv8b"
+                                                target="_blank">Ver</a></td>
+                                        <td><a>Pendiente</a></td>
+                                        <td align="rigth">13/07/2016</td>
+                                        <td><a>Pendiente</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <li><a class="link-tabs" target="_blank"><img
+                                src="https://www.acacias.gov.co/info/acacias_se/media/galeria1541.png" />Secretar&iacute;a
+                            de Planeaci&oacute;n y Vivienda</a>
+                        <div class="contenido-tabs">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>N&ordm;</td>
+                                        <td>Nombre</td>
+                                        <td>Categor&iacute;a Dato</td>
+                                        <td>Dato Abierto</td>
+                                        <td>Sello de Excelencia</td>
+                                        <td>Publicado</td>
+                                        <td>Visualizar Dato</td>
+                                    </tr>
+                                </thead>
+                                <tbody><!--<tr height="34">
+              <td align="rigth">10</td>
+              <td>Poblaci&oacute;n del Municipio de Acac&iacute;as por Edad y Genero</td>
+              <td>Vivienda, Ciudad y Territorio</td>
+              <td><a href="https://www.datos.gov.co/Vivienda-Ciudad-y-Territorio/Poblaci-n-del-Municipio-de-Acac-as-por-edad-y-gene/qppm-ib6h" target="_blank">Ver</a></td>
+              <td><a>Pendiente</a></td>
+              <td align="rigth">20/04/2020</td>
+              <td><a>Pendiente</a></td>
+          </tr>-->
+                                    <tr height="34">
+                                        <td align="rigth">9</td>
+                                        <td>Licencias de Construccion Aprobadas por A&ntilde;o</td>
+                                        <td>Vivienda, Ciudad y Territorio</td>
+                                        <td><a href="https://www.datos.gov.co/Vivienda-Ciudad-y-Territorio/LICENCIAS-DE-COSTRUCCION-APROBADAS-POR-A-O/4bhj-4ydn"
+                                                target="_blank">Ver</a></td>
+                                        <td><a>Pendiente</a></td>
+                                        <td align="rigth">28/10/2020</td>
+                                        <td><a>Pendiente</a></td>
+                                    </tr>
+                                    <tr height="34">
+                                        <td align="rigth">10</td>
+                                        <td>Coordenadas de Barrios y Veredas del Municipio de Acac&iacute;as</td>
+                                        <td>Vivienda, Ciudad y Territorio</td>
+                                        <td><a href="https://www.datos.gov.co/Ordenamiento-Territorial/Coordenadas-de-Barrios-y-Veredas-del-Municipio-de-/ujvc-hqy8"
+                                                target="_blank">Ver</a></td>
+                                        <td><a href="https://sellodeexcelencia.gov.co/detalle/2341" target="_blank"><img
+                                                    src="https://www.acacias.gov.co/info/acacias_se/media/galeria3122.png" /></a>
+                                        </td>
+                                        <td align="rigth">27/07/2021</td>
+                                        <td><a>Pendiente</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <li><a class="link-tabs" target="_blank"><img
+                                src="https://www.acacias.gov.co/info/acacias_se/media/galeria1541.png" />Secretar&iacute;a
+                            Educaci&oacute;n Cultura y Deporte</a>
+                        <div class="contenido-tabs">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>N&ordm;</td>
+                                        <td>Nombre</td>
+                                        <td>Categor&iacute;a Dato</td>
+                                        <td>Dato Abierto</td>
+                                        <td>Sello de Excelencia</td>
+                                        <td>Publicado</td>
+                                        <td>Visualizar Dato</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr height="34">
+                                        <td align="rigth">11</td>
+                                        <td>Directorio Instituciones Educativas Acac&iacute;as Meta</td>
+                                        <td>Educaci&oacute;n</td>
+                                        <td><a href="https://www.datos.gov.co/Educaci%C3%B3n/Directorio-Instituciones-Educativas-Acac%C3%ADas-Meta/7wuh-vu4h"
+                                                target="_blank">Ver</a></td>
+                                        <td><a>Pendiente</a></td>
+                                        <td align="rigth">24/08/2017</td>
+                                        <td><a>Pendiente</a></td>
+                                    </tr>
+                                    <tr height="34">
+                                        <td align="rigth">12</td>
+                                        <td>Poblaci&oacute;n Graduada Municipio de Acac&iacute;as</td>
+                                        <td>Secretar&iacute;a Social</td>
+                                        <td><a href="https://www.datos.gov.co/Educaci-n/POBLACI-N-GRADUADA-MUNICIPIO-DE-ACAC-AS/mtjt-drj7"
+                                                target="_blank">Ver</a></td>
+                                        <td><a href="https://sellodeexcelencia.gov.co/detalle/2068" target="_blank"><img
+                                                    src="https://www.acacias.gov.co/info/acacias_se/media/galeria3122.png" /></a>
+                                        </td>
+                                        <td align="rigth">09/09/2020</td>
+                                        <td><a><span class="fa fa-search" data-open="modal1">&nbsp;</span></a></td>
+                                    </tr>
+                                    <tr height="34">
+                                        <td align="rigth">13</td>
+                                        <td>Hogares Fami</td>
+                                        <td>Secretar&iacute;a Social</td>
+                                        <td><a href="https://www.datos.gov.co/Salud-y-Protecci-n-Social/Hogares-Fami/hipk-k74y"
+                                                target="_blank">Ver</a></td>
+                                        <td><a>Pendiente</a></td>
+                                        <td align="rigth">09/08/2017</td>
+                                        <td><a>Pendiente</a></td>
+                                    </tr>
+                                    <tr height="34">
+                                        <td align="rigth">14</td>
+                                        <td>Escenarios Deportivos Municipio Acac&iacute;as</td>
+                                        <td>Secretar&iacute;a Social</td>
+                                        <td><a href="https://www.datos.gov.co/Deporte-y-Recreaci-n/Escenarios-Deportivos-del-Municipio-de-Acac-as/jxgd-qg9s"
+                                                target="_blank">Ver</a></td>
+                                        <td><a>Secretar&iacute;a Social</a></td>
+                                        <td align="rigth">06/05/2021</td>
+                                        <td><a>Pendiente</a></td>
+                                    </tr>
+                                    <tr height="34">
+                                        <td align="rigth">15</td>
+                                        <td>Usuarios de la Biblioteca Municipal de Acac&iacute;as</td>
+                                        <td>Secretar&iacute;a Social</td>
+                                        <td><a href="https://www.datos.gov.co/Educaci-n/Usuarios-de-la-Biblioteca-Municipal-de-Acac-as/dedq-xrhv"
+                                                target="_blank">Ver</a></td>
+                                        <td><a>Secretar&iacute;a Social</a></td>
+                                        <td align="rigth">22/04/2022</td>
+                                        <td><a><span class="fa fa-search" data-open="modal2">&nbsp;</span></a></td>
+                                    </tr>
+                                    <tr height="34">
+                                        <td align="rigth">16</td>
+                                        <td>Humedales Municipio Acac&iacute;as</td>
+                                        <td>Ambiente y Desarrollo Sostenible</td>
+                                        <td><a href="https://www.datos.gov.co/Ambiente-y-Desarrollo-Sostenible/Humedales-Municipio-Acacias/mfzj-3yiw"
+                                                target="_blank">Ver</a></td>
+                                        <td><a>Pendiente</a></td>
+                                        <td align="rigth">12/06/2018</td>
+                                        <td><a><span class="fa fa-search" data-open="modal6">&nbsp;</span></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <li><a class="link-tabs" target="_blank"><img
+                                src="https://www.acacias.gov.co/info/acacias_se/media/galeria1541.png" />Secretar&iacute;a
+                            de Salud</a>
+                        <div class="contenido-tabs">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>N&ordm;</td>
+                                        <td>Nombre</td>
+                                        <td>Categor&iacute;a Dato</td>
+                                        <td>Dato Abierto</td>
+                                        <td>Sello de Excelencia</td>
+                                        <td>Publicado</td>
+                                        <td>Visualizar Dato</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr height="34">
+                                        <td align="rigth">17</td>
+                                        <td>Afiliados al Regimen Subsidiado y Contributivo del Municipio de
+                                            Acac&iacute;as</td>
+                                        <td>Salud y Proteci&oacute;n Social</td>
+                                        <td><a href="https://www.datos.gov.co/Salud-y-Protecci-n-Social/AFILIADOS-AL-REGIMEN-SUBSIDIADO-Y-CONTRIBUTIVO-DEL/x72s-gxui"
+                                                target="_blank">Ver</a></td>
+                                        <td><a href="https://sellodeexcelencia.gov.co/detalle/2140" target="_blank"><img
+                                                    src="https://www.acacias.gov.co/info/acacias_se/media/galeria3122.png" /></a>
+                                        </td>
+                                        <td align="rigth">22/10/2018</td>
+                                        <td><a><span class="fa fa-search" data-open="modal3">&nbsp;</span></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="rigth">18</td>
+                                        <td>Embarazos en Adolescentes Municipio Acac&iacute;as</td>
+                                        <td>Salud y Proteci&oacute;n Social</td>
+                                        <td><a href="https://www.datos.gov.co/Salud-y-Protecci-n-Social/Embarazos-en-Adolescentes-Municipio-Acacias/jjci-n3my"
+                                                target="_blank">Ver</a></td>
+                                        <td><a href="https://sellodeexcelencia.gov.co/detalle/2338" target="_blank"><img
+                                                    src="https://www.acacias.gov.co/info/acacias_se/media/galeria3122.png" /></a>
+                                        </td>
+                                        <td align="rigth">04/12/2018</td>
+                                        <td><a>Pendiente</a></td>
+                                    </tr>
+                                    <tr height="34">
+                                        <td align="rigth">19</td>
+                                        <td>Causas de Morbilidad Visual en Poblaci&oacute;n Estudiantil del Municipio de
+                                            Acac&iacute;as</td>
+                                        <td>Salud y Proteci&oacute;n Social</td>
+                                        <td><a href="https://www.datos.gov.co/Salud-y-Protecci-n-Social/CAUSAS-DE-MORBILIDAD-VISUAL-EN-POBLACI-N-ESTUDIANT/avj7-t8ff"
+                                                target="_blank">Ver</a></td>
+                                        <td><a>Pendiente</a></td>
+                                        <td align="rigth">26/11/2018</td>
+                                        <td><a>Pendiente</a></td>
+                                    </tr>
+                                    <tr height="34">
+                                        <td align="rigth">20</td>
+                                        <td>Nacidos vivos en el Municipio de Acac&iacute;as</td>
+                                        <td>Salud y Proteci&oacute;n Social</td>
+                                        <td><a href="https://www.datos.gov.co/Salud-y-Protecci-n-Social/Nacidos-vivos-en-el-Municipio-de-Acac-as/7ifb-wrqs"
+                                                target="_blank">Ver</a></td>
+                                        <td><a href="https://sellodeexcelencia.gov.co/detalle/2526" target="_blank"><img
+                                                    src="https://www.acacias.gov.co/info/acacias_se/media/galeria3122.png" /></a>
+                                        </td>
+                                        <td align="rigth">22/03/2022</td>
+                                        <td><a><span class="fa fa-search" data-open="modal7">&nbsp;</span></a></td>
+                                    </tr>
+                                    <tr height="34">
+                                        <td align="rigth">21</td>
+                                        <td>Defunciones en el Municipio de Acac&iacute;as</td>
+                                        <td>Salud y Proteci&oacute;n Social</td>
+                                        <td><a href="https://www.datos.gov.co/Salud-y-Protecci-n-Social/Defunciones-en-el-Municipio-de-Acac-as/qjfc-yg4f"
+                                                target="_blank">Ver</a></td>
+                                        <td><a>Pendiente</a></td>
+                                        <td align="rigth">22/03/2022</td>
+                                        <td><a>Pendiente</a></td>
+                                    </tr>
+                                    <tr height="34">
+                                        <td align="rigth">22</td>
+                                        <td>Eventos de interes en sal&uacute;d p&uacute;blica registrados en el
+                                            Municipio de Acac&iacute;as</td>
+                                        <td>Salud y Proteci&oacute;n Social</td>
+                                        <td><a href="https://www.datos.gov.co/Salud-y-Protecci-n-Social/Eventos-de-inter-s-en-salud-p-blica-registrados-en/wkxg-beax"
+                                                target="_blank">Ver</a></td>
+                                        <td><a>Pendiente</a></td>
+                                        <td align="rigth">09/08/2022</td>
+                                        <td><a>Pendiente</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <li><a class="link-tabs" target="_blank"><img
+                                src="https://www.acacias.gov.co/info/acacias_se/media/galeria1541.png" />Instituto
+                            Transito y Transporte Acac&iacute;as</a>
+                        <div class="contenido-tabs">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>N&ordm;</td>
+                                        <td>Nombre</td>
+                                        <td>Categor&iacute;a Dato</td>
+                                        <td>Dato Abierto</td>
+                                        <td>Sello de Excelencia</td>
+                                        <td>Publicado</td>
+                                        <td>Visualizar Dato</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr height="34">
+                                        <td align="rigth">23</td>
+                                        <td>Tarifas del Servicio de Transporte P&uacute;blico Individual de Pasajeros en
+                                            Acac&iacute;as</td>
+                                        <td>Transporte</td>
+                                        <td><a href="https://www.datos.gov.co/Transporte/Tarifas-del-servicio-de-transporte-p-blico-individ/n4rc-4ysg"
+                                                target="_blank">Ver</a></td>
+                                        <td><a href="https://sellodeexcelencia.gov.co/detalle/2336" target="_blank"><img
+                                                    src="https://www.acacias.gov.co/info/acacias_se/media/galeria3122.png" /></a>
+                                        </td>
+                                        <td align="rigth">22/02/2019</td>
+                                        <td><a>Pendiente</a></td>
+                                    </tr>
+                                    <tr height="34">
+                                        <td align="rigth">24</td>
+                                        <td>Comparendos de Tr&aacute;nsito Realizados en el Municipio de Acac&iacute;as
+                                        </td>
+                                        <td>Transporte</td>
+                                        <td><a href="https://www.datos.gov.co/Transporte/Comparendos-de-tr-nsito-realizados-en-el-Municipio/en2f-vzzr"
+                                                target="_blank">Ver</a></td>
+                                        <td><a>Pendiente</a></td>
+                                        <td align="rigth">11/03/2021</td>
+                                        <td><a><span class="fa fa-search" data-open="modal4">&nbsp;</span></a></td>
+                                    </tr>
+                                    <tr height="34">
+                                        <td align="rigth">25</td>
+                                        <td>Incidentes viales registrados en el Municipio de Acac&iacute;as</td>
+                                        <td>Transporte</td>
+                                        <td><a href="https://www.datos.gov.co/Transporte/Incidentes-viales-registrados-en-el-Municipio-de-A/747h-496x"
+                                                target="_blank">Ver</a></td>
+                                        <td><a>Pendiente</a></td>
+                                        <td align="rigth">14/07/2022</td>
+                                        <td><a>Pendiente</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</div>
+<!--info modal-->
+
+<div class="modal" data-animation="slideInOutLeft" id="modal1">
+    <div class="modal-dialog modal-lg">
+        <section class="modal-content modal-lg"><iframe allowfullscreen="" class="card-img-top" frameborder="0"
+                height="350"
+                src="https://datastudio.google.com/embed/u/0/reporting/39b44f1b-1d4a-4060-a0f9-ae5ee038b64a/page/lRymC"
+                width="780"></iframe></section>
+    </div>
+</div>
+
+<div class="modal" data-animation="slideInOutLeft" id="modal2">
+    <div class="modal-dialog modal-lg">
+        <section class="modal-content modal-lg"><iframe allowfullscreen="" class="card-img-top" frameborder="0"
+                height="350"
+                src="https://datastudio.google.com/embed/u/0/reporting/b82d7ec7-7eab-47e9-b1e9-1f64b832f28d/page/MYRrC"
+                width="780"></iframe></section>
+    </div>
+</div>
+
+<div class="modal" data-animation="slideInOutLeft" id="modal3">
+    <div class="modal-dialog modal-lg">
+        <section class="modal-content modal-lg"><iframe allowfullscreen="" class="card-img-top" frameborder="0"
+                height="350"
+                src="https://datastudio.google.com/embed/u/0/reporting/32346075-a385-427b-87ed-6f96c71d3cae/page/kGqbC"
+                width="780"></iframe></section>
+    </div>
+</div>
+
+<div class="modal" data-animation="slideInOutLeft" id="modal4">
+    <div class="modal-dialog modal-lg">
+        <section class="modal-content modal-lg"><iframe allowfullscreen="" class="card-img-top" frameborder="0"
+                height="350"
+                src="https://datastudio.google.com/embed/u/0/reporting/a40ac673-673e-4649-b427-3466ee70bcee/page/Vy30C"
+                width="780"></iframe></section>
+    </div>
+</div>
+
+<div class="modal" data-animation="slideInOutLeft" id="modal5">
+    <div class="modal-dialog modal-lg">
+        <section class="modal-content modal-lg"><iframe allowfullscreen="" class="card-img-top" frameborder="0"
+                height="350"
+                src="https://datastudio.google.com/embed/u/0/reporting/dc787339-0a45-48cc-8485-16de3b69a32f/page/l3L6C"
+                width="780"></iframe></section>
+    </div>
+</div>
+
+<div class="modal" data-animation="slideInOutLeft" id="modal6">
+    <div class="modal-dialog modal-lg">
+        <section class="modal-content modal-lg"><iframe allowfullscreen="" class="card-img-top" frameborder="0"
+                height="350"
+                src="https://datastudio.google.com/embed/u/0/reporting/166a78ff-284c-42f9-98c6-2ea5f3f401db/page/24H6C"
+                width="780"></iframe></section>
+    </div>
+</div>
+
+<div class="modal" data-animation="slideInOutLeft" id="modal7">
+    <div class="modal-dialog modal-lg">
+        <section class="modal-content modal-lg"><iframe allowfullscreen="" class="card-img-top" frameborder="0"
+                height="350"
+                src="https://lookerstudio.google.com/embed/u/0/reporting/c4f3df3a-c225-46a1-9a27-18d3ceaf3dfd/page/p_vlq5m46p4c"
+                width="780"></iframe></section>
+    </div>
+</div>
+
+<p>DISPLAYFORMULARIO(96)</p>
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        // $("#trasparencia a").each(function(){
+        //  if ($(this).attr("href")=="#"){
+        //    $(this).css("color","#fb9e9e")
+        //  }
+        // })
+        $(".link-tabs").click(function (e) {
+            if ($(this).hasClass("active")) {
+                $(".link-tabs").removeClass("active")
+                $(".contenido-tabs").hide(500)
+                $(this).find("img").removeClass("cerrar")
+            } else {
+                $(".link-tabs").removeClass("active")
+                $(this).addClass("active")
+                $(".contenido-tabs").hide(500)
+                $(this).siblings('.contenido-tabs').show(400)
+                $(this).find("img").addClass("cerrar")
+            }
+            e.preventDefault()
+        })
+    })
+
+    /**modal**/
+    const openEls = document.querySelectorAll("[data-open]");
+    const closeEls = document.querySelectorAll("[data-close]");
+    const isVisible = "is-visible";
+
+    for (const el of openEls) {
+        el.addEventListener("click", function () {
+            const modalId = this.dataset.open;
+            document.getElementById(modalId).classList.add(isVisible);
+        });
+    }
+
+    for (const el of closeEls) {
+        el.addEventListener("click", function () {
+            this.parentElement.parentElement.parentElement.classList.remove(isVisible);
+        });
+    }
+
+    document.addEventListener("click", e => {
+        if (e.target == document.querySelector(".modal.is-visible")) {
+            document.querySelector(".modal.is-visible").classList.remove(isVisible);
+        }
+    });
+
+    document.addEventListener("keyup", e => {
+        // if we press the ESC
+        if (e.key == "Escape" && document.querySelector(".modal.is-visible")) {
+            document.querySelector(".modal.is-visible").classList.remove(isVisible);
+        }
+    });
+</script>
