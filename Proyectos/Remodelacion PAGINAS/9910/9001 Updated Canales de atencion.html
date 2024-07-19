@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canales de Atención</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .vista {
+            width: 100%;
+            max-width: 1200px;
+            /* padding: 20px; */
+        }
+
+        .container,
+        .tablas {
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            /* padding: 20px; */
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #6001d3;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-card {
+            background-color: #f4f4f4;
+            border-left: 5px solid #6001d3;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .contact-card h3 {
+            color: #6001d3;
+            margin-top: 0;
+        }
+
+        .contact-card p,
+        .contact-card ul {
+            margin: 10px 0;
+        }
+
+        .contact-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contact-card ul li {
+            margin-bottom: 10px;
+        }
+
+        .contact-card a {
+            color: #6001d3;
+            text-decoration: none;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        .styled-table {
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 1em;
+            width: 100%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .styled-table thead tr {
+            background-color: #26a949;
+            color: #ffffff;
+            text-align: left;
+        }
+
+        .styled-table th,
+        .styled-table td {
+            padding: 12px 15px;
+        }
+
+        .styled-table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+        .styled-table tbody tr:last-of-type {
+            border-bottom: 2px solid #26a949;
+        }
+
+        .section.btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #26a949;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .section.btn:hover {
+            background-color: #218838;
+        }
+
+        #scroll {
+            overflow: scroll;
+            height: 500px;
+            width: 700px;
+        }
+
+        /* Parámetros de Nexura */
+        .dModPublicaciones .modContent table thead th {
+            background-color: #26a949;
+            color: #ffffff;
+            text-align: center;
+            align-content: center;
+        }
+
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="vista">
+        <div class="container">
+            <h2>Canales de Atención</h2>
+            <div class="contact-card">
+                <h3>Línea Principal de Atención al Ciudadano</h3>
+                <p><strong>Conmutador:</strong> 3203509652</p>
+            </div>
+            <div class="contact-card">
+                <h3>Correo Electrónico</h3>
+                <ul>
+                    <li><strong>Correo electrónico institucional:</strong> <a
+                            href="mailto:contactenos@acacias.gov.co">contactenos@acacias.gov.co</a></li>
+                    <li><strong>Correo de Notificaciones:</strong> <a
+                            href="mailto:notificacionjudicial@acacias.gov.co">notificacionjudicial@acacias.gov.co</a>
+                    </li>
+                    <li><strong>Chat de Atención al Ciudadano:</strong> <a href="#">Entrar al Chat</a></li>
+                </ul>
+            </div>
+            <div class="contact-card">
+                <h3>Teléfonos Fijos y Móviles, y Líneas Gratuitas</h3>
+                <p>Comuníquese con la entidad en el siguiente horario de atención:</p>
+                <p><strong>Lunes a Viernes:</strong><br>7:00 a.m. - 12:00 m<br>2:00 p.m. - 4:00 p.m</p>
+                <p><strong>Línea Gratuita:</strong><br>Marca desde tu celular o teléfono fijo 01 8000 112 996</p>
+            </div>
+            <div class="contact-card">
+                <h3>Correo físico o postal</h3>
+                <p>507001</p>
+                <h3>Link al formulario electrónico de solicitudes, peticiones, quejas, reclamos y denuncias.</h3>
+                <p><a class="section btn" href="http://190.159.199.17:81/HTV1PQR/CiudadanoPQR/Paginas/login.aspx"
+                        target="_blank" title="acuerdos municipales">Formulario PQRSD</a></p>
+            </div>
+
+        </div>
+
+        <div class="tablas">
+
+            <h3>Información Secretarías y Oficinas</h3>
+
+            <div id="scroll">
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Celular</th>
+                            <th>Secretaría</th>
+                            <th>Correo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>3214904883</td>
+                            <td>Despacho</td>
+                            <td>alcaldia@acacias.gov.co</td>
+                        </tr>
+                        <tr>
+                            <td>3115279618</td>
+                            <td>Financiera</td>
+                            <td>financiera@acacias.gov.co</td>
+                        </tr>
+                        <tr>
+                            <td>3214904867</td>
+                            <td>Gobierno</td>
+                            <td>gobierno@acacias.gov.co</td>
+                        </tr>
+                        <tr>
+                            <td>3214698829</td>
+                            <td>Social, Educación, Cultura y Deportes</td>
+                            <td>social@acacias.gov.co</td>
+                        </tr>
+                        <tr>
+                            <td>3214909021</td>
+                            <td>Privada</td>
+                            <td>privada@acacias.gov.co</td>
+                        </tr>
+                        <tr>
+                            <td>3214698828</td>
+                            <td>Infraestructura</td>
+                            <td>infraestructura@acacias.gov.co</td>
+                        </tr>
+                        <tr>
+                            <td>3115279198</td>
+                            <td>Oficina Jurídica</td>
+                            <td>juridica@acacias.gov.co</td>
+                        </tr>
+                        <tr>
+                            <td>3138151799</td>
+                            <td>Control Interno</td>
+                            <td>controlinterno@acacias.gov.co</td>
+                        </tr>
+                        <tr>
+                            <td>3214698827</td>
+                            <td>Planeación</td>
+                            <td>planeacion@acacias.gov.co</td>
+                        </tr>
+                        <tr>
+                            <td>3232217723</td>
+                            <td>Salud</td>
+                            <td>salud@acacias.gov.co</td>
+                        </tr>
+                        <tr>
+                            <td>3146226614</td>
+                            <td>Contratación</td>
+                            <td>contratacion@acacias.gov.co</td>
+                        </tr>
+                        <tr>
+                            <td>3214904885</td>
+                            <td>TIC</td>
+                            <td>tic@acacias.gov.co</td>
+                        </tr>
+                        <tr>
+                            <td>3214909021</td>
+                            <td>Prensa</td>
+                            <td>prensa@acacias.gov.co</td>
+                        </tr>
+                        <tr>
+                            <td>3214698877</td>
+                            <td>Fomento y Desarrollo Productivo</td>
+                            <td>fomento@acacias.gov.co</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <h3>Líneas de atención</h3>
+
+            <div id="scroll">
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Celular</th>
+                            <th>Oficinas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>3214698829</td>
+                            <td>Adulto Mayor</td>
+                        </tr>
+                        <tr>
+                            <td>3102749626</td>
+                            <td>Aseguramiento</td>
+                        </tr>
+                        <tr>
+                            <td>3214906425</td>
+                            <td>Biblioteca</td>
+                        </tr>
+                        <tr>
+                            <td>3214761108</td>
+                            <td>Certificados de Residencia</td>
+                        </tr>
+                        <tr>
+                            <td>3214698763</td>
+                            <td>Coactivo</td>
+                        </tr>
+                        <tr>
+                            <td>3214904873</td>
+                            <td>Comisaría de Familia I</td>
+                        </tr>
+                        <tr>
+                            <td>3214698828</td>
+                            <td>Comisaría de Familia II</td>
+                        </tr>
+                        <tr>
+                            <td>3102749795</td>
+                            <td>Cultura</td>
+                        </tr>
+                        <tr>
+                            <td>3138151799</td>
+                            <td>Deportes</td>
+                        </tr>
+                        <tr>
+                            <td>3102749926</td>
+                            <td>Discapacidad</td>
+                        </tr>
+                        <tr>
+                            <td>3214761116</td>
+                            <td>Enlace Víctimas I</td>
+                        </tr>
+                        <tr>
+                            <td>3232224640</td>
+                            <td>Enlace Víctimas II</td>
+                        </tr>
+                        <tr>
+                            <td>3102749903</td>
+                            <td>Equidad</td>
+                        </tr>
+                        <tr>
+                            <td>3214904880</td>
+                            <td>Familias en Acción Transf. Monetarias</td>
+                        </tr>
+                        <tr>
+                            <td>3214904910</td>
+                            <td>Familias en Acción II</td>
+                        </tr>
+                        <tr>
+                            <td>3102749763</td>
+                            <td>Familias en Acción III</td>
+                        </tr>
+                        <tr>
+                            <td>3214698877</td>
+                            <td>Fomento Turismo</td>
+                        </tr>
+                        <tr>
+                            <td>3102749605</td>
+                            <td>Gobierno Chichimene</td>
+                        </tr>
+                        <tr>
+                            <td>3214904874</td>
+                            <td>Industria y Comercio</td>
+                        </tr>
+                        <tr>
+                            <td>3102749887</td>
+                            <td>Infancia y Adolescencia</td>
+                        </tr>
+                        <tr>
+                            <td>3214904872</td>
+                            <td>Inspectora I</td>
+                        </tr>
+                        <tr>
+                            <td>3214904871</td>
+                            <td>Inspectora II</td>
+                        </tr>
+                        <tr>
+                            <td>3115279434</td>
+                            <td>Inspección III</td>
+                        </tr>
+                        <tr>
+                            <td>3102749634</td>
+                            <td>Jóvenes en Acción</td>
+                        </tr>
+                        <tr>
+                            <td>3108893057</td>
+                            <td>Línea Discapacidad</td>
+                        </tr>
+                        <tr>
+                            <td>3214760076</td>
+                            <td>Bienestar Animal</td>
+                        </tr>
+                        <tr>
+                            <td>3214904875</td>
+                            <td>Personería</td>
+                        </tr>
+                        <tr>
+                            <td>3214904864</td>
+                            <td>Presupuesto</td>
+                        </tr>
+                        <tr>
+                            <td>3214904904</td>
+                            <td>Rentas</td>
+                        </tr>
+                        <tr>
+                            <td>3214904865</td>
+                            <td>Salud - SIAO</td>
+                        </tr>
+                        <tr>
+                            <td>3232240060</td>
+                            <td>Salud - COVID</td>
+                        </tr>
+                        <tr>
+                            <td>3214908841</td>
+                            <td>SISBEN</td>
+                        </tr>
+                        <tr>
+                            <td>3214698830</td>
+                            <td>Social - LGBTI</td>
+                        </tr>
+                        <tr>
+                            <td>3214904877</td>
+                            <td>Talento Humano</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
