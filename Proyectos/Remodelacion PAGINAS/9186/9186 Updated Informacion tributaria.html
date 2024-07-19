@@ -1,0 +1,327 @@
+<style type="text/css">
+    .animate:hover {
+        transform: rotate(-5deg);
+        -webkit-transform: rotate(-5deg);
+        -moz-transform: rotate(-5deg);
+        -o-transform: rotate(-5deg);
+    }
+
+    #formularios {
+        padding: 20px 0;
+        width: 100%;
+    }
+
+    #formularios li {
+        width: 39%;
+        display: block;
+        margin: auto;
+    }
+
+    .wrapper img {
+        width: 100%;
+        color: transparent;
+        border: solid 3px;
+        border-radius: 5px 5px 5px 5px;
+    }
+
+    .animacion {
+        padding: 10px 0;
+    }
+
+    .wrapper {
+        height: 100px;
+        margin: 0 auto;
+        position: relative;
+        -webkit-perspective: 700px;
+        -moz-perspective: 700px;
+        perspective: 700px;
+    }
+
+    .postal {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -webkit-transition: transform 500ms ease-in-out;
+        -moz-transition: transform 500ms ease-in-out;
+        -o-transition: transform 500ms ease-in-out;
+        transition: transform 500ms ease-in-out;
+    }
+
+    .wrapper:hover .postal {
+        -webkit-transform: rotateX(180deg);
+        -moz-transform: rotateX(180deg);
+        -ms-transform: rotateX(180deg);
+        -o-transform: rotateX(180deg);
+        transform: rotateX(180deg);
+    }
+
+    /*spoiler*/
+    input[id^="spoiler"] {
+        display: none;
+    }
+
+    input[id^="spoiler"]+label {
+        width: 180px;
+        padding: 5px 20px;
+        background: #048;
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+        border-radius: 8px;
+    }
+
+    input[id^="spoiler"]:checked+label {
+        color: #333;
+        background: #ccc;
+    }
+
+    input[id^="spoiler"]~.spoiler {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        margin: 10px auto 0;
+        padding: 10px;
+        border-radius: 8px;
+        transition: all .6s;
+        margin-bottom: 12px;
+    }
+
+    input[id^="spoiler"]:checked+label+.spoiler {
+        height: auto;
+        opacity: 1;
+        padding: 10px;
+    }
+
+    .checkboxes {
+        margin-top: 30px;
+    }
+
+    img {
+        height: -webkit-fill-available;
+        max-width: fit-content;
+    }
+</style>
+<div style="text-align: justify;">Bienvenidos a la secci&oacute;n de informaci&oacute;n Tributaria de la
+    alcald&iacute;a. Esta publicaci&oacute;n ha sido creada para facilitar todos los tr&aacute;mites de impuestos en el
+    municipio. Recuerda que el pago de los impuestos es&nbsp;muy importante&nbsp;para el progreso de nuestro Municipio.
+</div>
+
+<h2 style="text-align: justify;">Normatividad</h2>
+
+<p style="text-align: justify;">Encuentre&nbsp;aqu&iacute; toda la documentaci&oacute;n actualizada de acuerdos y
+    resoluciones que hay vigentes hasta la fecha, estos documentos pueden ser visualizados en l&iacute;nea y
+    tambi&eacute;n ser descargardos&nbsp;en su dispositivo electr&oacute;nico.</p>
+
+<div class="container checkboxes"><input id="spoiler1" type="checkbox" /> <label for="spoiler1">Acuerdos</label>
+
+    <div class="spoiler">
+        <div class="row">
+            <div class="col-md-12" style="margin-top: 12px;">
+                <p>DISPLAYARCHIVO(160095)<br />
+                    DISPLAYARCHIVO(115927)<br />
+                    DISPLAYARCHIVO(96616)<br />
+                    DISPLAYARCHIVO(96615)<br />
+                    DISPLAYARCHIVO(105010)<br />
+                    DISPLAYARCHIVO(104299)<br />
+                    DISPLAYARCHIVO(104292)<br />
+                    DISPLAYARCHIVO(102005)<br />
+                    DISPLAYARCHIVO(101984)<br />
+                    DISPLAYARCHIVO(99929)<br />
+                    DISPLAYARCHIVO(101181)</p>
+            </div>
+        </div>
+    </div>
+    <input id="spoiler2" type="checkbox" /> <label for="spoiler2">Decretos</label>
+
+    <div class="spoiler">
+        <div class="row">
+            <div class="col-md-12" style="margin-top: 12px;">
+                <p>DISPLAYARCHIVO(219151)<br />
+                    DISPLAYARCHIVO(98616)<br />
+                    DISPLAYARCHIVO(98419)<br />
+                    DISPLAYARCHIVO(102400)<br />
+                    DISPLAYARCHIVO(101893)<br />
+                    DISPLAYARCHIVO(101376)</p>
+            </div>
+        </div>
+    </div>
+    <input id="spoiler3" type="checkbox" /> <label for="spoiler3">Resoluciones</label>
+
+    <div class="spoiler">
+        <div class="row">
+            <div class="col-md-12" style="margin-top: 12px;">
+                <p>DISPLAYARCHIVO(249919)</p>
+
+                <p>DISPLAYARCHIVO(230150)</p>
+
+                <p>DISPLAYARCHIVO(230151)</p>
+
+                <p>DISPLAYARCHIVO(226867)</p>
+
+                <p>DISPLAYARCHIVO(225350)</p>
+
+                <p>DISPLAYARCHIVO(225349)</p>
+
+                <p>DISPLAYARCHIVO(225346)</p>
+
+                <p>DISPLAYARCHIVO(218455)<br />
+                    DISPLAYARCHIVO(186821)<br />
+                    DISPLAYARCHIVO(171677)<br />
+                    DISPLAYARCHIVO(171678)<br />
+                    DISPLAYARCHIVO(161364)<br />
+                    DISPLAYARCHIVO(160227)<br />
+                    DISPLAYARCHIVO(160228)<br />
+                    DISPLAYARCHIVO(160229)<br />
+                    DISPLAYARCHIVO(160230)<br />
+                    DISPLAYARCHIVO(121854)<br />
+                    DISPLAYARCHIVO(118264)<br />
+                    DISPLAYARCHIVO(118263)<br />
+                    DISPLAYARCHIVO(114390)<br />
+                    DISPLAYARCHIVO(67651)<br />
+                    DISPLAYARCHIVO(99166)<br />
+                    DISPLAYARCHIVO(99153)<br />
+                    DISPLAYARCHIVO(99152)<br />
+                    DISPLAYARCHIVO(99151)<br />
+                    DISPLAYARCHIVO(97733)<br />
+                    DISPLAYARCHIVO(105524)<br />
+                    DISPLAYARCHIVO(105108)<br />
+                    DISPLAYARCHIVO(105107)<br />
+                    DISPLAYARCHIVO(104908)<br />
+                    DISPLAYARCHIVO(104747)<br />
+                    DISPLAYARCHIVO(104338)<br />
+                    DISPLAYARCHIVO(104330)<br />
+                    DISPLAYARCHIVO(104326)<br />
+                    DISPLAYARCHIVO(104332)<br />
+                    DISPLAYARCHIVO(104311)<br />
+                    DISPLAYARCHIVO(104306)<br />
+                    DISPLAYARCHIVO(104307)<br />
+                    DISPLAYARCHIVO(104308)<br />
+                    DISPLAYARCHIVO(104309)<br />
+                    DISPLAYARCHIVO(102424)<br />
+                    DISPLAYARCHIVO(102023)<br />
+                    DISPLAYARCHIVO(101891)<br />
+                    DISPLAYARCHIVO(101883)<br />
+                    DISPLAYARCHIVO(101783)<br />
+                    DISPLAYARCHIVO(101784)<br />
+                    DISPLAYARCHIVO(101785)<br />
+                    DISPLAYARCHIVO(101786)<br />
+                    DISPLAYARCHIVO(101414)<br />
+                    DISPLAYARCHIVO(101352)<br />
+                    DISPLAYARCHIVO(101303)<br />
+                    DISPLAYARCHIVO(101206)<br />
+                    DISPLAYARCHIVO(101189)<br />
+                    DISPLAYARCHIVO(101190)<br />
+                    DISPLAYARCHIVO(101191)<br />
+                    DISPLAYARCHIVO(101193)<br />
+                    DISPLAYARCHIVO(101222)<br />
+                    DISPLAYARCHIVO(101303)<br />
+                    DISPLAYARCHIVO(101352)</p>
+            </div>
+        </div>
+    </div>
+    <input id="spoiler4" type="checkbox" /> <label for="spoiler4">Calendarios</label>
+
+    <div class="spoiler">
+        <div class="row">
+            <div class="col-md-12" style="margin-top: 12px;">
+                <p>DISPLAYARCHIVO(226913)</p>
+
+                <p>DISPLAYARCHIVO(163832)<br />
+                    DISPLAYARCHIVO(161365)<br />
+                    DISPLAYARCHIVO(99178)<br />
+                    DISPLAYARCHIVO(97351)<br />
+                    DISPLAYARCHIVO(101195)</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="formularios">
+    <h2>Formularios</h2>
+
+    <div class="row">
+        <div class="col-md-6">
+            <ul class="animacion">
+                <li>
+                    <div class="wrapper"><a class="postal"
+                            href="https://docs.google.com/spreadsheets/d/1-vNUKG2DQe3i5t7GNVFwhmAnFnUsWkKq/edit?usp=sharing&amp;ouid=115477210977199397357&amp;rtpof=true&amp;sd=true"
+                            target="_blank"><img
+                                src="https://www.acacias.gov.co/info/acacias_se/media/galeria12081.png" /></a></div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-md-6">
+            <ul class="animacion">
+                <li>
+                    <div class="wrapper"><a class="postal"
+                            href="https://docs.google.com/spreadsheets/d/14unF6nhol2uYoK74YF8y1d91k2r7ejFS/edit?usp=sharing&amp;ouid=100965561016811573785&amp;rtpof=true&amp;sd=true"
+                            target="_blank"><img
+                                src="https://www.acacias.gov.co/info/acacias_se/media/galeria12085.png" /></a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <ul class="animacion">
+                <li>
+                    <div class="wrapper"><a class="postal"
+                            href="https://docs.google.com/spreadsheets/d/10DmwshrnMXy8N69NV_wYRdsWgRJ7Zbd8/edit?usp=drive_link&amp;ouid=115477210977199397357&amp;rtpof=true&amp;sd=true"
+                            target="_blank"><img
+                                src="https://www.acacias.gov.co/info/acacias_se/media/galeria12086.png" /></a></div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-md-6">
+            <ul class="animacion">
+                <li>
+                    <div class="wrapper"><a class="postal"
+                            href="https://docs.google.com/spreadsheets/d/109IGMWQqq2tSMDbojmOttQ2eif2J6prz/edit?usp=drive_link&amp;ouid=115477210977199397357&amp;rtpof=true&amp;sd=true"
+                            target="_blank"><img
+                                src="https://www.acacias.gov.co/info/acacias_se/media/galeria12083.png" /></a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <ul class="animacion">
+                <li>
+                    <div class="wrapper"><a class="postal"
+                            href="https://docs.google.com/spreadsheets/d/107nDU-XdXhl1AKDEFEqfUYc5nweHB8pb/edit?usp=drive_link&amp;ouid=115477210977199397357&amp;rtpof=true&amp;sd=true"
+                            target="_blank"><img
+                                src="https://www.acacias.gov.co/info/acacias_se/media/galeria12082.png" /></a></div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-md-6">
+            <ul class="animacion">
+                <li>
+                    <div class="wrapper"><a class="postal"
+                            href="https://docs.google.com/spreadsheets/d/1-rEFhtSTRa63qgw6--QIvv4Z1FDafXLz/edit?usp=drive_link&amp;ouid=115477210977199397357&amp;rtpof=true&amp;sd=true"
+                            target="_blank"><img
+                                src="https://www.acacias.gov.co/info/acacias_se/media/galeria12084.png" /></a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<h2>Entidades Bancarias Autorizadas</h2>
+
+<p>DISPLAYARCHIVO(227085)<br />
+    DISPLAYARCHIVO(227086)<br />
+    DISPLAYARCHIVO(227087)<br />
+    DISPLAYARCHIVO(227088)<br />
+    DISPLAYARCHIVO(227089)</p>
+
+<p>&nbsp;</p>
