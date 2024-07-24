@@ -1,0 +1,292 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<link href="https://www.acacias.gov.co/info/acacias_se/web/portal/img/favicon.png" rel="shortcut icon" />
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" />
+<style type="text/css">
+    * {
+        list-style-type: none;
+    }
+
+    header .u-menu .nav-menu .dropdown-menu a strong {
+        font-size: 15px !important;
+        font-weight: 400 !important;
+    }
+
+    header .u-menu .nav-menu ul.megamenu>li>a {
+        font-size: 12.8px !important;
+    }
+
+    .nav-pills>li+li {
+        display: none;
+    }
+
+    .scroll-to-top,
+    .show-scrollTop,
+    .block,
+    .block--gov-accessibility {
+        display: none;
+    }
+
+    span.govco-icon {
+        font-size: 2.5rem !important;
+    }
+
+    span.govco-icon>p {
+        font-size: 14px !important;
+    }
+
+    h1 {
+        font-size: 31px !important;
+        color: #048;
+        font-weight: 600;
+    }
+
+    .btn-default:hover,
+    .open>.dropdown-toggle.btn-default {
+        background-color: #e6e6e6 !important;
+        border-color: #adadad !important;
+    }
+
+    .accordion-toggle {
+        cursor: pointer;
+    }
+
+    .panel-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .panel-heading .accordion-toggle.collapsed:after {
+        /* symbol for "collapsed" panels */
+        content: "e080";
+        /* adjust as needed, taken from bootstrap.css */
+    }
+
+    .accordion-toggle,
+    .accordion-toggle:hover,
+    .accordion-toggle:focus {
+        text-decoration: none;
+    }
+
+    .container-accordion {
+        max-width: 800px;
+        padding: 0px 30px 0px 25px;
+    }
+
+    #introduccion {
+        font-size: 1.2rem;
+        color: darkslategray;
+    }
+
+    .header-content>.card-header>ul {
+        background: transparent;
+        border-radius: 25px;
+        color: darkgrey;
+        padding: 30px 0;
+    }
+
+    .second-level-titles,
+    .fourth-level-titles {
+        font-size: 16px;
+    }
+
+    .third-level-titles {
+        font-size: 16px;
+        padding-left: 30px;
+    }
+
+    .second-level-titles,
+    .third-level-titles {
+        margin-bottom: 6px;
+    }
+
+    .fourth-level-titles {
+        padding-left: 60px;
+    }
+
+    a {
+        color: gray;
+        text-decoration: none;
+    }
+
+    a:focus,
+    a:hover {
+        color: #23527c;
+        text-decoration: none;
+    }
+
+    /* Centering everything with a max-width */
+    .custom-container {
+        max-width: 838px;
+        margin: auto;
+        padding: 15px;
+    }
+
+    #buscador {
+        display: flex;
+        justify-content: right;
+        margin-bottom: 20px;
+    }
+
+    #searchInput {
+        border-radius: 10px 0px 0px 10px;
+        margin: unset;
+    }
+
+    .btn,
+    .btn-default {
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    .search-box {
+        margin: 15px 0px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    @media (max-width: 568px) {
+        #introduccion {
+            font-size: 16px;
+        }
+
+        .panel-title {
+            font-size: 14px;
+        }
+
+        .second-level-titles {
+            font-size: 16px;
+        }
+
+        .third-level-titles,
+        .fourth-level-titles {
+            font-size: 17px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .search-box {
+            margin: 8px -15px;
+            padding: 10px 15px;
+
+        }
+    }
+
+    /* estilos del formulario */
+    legend {
+        font-size: 31px !important;
+        color: #048;
+        font-weight: 600;
+        line-height: 1.4em !important;
+    }
+
+    fieldset {
+        margin-top: 5rem;
+    }
+</style>
+
+<div class="custom-container"><!-- Use custom container for centered content -->
+    <div class="container-accordion">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading accordion-toggle" data-parent="#accordion" data-toggle="collapse">
+                    <h4 class="panel-title"><a> INTRANET </a></h4>
+                </div>
+
+                <div class="panel-collapse collapse in" id="collapseOne">
+                    <div class="panel-body">
+                        <ul class="subtitles">
+                            <li class="second-level-titles"><a href="http://192.168.1.7:81/ACACIASHTML5/Home/Login">1- ControlDOC-Intranet</a></li>
+                            <li class="second-level-titles"><a href="http://190.159.199.17:81/ACACIASHTML5/Home/Login">2.1- ControlDoc-Externo 1</a></li>
+                            <li class="second-level-titles"><a href="http://190.144.160.250:81/ACACIASHTML5/Home/Login">2.2- ControlDoc-Externo 2</a></li>
+                            <li class="second-level-titles"><a href="https://principales.acacias.gov.co/notificacion/indexnot.php">3- Notificaciones Administrativas</a></li>
+                            <li class="second-level-titles"><a href="https://principales.acacias.gov.co/planeacion/proyectos/index.php">4- Nuestros Proyectos</a></li>
+                            <li class="second-level-titles"><a href="https://principales.acacias.gov.co/alcaldia/avisos.php">5- Notificaciones por Aviso</a></li>
+                            <li class="second-level-titles"><a href="https://enajenacion.acacias.gov.co/login">6- Notificaciones Enajenación</a></li>
+                            <li class="second-level-titles"><a href="https://192.168.1.10/portalv2017/impuestos.portal.wpnbienvenido.aspx?ICAT">7- Impuestos</a></li>
+                            <li class="second-level-titles"><a href="https://aulatic2.acacias.gov.co/">8- Cursos Aulatic</a></li>
+                            <li class="second-level-titles"><a href="https://manipulacion.acacias.gov.co/">9- Manipulación de Alimentos</a></li>
+                            <!-- Más ítems aquí si es necesario -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end container -->
+</div>
+<!-- end custom container --><!-- Agregar el script al final del body -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script>
+
+    function searchItem() {
+        var input, filter, panels, titles, found = false;
+        input = document.getElementById('searchInput');
+        filter = input.value.toUpperCase().trim();
+        panels = document.getElementById('accordion').getElementsByClassName('panel');
+
+        for (var i = 0; i < panels.length; i++) {
+            titles = panels[i].querySelectorAll('.second-level-titles, .third-level-titles');
+            for (var j = 0; j < titles.length; j++) {
+                var a = titles[j].querySelector("a");
+                if (a && a.textContent.toUpperCase().indexOf(filter) > -1) {
+                    $(panels[i].getElementsByClassName('panel-collapse')[0]).collapse('show');
+                    $('html, body').animate({
+                        scrollTop: $(titles[j]).offset().top - 20
+                    }, 500);
+                    found = true;
+                    break; // Break out of the inner loop on the first match
+                }
+            }
+            if (found) break; // Break out of the outer loop if a match has been found
+        }
+
+        if (!found) alert('Sub-elemento no encontrado.');
+    }
+
+
+
+</script>
+<script>
+    $(document).ready(function () {
+        // Detectar clics fuera de los paneles del acordeón y colapsar los que están abiertos
+        $(document).click(function (event) {
+            if (!$(event.target).closest('.panel').length) {
+                $('.panel-collapse.in').collapse('hide');
+            }
+        });
+
+        // Agregar evento click a los toggles del acordeón para expandir/cerrar los paneles
+        $('.accordion-toggle').click(function (e) {
+            e.stopPropagation(); // Prevenir que el evento se propague y cause el cierre inmediato
+            var $this = $(this);
+            var $collapse = $this.closest('.panel').find('.panel-collapse');
+
+            $collapse.collapse('toggle'); // Alternar el estado de colapso del panel
+        });
+    });
+
+
+
+    const resolutions = [
+        {
+            id: 'collapseOne',
+            title: 'Informes de seguimiento y control',
+            items: [
+                { title: '1- ControlDOC-Intranet', link: 'http://192.168.1.7:81/ACACIASHTML5/Home/Login' },
+                { title: '2.1- ControlDoc-Externo 1', link: 'http://190.159.199.17:81/ACACIASHTML5/Home/Login' },
+                { title: '2.2- ControlDoc-Externo 2', link: 'http://190.144.160.250:81/ACACIASHTML5/Home/Login' },
+                { title: '3- Notificaciones Administrativas', link: 'https://principales.acacias.gov.co/notificacion/indexnot.php' },
+                { title: '4- Nuestros Proyectos', link: 'https://principales.acacias.gov.co/planeacion/proyectos/index.php' },
+                { title: '5- Notificaciones por Aviso', link: 'https://principales.acacias.gov.co/alcaldia/avisos.php' },
+                { title: '6- Notificaciones Enajenación', link: 'https://enajenacion.acacias.gov.co/login' },
+                { title: '7- Impuestos', link: 'https://192.168.1.10/portalv2017/impuestos.portal.wpnbienvenido.aspx?ICAT' },
+                { title: '8- Cursos Aulatic', link: 'https://aulatic2.acacias.gov.co/' },
+                { title: '9- Manipulación de Alimentos', link: 'https://manipulacion.acacias.gov.co/' }
+            ]
+
+        }
+    ]
+</script>
