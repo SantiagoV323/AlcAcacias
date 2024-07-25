@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabla de Cursos</title>
     <style>
-        /* styles.css */
-    
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
@@ -14,69 +12,76 @@
             padding: 20px;
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
+            align-items: flex-start;
+            min-height: 100vh;
+            overflow-x: hidden;
         }
-    
+
         .table-container {
             width: 100%;
             overflow-x: auto;
         }
-    
+
         .custom-table {
             width: 100%;
             border-collapse: collapse;
             border: 1px solid #ccc;
             background-color: #fff;
         }
-    
+
         .custom-table th,
         .custom-table td {
             border: 1px solid #ccc;
             padding: 10px;
             text-align: center;
-            /* vertical-align: top; */
+            vertical-align: top;
+            border-bottom: white;
         }
-    
+
         .custom-table th {
             background-color: #003366;
             color: #fff;
             font-weight: bold;
         }
-    
+
         .custom-table td a {
             color: #0066cc;
             text-decoration: none;
         }
-    
+
         .custom-table td a:hover {
             text-decoration: underline;
         }
-    
+
         .category {
             background-color: #f2f2f2;
             font-weight: bold;
         }
-    
+
         .modules {
             white-space: pre-line;
         }
-    
+
         .hours,
         .badge {
             text-align: center;
         }
-    
+
         .short-description {
             display: block;
         }
-    
+
         .full-description {
             display: none;
         }
-    
+
+        .description {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         .verMas {
-            display: inline-flex;
             margin-top: 10px;
             padding: 5px 10px;
             background-color: #0066cc;
@@ -85,7 +90,7 @@
             cursor: pointer;
             border-radius: 5px;
         }
-    
+
         .verMas:hover {
             background-color: #004080;
         }
@@ -126,7 +131,6 @@
                     <td class="link"><a href="https://www.coursera.org/learn/resolucion-decisiones">Click aquí</a></td>
                     <td class="link"><a href="https://docs.google.com/presentation/d/1j7qrvuVkX18pYEMWhBfo3j7Z0rWKiSRiXReLxP2U/edit#slide=id.p2c2e5a3995f_0_40">Enlace</a></td>
                 </tr>
-
                 <tr>
                     <td class="category">DESARROLLO</td>
                     <td class="course-title">Análisis de Datos 1</td>
@@ -136,10 +140,10 @@
                         <button class="toggle-button verMas">Ver más</button>
                     </td>
                     <td class="modules">
-                        Módulo 1: Presentación del análisis computacional de datos. 5 Horas. <br>
-                        Módulo 2: Todo Acerca del pensamiento analitico. 2 Horas. <br>
-                        Módulo 3: El Maravilloso Mundo de los datos. 3 Horas. <br>
-                        Módulo 4: Configura tu caja de herramientas. 3 Horas. <br>
+                        Módulo 1: Presentación del análisis computacional de datos. 5 Horas.<br>
+                        Módulo 2: Todo Acerca del pensamiento analitico. 2 Horas.<br>
+                        Módulo 3: El Maravilloso Mundo de los datos. 3 Horas.<br>
+                        Módulo 4: Configura tu caja de herramientas. 3 Horas.<br>
                         Módulo 5: Posibilidades profesionales infinitas. 3 Horas.
                     </td>
                     <td class="hours">19</td>
@@ -151,7 +155,6 @@
         </table>
     </div>
     <script>
-        // script.js
         document.addEventListener('DOMContentLoaded', function () {
             const toggleButtons = document.querySelectorAll('.toggle-button');
 
@@ -172,7 +175,6 @@
                 });
             });
         });
-
     </script>
 </body>
 </html>
