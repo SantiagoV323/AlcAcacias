@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Cursos</title>
+    <style>
+        /* styles.css */
+    
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+    
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+    
+        .custom-table th,
+        .custom-table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            /* vertical-align: top; */
+        }
+    
+        .custom-table th {
+            background-color: #003366;
+            color: #fff;
+            font-weight: bold;
+        }
+    
+        .custom-table td a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+    
+        .custom-table td a:hover {
+            text-decoration: underline;
+        }
+    
+        .category {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+    
+        .modules {
+            white-space: pre-line;
+        }
+    
+        .hours,
+        .badge {
+            text-align: center;
+        }
+    
+        .short-description {
+            display: block;
+        }
+    
+        .full-description {
+            display: none;
+        }
+    
+        .verMas {
+            display: inline-flex;
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #0066cc;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    
+        .verMas:hover {
+            background-color: #004080;
+        }
+    </style>
+</head>
+<body>
+    <div class="table-container">
+        <table class="custom-table">
+            <thead>
+                <tr>
+                    <th>RUTA</th>
+                    <th>NOMBRE DEL PROGRAMA</th>
+                    <th>DESCRIPCIÓN</th>
+                    <th>MÓDULOS DEL CURSO</th>
+                    <th>HORAS</th>
+                    <th>TIENE INSIGNIA?</th>
+                    <th>LINK AL CURSO SI ESTÁ INSCRITO</th>
+                    <th>Enlace del Currículo de cursos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="category">TODAS LAS RUTAS</td>
+                    <td class="course-title">ELECTIVA</td>
+                    <td class="description">
+                        <div class="short-description">Prepara para que pueda resolver problemas y tomar decisiones con eficacia. Siendo el pensamiento crítico...</div>
+                        <div class="full-description">Prepara para que pueda resolver problemas y tomar decisiones con eficacia. Siendo el pensamiento crítico (la aplicación de métodos científicos y del razonamiento lógico) constituye la base para resolver problemas y tomar decisiones con eficacia. El pensamiento crítico nos permite evitar escollos frecuentes, verificar la validez de nuestras creencias y suposiciones y corregir las distorsiones que pueden haberse producido en nuestros procesos mentales. Con este curso adquirirás la confianza para evaluar acertadamente los problemas, sopesar soluciones alternativas y prever probables riesgos. Aprenderás a usar el análisis, la síntesis y las preguntas positivas para abordar problemas tanto individuales como organizacionales y cultivarás el pensamiento crítico que se necesita en estos tiempos turbulentos. Mediante estudios de caso y de situaciones en que se han visto otros alumnos, se exploran modelos exitosos y métodos de probada eficacia que son fácilmente reproducibles en el trabajo.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        Módulo 1: Introducción a la resolución de problemas. 1 Hora.<br>
+                        Módulo 2: Gráficas y diagramas. 1 Hora.<br>
+                        Módulo 3: Métodos para tomar decisiones. 1 Hora.<br>
+                        Módulo 4: Ejecución de decisiones. 1 Hora.
+                    </td>
+                    <td class="hours">5</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/learn/resolucion-decisiones">Click aquí</a></td>
+                    <td class="link"><a href="https://docs.google.com/presentation/d/1j7qrvuVkX18pYEMWhBfo3j7Z0rWKiSRiXReLxP2U/edit#slide=id.p2c2e5a3995f_0_40">Enlace</a></td>
+                </tr>
+
+                <tr>
+                    <td class="category">DESARROLLO</td>
+                    <td class="course-title">Análisis de Datos 1</td>
+                    <td class="description">
+                        <div class="short-description">Primer curso del Certificado de Google Data Analytics. Prepara para empleos introductorios de analista de datos con un plan...</div>
+                        <div class="full-description">Primer curso del Certificado de Google Data Analytics. Prepara para empleos introductorios de analista de datos con un plan de estudios práctico de Google. Enseña habilidades analíticas y herramientas como hojas de cálculo, SQL, R y Tableau. No se requiere experiencia previa. Desarrolla pensamiento crítico y ofrece orientación para la búsqueda de empleo. Al completar, los estudiantes estarán listos para roles introductorios en análisis de datos.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        Módulo 1: Presentación del análisis computacional de datos. 5 Horas. <br>
+                        Módulo 2: Todo Acerca del pensamiento analitico. 2 Horas. <br>
+                        Módulo 3: El Maravilloso Mundo de los datos. 3 Horas. <br>
+                        Módulo 4: Configura tu caja de herramientas. 3 Horas. <br>
+                        Módulo 5: Posibilidades profesionales infinitas. 3 Horas.
+                    </td>
+                    <td class="hours">19</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/análisis-de-datos-1-ati03">Click aquí</a></td>
+                    <td class="link"><a href="https://docs.google.com/presentation/d/1j7q-ryuVkX18pYEMWhBDf371Zz0RWiKSRjXreLPxM2U/edit#slide=id.p">Enlace</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        // script.js
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleButtons = document.querySelectorAll('.toggle-button');
+
+            toggleButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const shortDescription = this.previousElementSibling.previousElementSibling;
+                    const fullDescription = this.previousElementSibling;
+
+                    if (fullDescription.style.display === 'none' || fullDescription.style.display === '') {
+                        fullDescription.style.display = 'block';
+                        shortDescription.style.display = 'none';
+                        this.textContent = 'Ver menos';
+                    } else {
+                        fullDescription.style.display = 'none';
+                        shortDescription.style.display = 'block';
+                        this.textContent = 'Ver más';
+                    }
+                });
+            });
+        });
+
+    </script>
+</body>
+</html>
