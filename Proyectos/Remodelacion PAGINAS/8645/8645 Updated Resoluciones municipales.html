@@ -1,0 +1,312 @@
+<style type="text/css">
+    /*spoiler*/
+    input[id^="spoiler"] {
+        display: none;
+    }
+
+
+    input[id^="spoiler"]+label {
+        width: 180px;
+        padding: 5px 20px;
+        background: #048;
+        color: white;
+        text-align: center;
+        font-size: 18px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    input[id^="spoiler"]:checked+label {
+        color: #333;
+        background: #ccc;
+    }
+
+    input[id^="spoiler"]~.spoiler {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        margin: 10px auto 0;
+        padding: 10px;
+        border-radius: 8px;
+        transition: all .6s;
+        margin-bottom: 12px;
+    }
+
+    input[id^="spoiler"]:checked+label+.spoiler {
+        height: auto;
+        opacity: 1;
+        padding: 10px;
+    }
+</style>
+<!-- <div class="container">
+    <p><input id="spoiler1" /> <label for="spoiler1">Vigencia 2024</label></p>
+    <p>DISPLAYDOCUMENTOS(1473)</p>
+    <p>&nbsp;</p>
+</div> -->
+<div class="tabla de conenedores">
+    <div class="container"><input id="spoiler1" type="checkbox" /> <label for="spoiler1"> Vigencia 2024 </label>
+        <div class="spoiler">
+            <div class="row">
+                <div class="col-md-12" style="margin-top: 12px;">
+                    <p>DISPLAYDOCUMENTOS(1472)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container"><input id="spoiler2" type="checkbox" /> <label for="spoiler2"> Vigencia 2023 </label>
+
+        <div class="spoiler">
+            <div class="row">
+                <div class="col-md-12" style="margin-top: 12px;">
+                    <p>DISPLAYDOCUMENTOS(1440)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container"><input id="spoiler3" type="checkbox" /> <label for="spoiler3"> Vigencia 2022 </label>
+
+        <div class="spoiler">
+            <div class="row">
+                <div class="col-md-12" style="margin-top: 12px;">
+                    <p>DISPLAYDOCUMENTOS(1393)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container"><input id="spoiler4" type="checkbox" /> <label for="spoiler4"> Vigencia 2021 </label>
+
+        <div class="spoiler">
+            <div class="row">
+                <div class="col-md-12" style="margin-top: 12px;">
+                    <p>DISPLAYDOCUMENTOS(1354)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container"><input id="spoiler5" type="checkbox" /> <label for="spoiler5"> Vigencia 2020 </label>
+
+        <div class="spoiler">
+            <div class="row">
+                <div class="col-md-12" style="margin-top: 12px;">
+                    <p>DISPLAYDOCUMENTOS(1289)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container"><input id="spoiler6" type="checkbox" /> <label for="spoiler6">Vigencia 2019</label>
+
+        <div class="spoiler">
+            <div class="row">
+                <div class="col-md-12" style="margin-top: 12px;">
+                    <p>DISPLAYDOCUMENTOS(1222)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container"><input id="spoiler7" type="checkbox" /> <label for="spoiler7">Vigencia 2018</label>
+
+        <div class="spoiler">
+            <div class="row">
+                <div class="col-md-12" style="margin-top: 12px;">
+                    <p>DISPLAYDOCUMENTOS(1188)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container"><input id="spoiler8" type="checkbox" /> <label for="spoiler8">Vigencia 2017</label>
+
+        <div class="spoiler">
+            <div class="row">
+                <div class="col-md-12" style="margin-top: 12px;">
+                    <p>DISPLAYDOCUMENTOS(1186)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container"><input id="spoiler9" type="checkbox" /> <label for="spoiler9">Vigencia 2016</label>
+
+        <div class="spoiler">
+            <div class="row">
+                <div class="col-md-12" style="margin-top: 12px;">
+                    <p>DISPLAYDOCUMENTOS(1185)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container"><input id="spoiler10" type="checkbox" /> <label for="spoiler10">Vigencia 2015</label>
+
+        <div class="spoiler">
+            <div class="row">
+                <div class="col-md-12" style="margin-top: 12px;">
+                    <p>DISPLAYDOCUMENTOS(1184)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container"><input id="spoiler10" type="checkbox" /> <label for="spoiler10">Vigencia 2014</label>
+
+        <div class="spoiler">
+            <div class="row">
+                <div class="col-md-12" style="margin-top: 12px;">
+                    <p>DISPLAYDOCUMENTOS(1183)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container"><input id="spoiler11" type="checkbox" /> <label for="spoiler11">Vigencia 2013</label>
+
+        <div class="spoiler">
+            <div class="row">
+                <div class="col-md-12" style="margin-top: 12px;">
+                    <p>DISPLAYDOCUMENTOS(1182)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container"><input id="spoiler12" type="checkbox" /> <label for="spoiler12">Vigencia 2012</label>
+
+        <div class="spoiler">
+            <div class="row">
+                <div class="col-md-12" style="margin-top: 12px;">
+                    <p>DISPLAYDOCUMENTOS(1181)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container"><input id="spoiler13" type="checkbox" /> <label for="spoiler13">Vigencia 2011</label>
+
+        <div class="spoiler">
+            <div class="row">
+                <div class="col-md-12" style="margin-top: 12px;">
+                    <p>DISPLAYDOCUMENTOS(1162)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container"><input id="spoiler14" type="checkbox" /> <label for="spoiler14">Vigencia 2010</label>
+
+        <div class="spoiler">
+            <div class="row">
+                <div class="col-md-12" style="margin-top: 12px;">
+                    <p>DISPLAYDOCUMENTOS(1161)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container"><input id="spoiler15" type="checkbox" /> <label for="spoiler15">Vigencia 2009</label>
+
+        <div class="spoiler">
+            <div class="row">
+                <div class="col-md-12" style="margin-top: 12px;">
+                    <p>DISPLAYDOCUMENTOS(1160)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container"><input id="spoiler16" type="checkbox" /> <label for="spoiler16">Vigencia 2008</label>
+
+        <div class="spoiler">
+            <div class="row">
+                <div class="col-md-12" style="margin-top: 12px;">
+                    <p>DISPLAYDOCUMENTOS(1159)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container"><input id="spoiler17" type="checkbox" /> <label for="spoiler17">Vigencia 2007</label>
+
+        <div class="spoiler">
+            <div class="row">
+                <div class="col-md-12" style="margin-top: 12px;">
+                    <p>DISPLAYDOCUMENTOS(1158)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container"><input id="spoiler17" type="checkbox" /> <label for="spoiler17">Vigencia 2006</label>
+
+        <div class="spoiler">
+            <div class="row">
+                <div class="col-md-12" style="margin-top: 12px;">
+                    <p>DISPLAYDOCUMENTOS(1157)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container"><input id="spoiler18" type="checkbox" /> <label for="spoiler18">Vigencia 2005</label>
+
+        <div class="spoiler">
+            <div class="row">
+                <div class="col-md-12" style="margin-top: 12px;">
+                    <p>DISPLAYDOCUMENTOS(1156)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container"><input id="spoiler19" type="checkbox" /> <label for="spoiler19">Vigencia 2004</label>
+
+        <div class="spoiler">
+            <div class="row">
+                <div class="col-md-12" style="margin-top: 12px;">
+                    <p>DISPLAYDOCUMENTOS(1155)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container"><input id="spoiler20" type="checkbox" /> <label for="spoiler20">Vigencia 2003</label>
+
+        <div class="spoiler">
+            <div class="row">
+                <div class="col-md-12" style="margin-top: 12px;">
+                    <p>DISPLAYDOCUMENTOS(1154)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container"><input id="spoiler21" type="checkbox" /> <label for="spoiler21">Vigencia 2002</label>
+
+        <div class="spoiler">
+            <div class="row">
+                <div class="col-md-12" style="margin-top: 12px;">
+                    <p>DISPLAYDOCUMENTOS(1153)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container"><input id="spoiler21" type="checkbox" /> <label for="spoiler21">Vigencia 2001</label>
+
+        <div class="spoiler">
+            <div class="row">
+                <div class="col-md-12" style="margin-top: 12px;">
+                    <p>DISPLAYDOCUMENTOS(1152)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p>&nbsp;</p>
+</div>
