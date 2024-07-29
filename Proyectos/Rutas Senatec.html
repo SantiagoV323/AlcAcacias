@@ -1,110 +1,102 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabla de Cursos</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
 
-        .table-container {
-            width: 100%;
-            overflow-x: auto;
-        }
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+    }
 
-        .custom-table {
-            width: 100%;
-            border-collapse: collapse;
-            border: 1px solid #ccc;
-            background-color: #fff;
-        }
+    .custom-table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid #ccc;
+        background-color: #fff;
+    }
 
-        .custom-table th,
-        .custom-table td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: center;
-            /* vertical-align: top; */
-            border-bottom: white;
-        }
+    .custom-table th,
+    .custom-table td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+        /* vertical-align: top; */
+        border-bottom: white;
+    }
 
-        .custom-table th {
-            background-color: #003366;
-            color: #fff;
-            font-weight: bold;
-        }
+    .custom-table th {
+        background-color: #003366;
+        color: #fff;
+        font-weight: bold;
+    }
 
-        .custom-table td a {
-            color: #0066cc;
-            text-decoration: none;
-        }
+    .custom-table td a {
+        color: #0066cc;
+        text-decoration: none;
+    }
 
-        .custom-table td a:hover {
-            text-decoration: underline;
-        }
+    .custom-table td a:hover {
+        text-decoration: underline;
+    }
 
-        .category {
-            background-color: #f2f2f2;
-            font-weight: bold;
-        }
+    .category {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
 
-        .modules {
-            white-space: pre-line;
-        }
+    .modules {
+        white-space: pre-line;
+    }
 
-        .hours,
-        .badge {
-            text-align: center;
-        }
+    .hours,
+    .badge {
+        text-align: center;
+    }
 
-        .short-description {
-            display: block;
-        }
+    .short-description {
+        display: block;
+    }
 
-        .full-description {
-            display: none;
-        }
+    .full-description {
+        display: none;
+    }
 
-        .short-modules {
-            display: block;
-        }
+    .short-modules {
+        display: block;
+    }
 
-        .full-modules {
-            display: none;
-        }
+    .full-modules {
+        display: none;
+    }
 
-        .description {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    .description {
+        /* display: flex; */
+        flex-direction: column;
+        align-items: center;
+    }
 
-        .verMas {
-            margin-top: 10px;
-            padding: 5px 10px;
-            background-color: #0066cc;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
+    .verMas {
+        margin-top: 10px;
+        padding: 5px 10px;
+        background-color: #0066cc;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
 
-        .verMas:hover {
-            background-color: #004080;
-        }
-    </style>
-</head>
-
+    .verMas:hover {
+        background-color: #004080;
+    }
+</style>
 <body>
     <div class="table-container">
         <table class="custom-table">
@@ -200,7 +192,7 @@
                     <td class="category">DESARROLLO</td>
                     <td class="course-title">Análisis de Datos 2</td>
                     <td class="description">
-                        <div class="short-description">Este curso de Google Data Analytics se centra en habilidades introductorias para roles de analista de datos....</div>
+                        <div class="short-description">Este curso de Google Data Analytics se centra en habilidades introductorias para roles de analista de datos...</div>
                         <div class="full-description">Este curso de Google Data Analytics se centra en habilidades introductorias para roles de analista de datos. Mejorarás tu capacidad en análisis de datos utilizando hojas de cálculo y SQL. Cubre temas como identificación de sesgos, manejo de datos estructurados y no estructurados, y consideraciones éticas. Al finalizar, estarás listo para tomar decisiones informadas y aplicar mejores prácticas en la gestión y seguridad de datos, desarrollando pensamiento crítico mediante ejercicios prácticos.</div>
                         <button class="toggle-button verMas">Ver más</button>
                     </td>
@@ -228,7 +220,7 @@
                     <td class="category">DESARROLLO</td>
                     <td class="course-title">Análisis de Datos 3</td>
                     <td class="description">
-                        <div class="short-description">Tercer curso del Certificado de Análisis de Datos de Google. Prepara para roles introductorios de analista de datos, expandiendo....</div>
+                        <div class="short-description">Tercer curso del Certificado de Análisis de Datos de Google. Prepara para roles introductorios de analista de datos, expandiendo...</div>
                         <div class="full-description">Tercer curso del Certificado de Análisis de Datos de Google. Prepara para roles introductorios de analista de datos, expandiendo habilidades con hojas de cálculo y SQL. Proporciona instrucciones prácticas. Al finalizar, listo para empleos introductorios sin experiencia previa. Cubre selección y tipos de datos, identificación de sesgos, ética y privacidad. Enfoca pensamiento crítico mediante estudios de caso, desarrollando habilidades esenciales para resolver problemas y tomar decisiones.</div>
                         <button class="toggle-button verMas">Ver más</button>
                     </td>
@@ -258,7 +250,7 @@
                     <td class="category">DESARROLLO</td>
                     <td class="course-title">Análisis de Datos 4</td>
                     <td class="description">
-                        <div class="short-description">Curso de Google Data Analytics enfocado en el control y limpieza de datos. A través de hojas de cálculo y SQL....</div>
+                        <div class="short-description">Curso de Google Data Analytics enfocado en el control y limpieza de datos. A través de hojas de cálculo y SQL...</div>
                         <div class="full-description">Curso de Google Data Analytics enfocado en el control y limpieza de datos. A través de hojas de cálculo y SQL, aprenderás a verificar e informar resultados, desarrollando consultas básicas en SQL. Al finalizar, podrás controlar la integridad de los datos, aplicar técnicas de limpieza y usar funciones básicas de SQL. Destaca la importancia de informar sobre la limpieza de datos y fomenta el pensamiento crítico, preparándote para resolver problemas en el análisis de datos.</div>
                         <button class="toggle-button verMas">Ver más</button>
                     </td>
@@ -396,7 +388,7 @@
                     <td class="category">DESARROLLO</td>
                     <td class="course-title">Análisis de Datos 9</td>
                     <td class="description">
-                        <div class="short-description"> Este curso del Certificado Microsoft Power Analyst inicia en el análisis de datos con Power BI....</div>
+                        <div class="short-description"> Este curso del Certificado Microsoft Power Analyst inicia en el análisis de datos con Power BI...</div>
                         <div class="full-description"> Este curso del Certificado Microsoft Power Analyst inicia en el análisis de datos con Power BI. Aprenderás sobre el papel del analista de datos y las etapas clave en el proceso de análisis, aplicando Power BI. Cubre el papel del analista, las etapas clave del análisis y habilidades esenciales con enfoque en Power BI. Prepara para el examen PL-300, obteniendo la certificación Microsoft Power BI Data Analyst. Fomenta el pensamiento crítico con estudios de caso para abordar desafíos.</div>
                         <button class="toggle-button verMas">Ver más</button>
                     </td>
@@ -423,7 +415,7 @@
                     <td class="category">DESARROLLO</td>
                     <td class="course-title">Análisis de Datos 10</td>
                     <td class="description">
-                        <div class="short-description"> Este curso explora los fundamentos del aprendizaje automático y su aplicación en la creación de modelos....</div>
+                        <div class="short-description"> Este curso explora los fundamentos del aprendizaje automático y su aplicación en la creación de modelos...</div>
                         <div class="full-description"> Este curso explora los fundamentos del aprendizaje automático y su aplicación en la creación de modelos predictivos e inteligencia artificial. Utilizando herramientas, Scikit-Learn, Tensor Flow y Mytorch. Diseñado para roles en ciencia de datos en Azure, prepara para la certificación DP-100 de Microsoft, evaluando la capacidad para operar soluciones de aprendizaje automático en la nube. Ideal para quienes tienen conocimientos previos en aprendizaje automático o un sólido trasfondo matemático.</div>
                         <button class="toggle-button verMas">Ver más</button>
                     </td>
@@ -450,7 +442,7 @@
                     <td class="category">DESARROLLO</td>
                     <td class="course-title">Análisis de Datos 11</td>
                     <td class="description">
-                        <div class="short-description"> Este curso enseña a utilizar Azure Machine Learning sin codificación. Para científicos de....</div>
+                        <div class="short-description"> Este curso enseña a utilizar Azure Machine Learning sin codificación. Para científicos de...</div>
                         <div class="full-description"> Este curso enseña a utilizar Azure Machine Learning sin codificación. Para científicos de datos con experiencia en Python y frameworks como Scikit-Learn, Pytorch, y TensorFlow. Cubre gestión de recursos en Azure, experimentos, entrenamiento y operación de modelos, con enfoque en prácticas de aprendizaje automático responsable. También incluye el uso de Azure Databricks para preparar datos. Proporciona habilidades completas para construir soluciones en Microsoft Azure.</div>
                         <button class="toggle-button verMas">Ver más</button>
                     </td>
@@ -478,7 +470,7 @@
                     <td class="category">DESARROLLO</td>
                     <td class="course-title">Análisis de Datos 12</td>
                     <td class="description">
-                        <div class="short-description"> Este curso explora la ciencia de datos desde sus orígenes hasta su evolución actual, abordando el....</div>
+                        <div class="short-description"> Este curso explora la ciencia de datos desde sus orígenes hasta su evolución actual, abordando el...</div>
                         <div class="full-description"> Este curso explora la ciencia de datos desde sus orígenes hasta su evolución actual, abordando el uso de datos para descubrir patrones y predicciones. Se centra en conceptos clave como aprendizaje automático, aplicaciones empresariales y destaca la importancia del pensamiento crítico. A través de estudios de caso, proporciona una introducción completa a la ciencia de datos y fomenta habilidades esenciales en tiempos desafiantes.</div>
                         <button class="toggle-button verMas">Ver más</button>
                     </td>
@@ -506,7 +498,7 @@
                     <td class="category">DESARROLLO</td>
                     <td class="course-title">Análisis de Datos 13</td>
                     <td class="description">
-                        <div class="short-description"> Este curso de ciencia de datos te proporciona habilidades clave utilizando herramientas como Júpiter Note-books, Rstudio IDE, Git, Github....</div>
+                        <div class="short-description"> Este curso de ciencia de datos te proporciona habilidades clave utilizando herramientas como Júpiter Note-books, Rstudio IDE, Git, Github...</div>
                         <div class="full-description"> Este curso de ciencia de datos te proporciona habilidades clave utilizando herramientas como Júpiter Note-books, Rstudio IDE, Git, Github y Watson Studio. Incluye laboratorios prácticos en Cloud On Skills, donde experimentas con Python, R o Scala. Crearás un proyecto demostrando tu competencia con un cuaderno Júpiter. Se enfatiza el pensamiento crítico, brindándote confianza para evaluar problemas y considerar soluciones. Este curso te equipa con habilidades prácticas.</div>
                         <button class="toggle-button verMas">Ver más</button>
                     </td>
@@ -537,7 +529,7 @@
                     <td class="category">DESARROLLO</td>
                     <td class="course-title">Análisis de Datos 14</td>
                     <td class="description">
-                        <div class="short-description"> Este curso de Python para principiantes brinda una introducción al lenguaje, desde lo básico hasta....</div>
+                        <div class="short-description"> Este curso de Python para principiantes brinda una introducción al lenguaje, desde lo básico hasta...</div>
                         <div class="full-description"> Este curso de Python para principiantes brinda una introducción al lenguaje, desde lo básico hasta el uso de bibliotecas como pandas y NumPy. Los participantes practican con cuadernos Júpiter, aplicando conocimientos en tareas prácticas como la recopilación de datos. Al finalizar, se espera qué los estudiantes estén cómodos creando programas básicos y automatizando tareas con Python, preparándose en la ingeniería de datos, IA y DevOps. El curso destaca la importancia del pensamiento crítico.</div>
                         <button class="toggle-button verMas">Ver más</button>
                     </td>
@@ -566,7 +558,7 @@
                     <td class="category">DESARROLLO</td>
                     <td class="course-title">Análisis de Datos 15</td>
                     <td class="description">
-                        <div class="short-description"> Curso esencial para desarrollar habilidades de análisis de datos con Python. Cubre desde....</div>
+                        <div class="short-description"> Curso esencial para desarrollar habilidades de análisis de datos con Python. Cubre desde...</div>
                         <div class="full-description"> Curso esencial para desarrollar habilidades de análisis de datos con Python. Cubre desde la recopilación de datos hasta la construcción de modelos de aprendizaje automático. Se enfatiza el pensamiento crítico y se utilizan bibliotecas como pandas y Scikit-Learn. Al completar el curso, se obtiene un certificado de IBM y se destacan habilidades aplicables en entornos laborales.</div>
                         <button class="toggle-button verMas">Ver más</button>
                     </td>
@@ -596,7 +588,7 @@
                     <td class="category">DESARROLLO</td>
                     <td class="course-title">Análisis de Datos 16</td>
                     <td class="description">
-                        <div class="short-description"> Curso inmersivo en aprendizaje automático con Python. Ideal para ciencias de datos o iniciación....</div>
+                        <div class="short-description"> Curso inmersivo en aprendizaje automático con Python. Ideal para ciencias de datos o iniciación...</div>
                         <div class="full-description"> Curso inmersivo en aprendizaje automático con Python. Ideal para ciencias de datos o iniciación en ML. Cubre temas como regresión, clasificación y agrupación con énfasis en prácticas utilizando bibliotecas como Scikit-Learn. Proyecto final demuestra habilidades en construcción y evaluación de modelos de ML. Destaca la importancia del pensamiento crítico. Obtén habilidades y un certificado en aprendizaje automático. Estudios de caso exploran modelos exitosos aplicables en entornos laborales.</div>
                         <button class="toggle-button verMas">Ver más</button>
                     </td>
@@ -626,7 +618,7 @@
                     <td class="category">DESARROLLO</td>
                     <td class="course-title">Base de datos 1</td>
                     <td class="description">
-                        <div class="short-description"> Este curso del Certificado de Análisis Computacional de Datos de Google aborda bases de datos....</div>
+                        <div class="short-description"> Este curso del Certificado de Análisis Computacional de Datos de Google aborda bases de datos...</div>
                         <div class="full-description"> Este curso del Certificado de Análisis Computacional de Datos de Google aborda bases de datos. Aprenderás a diferenciar sistemas de gestión y a utilizar SQL para la creación y selección de datos. Al finalizar, tendrás conocimientos prácticos sobre conceptos fundamentales, tecnologías y sistemas de gestión de bases de datos, con experiencia en MySQL y bases de datos relacionales. El curso promueve el pensamiento crítico, preparándote para desafíos en análisis de datos.</div>
                         <button class="toggle-button verMas">Ver más</button>
                     </td>
@@ -650,6 +642,1372 @@
                             href="https://docs.google.com/presentation/d/1p0TnEaAzgVSl4lwt9Va-HtNYXn6jFJ6hkoC8h9UMBbI/edit#slide=id.p" target="_blank">Enlace</a>
                     </td>
                 </tr>
+
+                <tr>
+                    <td class="category" rowspan="2">TECNOLOGÍAS EMERGENTES</td>
+                    <td class="course-title" rowspan="2">Computación en la nube 1</td>
+                    <td class="description" rowspan="2">
+                        <div class="short-description">Curso introductorio sobre Fundamentos de Google Cloud para trabajar con Google Cloud, abordando</div>
+                        <div class="full-description">Curso introductorio sobre Fundamentos de Google Cloud para trabajar con Google Cloud, abordando servicios y herramientas clave. También incluye "Architecting with Google Kubernetes Engine: Foundations", que explora principios de diseño y arquitectura de Kubernetes. Destaca la importancia del pensamiento crítico y métodos científicos para resolver problemas y aplicar soluciones efectivas. Estudios de caso ofrecen modelos exitosos aplicables en entornos laborales.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: Introducción a las bases de datos. 4 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: Introducción al curso. Hoy 1 minuto</li>
+                            <li>Módulo 2: Presentación de Google cloud. 25 minutos</li>
+                            <li>Módulo 3: Recursos y acceso en la nube. 46 minutos</li>
+                            <li>Módulo 4: MáMáquinas virtuales y redes en la nube. 1 hora</li>
+                            <li>Módulo 5: Almacenamiento en la nube. 1 hora</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">5</td>
+                    <td class="badge" rowspan="2">SI</td>
+                    <td class="link" rowspan="2"><a href="https://www.coursera.org/programs/computacion-en-la-nube-1-1fds3" target="_blank">Click aquí</a></td>
+                    <td class="link" rowspan="2"><a href="https://docs.google.com/presentation/d/1tXLzt6Fu0uoduCH3DxpudvV3a-rFE4ZOWzMSSKl0m4E/edit#slide=id.p" target="_blank">Enlace</a></td>
+                </tr>
+                <tr>
+                    <td class="modules">
+                        <ul>
+                            <li>Módulo 1: Introducción al curso uno. 11 minutos.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: Introducción al curso uno. 11 minutos.</li>
+                            <li>Módulo 2: Introducción a Google cloud. 2 horas.</li>
+                            <li>Módulo 3: Introducción a los contenedores y kubernetes. 2 horas.</li>
+                            <li>Módulo 4:Arquitectura de kubernetes. 3 horas</li>
+                            <li>Módulo 5: Recursos del curso. 10 minutos</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">8</td>
+                </tr>
+
+                <tr>
+                    <td class="category" rowspan="2">TECNOLOGÍAS EMERGENTES</td>
+                    <td class="course-title" rowspan="2">Computación en la nube 2</td>
+                    <td class="description" rowspan="2">
+                        <div class="short-description">El curso proporciona una introducción completa a Python, explorando arquitecturas sin servidor</div>
+                        <div class="full-description">El curso proporciona una introducción completa a Python, explorando arquitecturas sin servidor y microservicios con AWS Lambda y Amazon API Gateway. Se enfoca en bases de datos de AWS, como Amazon RDS y DynamoDB, y servicios de integración de aplicaciones como Amazon SQS y EventBridge. Incluye un proyecto práctico con DynamoDB y Lambda. El curso de consultoría en la nube destaca habilidades esenciales para consultores, desde la comprensión básica hasta habilidades blandas y duras.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: Bienvenida al curso. 3 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: Bienvenida al curso. 3 horas.</li>
+                            <li>Módulo 2: Comparación de arquitecturas. 1 hora</li>
+                            <li>Módulo 3: Base de datos. 1 hora.</li>
+                            <li>Módulo 4: Servicios de mensajería. 3 horas</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">9</td>
+                    <td class="badge" rowspan="2">SI</td>
+                    <td class="link" rowspan="2"><a href="https://www.coursera.org/programs/computacion-en-la-nube-2-6ol3b" target="_blank">Click aquí</a></td>
+                    <td class="link" rowspan="2"><a href="https://docs.google.com/presentation/d/1vNVe_D78RZtgEtD0GN3B6i1nsTOulv4TGUy2ByKFXww/edit#slide=id.p" target="_blank">Enlace</a></td>
+                </tr>
+                <tr>
+                    <td class="modules">
+                        <ul>
+                            <li>Módulo 1: Pensar como consultor en la nube. 2 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: Pensar como consultor en la nube. 2 horas.</li>
+                            <li>Módulo 2: Diseñar soluciones y gestionar proyectos. 2 horas.</li>
+                            <li>Módulo 3: Gestionar las relaciones. 2 horas.</li>
+                            <li>Módulo 4: Construir su carrera. 3 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">10</td>
+                </tr>
+
+                <tr>
+                    <td class="category" rowspan="2">TECNOLOGÍAS EMERGENTES</td>
+                    <td class="course-title" rowspan="2">Computación en la nube 3</td>
+                    <td class="description" rowspan="2">
+                        <div class="short-description">Estos cursos abarcan el desarrollo de software, gestión de proyectos en DevOps, automatización...</div>
+                        <div class="full-description">Estos cursos abarcan el desarrollo de software, gestión de proyectos en DevOps, automatización en la nube y AWS. Se destacan prácticas de gestión, marcos de proyectos, implementación de tuberías de integración/desarrollo continuo y automatización con AWS. Ambos enfatizan el pensamiento crítico mediante estudios de caso y experiencias de alumnos para explorar modelos exitosos aplicables en entornos laborales."</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: Definir el proyecto. 1 hora.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: Definir el proyecto. 1 hora.</li>
+                            <li>Módulo 2: Metodologías para la gestión de proyectos. 1 hora.</li>
+                            <li>Módulo 3: Introducción a DevOps. 2 horas.</li>
+                            <li>Módulo 4: Construir una mejor canalización. 3 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">8</td>
+                    <td class="badge" rowspan="2">SI</td>
+                    <td class="link" rowspan="2"><a href="https://www.coursera.org/programs/computacion-en-la-nube-3-das7o" target="_blank">Click aquí</a></td>
+                    <td class="link" rowspan="2"><a href="https://docs.google.com/presentation/d/1AJDnIMAkyP288cTXQ7uKsm0RenCfaMkTUPwDYJyXq_E/edit#slide=id.p" target="_blank">Enlace</a></td>
+                </tr>
+                <tr>
+                    <td class="modules">
+                        <ul>
+                            <li>Módulo 1: ¿Por qué automatizar? 2 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: ¿Por qué automatizar? 2 horas.</li>
+                            <li>Módulo 2: Infraestructura como código. 2 horas.</li>
+                            <li>Módulo 3: Servicios y características de Adobe AWS utilizados para la automatización. 2 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">8</td>
+                </tr>
+                
+                <tr>
+                    <td class="category">TECNOLOGÍAS EMERGENTES</td>
+                    <td class="course-title">Computación en la nube 4</td>
+                    <td class="description">
+                        <div class="short-description"> "AWS Cloud Technical Essentials" es un curso para roles técnicos sin conocimientos previos en la nube...</div>
+                        <div class="full-description"> "AWS Cloud Technical Essentials" es un curso para roles técnicos sin conocimientos previos en la nube o AWS. Cubre seguridad, gestión de identidad y acceso, así como monitoreo y optimización de infraestructura en la nube con AWS. Recomendado para roles de desarrollador, arquitecto u operaciones, se sugiere completar "AWS Cloud Practice Essentials" antes para principiantes en la nube. El curso promueve el pensamiento crítico, enfatizando la resolución de problemas, toma de decisiones.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: Visión general y seguridad de AWS. 5 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: Visión general y seguridad de AWS. 5 horas.</li>
+                            <li>Módulo 2: Informática y redes. 6 horas.</li>
+                            <li>Módulo 3: Almacenamiento y bases de datos en AWS. 6 horas.</li>
+                            <li>Módulo 4: Supervisión y optimización. 7 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">25</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/computacion-en-la-nube-4-628fo" target="_blank">Click aquí</a></td>
+                    <td class="link"><a
+                            href="https://docs.google.com/presentation/d/1x8UO87DIo-24OXF3biGEvlPWMnCWjASPnfQfypYtXTI/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">TECNOLOGÍAS EMERGENTES</td>
+                    <td class="course-title">Computación en la nube 5</td>
+                    <td class="description">
+                        <div class="short-description"> Curso para arquitectos de soluciones en la nube, ideal para el examen Associate de AWS Solutions Architect...</div>
+                        <div class="full-description"> Curso para arquitectos de soluciones en la nube, ideal para el examen Associate de AWS Solutions Architect. Enfocado en escenarios de casos de uso y aprendizaje práctico. Aborda arquitecturas basadas en eventos, eficiencia de costos y construcción de arquitecturas híbridas. Destaca el pensamiento crítico, aplicando métodos científicos y razonamiento lógico para resolver problemas y tomar decisiones. Se basa en estudios, experiencias de alumnos para explorar modelos exitosos y métodos probados.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: Introducción al apasionante mundo de la ciberseguridad. 3 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: Introducción al apasionante mundo de la ciberseguridad. 3 horas.</li>
+                            <li>Módulo 2: La evolución de la ciberseguridad. 2 horas.</li>
+                            <li>Módulo 3: Protección frente a amenazas, riesgos y vulnerabilidades. 2 horas.</li>
+                            <li>Módulo 4: Herramientas de ciberseguridad y lenguajes de programación. 3 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">21</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/computacion-en-la-nube-5-pgsmq" target="_blank">Click aquí</a></td>
+                    <td class="link"><a
+                            href="https://docs.google.com/presentation/d/1Pc94ZZlerENLY-C3xsEzdk26RlmibdwPgfoMLmOYd74/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">TECNOLOGÍAS EMERGENTES</td>
+                    <td class="course-title">Ciberseguridad 1</td>
+                    <td class="description">
+                        <div class="short-description"> Primer curso del Certificado de Ciberseguridad de Google qué ofrece una introducción interactiva al mundo de la ciberseguridad...</div>
+                        <div class="full-description"> Primer curso del Certificado de Ciberseguridad de Google qué ofrece una introducción interactiva al mundo de la ciberseguridad aborda eventos, destaca la importancia en las operaciones comerciales y explora responsabilidades y habilidades de un analista de ciberseguridad. Guiado por expertos de Google, incluye actividades prácticas y ejemplos simulando tareas comunes. La finalización del certificado prepara para roles de ciberseguridad sin experiencia previa. Destaca el pensamiento crítico.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: Introducción al apasionante mundo de la ciberseguridad. 3 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: Introducción al apasionante mundo de la ciberseguridad. 3 horas.</li>
+                            <li>Módulo 2: La evolución de la ciberseguridad. 2 horas.</li>
+                            <li>Módulo 3: Protección frente a amenazas, riesgos y vulnerabilidades. 2 horas.</li>
+                            <li>Módulo 4: Herramientas de ciberseguridad y lenguajes de programación. 3 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">21</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/computacion-en-la-nube-5-pgsmq" target="_blank">Click aquí</a></td>
+                    <td class="link"><a
+                            href="https://docs.google.com/presentation/d/1Pc94ZZlerENLY-C3xsEzdk26RlmibdwPgfoMLmOYd74/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">TECNOLOGÍAS EMERGENTES</td>
+                    <td class="course-title">Ciberseguridad 2</td>
+                    <td class="description">
+                        <div class="short-description"> Conceptos con énfasis en cómo los profesionales de la ciberseguridad utilizan los marcos y controles...</div>
+                        <div class="full-description"> Conceptos con énfasis en cómo los profesionales de la ciberseguridad utilizan los marcos y controles para proteger las operaciones comerciales. Identificarás los pasos de la gestión de riesgos y conocerás las amenazas, riesgos y vulnerabilidades comunes. Explorarás los datos de gestión de eventos e información de seguridad y utilizarás un manual para responder a las amenazas, riesgos y vulnerabilidades identificadas.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: Dominios de seguridad. 3 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: Dominios de seguridad. 3 horas.</li>
+                            <li>Módulo 2: Marcos y controles de seguridad. 4 horas.</li>
+                            <li>Módulo 3: Introducción a las herramientas de ciberseguridad. 2 horas.</li>
+                            <li>Módulo 4: Uso de los manuales de estrategias para responder a incidentes. Hola 2 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">12</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/ciberseguridad-2-ordhq" target="_blank">Click aquí</a></td>
+                    <td class="link"><a
+                            href="https://docs.google.com/presentation/d/14ChT1akYYfglsppS_tjPd897l5BR94TKfFwEgMBrA-o/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">TECNOLOGÍAS EMERGENTES</td>
+                    <td class="course-title">Ciberseguridad 3</td>
+                    <td class="description">
+                        <div class="short-description"> Explorarás habilidades informáticas qué utilizarás en el trabajo como analista de ciberseguridad...</div>
+                        <div class="full-description"> Explorarás habilidades informáticas qué utilizarás en el trabajo como analista de ciberseguridad. Practicarás el uso de Linux qué se utiliza comúnmente en la ciberseguridad. Luego, usarás SQL para comunicarte con una base de datos. Todo esto te ayudará a desarrollar tus habilidades y prepararte para trabajar en el área de la ciberseguridad, en un nivel inicial.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: Introducción a los sistemas operativos. 3 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: Introducción a los sistemas operativos. 3 horas.</li>
+                            <li>Módulo 2: El sistema operativo Linux. 4 horas.</li>
+                            <li>Módulo 3: Comandos de linux en bash. 9 horas.</li>
+                            <li>Módulo 4: Bases de datos y SQL. 8 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">25</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/ciberseguridad-3-bfffj" target="_blank">Click aquí</a></td>
+                    <td class="link"><a
+                            href="https://docs.google.com/presentation/d/14ChT1akYYfglsppS_tjPd897l5BR94TKfFwEgMBrA-o/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">TECNOLOGÍAS EMERGENTES</td>
+                    <td class="course-title">Ciberseguridad 4</td>
+                    <td class="description">
+                        <div class="short-description"> Explorarás los conceptos de activos, amenazas y vulnerabilidades. Primero conocerás cómo se clasifican...</div>
+                        <div class="full-description"> Explorarás los conceptos de activos, amenazas y vulnerabilidades. Primero conocerás cómo se clasifican los activos. Luego, profundizarás sobre las amenazas y vulnerabilidades, así como los controles de seguridad qué utilizan las organizaciones para proteger la información y mitigar el riesgo. Además, practicarás el proceso de modelado de amenazas y desarrollarás una mentalidad de atacante. También, aprenderás tácticas para anticiparte a los riesgos de seguridad.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: Introducción a la seguridad de los activos. 4 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: Introducción a la seguridad de los activos. 4 horas.</li>
+                            <li>Módulo 2: Protección de los activos de la organización. 6 horas.</li>
+                            <li>Módulo 3: Vulnerabilidades en los sistemas. 5 horas.</li>
+                            <li>Módulo 4: Amenazas a la seguridad de los activos. 5 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">22</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/ciberseguridad-4-9sm3a" target="_blank">Click aquí</a></td>
+                    <td class="link"><a
+                            href="https://docs.google.com/presentation/d/1spDP4dn6S59YDy9rVYnH2A1laRgFc49CxHevDkQQthk/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">TECNOLOGÍAS EMERGENTES</td>
+                    <td class="course-title">Ciberseguridad 5</td>
+                    <td class="description">
+                        <div class="short-description"> Detección y respuesta a incidentes. Definirás un incidente de seguridad y explicarás el ciclo de vida...</div>
+                        <div class="full-description"> Detección y respuesta a incidentes. Definirás un incidente de seguridad y explicarás el ciclo de vida de la respuesta a incidentes; incluirás las funciones y las responsabilidades de respuesta a incidentes. Analizarás e interpretarás las comunicaciones de red para detectar incidentes de seguridad con herramientas de rastreo de paquetes para capturar el tráfico de red. Al evaluar y analizar los artefactos, explorarás los procesos y procedimientos de investigación y respuesta a incidentes.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: Introducción a la detección y respuesta a incidentes. 3 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: Introducción a la detección y respuesta a incidentes. 3 horas.</li>
+                            <li>Módulo 2: Análisis y monitoreo de redes. 4 horas.</li>
+                            <li>Módulo 3: Investigación y respuesta ante incidentes. 5 horas.</li>
+                            <li>Módulo 4: Tráfico de red y registros mediante el uso de herramientas SIEM e IDS. 7 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">21</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/ciberseguridad-5-gif4e" target="_blank">Click aquí</a></td>
+                    <td class="link"><a
+                            href="https://docs.google.com/presentation/d/1pUpraeyYvYpqqFVtEbsRopMWbmN6qUZDnRzsR59RE7I/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">TECNOLOGÍAS EMERGENTES</td>
+                    <td class="course-title">Ciberseguridad 6</td>
+                    <td class="description">
+                        <div class="short-description"> Séptimo curso del Certificado de Ciberseguridad de Google: Introducción a Python para automatizar...</div>
+                        <div class="full-description"> Séptimo curso del Certificado de Ciberseguridad de Google: Introducción a Python para automatizar tareas en ciberseguridad. Cubre conceptos básicos y guía con ejemplos prácticos de expertos de Google en ciberseguridad. Estudiantes preparados para roles iniciales en ciberseguridad, sin experiencia previa necesaria. Enfocado en el pensamiento crítico y habilidades prácticas.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: Introducción a Python. 9 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: Introducción a Python. 9 horas.</li>
+                            <li>Módulo 2: Escribe código usando python de forma efectiva. 5 horas.</li>
+                            <li>Módulo 3: Trabaja con cadenas y listas. 6 horas.</li>
+                            <li>Módulo 4: Python en la práctica. 6 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">27</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/ciberseguridad-6-biapp" target="_blank">Click aquí</a></td>
+                    <td class="link"><a
+                            href="https://docs.google.com/presentation/d/1zBegrOspa0AgMPbkfT2b3V0agruC3o-9V-WXabxnxuw/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">TECNOLOGÍAS EMERGENTES</td>
+                    <td class="course-title">Ciberseguridad 7</td>
+                    <td class="description">
+                        <div class="short-description"> Curso introductorio en ciberseguridad, ideal para comenzar en la carrera. Cubre sistemas informáticos...</div>
+                        <div class="full-description"> Curso introductorio en ciberseguridad, ideal para comenzar en la carrera. Cubre sistemas informáticos, sistemas operativos y seguridad empresarial. Prepara para el Certificado de Analista de Seguridad Cibernética de Microsoft. Destaca pensamiento crítico y estudios de caso para explorar modelos efectivos.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: Introducción a los ordenadores y sistemas operativos. 5 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: Introducción a los ordenadores y sistemas operativos. 5 horas.</li>
+                            <li>Módulo 2: Sistemas empresariales y seguridad. 3 horas.</li>
+                            <li>Módulo 3: Aplicaciones de sistemas empresariales. 4 horas.</li>
+                            <li>Módulo 4: Ordenadores, sistemas operativos y seguridad. 2 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">14</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/ciberseguridad-7-6hm4i" target="_blank">Click aquí</a></td>
+                    <td class="link"><a
+                            href="https://docs.google.com/presentation/d/1CzGFQGK3e11hq9IxlVVWfLovR19t5qx578XO1NE7TNc/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">TECNOLOGÍAS EMERGENTES</td>
+                    <td class="course-title">Ciberseguridad 8</td>
+                    <td class="description">
+                        <div class="short-description"> Curso introductorio para la ciberseguridad, enfocado en redes y computación en la nube...</div>
+                        <div class="full-description"> Curso introductorio para la ciberseguridad, enfocado en redes y computación en la nube. Prepara para el CertificadoProfesional de Microsoft Cybersecurity Analyst sin experiencia previa. Cubre conceptos clave de redes y seguridad, así como la infraestructura y monitoreo de red. También es útil para el examen Microsoft SC-900. Destaca el pensamiento crítico y utiliza estudios de caso para explorar modelos y métodos eficaces.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: redes informáticas. 4 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: redes informáticas. 4 horas.</li>
+                            <li>Módulo 2: dispositivos y protocolos de red. 6 horas.</li>
+                            <li>Módulo 3: seguridad de la red. 4 horas.</li>
+                            <li>Módulo 4: computación en nube y redes. 6 horas.</li>
+                            <li>Módulo 5: redes y computación en nube. 3 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">25</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/ciberseguridad-8-mtvij" target="_blank">Click aquí</a></td>
+                    <td class="link"><a
+                            href="https://docs.google.com/presentation/d/1cJVPpkYBY9EQiGgzP8CLp8BhPTLT8YFdaHTCfDnwJUE/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">TECNOLOGÍAS EMERGENTES</td>
+                    <td class="course-title">Ciberseguridad 9</td>
+                    <td class="description">
+                        <div class="short-description"> Curso sobre amenazas cibernéticas, estrategias de mitigación y cifrado...</div>
+                        <div class="full-description"> Curso sobre amenazas cibernéticas, estrategias de mitigación y cifrado. Prepara para certificación de analistas de seguridad cibernética de Microsoft sin experiencia previa. Aborda panorama de amenazas, tipos de ataques, algoritmos de cifrado y conceptos de seguridad. También es útil para el examen SC-900 de Microsoft. Destaca el pensamiento crítico y ofrece modelos y métodos prácticos.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: amenazas y ataques. 4 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: amenazas y ataques. 4 horas.</li>
+                            <li>Módulo 2: criptografía. 4 horas.</li>
+                            <li>Módulo 3: amenazas basadas en redes y dispositivos. 4 horas.</li>
+                            <li>Módulo 4: seguridad conformidad e identidad. 4 horas.</li>
+                            <li>Módulo 5: vectores de amenazas a la ciberseguridad y mitigación. 2 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">20</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/ciberseguridad-9-j5aii" target="_blank">Click aquí</a></td>
+                    <td class="link"><a
+                            href="https://docs.google.com/presentation/d/1jLkgKCovGeihcx6hDmho0Pq-jjl9vv1h0qleReZqzpg/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">TECNOLOGÍAS EMERGENTES</td>
+                    <td class="course-title">Ciberseguridad 10</td>
+                    <td class="description">
+                        <div class="short-description"> Curso de ciberseguridad aborda ataque y defensa cibernética en entorno de nube...</div>
+                        <div class="full-description"> Curso de ciberseguridad aborda ataque y defensa cibernética en entorno de nube. Aprenderás estrategias de prueba de penetración y gestión de vulnerabilidades. Preparación para el Certificado Profesional de Analistas de Ciberseguridad de Microsoft sin experiencia previa. También útil para el examen SC-900 de Microsoft, certificación en seguridad y cumplimiento. Enfocado en pensamiento crítico para evaluar problemas y tomar decisiones eficaces.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: pruebas de penetración. 5 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: pruebas de penetración. 5 horas.</li>
+                            <li>Módulo 2: herramientas preventivas. Hoy 6 horas.</li>
+                            <li>Módulo 3: pruebas de penetración en azure. 4 horas.</li>
+                            <li>Módulo 4: proyecto final y evaluación: hoy herramientas y tecnologías de ciberseguridad. 3 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">20</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/ciberseguridad-10-4uhny" target="_blank">Click aquí</a></td>
+                    <td class="link"><a
+                            href="https://docs.google.com/presentation/d/166qld1udEU1Q0zmuyySL3v7zZXTvUFyDZyPq4lFGdNs/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">TECNOLOGÍAS EMERGENTES</td>
+                    <td class="course-title">Ciberseguridad 10</td>
+                    <td class="description">
+                        <div class="short-description"> Curso de ciberseguridad aborda ataque y defensa cibernética en entorno de nube...</div>
+                        <div class="full-description"> Curso de ciberseguridad aborda ataque y defensa cibernética en entorno de nube. Aprenderás estrategias de prueba de penetración y gestión de vulnerabilidades. Preparación para el Certificado Profesional de Analistas de Ciberseguridad de Microsoft sin experiencia previa. También útil para el examen SC-900 de Microsoft, certificación en seguridad y cumplimiento. Enfocado en pensamiento crítico para evaluar problemas y tomar decisiones eficaces.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: pruebas de penetración. 5 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: pruebas de penetración. 5 horas.</li>
+                            <li>Módulo 2: herramientas preventivas. Hoy 6 horas.</li>
+                            <li>Módulo 3: pruebas de penetración en azure. 4 horas.</li>
+                            <li>Módulo 4: proyecto final y evaluación: hoy herramientas y tecnologías de ciberseguridad. 3 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">20</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/ciberseguridad-10-4uhny" target="_blank">Click aquí</a></td>
+                    <td class="link"><a
+                            href="https://docs.google.com/presentation/d/166qld1udEU1Q0zmuyySL3v7zZXTvUFyDZyPq4lFGdNs/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">EXPERIENCIA DIGITAL</td>
+                    <td class="course-title">Experiencia de usuario 1</td>
+                    <td class="description">
+                        <div class="short-description"> Primer curso en diseño de UX de Google, prepara para trabajos de nivel básico...</div>
+                        <div class="full-description"> Primer curso en diseño de UX de Google, prepara para trabajos de nivel básico. Dirigido por profesionales de UX, enfocado en habilidades prácticas. Al completar los siete cursos, los alumnos estarán listos para roles de diseñador de UX sin experiencia previa requerida. Se abordan conceptos básicos, responsabilidades laborales y se destaca el pensamiento crítico.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: introducción al diseño de la experiencia del usuario. 5 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: introducción al diseño de la experiencia del usuario. 5 horas.</li>
+                            <li>Módulo 2: familiarizarse con términos, herramientas y frameworks comunes en el diseño de UX. 5 horas.</li>
+                            <li>Módulo 3: participar en sprints de diseño. 3 horas.</li>
+                            <li>Módulo 4: desarrollo de una presencia profesional. 8 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">20</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/experiencia-de-usuario-1-3uo8x" target="_blank">Click aquí</a></td>
+                    <td class="link"><a
+                            href="https://docs.google.com/presentation/d/1jsM-vjZMLDjThrHBVst5MB3LiY5ajY-ggO05gyeZeCo/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">EXPERIENCIA DIGITAL</td>
+                    <td class="course-title">Experiencia de usuario 2</td>
+                    <td class="description">
+                        <div class="short-description"> Segundo curso del programa de certificación en diseño de UX de Google...</div>
+                        <div class="full-description"> Segundo curso del programa de certificación en diseño de UX de Google. Enfocado en empatizar con usuarios, definir necesidades y generar soluciones prácticas. Dictado por profesionales de UX de Google, ofrece actividades prácticas simulando escenarios reales. Al completar, los alumnos estarán listos para trabajos básicos en diseño de UX, sin experiencia previa requerida.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: Integrar la investigación en el proceso de diseño. 4 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: Integrar la investigación en el proceso de diseño. 4 horas.</li>
+                            <li>Módulo 2: Empatizar con los usuarios y definir los puntos débiles. 8 horas.</li>
+                            <li>Módulo 3: Creación de historias de usuario y mapa de recorrido del usuario.  4 horas.</li>
+                            <li>Módulo 4: Definición de problemas de usuario.  4 horas.</li>
+                            <li>Módulo 5: Idear soluciones de diseño. 8 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">30</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/experiencia-de-usuario-2-lzuld" target="_blank">Click aquí</a></td>
+                    <td class="link"><a
+                            href="https://docs.google.com/presentation/d/1jsM-vjZMLDjThrHBVst5MB3LiY5ajY-ggO05gyeZeCo/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">EXPERIENCIA DIGITAL</td>
+                    <td class="course-title">Experiencia de usuario 3</td>
+                    <td class="description">
+                        <div class="short-description"> Este curso enseña a crear esquemas y prototipos de baja fidelidad para UX...</div>
+                        <div class="full-description"> Este curso enseña a crear esquemas y prototipos de baja fidelidad para UX, usando herramientas como Figma. Aprenderás dibujo básico, arquitectura de información y diseño de interactividad, esencial para roles de diseño UX. Incluye prácticas qué simulan el entorno real y fomenta el pensamiento crítico. Al finalizar, avanzarás en tu portfolio de UX, preparándote para empleos de nivel básico.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: Definir el proyecto. 1 hora.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: Definir el proyecto. 1 hora.</li>
+                            <li>Módulo 2: Metodologías para la gestión de proyectos. 1 hora.</li>
+                            <li>Módulo 3: Introducción a DevOps. 2 horas.</li>
+                            <li>Módulo 4: Construir una mejor canalización. 3 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">20</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/experiencia-de-usuario-3-69d2u" target="_blank">Click aquí</a></td>
+                    <td class="link"><a
+                            href="https://docs.google.com/presentation/d/1AJDnIMAkyP288cTXQ7uKsm0RenCfaMkTUPwDYJyXq_E/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">EXPERIENCIA DIGITAL</td>
+                    <td class="course-title">Experiencia de usuario 4</td>
+                    <td class="description">
+                        <div class="short-description"> Aprende a realizar investigaciones en UX y probar diseños preliminares en este curso...</div>
+                        <div class="full-description"> Aprende a realizar investigaciones en UX y probar diseños preliminares en este curso, dictado por expertos de Google. Planificarás y ejecutarás estudios de usabilidad, analizarás datos y modificarás diseños basados en tus hallazgos. Completa este y otros cursos del programa para adquirir habilidades claves en diseño UX y prepararte para roles de nivel básico. El curso incluye prácticas realistas y fomenta el pensamiento crítico, esencial para desarrollar soluciones efectivas en UX.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: Planificación de estudios de investigación en UX. 8 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: Planificación de estudios de investigación en UX. 8 horas.</li>
+                            <li>Módulo 2: Investigación con estudios de usabilidad. 5 horas.</li>
+                            <li>Módulo 3: Analizar y sintetizar los resultados de la investigación. 4 horas.</li>
+                            <li>Módulo 4: Compartir las conclusiones de la investigación para el desarrollo de mejores diseños. 4 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">21</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/experiencia-de-usuario-4-s5xl4" target="_blank">Click aquí</a></td>
+                    <td class="link"><a
+                            href="https://docs.google.com/presentation/d/1nQo2wRO-4tjVRz7FFTNMFKgT3Jpx00d98Hg0yQFPHg0/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">EXPERIENCIA DIGITAL</td>
+                    <td class="course-title">Experiencia de usuario 4</td>
+                    <td class="description">
+                        <div class="short-description"> Aprende a realizar investigaciones en UX y probar diseños preliminares en este curso...</div>
+                        <div class="full-description"> Aprende a realizar investigaciones en UX y probar diseños preliminares en este curso, dictado por expertos de Google. Planificarás y ejecutarás estudios de usabilidad, analizarás datos y modificarás diseños basados en tus hallazgos. Completa este y otros cursos del programa para adquirir habilidades claves en diseño UX y prepararte para roles de nivel básico. El curso incluye prácticas realistas y fomenta el pensamiento crítico, esencial para desarrollar soluciones efectivas en UX.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: Planificación de estudios de investigación en UX. 8 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: Planificación de estudios de investigación en UX. 8 horas.</li>
+                            <li>Módulo 2: Investigación con estudios de usabilidad. 5 horas.</li>
+                            <li>Módulo 3: Analizar y sintetizar los resultados de la investigación. 4 horas.</li>
+                            <li>Módulo 4: Compartir las conclusiones de la investigación para el desarrollo de mejores diseños. 4 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">21</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/experiencia-de-usuario-4-s5xl4" target="_blank">Click aquí</a></td>
+                    <td class="link"><a
+                            href="https://docs.google.com/presentation/d/1nQo2wRO-4tjVRz7FFTNMFKgT3Jpx00d98Hg0yQFPHg0/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">EXPERIENCIA DIGITAL</td>
+                    <td class="course-title">Experiencia de usuario 5</td>
+                    <td class="description">
+                        <div class="short-description"> Este curso enseña a crear prototipos y diseños de alta fidelidad en Figma...</div>
+                        <div class="full-description"> Este curso enseña a crear prototipos y diseños de alta fidelidad en Figma, preparándote para roles de nivel básico en UX. Aprenderás a transformar maquetas en prototipos interactivos, realizar investigaciones para mejorar tus diseños, compartir tu trabajo con equipos de desarrollo. Dado por expertos de Google, este curso incluye prácticas realistas y desarrollo de pensamiento crítico, esencial para abordar desafíos en diseño UX. Tendrás proyectos listos para enriquecer tu portfolio profesional.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: Comenzar a crear maquetas.11 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: Comenzar a crear maquetas.11 horas.</li>
+                            <li>Módulo 2: Aplicar los principios del diseño visual a las maquetas. 5 horas.</li>
+                            <li>Módulo 3: Exploración de sistemas de diseño. 3 horas.</li>
+                            <li>Módulo 4: Participar en sesiones de crítica de diseño. 3 horas.</li>
+                            <li>Módulo 5: Módulo 5: Creación de prototipos de alta fidelidad. 2 horas.</li>
+                            <li>Módulo 6: Módulo 6: Probar diseños e iterar para mejorarlos. 7 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">33</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/experiencia-de-usuario-5-7efoq" target="_blank">Click aquí</a></td>
+                    <td class="link"><a
+                            href="https://docs.google.com/presentation/d/1cCHZyZN3SzRUK5ncxRUaoGSaVSpN5uIJjiLRuFUGrQE/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">EXPERIENCIA DIGITAL</td>
+                    <td class="course-title">Experiencia de usuario 6</td>
+                    <td class="description">
+                        <div class="short-description"> Este curso enseña a diseñar sitios web adaptables con Adobe XD, enfocado en principiantes...</div>
+                        <div class="full-description"> Este curso enseña a diseñar sitios web adaptables con Adobe XD, enfocado en principiantes en diseño UX. Abarca todo el proceso de diseño, desde entender al usuario hasta probar y mejorar los prototipos. Finaliza con un proyecto para tu portfolio y consejos para la búsqueda de empleo en UX. Dictado por expertos de Google, te equipará con habilidades prácticas y fomentará tu pensamiento crítico, preparándote para roles de nivel básico sin necesidad de experiencia previa en Adobe XD.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: Primeros pasos en el proceso de diseño de ux: empatizar y definir. 7 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: Primeros pasos en el proceso de diseño de ux: empatizar y definir. 7 horas.</li>
+                            <li>Módulo 2: Seguir el proceso de diseño de UX: idear. 4 horas.</li>
+                            <li>Módulo 3: Crear esquemas de página para un sitio web adaptable. 6 horas.</li>
+                            <li>Módulo 4: Crear y probar prototipos de baja fidelidad. 6 horas.</li>
+                            <li>Módulo 5: Crear y probar diseños de alta fidelidad. 6 horas.</li>
+                            <li>Módulo 6: Documentar el trabajo de diseño y buscar empleo. 7 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">39</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/experiencia-de-usuario-6-yc2ef" target="_blank">Click aquí</a></td>
+                    <td class="link"><a
+                            href="https://docs.google.com/presentation/d/1L7S5BVnP6ekWKva1Tek4-4z9W7d4BSnHzm_wD1_I8Bg/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">EXPERIENCIA DIGITAL</td>
+                    <td class="course-title">Marketing Digital 1</td>
+                    <td class="description">
+                        <div class="short-description"> Inicia tu camino en marketing digital y comercio electrónico con el primer curso del...</div>
+                        <div class="full-description"> Inicia tu camino en marketing digital y comercio electrónico con el primer curso del Certificado de Carrera de Google. Aprenderás roles de nivel inicial, el embudo de marketing, y estrategias digitales sin necesidad de experiencia previa. Guiado por especialistas de Google, este curso combina teoría y práctica, preparándote para roles como coordinador de marketing digital. Cultiva también el pensamiento crítico para abordar desafíos en el sector.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: Introducción a los fundamentos del marketing digital y el comercio electrónico. 4 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: Introducción a los fundamentos del marketing digital y el comercio electrónico. 4 horas.</li>
+                            <li>Módulo 2: El recorrido del cliente y el embudo de marketing. 4 horas.</li>
+                            <li>Módulo 3: Estrategias de marketing digital y comercio electrónico. 4 horas.</li>
+                            <li>Módulo 4: Medir el éxito. 3 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">18</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/marketing-digital-1-pt242" target="_blank">Click aquí</a></td>
+                    <td class="link"><a
+                            href="https://docs.google.com/presentation/d/1-NO7h-yr7NBIrNPNjiJS6tg-ayX9ECFwpGcWLa9-ReQ/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">EXPERIENCIA DIGITAL</td>
+                    <td class="course-title">Marketing Digital 2</td>
+                    <td class="description">
+                        <div class="short-description"> Este curso enseña SEO, SEM, y publicidad gráfica para atraer e interactuar con clientes online...</div>
+                        <div class="full-description"> Este curso enseña SEO, SEM, y publicidad gráfica para atraer e interactuar con clientes online, parte del Certificado de Google en Marketing Digital. Aprenderás a mejorar el tráfico web y aplicar estrategias digitales efectivas. Ideal para principiantes, es guiado por expertos de Google y prepara para roles de nivel inicial.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: Introducción a “atraer e involucrar a clientes con marketing digital”. 6 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: Introducción a “atraer e involucrar a clientes con marketing digital”. 6 horas.</li>
+                            <li>Módulo 2: Comprende la optimización de motores de búsqueda (SEO). 3 horas.</li>
+                            <li>Módulo 3: Utilizar optimización de motores de búsqueda (SEO). 5 horas.</li>
+                            <li>Módulo 4: Marketing de motores de búsqueda (SEM) y publicidad gráfica. 6 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">21</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/marketing-digital-2-t14er" target="_blank">Click aquí</a></td>
+                    <td class="link"><a
+                            href="https://docs.google.com/presentation/d/1pH5fsSshNd48mBJTxEhYfal6zcVcSdbPRyobhsSlUfk/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">EXPERIENCIA DIGITAL</td>
+                    <td class="course-title">Marketing Digital 3</td>
+                    <td class="description">
+                        <div class="short-description"> Aprende estrategias de marketing en redes sociales con este curso Certificado de Google...</div>
+                        <div class="full-description"> Aprende estrategias de marketing en redes sociales con este curso Certificado de Google. Descubre cómo las redes sociales son esenciales para el marketing, identifica la plataforma adecuada, y crea contenido atractivo. Incluye manejo de presencia online, definición de objetivos y análisis de éxito en anuncios. Dado por especialistas de Google, este curso es clave para buscar roles en marketing digital sin experiencia previa, maximizando interacción y utilizar analíticas para toma de decisiones.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1:  Introducción a “De me gusta Leads: hola interactúa con las y los clientes en línea”. 3 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1:  Introducción a “De me gusta Leads: hola interactúa con las y los clientes en línea”. 3 horas.</li>
+                            <li>Módulo 2: Estrategia, planificación y publicación en redes sociales. 6 horas.</li>
+                            <li>Módulo 3: Escucha interacción en redes sociales. 8 horas.</li>
+                            <li>Módulo 4: Analítica informe de redes sociales. 4 horas.</li>
+                            <li>Módulo 5: Redes sociales de pago. 5 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">27</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/marketing-digital-3-lx9md" target="_blank">Click aquí</a></td>
+                    <td class="link"><a
+                            href="https://docs.google.com/presentation/d/1AHaAoDeNQs4Ae3hikRG-SPvbxzWCFoh4-3eiYmdJVZA/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">EXPERIENCIA DIGITAL</td>
+                    <td class="course-title">Marketing Digital 4</td>
+                    <td class="description">
+                        <div class="short-description"> Domina el marketing por correo electrónico con este curso del Certificado de Google...</div>
+                        <div class="full-description"> Domina el marketing por correo electrónico con este curso del Certificado de Google. Aprende a crear y ejecutar campañas efectivas, usar listas de correo y automatizar flujos de trabajo. Descubre cómo comunicarte con clientes para impulsar ventas y fidelizar. Incluye prácticas guiadas por especialistas de Google y prepara para roles de nivel inicial en marketing digital y comercio electrónico, enseñando desde redacción de correos hasta análisis de campañas, sin necesidad de experiencia previa.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: Introducción a “Creatividad en la bandeja de entrada: hoy marketing por correo electrónico”. 4 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: Introducción a “Creatividad en la bandeja de entrada: hoy marketing por correo electrónico”. 4 horas.</li>
+                            <li>Módulo 2: Tipos de marketing por correo electrónico. 4 horas.</li>
+                            <li>Módulo 3: Herramientas útiles para el marketing por correo electrónico. 7 horas.</li>
+                            <li>Módulo 4: Recopilar y analizar datos de campaña de correo electrónico. 3 horas.</li>
+                            <li>Módulo 5: Ejecuta tu propia campaña en marketing por correo electrónico. 5 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">25</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/marketing-digital-4-omgdv" target="_blank">Click aquí</a></td>
+                    <td class="link"><a
+                            href="https://docs.google.com/presentation/d/1_sk18UiIQKaOfFcIcJTbLzPiEPW5ieuc3m7cGzgLq5Q/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">EXPERIENCIA DIGITAL</td>
+                    <td class="course-title">Marketing Digital 5</td>
+                    <td class="description">
+                        <div class="short-description"> Aprende analítica de marketing en este curso de Google, clave para interpretar datos de...</div>
+                        <div class="full-description"> Aprende analítica de marketing en este curso de Google, clave para interpretar datos de marketing digital y comercio electrónico. Domina Google Analytics, Google Ads y pruebas A/B, optimiza campañas y presupuestos basado en métricas clave. Ideal para prepararte para roles iniciales en marketing, sin necesidad de experiencia previa. Incluye prácticas guiadas por expertos de Google.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: Introducción a “Evaluar para tener éxito: analítica y medición de marketing”. 6 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: Introducción a “Evaluar para tener éxito: analítica y medición de marketing”. 6 horas.</li>
+                            <li>Módulo 2: Usar las métricas de Google analytics y Google Ads. 6 horas.</li>
+                            <li>Módulo 3: Me diré el éxito de las campañas de marketing. 5 horas.</li>
+                            <li>Módulo 4: Compartir métricas y datos con las partes interesadas. 8 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">26</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/marketing-digital-5-0apdr" target="_blank">Click aquí</a></td>
+                    <td class="link"><a
+                            href="https://docs.google.com/presentation/d/1Nunt875a9yvHufcH3ATbLpF083h6C5mepa9O61K2et0/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">GESTIÓN DE PROYECTOS</td>
+                    <td class="course-title">Gestión de Proyectos Ágiles 1</td>
+                    <td class="description">
+                        <div class="short-description"> Inicia tu carrera en gestión de proyectos con este curso, el primero de seis, enseñado...</div>
+                        <div class="full-description"> Inicia tu carrera en gestión de proyectos con este curso, el primero de seis, enseñado por gerentes de Google. Aprenderás la terminología clave, el rol de un gerente de proyectos, y explorarás diferentes sectores y metodologías. Prepara para roles introductorios sin experiencia previa, fomentando el pensamiento crítico y habilidades prácticas para el éxito en proyectos. Incluye perspectivas reales y casos de estudio.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: Iniciar una carrera en gestión de proyectos. 3 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: Iniciar una carrera en gestión de proyectos. 3 horas.</li>
+                            <li>Módulo 2: Convertirse en un gerente de proyectos eficaz. 4 horas.</li>
+                            <li>Módulo 3: El ciclo de vida y las metodologías de la gestión de proyectos. 3 horas.</li>
+                            <li>Módulo 4: Estructura y cultura de una organización. 3 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">26</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/GESTIÓN-de-proyectos-agiles-1-gmp4y" target="_blank">Click aquí</a></td>
+                    <td class="link"><a
+                            href="https://docs.google.com/presentation/d/1A3VeVBI-tCmQaXNf66hmyBnu1ECuexWyNrcsaJFCfO4/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">GESTIÓN DE PROYECTOS</td>
+                    <td class="course-title">Gestión de Proyectos Ágiles 2</td>
+                    <td class="description">
+                        <div class="short-description"> Aprende a configurar proyectos para el éxito en la fase de iniciación con este curso del...</div>
+                        <div class="full-description"> Aprende a configurar proyectos para el éxito en la fase de iniciación con este curso del Certificado de Google. Cubre definición de objetivos, entregables, y uso de herramientas como análisis de interesados. Instruido por gerentes de proyectos de Google, te prepara para roles introductorios, enseñando prácticas y herramientas esenciales sin requerir experiencia previa. Al finalizar, dominarás la iniciación de proyectos, desde la definición del alcance hasta la comunicación de roles.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: Fundamentos de la iniciación de proyectos 2 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: Fundamentos de la iniciación de proyectos 2 horas.</li>
+                            <li>Módulo 2: Definición de los objetivos, el alcance y los criterios de éxito del proyecto 6 horas.</li>
+                            <li>Módulo 3: Cómo trabajar eficazmente con los interesados. 5 horas.</li>
+                            <li>Módulo 4: Utilización de recursos y herramientas para el éxito de proyecto 4 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">18</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/GESTIÓN-de-proyectos-agiles-2-evjek" target="_blank">Click aquí</a></td>
+                    <td class="link"><a
+                            href="https://docs.google.com/presentation/d/1K4mX0vSUZLux7yubRmHTEOdsrPFrKJwQAg-dVMd3hAg/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">GESTIÓN DE PROYECTOS</td>
+                    <td class="course-title">Gestión de Proyectos Ágiles 3</td>
+                    <td class="description">
+                        <div class="short-description"> Este tercer curso del Certificado de Google enseña la planificación de proyectos...</div>
+                        <div class="full-description"> Este tercer curso del Certificado de Google enseña la planificación de proyectos, incluyendo estimaciones de tiempo, gestión de presupuestos y procesos de adquisición. Aprenderás a manejar riesgos y a redactar planes de comunicación. Instruido por gerentes de proyectos de Google, prepara para roles introductorios sin experiencia previa. Cubre desde la creación de un plan de proyecto hasta la organización de la documentación, enfatizando el pensamiento crítico para la resolución de problemas.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: inicio de la fase de planificación 5 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: inicio de la fase de planificación 5 horas.</li>
+                            <li>Módulo 2: construir un plan de proyecto 4 horas.</li>
+                            <li>Módulo 3: gestionar presupuestos y compras 4 horas.</li>
+                            <li>Módulo 4: gestión eficaz de riesgos 4 horas.</li>
+                            <li>Módulo 5: organizar la comunicación y la documentación. 6 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">25</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/GESTIÓN-de-proyectos-agiles-3-cfh1p" target="_blank">Click aquí</a></td>
+                    <td class="link"><a
+                            href="https://docs.google.com/presentation/d/1wi1s0YE9m-XL7bBDQE_nm5u4R6ZLtPPRH84CoTLy9cU/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">GESTIÓN DE PROYECTOS</td>
+                    <td class="course-title">Gestión de Proyectos Ágiles 4</td>
+                    <td class="description">
+                        <div class="short-description"> El cuarto curso del Certificado en Gestión de Proyectos de Google se centra en la ejecución...</div>
+                        <div class="full-description"> El cuarto curso del Certificado en Gestión de Proyectos de Google se centra en la ejecución y cierre de proyectos. Aprenderás a seguir aspectos claves, manejar cambios, riesgos, y dependencias, además de gestionar calidad y satisfacción del cliente. Incluye enseñanzas sobre mejora continua, análisis de datos, liderazgo y trabajo en equipo, culminando con técnicas de cierre de proyectos. Diseñado para novatos en gestión de proyectos, fomenta el pensamiento crítico para toma de decisiones eficaz.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: introducción a la ejecución de proyectos 5 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: introducción a la ejecución de proyectos 5 horas.</li>
+                            <li>Módulo 2: gestión de calidad y mejora continua 3 horas.</li>
+                            <li>Módulo 3: toma decisiones basadas en datos 4 horas.</li>
+                            <li>Módulo 4: habilidades de liderazgo influencia 3 horas.</li>
+                            <li>Módulo 5: comunicación eficaz del proyecto 3 horas.</li>
+                            <li>Módulo 6: cerrar un proyecto 3 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">23</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/GESTIÓN-de-proyectos-agiles-4-fxvih" target="_blank">Click aquí</a></td>
+                    <td class="link"><a
+                            href="https://docs.google.com/presentation/d/1L6tcSgrVRJr_uUIgsMVBcQewGSZFmC4ICFevT5YX9TI/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">GESTIÓN DE PROYECTOS</td>
+                    <td class="course-title">Gestión de Proyectos Ágiles 5</td>
+                    <td class="description">
+                        <div class="short-description"> El quinto curso del Certificado de Google en Gestión de Proyectos aborda Agile y Scrum...</div>
+                        <div class="full-description"> El quinto curso del Certificado de Google en Gestión de Proyectos aborda Agile y Scrum, muestra cómo difieren e integran con otros métodos. Explora los fundamentos de Scrum, incluyendo sus valores, roles de equipo, y gestión de proyectos ágil. Te prepara para liderar equipos Agile y aplicar estos enfoques en organizaciones, orientando hacia roles iniciales en gestión de proyectos y fomentando el pensamiento crítico para enfrentar desafíos efectivamente.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: los aspectos básicos de la metodología agile. 3 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: los aspectos básicos de la metodología agile. 3 horas.</li>
+                            <li>Módulo 2: scrum 101. 2 horas.</li>
+                            <li>Módulo 3: implementación de scrum 8 horas.</li>
+                            <li>Módulo 4: aplicar la metodología de agile en la organización 6 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">22</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/GESTIÓN-de-proyectos-agiles-5-p9007" target="_blank">Click aquí</a></td>
+                    <td class="link"><a
+                            href="https://docs.google.com/presentation/d/1Gp1wIV1rYuFsr-08VzLnlR0JxMMS4gLHTw9cURgcaxE/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">GESTIÓN DE PROYECTOS</td>
+                    <td class="course-title">Gestor de proyectos informáticos de IBM 1</td>
+                    <td class="description">
+                        <div class="short-description"> El quinto curso del Certificado de Google en Gestión de Proyectos aborda Agile y Scrum...</div>
+                        <div class="full-description"> El quinto curso del Certificado de Google en Gestión de Proyectos aborda Agile y Scrum, muestra cómo difieren e integran con otros métodos. Explora los fundamentos de Scrum, incluyendo sus valores, roles de equipo, y gestión de proyectos ágil. Te prepara para liderar equipos Agile y aplicar estos enfoques en organizaciones, orientando hacia roles iniciales en gestión de proyectos y fomentando el pensamiento crítico para enfrentar desafíos efectivamente.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: ¿hola por qué la gestión de proyectos? 42 minutos.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: ¿hola por qué la gestión de proyectos? 42 minutos.</li>
+                            <li>Módulo 2: gestión tradicional de proyectos 2 horas.</li>
+                            <li>Módulo 3: gestión moderna de proyectos 2 horas.</li>
+                            <li>Módulo 4: preparar el proyecto para el éxito 4 horas.</li>
+                            <li>Módulo 5: planificación de proyectos 3 horas.</li>
+                            <li>Módulo 6: proyecto final y cuestionario 5 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">20</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/gestor-de-proyectos-informaticos-de-ibm-1-q798d" target="_blank">Click aquí</a></td>
+                    <td class="link"><a
+                            href="https://docs.google.com/presentation/d/1Vmg5A6EYHJJCZ96oBFkcL98tANdONKVizwCgxtpFk7M/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <h3>acá falta un módulo de dobles</h3>
+
+                <tr>
+                    <td class="category">DESARROLLO</td>
+                    <td class="course-title">Desarrollador back-end de Meta 1</td>
+                    <td class="description">
+                        <div class="short-description">Este curso de Meta enseña desarrollo web back-end, introduciendo HTML, CSS, Bootstrap, y React...</div>
+                        <div class="full-description"> Este curso de Meta enseña desarrollo web back-end, introduciendo HTML, CSS, Bootstrap, y React. Aprenderás a crear páginas web y entender el rol de front-end. Finaliza con un proyecto en Boots-trap para una web responsiva. Ideal para principiantes con interés en codificación y pensamiento crítico.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: introducción al desarrollo web 4 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: introducción al desarrollo web 4 horas.</li>
+                            <li>Módulo 2: introducción html y CSS 6 horas.</li>
+                            <li>Módulo 3: Marcos de interfaz de usuario 5 horas.</li>
+                            <li>Módulo 4: preparar el proyecto para el éxito 4 horas.</li>
+                            <li>Módulo 4: evaluación calificada de final del curso 2 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">18</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/desarrollador-back-end-de-meta-1-a4qcv" target="_blank">Click aquí</a></td>
+                    <td class="link"><a href="https://docs.google.com/presentation/d/1QO2TjgheyXzyZO_Sj6gTqdlCIZsWhp2VlBg2NsgjzYQ/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">DESARROLLO</td>
+                    <td class="course-title">Desarrollador back-end de Meta 2</td>
+                    <td class="description">
+                        <div class="short-description">Este curso enseña programación en Python, cubriendo sintaxis básica, módulos, y herramientas...</div>
+                        <div class="full-description"> Este curso enseña programación en Python, cubriendo sintaxis básica, módulos, y herramientas. Aprenderás a usar objetos, clases, control de flujo, y pruebas unitarias. Ideal para principiantes en desarrollo back-end o ingeniería de bases de datos, no requiere experiencia previa. Incluye fomento del pensamiento crítico para solucionar problemas.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: introducción a python 7 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: introducción a python 7 horas.</li>
+                            <li>Módulo 2: programación básica con python 10 horas.</li>
+                            <li>Módulo 3: paradigmas de programación 14 horas.</li>
+                            <li>Módulo 4: módulos, paquetes, bibliotecas y herramientas 10 horas.</li>
+                            <li>Módulo 5: evaluación calificada de final del curso. 1 hora.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">44</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/desarrollador-back-end-de-meta-2-x6fi9" target="_blank">Click aquí</a></td>
+                    <td class="link"><a href="https://docs.google.com/presentation/d/1T6BnCvfDGVRKsAnJ--wNWPDSv49CUicCO2sD2w0Hp_Q/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">DESARROLLO</td>
+                    <td class="course-title">Desarrollador back-end de Meta 3</td>
+                    <td class="description">
+                        <div class="short-description">Este curso sobre Django enseña a construir y asegurar servidores web con Python...</div>
+                        <div class="full-description"> Este curso sobre Django enseña a construir y asegurar servidores web con Python, HTML, y CSS. Abarca diseño de aplicaciones, manejo de bases de datos, interfaces de usuario, y seguridad web. Es necesario tener conocimientos de HTML, CSS, Python, y MySQL. Promueve el pensamiento crítico para abordar problemas y soluciones.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: introducción a Django. 6 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: introducción a Django. 6 horas.</li>
+                            <li>Módulo 2: vistas 9 horas.</li>
+                            <li>Módulo 3: modelos 14 horas.</li>
+                            <li>Módulo 4: plantillas 8 horas.</li>
+                            <li>Módulo 5: resumen del curso de evaluación calificada del proyecto 5 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">45</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/desarrollador-back-end-de-meta-3-2tzro" target="_blank">Click aquí</a></td>
+                    <td class="link"><a href="https://docs.google.com/presentation/d/1b-3HirBKJXR7s048g9weqvwF_hGeHVz3l66apsApatQ/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">DESARROLLO</td>
+                    <td class="course-title">Meta Desarrollador Android  1</td>
+                    <td class="description">
+                        <div class="short-description">Este curso introductorio para aspirantes a desarrolladores móviles cubre herramientas y programación...</div>
+                        <div class="full-description"> Este curso introductorio para aspirantes a desarrolladores móviles cubre herramientas y programación para aplicaciones Android, incluyendo Android Studio y conceptos clave. Termina con un proyecto guiado. También enfatiza el pensamiento crítico para resolver problemas y tomar decisiones eficaces.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: introducción al desarrollo de aplicaciones móviles para Android 4 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: introducción al desarrollo de aplicaciones móviles para Android 4 horas.</li>
+                            <li>Módulo 2: emulación de desarrollo 3 horas.</li>
+                            <li>Módulo 3: modelos 14 horas.</li>
+                            <li>Módulo 3: crear la aplicación 4 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">12</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/meta-desarrollador-android-1-19qi5" target="_blank">Click aquí</a></td>
+                    <td class="link"><a href="https://docs.google.com/presentation/d/1ZXYNyJHjHRriE3sfNpwLZMcbCCizrQG3aRv4yhb-BAE/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">DESARROLLO</td>
+                    <td class="course-title">Meta Desarrollador Android  2</td>
+                    <td class="description">
+                        <div class="short-description">Este curso sobre Kotlin para principiantes cubre fundamentos de programación aplicables a cualquier lenguaje...</div>
+                        <div class="full-description"> Este curso sobre Kotlin para principiantes cubre fundamentos de programación aplicables a cualquier lenguaje y particularidades de Kotlin, incluyendo tipos de datos, funciones, condicionales, y colecciones. Finaliza con un proyecto de cuenta bancaria. No requiere experiencia previa, solo interés en codificación y desarrollo Android. Promueve el pensamiento crítico para solucionar problemas.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: introducción a la programación de kotlin 8 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: introducción a la programación de kotlin 8 horas.</li>
+                            <li>Módulo 2: funciones, clases y objetos 7 horas.</li>
+                            <li>Módulo 3: clases avanzadas, anulabilidad y colecciones 6 horas.</li>
+                            <li>Módulo 4: evaluación calificada de 2 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">25</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/meta-desarrollador-android-2-td02q" target="_blank">Click aquí</a></td>
+                    <td class="link"><a href="https://docs.google.com/presentation/d/1B-OZD0zFA0kIj9XbhALbUZsfdkrJZgN2Rl_syl0ysEo/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">DESARROLLO</td>
+                    <td class="course-title">Meta Desarrollador Android  3</td>
+                    <td class="description">
+                        <div class="short-description">Este curso enseña fundamentos de UX, explorando investigación, diseño, y empatía hacia...</div>
+                        <div class="full-description"> Este curso enseña fundamentos de UX, explorando investigación, diseño, y empatía hacia los usuarios. Aprenderás a crear artefactos de UX, wireframes en Figma, y prototipos MVP, además de principios básicos de diseño. Ideal para principiantes en desarrollo UX/UI, fomenta el pensamiento crítico para resolver problemas de diseño.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: introducción a los principios de diseño ux/UI, 3 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: introducción a los principios de diseño ux/UI, 3 horas.</li>
+                            <li>Módulo 2: evaluación del diseño interactivo 3 horas.</li>
+                            <li>Módulo 3: fundamento del diseño aplicado 4 horas.</li>
+                            <li>Módulo 4: diseño de su ui 5 horas.</li>
+                            <li>Módulo 5: resumen del curso y evaluación final 3 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">21</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/meta-desarrollador-android-3-v25vx" target="_blank">Click aquí</a></td>
+                    <td class="link"><a href="https://docs.google.com/presentation/d/17cAeEY3mcFRPk685LiGNlVm0d4lpuFCrjoDeAERltUc/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">DESARROLLO</td>
+                    <td class="course-title">Meta Desarrollador Android 4</td>
+                    <td class="description">
+                        <div class="short-description">Curso para principiantes en desarrollo Android enseña UI en Android Studio y Kotlin...</div>
+                        <div class="full-description"> Curso para principiantes en desarrollo Android enseña UI en Android Studio y Kotlin. Cubre fundamen-tos, Jetpack Compose, estados, Material Design, temas, y animaciones. Fomenta el pensamiento crítico para resolver problemas.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: creación básica de interfaz de usuario en Android 7 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: creación básica de interfaz de usuario en Android 7 horas.</li>
+                            <li>Módulo 2: creación de interfaz de usuario con jetpack compose 6 horas.</li>
+                            <li>Módulo 3: interfaz de usuario avanzada con jetpack compose 7 horas.</li>
+                            <li>Módulo 4: estilo de interfaz de usuario 4 horas.</li>
+                            <li>Módulo 5: proyecto final 5 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">35</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/meta-desarrollador-android-4-xjc3b" target="_blank">Click aquí</a></td>
+                    <td class="link"><a href="https://docs.google.com/presentation/d/16J01TvwkWLYxGQ6zlaLNseV9tXAv2iQJA9VFHHgUSe8/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">DESARROLLO</td>
+                    <td class="course-title">Meta Desarrollador Android 5</td>
+                    <td class="description">
+                        <div class="short-description">Este curso introductorio a JavaScript prepara a desarrolladores de Android para el desarrollo móvil multiplataforma...</div>
+                        <div class="full-description">Este curso introductorio a JavaScript prepara a desarrolladores de Android para el desarrollo móvil multiplataforma, incluyendo React. Cubre fundamentos web, DOM, pruebas con Jest, y fomenta el pensamiento crítico. Apto para certificados profesionales de Meta.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: introducción a javascript 8 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: introducción a javascript 8 horas.</li>
+                            <li>Módulo 2: los componentes fundamentales de un programa a 7 horas.</li>
+                            <li>Módulo 3: hola paradigmas de programación 17 horas.</li>
+                            <li>Módulo 4: pruebas y compatibilidad 4 horas.</li>
+                            <li>Módulo 5: proyecto final 4 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">42</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/meta-desarrollador-android-5-rir96" target="_blank">Click aquí</a></td>
+                    <td class="link"><a href="https://docs.google.com/presentation/d/1lRwXVZd4zwYDvf-GMDxMb0zhABE9mWMbfogZ2iLNK0w/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">DESARROLLO</td>
+                    <td class="course-title">Meta Desarrollador Android 6</td>
+                    <td class="description">
+                        <div class="short-description">Este curso enseña React.js para crear aplicaciones web y móviles escalables...</div>
+                        <div class="full-description">Este curso enseña React.js para crear aplicaciones web y móviles escalables. Aprenderá a usar componentes, props, y formularios, y a trabajar con JSX, HTML, CSS, y JavaScript. Ideal para principiantes en desarrollo móvil, promueve el pensamiento crítico para solucionar problemas.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: componentes react.10 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: componentes react.10 horas.</li>
+                            <li>Módulo 2: datos y estado 6 horas.</li>
+                            <li>Módulo 3: navegación, actualización y recursos react. 6 horas.</li>
+                            <li>Módulo 4: su primera aplicación react 2 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">26</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/meta-desarrollador-android-6-tvuo7" target="_blank">Click aquí</a></td>
+                    <td class="link"><a href="https://docs.google.com/presentation/d/1lRwXVZd4zwYDvf-GMDxMb0zhABE9mWMbfogZ2iLNK0w/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">DESARROLLO</td>
+                    <td class="course-title">Desarrollador de Meta de IOS 1</td>
+                    <td class="description">
+                        <div class="short-description">Este curso introduce el desarrollo iOS, configuración de entorno local y programación en Swift...</div>
+                        <div class="full-description">Este curso introduce el desarrollo iOS, configuración de entorno local y programación en Swift. Aprenderás a usar Xcode, crear interfaces en Swift, y manejar datos, preparándote para el ecosistema de aplicaciones móviles. Incluye herramientas como Swift, iOS, XCode, y más, fomentando el pensamiento crítico para solucionar problemas.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: introducción al desarrollo de aplicaciones móviles para ios 5 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: introducción al desarrollo de aplicaciones móviles para ios 5 horas.</li>
+                            <li>Módulo 2: simulación y desarrollo 2 horas.</li>
+                            <li>Módulo 3: crear la aplicación 2 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">11</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/desarrollador-de-meta-de-ios-1-4z0as" target="_blank">Click aquí</a></td>
+                    <td class="link"><a href="https://docs.google.com/presentation/d/1z07vrm8ryjJFtGDcNOMwAwMO15xd2sjrQRHaw4EjKrs/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">DESARROLLO</td>
+                    <td class="course-title">Desarrollador de Meta de IOS 2</td>
+                    <td class="description">
+                        <div class="short-description">Este curso para principiantes cubre los fundamentos de Swift, incluyendo programación básica...</div>
+                        <div class="full-description">Este curso para principiantes cubre los fundamentos de Swift, incluyendo programación básica, estructuras de datos, y aspectos únicos de Swift. Aprenderás a usar variables, colecciones, funciones y cierres, preparándote para la programación eficaz en Swift. No requiere experiencia previa, solo interés en aprender a programar.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: introducción a la programación en Swift 9 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: introducción a la programación en Swift 9 horas.</li>
+                            <li>Módulo 2: estructuras de datos 4 horas.</li>
+                            <li>Módulo 3: funciones y cierres 4 horas.</li>
+                            <li>Módulo 4: estructuras y clases 3 horas.</li>
+                            <li>Módulo 5: evaluación gradual 4 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">26</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/desarrollador-de-meta-de-ios-2-x1im4" target="_blank">Click aquí</a></td>
+                    <td class="link"><a href="https://docs.google.com/presentation/d/1tECldKgYGwGXV2D1hWFeDLlcZXDNvG9HmDeqgaqUfPU/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">DESARROLLO</td>
+                    <td class="course-title">Desarrollador de Meta de IOS 3</td>
+                    <td class="description">
+                        <div class="short-description">Este curso intermedio sobre iOS enseña principios de trabajar con datos, uso de API...</div>
+                        <div class="full-description">Este curso intermedio sobre iOS enseña principios de trabajar con datos, uso de API, y Core Data en Swift. Aprenderás técnicas de programación asíncrona y manejo avanzado de datos. Requiere conocimiento previo en Swift y APIs. Promueve el pensamiento crítico para resolver problemas de desarrollo.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: introducción a las api de rest 3 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: introducción a las api de rest 3 horas.</li>
+                            <li>Módulo 2: interactuar con api de rest en Swift 3 horas.</li>
+                            <li>Módulo 3: datos en swift 5 horas.</li>
+                            <li>Módulo 4: proyecto final 3 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">16</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/desarrollador-de-meta-de-ios-3-fg9qt" target="_blank">Click aquí</a></td>
+                    <td class="link"><a href="https://docs.google.com/presentation/d/1ZxQFnV-pL0bTsjFCJkKA9oQ2mSfquSbPEyP2k8rAH_o/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">DESARROLLO</td>
+                    <td class="course-title">Desarrollador front-end de Meta 1</td>
+                    <td class="description">
+                        <div class="short-description">Este curso introductorio al desarrollo front-end de Meta enseña sobre HTML, CSS, Bootstrap, y React...</div>
+                        <div class="full-description">Este curso introductorio al desarrollo front-end de Meta enseña sobre HTML, CSS, Bootstrap, y React. Aprenderás a crear sitios web responsivos y a entender el rol del desarrollador front-end. Ideal para principiantes sin experiencia previa, también fomenta el pensamiento crítico en el desarrollo web.</div>
+                        <button class="toggle-button verMas">Ver más</button>
+                    </td>
+                    <td class="modules">
+                        <ul class="short-modules">
+                            <li>Módulo 1: introducción al desarrollo web 4 horas.</li>
+                        </ul>
+                        <ul class="full-modules">
+                            <li>Módulo 1: introducción al desarrollo web 4 horas.</li>
+                            <li>Módulo 2: introducción a HTML Y CSS 6 horas.</li>
+                            <li>Módulo 3: Marcos de interfaz de usuario 5 horas.</li>
+                            <li>Módulo 4: evaluación calificada de final de curso 2 horas.</li>
+                        </ul>
+                        <button class="toggle-modules verMas">Ver más</button>
+                    </td>
+                    <td class="hours">18</td>
+                    <td class="badge">SI</td>
+                    <td class="link"><a href="https://www.coursera.org/programs/desarrollador-front-end-de-meta-1-445c9" target="_blank">Click aquí</a></td>
+                    <td class="link"><a href="https://docs.google.com/presentation/d/1fnXgTH0_7hYtJV7HjM8yI_4iAdUwbT-y4OST1pqctls/edit#slide=id.p" target="_blank">Enlace</a>
+                    </td>
+                </tr>
+
             </tbody>
         </table>
     </div>
