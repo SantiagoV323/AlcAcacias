@@ -1,0 +1,655 @@
+<p>&nbsp;</p>
+
+<p>
+    <style type="text/css">
+        .text-center {
+            text-align: center;
+            margin-bottom: 1em;
+        }
+
+        .lightbox-gallery {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            overflow: hidden;
+        }
+
+        .lightbox-gallery img:hover {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+            filter: opacity(.7);
+        }
+
+        .lightbox-gallery div>img {
+            width: 220px;
+            height: 130px;
+            display: block;
+        }
+
+        .lightbox-gallery div {
+            margin: 10px;
+            flex-basis: 180px;
+        }
+
+        /*Lighbox CSS*/
+        .lightbox {
+            display: none;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 20;
+            padding-top: 110px;
+            box-sizing: border-box;
+        }
+
+        .lightbox img {
+            display: block;
+            margin: auto;
+        }
+
+        .lightbox .caption {
+            margin: 15px auto;
+            width: 0%;
+            text-align: center;
+            font-size: 1em;
+            line-height: 1.5;
+            font-weight: 700;
+            color: #eee;
+        }
+
+        /* titulo encima del video*/
+        figure {
+            border-radius: 10%;
+            display: block;
+            height: 150px;
+            position: relative;
+            width: 150px;
+        }
+
+        figure:after {
+            background-color: rgba(0, 0, 0, .5);
+            border-radius: 5px;
+            color: #fff;
+            content: attr(title);
+            opacity: 0;
+            padding: 6px 12px;
+            position: absolute;
+            left: 110%;
+            top: 30px;
+            transition: all .25s ease;
+            visibility: hidden;
+            white-space: nowrap;
+        }
+
+        figure[tooltip-dir="bottom"]:after,
+        figure[tooltip-dir="top"]:after {
+            left: 50%;
+            right: auto;
+
+            transform: translateX(-50%);
+        }
+
+        figure[tooltip-dir="top"]:after {
+            bottom: 80%;
+            top: auto;
+        }
+
+        figure:hover:after {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        select {
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 6px 12px;
+        }
+
+        .lightbox-video {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            overflow: hidden;
+
+        }
+
+        .lightbox-video div>figure {
+            width: 350px;
+            height: 160px;
+            display: block;
+        }
+
+        .galeria {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            overflow: hidden;
+        }
+
+        .galeria {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /* justify-content: space-between; */
+            /* overflow: hidden; */
+            justify-content: center;
+        }
+
+        .galeria img {
+            object-fit: cover;
+            width: 200px;
+            height: 200px;
+            display: block;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        .galeria img:hover {
+            -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+            filter: opacity(.95);
+            margin: 40px;
+            transition: 0.5s;
+            /* Make a transition to get the image back to its default size */
+        }
+
+        .galeria img {
+            transition: 0.5s;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        td {
+            background-color: #ffffff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .tablaDeContenido {
+            margin-top: 1.5em;
+        }
+    </style>
+</p>
+
+<div class="container">
+    <div>
+        <h2 class="text-rigth">4/03/2024 ACTIVACION DE RUTA</h2>
+        <div class="galeria">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13552.jpg" alt="img1">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13553.jpg" alt="img2">
+        </div>
+
+        <h2>8,10,11,22 DE ABRIL 2024 ACTIVACIONES DE RUTA Y SEGUIMIENTOS
+            2,8,10,11,18,25,30 DE ABRIL 2024 ORIENTACIONES PSICOSOCIALES
+        </h2>
+        <div class="galeria">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13554.jpg" alt="img3">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13555.jpg" alt="img4">
+        </div>
+
+        <p>
+            Apoyo psicosocial a través de escucha activa, validación de sus sentimientos, promoviendo la comunicación
+            afectiva, resolución de conflictos, comunicación asertiva, establecimiento de límites para fomentar un
+            desarrollo saludable, se brindó́ orientación promoviendo herramientas para el manejo emocional.
+        </p>
+
+        <h2>11/04/2024 CAMPAÑAS DE PREVENCION, PROMOCION Y PROTECCION DE LOS DERECHOS DE LOS NIÑOS NIÑAS Y
+            ADOLESCENTES CON LA CIUDADANIA Y LOS DIAS 5,18,19,23,24,25,26 DE ABRIL 2024 CON INSTITUCIONES EDUCATIVAS
+            PUBLICAS Y PRIVADAS 11 INSTITUCIONES</h2>
+        <div class="galeria">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13556.jpg" alt="img5">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13557.jpg" alt="img6">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13558.jpg" alt="img7">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13559.jpg" alt="img8">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13560.jpg" alt="img9">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13561.jpg" alt="img10">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13562.jpg" alt="img11">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13563.jpg" alt="img12">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13564.jpg" alt="img13">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13565.jpg" alt="img14">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13566.jpg" alt="img15">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13567.jpg" alt="img16">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13568.jpg" alt="img17">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13569.jpg" alt="img18">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13570.jpg" alt="img19">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13571.jpg" alt="img20">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13572.jpg" alt="img21">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13573.jpg" alt="img22">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13574.jpg" alt="img23">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13575.jpg" alt="img24">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13576.jpg" alt="img25">
+        </div>
+
+        <p>El día 11 de abril 2024 en el horario de 9:00am a 11:00am junto con el enlace de infancia y adolescencia y
+            los componentes de discapacidad, equidad de género, policía de infancia y adolescencia, Anleyzin Zambrano de
+            la fundación Corpuloda, y jóvenes que hacen parte de secretaria social cultura y deportes se llevó́ a cabo
+            campañas de prevención, promoción y protección de los derechos de los niños, niñas y adolescentes en los
+            semáforos de la calle 13 el rincón de los viejitos, calle 14 Aso ventas, calle 15 bomba de gasolina Primax,
+            punto de salud barrio la independencia, parque central, carrera 23 con 18 frente a la lechonas en madi gas y
+            establecimientos públicos del municipio de Acacías Meta. Durante esta actividad se difundió́ la línea de
+            atención de infancia y adolescencia y mensajes clave sobre la importancia de garantizar los derechos
+            fundamentales de la población infantil, adolescente.</p>
+        <br> <br>
+        <p>Realizamos actividades de recreación, talleres de lectura, juegos de roles, juegos tradicionales entre otros
+            en busca generar espacios de recreación buen uso de tiempo libre, compartir tiempo de calidad y utilizar el
+            juego como herramienta fundamental para la adquisición de aprendizajes significativos en los NNA, nuestro
+            impacto se extiende a más de 500 estudiantes en instituciones públicas y privadas del municipio de Acacias."
+        </p>
+
+        <div class="listaElementos">
+            <ul>
+                <li>El 05/04/2024 en el horario 2:00pm a 5:00pm en la institución educativa capullitos del llano.</li>
+                <li>El 18/04/2024 en el horario de 8:00am a 12:00pm en la institución educativa María Montessori donde
+                    el alcalde Carlos Julio Plata becerra fue niño por un día.</li>
+                <li>El 19/04/2024 en el horario de 10:00am a 12:00pm en el colegio Nuestra Señora de la Esperanza.</li>
+                <li>El 23/04/2024 en el horario de 8:00am a 9:30am colegio Pablo Sexto.</li>
+                <li>EL 23/04/2024 en el horario de 10:00am a 11:30 am Institución educativa Rafael Pombo.</li>
+                <li>El 24/04/2024 en el horario de 8:00am a 9:30am Institución educativa Enrique Daniels.</li>
+                <li>El 24/04/2024 en el horario de 10:am a 11:30am Institución educativa Antonio Nariño.</li>
+                <li>El 25/04/2024 en el horario de 8:00 am a 11:30 am institución educativa Gabriela Mistral.</li>
+                <li>El 26/04/2024 en el horario de 8:00 am a 11:30 am en la escuela Santa Teresita con las sedes
+                    Montelíbano, San Cayetano y el Rosario.</li>
+            </ul>
+        </div>
+
+        <h2>19/04/2024 CAPACITACIÓN EN PAUTAS DE CRIANZA Y PREVENCIÓN DEL BULLYNG Y CIBERACOSO.</h2>
+        <div class="galeria">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13577.jpg" alt="img26">
+        </div>
+        <p>"El 19/04/2024, de 6:00 am a 7:30 am, participé en la escuela de padres de la Institución Educativa Carmelo,
+            donde brindé una capacitación sobre pautas de crianza y prevención del bullying y ciberacoso. Durante la
+            sesión, logramos impactar de manera positiva a 50 padres de familia, contribuyendo así al fortalecimiento de
+            la comunidad educativa."</p>
+
+        <h2>19/04/2024 SOCIALIZACION DE LA OFERTA INSTITUCIONAL</h2>
+        <div class="galeria">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13578.jpg" alt="img27">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13579.jpg" alt="img28">
+        </div>
+
+        <h2>29/04/2024 ACTIVIDAD EN EL PARQUE PRINCIPAL CON LOS NIÑOS, NIÑAS, ADOLESCENTES DEL MUNICIPIO DE ACACÍAS
+            META </h2>
+        <div class="galeria">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13580.jpg" alt="img29">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13581.jpg" alt="img30">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13582.jpg" alt="img31">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13583.jpg" alt="img32">
+        </div>
+        <p>El 29/04/2024, de 2:00 pm a 5:00 pm, en colaboración con la biblioteca municipal, organizamos una jornada en
+            el parque principal de Acacias Meta donde se disfrutaron juegos tradicionales y cuentacuentos. Esta
+            actividad impactó de forma positiva a 30 niños, niñas y adolescentes del municipio, brindando un espacio
+            para socializar sus derechos. Fue una hermosa oportunidad para promover la diversión, el aprendizaje y la
+            conciencia en un entorno al aire libre."</p>
+
+        <h2>29/04/2024 REUNIÓN CON LAS MADRES COMUNITARIA</h2>
+        <div class="galeria">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13584.jpg" alt="img33">
+        </div>
+        <p>29/04/2024 a las 10:25 am, colaboré con el Enlace de Infancia y Adolescencia en una reunión con madres
+            comunitarias donde se presentó la oferta institucional, impactando positivamente a más de 30 de ellas. Fue
+            una oportunidad invaluable para difundir información clave y fortalecer los lazos con la comunidad."</p>
+
+        <h2>LOS DIAS 1,5 Y 9 DE ABRIL 2024 REALIZACION DE LOS COMITES Y MESAS DE PRIMERA INFANCIA, INFANCIA Y
+            FORTALECIOMIENTO FAMILIAR</h2>
+        <div class="galeria">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13585.jpg" alt="img34">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13586.png" alt="img35">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13587.jpg" alt="img36">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13588.jpg" alt="img37">
+        </div>
+        <br>
+        <p>El día 1/04/2024 de 4:00am a 6:00 pm apoyo al enlace de infancia y adolescencia en el Primer Consejo
+            Municipal de política Social “COMPOS” se llevó́ a cabo en la sala de juntas despacho Municipal, quedando
+            programado el segundo consejo Política Social para el día 15/06/2024.</p>
+        <br>
+        <p>El día 05/04/2024 de 8:00 am a 10:00am apoyo al enlace de infancia y adolescencia en la primera mesa de
+            primera infancia, infancia, adolescencia y fortalecimiento familiar “MIAFF” del municipio de Acacias Meta.
+            se llevó́ a cabo en sala de juntas del despacho Municipal, quedando programado la segunda mesa “MIAFF” para
+            el día 15/06/2024.</p>
+        <br>
+        <p>El día 05/04/2024 de 10:00am a 12:00pm apoyo al enlace de infancia y adolescencia en la realización del
+            primer comité́ interinstitucional de prevención y erradicación del trabajo infantil y protección del
+            adolescente trabajador del municipio de Acacias Meta, se llevó́ a cabo en la sala de juntas del despacho
+            municipal quedando programado el segundo comité́ para el 15/06/2024.</p>
+        <br>
+        <p>El día 09/04/2024 8:00 am se tenía programado la realización de la primera mesa de participación de niños,
+            niñas y adolescente del municipio de Acacias Meta con todos los personeros de las instituciones públicas y
+            privadas del municipio, teniendo como asistencia solo dos personeros (a) Jack Dilan Torres Clavijo personero
+            del colegio Nuestra Señora de la Sabiduría y María Paula Gómez Rojas personera del Colegio COFREM quedando
+            así́ aplazada la primera mesa de participación de niños, niños y adolescente para el día 07/05/2024 por poca
+            participación de los mismos.</p>
+        <br>
+
+        <h2>02,10,21,22,31 DE MAYO 2024 ACTIVACION DE RUTA Y SEGUIMIENTO</h2>
+        <h3>02,06,09,10,15,20,21,30,31 DE MAYO 2024 ORIENTACIONES PSICO SOCIALES</h3>
+        <p>orientación psicosocial promoviendo la comunicación asertiva, establecimiento de límites en el hogar y
+            promoviendo herramientas para el manejo emocional.</p>
+        <br> <br>
+
+        <h2>22/05/2024 SOCIALIZACION DE LA CAMPAÑA VACUNATE CONTRA LA AGRESION EN LAS DEPENDENCIAS DE LA ALCALDIA
+            MUNICIPAL CON LA PARTICIPACION DE LOS PERSONEROS DE LAS INSTITUCIONES PUBLICAS Y PRIVADAS DEL MUNICIPIO DE
+            ACACIAS META</h2>
+        <div class="galeria">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13589.jpg" alt="img38">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13590.jpg" alt="img39">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13591.jpg" alt="img40">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13592.png" alt="img41">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13593.png" alt="img42">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13594.jpg" alt="img43">
+        </div>
+        <p>El 22 de mayo de 2024, de 4:00 pm a 5:00 pm, junto con el enlace de infancia y adolescencia y los personeros
+            de las instituciones educativas públicas y privadas del municipio de Acacías, Meta, se llevó́ a cabo el
+            lanzamiento de la campaña "Vacúnate Contra la Agresión" en la Alcaldía Municipal, ubicada en la antigua
+            Normal. El propósito principal de esta iniciativa es crear conciencia y promover el respeto mutuo y la
+            igualdad, reconociendo que cada persona aporta su propio pensamiento y opinión, enriqueciendo así́ nuestra
+            sociedad con sus diferencias. Es esencial respetar estas diferencias para fomentar un entorno laboral
+            saludable donde se aprecie la diversidad de perspectivas. Se logró impactar a más de 50 funcionarios
+            públicos, quienes se sumaron a esta importante causa.</p>
+
+        <h2>24/05/2024 CAPACITACIÓN PAUTAS DE CRIANZA Y CRIANZA AMOROSA</h2>
+        <div class="galeria">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13595.jpg" alt="img44">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13597.jpg" alt="img45">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13598.jpg" alt="img46">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13599.jpg" alt="img47">
+        </div>
+        <p>El 24/05/2024, de 6:00 am a 9:30 am, en el salón comunal del barrio La Tiza, brindé apoyo a las madres
+            comunitarias con una capacitación sobre pautas de crianza y crianza amorosa en la escuela de padres. Este
+            encuentro impactó positivamente a más de 100 padres de familia, fortaleciendo la crianza en un ambiente de
+            amor y comprensión."</p>
+
+        <h2>28/052024 ACTIVIDADES LUDICO-PEDAGOGICAS</h2>
+        <br>
+        <p>"El 28/05/2024, de 9:00 am a 11:30 am, en el hogar infantil comunitario, llevamos a cabo actividades de
+            recreación, talleres de lectura, juegos de roles, juegos tradicionales y más. Nuestro objetivo fue crear
+            espacios para el buen uso del tiempo libre, fomentar el compartir en calidad y emplear el juego como
+            herramienta clave para que los niños del Jardín del Bienestar Familiar adquieran aprendizajes
+            significativos. Estas actividades impactaron positivamente a más de 80 pequeños."</p>
+        <div class="galeria">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13600.jpg" alt="img48">
+        </div>
+
+        <h2>22/05/2024 CAPACITACION DEL CODIGO DE INFANCIA Y ADOLESCENCIA LEY 1098 DE 2006</h2>
+        <div class="galeria">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13601.jpg" alt="img49">
+        </div>
+
+        <h2>EL DIA 27 DE MAYO 2024 SE REALIZO LA PRIMERA MESA DE PARTICIPACION DE NIÑOS, NIÑAS Y ADOLESCENTES DEL
+            MUNICIPIO DE ACACIAS META</h2>
+        <div>
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13602.jpg" alt="img50">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13603.jpg" alt="img51">
+        </div>
+
+        <h2>07,27, DE JUNIO 2024 ACTIVACIONES DE RUTA</h2>
+        <h3>04,07,11,19,20,21,24,25,28 JUNIO ORIENTACIONES PSICOSOCIALES</h3>
+        <div class="galeria">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13604.jpg" alt="img52">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13605.jpg" alt="img53">
+        </div>
+        <p>Servicio orientaciones psicosociales mediante la práctica de la escucha activa, con el claro propósito de
+            estimular el desarrollo de habilidades sociales y emocionales en las personas atendidas. Fomentando una
+            comunicación afectiva, validando sus sentimientos y creando un espacio seguro y empático que permita su
+            expresión y crecimiento integral."</p>
+
+        <h2>11/06/2024 VISITAS A LAS INSTITUCIONES EDUCATIVAS MARÍA MONTESSORI, LUIS CARLOS GALÁN Y 20 DE JULIO </h2>
+        <div class="galeria">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13606.jpg" alt="img54">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13607.jpg" alt="img55">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13608.jpg" alt="img56">
+        </div>
+        <br>
+        <p>El 11/06/2024, de 9: 00am. a 12:30p m., visitas a las instituciones educativas María Montessori, Luis Carlos
+            Galán y 20 de Julio, donde presentamos la campaña "Vacúnate contra la agresión" a los coordinadores y
+            rectores. Esta campaña tiene como objetivo concientizar y sensibilizar sobre el cuidado, protección,
+            inclusión, empatía y promoción de derechos, como estrategia para fomentar entornos saludables para los
+            niños, niñas, adolescentes y sus familias en el municipio de Acacías, Meta.</p>
+
+        <h2>7 JUNIO ÁRBOL DE PROBLEMAS CONTEXTO TERRITORIAL CON MADRES CUIDADORAS NIÑOS, NIÑAS Y ADOLESCENTES CON
+            DISCAPACIDAD EN LAS INSTALACIONES DE CVS.</h2>
+        <div class="galeria">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13609.png" alt="img57">
+        </div>
+        <p>El 7/06/2024, de 2:00 pm a 4:00 pm, se llevó a cabo la socialización de la oferta institucional y la
+            actividad del "árbol de problema" en el contexto territorial, en colaboración con el Enlace de Infancia y
+            Adolescencia y el apoyo a la discapacidad. Este evento contó con la participación de madres cuidadoras,
+            niños, niñas y adolescentes con discapacidad, logrando impactar positivamente a 50 madres cuidadoras."</p>
+
+        <h2>EL 12/06/2024 CAMPAÑA "UNIDOS CONTRA EL TRABAJO INFANTIL"</h2>
+        <div class="galeria">
+            <!-- Complete the next two pics -->
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13610.jpg" alt="img58">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13611.jpg" alt="img59">
+        </div>
+        <p>El 12/06/2024 a las 10:00am., en el Parque Principal de Acacías Meta, se realizó́ la campaña "Unidos contra
+            el trabajo infantil" en coordinación con la Policía de Infancia y Adolescencia. Durante esta iniciativa, se
+            llevaron a cabo actividades preventivas con el objetivo de garantizar los derechos de los niños, niñas y
+            adolescentes del municipio de Acacias Meta.</p>
+
+        <h2>EL 12/06/2024 SOCIALIZACIÓN DE LA OFERTA INSTITUCIONAL DE LOS COMPONENTES DE PROGRAMAS SOCIALES EN EL
+            BARRIO LA TIZA.</h2>
+        <div class="galeria">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13612.jpg" alt="img60">
+        </div>
+
+        <h2>13 JUNIO VISITA A ECOPETROL CAMPAÑA CON PERSONEROS Y POBLACION DE INFANCIA Y ADOLESCENCIA CON DISCAPACIDAD
+        </h2>
+        <div class="galeria">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13613.png" alt="img61">
+        </div>
+        <p>El 13/06/2024, de 2:00 pm a 4:30 pm, se llevó a cabo una visita a la zona ECO de Ecopetrol con la
+            participación de representantes de instituciones educativas, la población infantil y adolescente con
+            discapacidad, así como padres de familia. Esta actividad formó parte de la campaña "Vacúnate contra la
+            agresión", donde los participantes disfrutaron de una experiencia pedagógica enriquecedora. A través de
+            juegos, vivencias y enseñanzas, se sensibilizó a los asistentes sobre la importancia de cuidar y preservar
+            nuestro medio ambiente. Se logró impactar a 50 personas, incluyendo madres cuidadoras, niños, niñas y
+            adolescentes del municipio de Acacías, Meta."</p>
+            <br>
+
+        <h2>19/06/2024 SOCIALIZACIÓN DE LA OFERTA INSTITUCIONAL DE PROGRAMAS SOCIALES A LAS MADRES CUIDADORAS</h2>
+        <div class="galeria">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13614.jpg" alt="img62">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13615.jpg" alt="img63">
+        </div>
+        <p>El 19/06/2024, a las 2:00 p. m., se llevó a cabo una reunión en las instalaciones de la Alcaldía Municipal,
+            con la colaboración de los enlaces de discapacidad y equidad de género, contando con la participación de
+            madres cuidadoras. Durante este encuentro, se presentaron las ofertas institucionales de los programas
+            sociales con el fin de proporcionarles información relevante y apoyo. Se logró impactar aproximadamente a 20
+            madres cuidadoras.</p>
+            <br>
+
+        <h2>21/06/2024 CAPACITACION PAUTAS DE CRIANZA Y CRIANZA AMOROSA A MADRES Y PADRES CUIDADORES</h2>
+        <div class="galeria">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13616.png" alt="img65">
+        </div>
+        <p>El 21/06/2024, de 4:00 pm a 6:00 pm, en las instalaciones de la Alcaldía Municipal, se llevó a cabo un
+            acompañamiento a madres y padres cuidadores a través de una capacitación en pautas de crianza y crianza
+            amorosa. Posteriormente, se organizaron en grupos para discutir diversos temas relacionados con las pautas
+            de crianza y crianza amorosa. Cada grupo tuvo la tarea de representar su tema mediante diferentes dinámicas,
+            como noticieros, cuentos, obras de teatro o rondas infantiles. Se logró impactar a más de 30 madres y padres
+            cuidadores."</p>
+            <br>
+
+        <h2>8/06/2024 CAPACITACIÓN SOBRE TRABAJO EN EQUIPO DIRIGIDA A LAS MADRES COMUNITARIAS PERTENECIENTES A LA
+            ASOCIACIÓN "PERESTROIKA" EN EL SALON COMUNAL BARRIO LA TIZA.</h2>
+        <div class="galeria">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13617.jpg" alt="img66">
+        </div>
+        <p>El 28/06/2024, de 9:00 am a 12:00 pm, se llevó a cabo en el salón comunal de La Tiza una capacitación sobre
+            trabajo en equipo dirigida a las madres comunitarias pertenecientes a la asociación "Perestroika". Durante
+            este evento, se creó un espacio de intercambio de conocimientos bidireccional, enfatizando la importancia
+            del aprendizaje colectivo como medio para alcanzar el objetivo principal de fomentar el trabajo en equipo.
+            Los pilares fundamentales abordados fueron la promoción de la empatía entre los participantes, la mejora de
+            la comunicación efectiva y la valoración de la entrega y compromiso en cada tarea encomendada. Esta
+            capacitación resultó ser una experiencia enriquecedora y constructiva para todas las involucradas,
+            contribuyendo al fortalecimiento de las habilidades colaborativas y al desarrollo de un ambiente propicio
+            para el trabajo en equipo. Se logró impactar a más de 50 madres comunitarias."</p>
+            <br>
+
+        <h2>19/06/2024 CAPACITACION DEL CODIGO DE INFANCIA Y ADOLESCENCIA LEY 1098 DE 2006.</h2>
+        <div class="galeria">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13618.jpg" alt="img67">
+        </div>
+        <br>
+
+        <h2>12/06/2024 SOCIALIZACION A LA CIUDADANIA CODIGO DE INFANCIA Y ADOLESCENCIA LEY 1098 DE 2006.</h2>
+        <div class="galeria">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13619.jpg" alt="img68">
+        </div>
+        <br>
+
+        <h2>18/06/2024 MESA TÉCNICA CONSEJO MUNICIPAL DE POLITICA SOCIAL “COMPOS”</h2>
+        <div class="galeria">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13620.jpg" alt="img69">
+        </div>
+        <br>
+
+        <h2>18/06/2024 MESA TÉCNICA PRIMERA INFANCIA, INFANCIA, ADOLESCENCIA Y FORTALECIMIENTO FAMILIAR “MIAFF”</h2>
+        <div class="galeria">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13621.jpg" alt="img70">
+        </div>
+        <br>
+
+        <h2>19/06/2024 MESA TÉCNICA COMITÉ INTERINSTITUCIONAL DE PREVENCIÓN Y ERRADICACIÓN DEL TRABAJO INFANTIL Y
+            PROTECCIÓN DEL ADOLESCENTE TRABAJADOR DE ACACIAS META</h2>
+        <div class="galeria">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13622.jpg" alt="img71">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13623.jpg" alt="img72">
+        </div>
+        <br>
+
+        <h2>19/06/2024 MESA TÉCNICA RUTA DE INMEDIATA ATENCIÓN “RIA”</h2>
+        <div class="galeria">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13624.jpg" alt="img73">
+        </div>
+        <br>
+
+        <h2>24/06/2024 MESA TÉCNICA DE TRABAJO EN EL MARCO DE LA ELABORACIÓN DEL PLAN DE ACCIÓN DE LA POBLACIÓN DE
+            REINCORPORADOS</h2>
+        <div class="galeria">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13625.jpg" alt="img74">
+        </div>
+        <br>
+
+        <h2>27/06/2024 MESA TÉCNICA DE TRABAJO EN EL MARCO DE SEGUIMIENTO A LAS ACCIONES EJECUTADAS DEL PLAN DE ACCIÓN
+            DE SALUD MENTAL</h2>
+        <div class="galeria">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13626.jpg" alt="img75">
+        </div>
+        <br>
+
+        <h2>05/06/2024 CAPACITACION CTI -FISCAL</h2>
+        <div class="galeria">
+            <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13627.jpg" alt="img76">
+        </div>
+        <br>
+    </div>
+
+    <div>
+        <table class="tablaDeContenido">
+            <tr>
+                <th>FECHA</th>
+                <th>ACTIVACION DE RUTA</th>
+                <th>ORIENTACIONES</th>
+            </tr>
+            <tr>
+                <td>04/03/2024</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>08/04/2024 - 30/04/2024</td>
+                <td>5</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>02/05/2024 - 31/05/2024</td>
+                <td>6</td>
+                <td>27</td>
+            </tr>
+            <tr>
+                <td>01/06/2024 - 25/06/2024</td>
+                <td>3</td>
+                <td>28</td>
+            </tr>
+        </table>
+    </div>
+
+    &nbsp;
+</div>
+
+<h2 class="text-rigth">Documentos</h2>
+
+<p>DISPLAYARCHIVO(183824)</p>
+
+<p>DISPLAYARCHIVO(104334)</p>
+
+<p>DISPLAYARCHIVO(104335)</p>
+
+<p>DISPLAYARCHIVO(104336)</p>
+
+<p>DISPLAYARCHIVO(104337)</p>
+<script>
+    // Create a lightbox
+    (function () {
+        var $lightbox = $("<div class='lightbox'></div>");
+        var $img = $("<img>");
+        var $caption = $("<p class='caption'></p>");
+
+        // Add image and caption to lightbox
+
+        $lightbox
+            .append($img)
+            .append($caption);
+
+        // Add lighbox to document
+
+        $('body').append($lightbox);
+
+        $('.lightbox-gallery img').click(function (e) {
+            e.preventDefault();
+
+            // Get image link and description
+            var src = $(this).attr("data-image-hd");
+            var cap = $(this).attr("alt");
+
+            // Add data to lighbox
+
+            $img.attr('src', src);
+            $caption.text(cap);
+
+            // Show lightbox
+
+            $lightbox.fadeIn('fast');
+
+            $lightbox.click(function () {
+                $lightbox.fadeOut('fast');
+            });
+        });
+
+    }());
+</script>
