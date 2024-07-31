@@ -1,0 +1,288 @@
+<p>&nbsp;</p>
+
+<p>
+    <style type="text/css">
+        .text-center {
+            text-align: center;
+            margin-bottom: 1em;
+        }
+
+        .lightbox-gallery {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            overflow: hidden;
+        }
+
+        .lightbox-gallery img:hover {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+            filter: opacity(.7);
+        }
+
+        .lightbox-gallery div>img {
+            width: 220px;
+            height: 130px;
+            display: block;
+        }
+
+        .lightbox-gallery div {
+            margin: 10px;
+            flex-basis: 180px;
+        }
+
+        /*Lighbox CSS*/
+        .lightbox {
+            display: none;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 20;
+            padding-top: 110px;
+            box-sizing: border-box;
+        }
+
+        .lightbox img {
+            display: block;
+            margin: auto;
+        }
+
+        .lightbox .caption {
+            margin: 15px auto;
+            width: 0%;
+            text-align: center;
+            font-size: 1em;
+            line-height: 1.5;
+            font-weight: 700;
+            color: #eee;
+        }
+
+        /* titulo encima del video*/
+        figure {
+            border-radius: 10%;
+            display: block;
+            height: 150px;
+            position: relative;
+            width: 150px;
+        }
+
+        figure:after {
+            background-color: rgba(0, 0, 0, .5);
+            border-radius: 5px;
+            color: #fff;
+            content: attr(title);
+            opacity: 0;
+            padding: 6px 12px;
+            position: absolute;
+            left: 110%;
+            top: 30px;
+            transition: all .25s ease;
+            visibility: hidden;
+            white-space: nowrap;
+        }
+
+        figure[tooltip-dir="bottom"]:after,
+        figure[tooltip-dir="top"]:after {
+            left: 50%;
+            right: auto;
+
+            transform: translateX(-50%);
+        }
+
+        figure[tooltip-dir="top"]:after {
+            bottom: 80%;
+            top: auto;
+        }
+
+        figure:hover:after {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        select {
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 6px 12px;
+        }
+
+        .lightbox-video {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            overflow: hidden;
+
+        }
+
+        .lightbox-video div>figure {
+            width: 350px;
+            height: 160px;
+            display: block;
+        }
+    </style>
+</p>
+
+<div class="container">
+    <h2 class="text-rigth">Galeria Imagenes</h2>
+    &nbsp;
+
+    <div class="lightbox-gallery">
+        <div class="contenedor"><img class="card-img-top"
+                data-image-hd="https://www.acacias.gov.co/info/acacias_se/media/galeria2485.jpg"
+                src="https://www.acacias.gov.co/info/acacias_se/media/galeria2485.jpg" /></div>
+
+        <div><img class="card-img-top" data-image-hd="https://www.acacias.gov.co/info/acacias_se/media/galeria2486.jpg"
+                src="https://www.acacias.gov.co/info/acacias_se/media/galeria2486.jpg" /></div>
+
+        <div><img class="card-img-top" data-image-hd="https://www.acacias.gov.co/info/acacias_se/media/galeria2487.jpg"
+                src="https://www.acacias.gov.co/info/acacias_se/media/galeria2487.jpg" /></div>
+
+        <div><img class="card-img-top" data-image-hd="https://www.acacias.gov.co/info/acacias_se/media/galeria5425.jpg"
+                src="https://www.acacias.gov.co/info/acacias_se/media/galeria5425.jpg" /></div>
+
+        <div><img class="card-img-top" data-image-hd="https://www.acacias.gov.co/info/acacias_se/media/galeria5426.jpg"
+                src="https://www.acacias.gov.co/info/acacias_se/media/galeria5426.jpg" /></div>
+
+        <div><img class="card-img-top" data-image-hd="https://www.acacias.gov.co/info/acacias_se/media/galeria5427.jpg"
+                src="https://www.acacias.gov.co/info/acacias_se/media/galeria5427.jpg" /></div>
+
+        <div><img class="card-img-top" data-image-hd="https://www.acacias.gov.co/info/acacias_se/media/galeria5428.jpg"
+                src="https://www.acacias.gov.co/info/acacias_se/media/galeria5428.jpg" /></div>
+
+        <div><img class="card-img-top" data-image-hd="https://www.acacias.gov.co/info/acacias_se/media/galeria5429.jpg"
+                src="https://www.acacias.gov.co/info/acacias_se/media/galeria5429.jpg" /></div>
+
+        <div><img class="card-img-top" data-image-hd="https://www.acacias.gov.co/info/acacias_se/media/galeria5430.jpg"
+                src="https://www.acacias.gov.co/info/acacias_se/media/galeria5430.jpg" /></div>
+
+        <div><img class="card-img-top" data-image-hd="https://www.acacias.gov.co/info/acacias_se/media/galeria5431.jpg"
+                src="https://www.acacias.gov.co/info/acacias_se/media/galeria5431.jpg" /></div>
+
+        <div><img class="card-img-top" data-image-hd="https://www.acacias.gov.co/info/acacias_se/media/galeria5432.jpg"
+                src="https://www.acacias.gov.co/info/acacias_se/media/galeria5432.jpg" /></div>
+
+        <div><img class="card-img-top" data-image-hd="https://www.acacias.gov.co/info/acacias_se/media/galeria5433.jpg"
+                src="https://www.acacias.gov.co/info/acacias_se/media/galeria5433.jpg" /></div>
+
+        <div><img class="card-img-top" data-image-hd="https://www.acacias.gov.co/info/acacias_se/media/galeria5434.jpg"
+                src="https://www.acacias.gov.co/info/acacias_se/media/galeria5434.jpg" /></div>
+
+        <div><img class="card-img-top" data-image-hd="https://www.acacias.gov.co/info/acacias_se/media/galeria5435.jpg"
+                src="https://www.acacias.gov.co/info/acacias_se/media/galeria5435.jpg" /></div>
+
+        <div><img class="card-img-top" data-image-hd="https://www.acacias.gov.co/info/acacias_se/media/galeria5436.jpg"
+                src="https://www.acacias.gov.co/info/acacias_se/media/galeria5436.jpg" /></div>
+    </div>
+</div>
+
+<div class="container">
+    <h2 class="text-rigth">Galeria Videos</h2>
+
+    <p>&nbsp;</p>
+
+    <div class="lightbox-video">
+        <div>
+            <figure id="photo" title="dia universal derechos del niño" tooltip-dir="top"><iframe height="170"
+                    src="https://drive.google.com/file/d/1-HcyeRagSU1AszOGXFd8aLscPjb5bG0n/preview"
+                    width="330"></iframe></figure>
+        </div>
+
+        <div>
+            <figure id="photo" title="Cuento Mi Mamá es Magica" tooltip-dir="top"><iframe height="170"
+                    src="https://drive.google.com/file/d/18qeW7NDSTVsDbYwG6kmHnjriolyOsXzK/preview"
+                    width="330"></iframe></figure>
+        </div>
+        <!--<div>
+<figure id="photo" title="Mesa de participación" tooltip-dir="top"><iframe height="170" src="https://drive.google.com/file/d/15UGg8YHWMKHwogIcuNZGLQTWewBoog4z/preview" width="330"></iframe></figure>
+</div>-->
+    </div>
+    &nbsp;
+
+    <div class="lightbox-video"><!--<div>
+<figure id="photo" title="No al trabajo infantil" tooltip-dir="top"><iframe height="170" src="https://drive.google.com/file/d/1poJmh5XBzp2GE_C05HX0-_R1cpzOqeYC/preview" width="330"></iframe></figure>
+</div>--></div>
+    &nbsp;
+
+    <div class="lightbox-video">
+        <div>
+            <figure id="photo" title="Cuento Mi Mamá es Magica" tooltip-dir="top"><iframe height="170"
+                    src="https://drive.google.com/file/d/1PaEqT7YRb3MwIj1fQm3l8Wj2kVMhtc5r/preview"
+                    width="330"></iframe></figure>
+        </div>
+
+        <div>
+            <figure id="photo" title="No al Trabajo Infantil" tooltip-dir="top"><iframe height="170"
+                    src="https://drive.google.com/file/d/1tHaY7NXjCfII_9H787Ht_QvuAyZwGCid/preview"
+                    width="330"></iframe></figure>
+        </div>
+    </div>
+    &nbsp;
+
+    <div class="lightbox-video">
+        <div>
+            <figure id="photo" title="No al Trabajo Infantil" tooltip-dir="top"><iframe height="170"
+                    src="https://drive.google.com/file/d/1hhr8Zs_gP9k0LDNKWCuFeel9P9Zcx3rI/preview"
+                    width="330"></iframe></figure>
+        </div>
+
+        <div>
+            <figure id="photo" title="Cuento Bota de Manzana" tooltip-dir="top"><iframe height="170"
+                    src="https://drive.google.com/file/d/1P7bONjYKa1bcsVsdRmNF2kpze-EpogVu/preview"
+                    width="330"></iframe></figure>
+        </div>
+    </div>
+</div>
+
+<h2 class="text-rigth">Documentos</h2>
+
+<p>DISPLAYARCHIVO(183824)</p>
+
+<p>DISPLAYARCHIVO(104334)</p>
+
+<p>DISPLAYARCHIVO(104335)</p>
+
+<p>DISPLAYARCHIVO(104336)</p>
+
+<p>DISPLAYARCHIVO(104337)</p>
+<script>
+    // Create a lightbox
+    (function () {
+        var $lightbox = $("<div class='lightbox'></div>");
+        var $img = $("<img>");
+        var $caption = $("<p class='caption'></p>");
+
+        // Add image and caption to lightbox
+
+        $lightbox
+            .append($img)
+            .append($caption);
+
+        // Add lighbox to document
+
+        $('body').append($lightbox);
+
+        $('.lightbox-gallery img').click(function (e) {
+            e.preventDefault();
+
+            // Get image link and description
+            var src = $(this).attr("data-image-hd");
+            var cap = $(this).attr("alt");
+
+            // Add data to lighbox
+
+            $img.attr('src', src);
+            $caption.text(cap);
+
+            // Show lightbox
+
+            $lightbox.fadeIn('fast');
+
+            $lightbox.click(function () {
+                $lightbox.fadeOut('fast');
+            });
+        });
+
+    }());
+</script>
