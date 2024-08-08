@@ -1,0 +1,183 @@
+<style type="text/css">
+    .animate:hover {
+        transform: rotate(-5deg);
+        -webkit-transform: rotate(-5deg);
+        -moz-transform: rotate(-5deg);
+        -o-transform: rotate(-5deg);
+    }
+
+    #formularios {
+        padding: 20px 0;
+        width: 100%;
+    }
+
+    #formularios li {
+        width: 39%;
+        display: block;
+        margin: auto;
+    }
+
+    .wrapper img {
+        width: 100%;
+        color: transparent;
+        border: solid 3px;
+        border-radius: 5px 5px 5px 5px;
+    }
+
+    .animacion {
+        padding: 10px 0;
+    }
+
+    .wrapper {
+        height: 100px;
+        margin: 0 auto;
+        position: relative;
+        -webkit-perspective: 700px;
+        -moz-perspective: 700px;
+        perspective: 700px;
+    }
+
+    .postal {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -webkit-transition: transform 500ms ease-in-out;
+        -moz-transition: transform 500ms ease-in-out;
+        -o-transition: transform 500ms ease-in-out;
+        transition: transform 500ms ease-in-out;
+    }
+
+    .wrapper:hover .postal {
+        -webkit-transform: rotateX(180deg);
+        -moz-transform: rotateX(180deg);
+        -ms-transform: rotateX(180deg);
+        -o-transform: rotateX(180deg);
+        transform: rotateX(180deg);
+    }
+
+    /*spoiler*/
+    input[id^="spoiler"] {
+        display: none;
+    }
+
+    input[id^="spoiler"]+label {
+        width: 180px;
+        padding: 5px 20px;
+        background: #048;
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+        border-radius: 8px;
+    }
+
+    input[id^="spoiler"]:checked+label {
+        color: #333;
+        background: #ccc;
+    }
+
+    input[id^="spoiler"]~.spoiler {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        margin: 10px auto 0;
+        padding: 10px;
+        border-radius: 8px;
+        transition: all .6s;
+        margin-bottom: 12px;
+    }
+
+    input[id^="spoiler"]:checked+label+.spoiler {
+        height: auto;
+        opacity: 1;
+        padding: 10px;
+    }
+
+    .checkboxes {
+        margin-top: 30px;
+    }
+
+    img {
+        height: -webkit-fill-available;
+        max-width: fit-content;
+    }
+</style>
+
+<div id="formularios">
+    <h2>Formularios</h2>
+
+    <div class="row">
+        <div class="col-md-6">
+            <ul class="animacion">
+                <li>
+                    <div class="wrapper"><a class="postal"
+                            href="https://docs.google.com/spreadsheets/d/1VSJr_xcuGojEhzvq7uOi0aOHlz0aJVdd/edit#gid=1456163880"
+                            target="_blank"><img
+                                src="https://www.acacias.gov.co/info/acacias_se/media/galeria12081.png" /></a></div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-md-6">
+            <ul class="animacion">
+                <li>
+                    <div class="wrapper"><a class="postal"
+                            href="https://docs.google.com/spreadsheets/d/1VKycvSfM6JEqth9MW9wHPuDZHoocCbe5/edit#gid=1502706342"
+                            target="_blank"><img
+                                src="https://www.acacias.gov.co/info/acacias_se/media/galeria12085.png" /></a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <ul class="animacion">
+                <li>
+                    <div class="wrapper"><a class="postal"
+                            href="https://docs.google.com/spreadsheets/d/1F3bg2t4jOJ1Dry0ECW737CNGDLr2OXDj/edit#gid=651823249"
+                            target="_blank"><img
+                                src="https://www.acacias.gov.co/info/acacias_se/media/galeria12086.png" /></a></div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-md-6">
+            <ul class="animacion">
+                <li>
+                    <div class="wrapper"><a class="postal"
+                            href="https://docs.google.com/spreadsheets/d/10toJuF7P0nhOaAoCMJ7so-tuk6gwlyiN/edit#gid=1912263100"
+                            target="_blank"><img
+                                src="https://www.acacias.gov.co/info/acacias_se/media/galeria12083.png" /></a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <ul class="animacion">
+                <li>
+                    <div class="wrapper"><a class="postal"
+                            href="https://docs.google.com/spreadsheets/d/10wYQRVdaKVehXj0WxQ-Y6wjjbmsBjf3J/edit#gid=1795097855"
+                            target="_blank"><img
+                                src="https://www.acacias.gov.co/info/acacias_se/media/galeria12082.png" /></a></div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-md-6">
+            <ul class="animacion">
+                <li>
+                    <div class="wrapper"><a class="postal"
+                            href="https://docs.google.com/spreadsheets/d/10uF34Hv6og6LkPSEGCC7V9wyVMnVA0u8/edit#gid=413150721"
+                            target="_blank"><img
+                                src="https://www.acacias.gov.co/info/acacias_se/media/galeria12084.png" /></a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
