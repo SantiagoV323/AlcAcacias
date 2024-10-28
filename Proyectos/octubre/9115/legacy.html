@@ -1,0 +1,484 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<style type="text/css">
+    .card {
+        margin: 10px;
+        padding: 15px;
+        justify-content: center;
+        border-radius: 10px;
+        box-shadow: 3px 3px 10px -1px black;
+    }
+
+    .icon-dataset {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .name-category {
+        width: 50%;
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+
+    a {
+        color: #00bb19;
+        text-decoration: none;
+    }
+
+    h3 {
+        color: #2f00df;
+    }
+
+    /*spoiler*/
+    input[id^="spoiler"] {
+        display: none;
+    }
+
+    input[id^="spoiler"]+label {
+        width: 180px;
+        padding: 5px 20px;
+        background: #e1a;
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+        border-radius: 8px;
+    }
+
+    input[id^="spoiler"]:checked+label {
+        color: #333;
+        background: #ccc;
+    }
+
+    input[id^="spoiler"]~.spoiler {
+        width: 70%;
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        margin: 10px auto 0;
+        padding: 10px;
+        background: #eee;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        transition: all .6s;
+        margin-bottom: 12px;
+    }
+
+    input[id^="spoiler"]:checked+label+.spoiler {
+        height: auto;
+        opacity: 1;
+        padding: 10px;
+    }
+
+    .lightbox-gallery {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+
+    .lightbox-gallery img:hover {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+        filter: opacity(.7);
+    }
+
+    .lightbox-gallery div>img {
+        width: 220px;
+        height: 130px;
+        display: block;
+    }
+
+    .lightbox-gallery div {
+        margin: 10px;
+        flex-basis: 180px;
+    }
+
+    /*Lighbox CSS*/
+    .lightbox {
+        display: none;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 20;
+        padding-top: 110px;
+        box-sizing: border-box;
+    }
+
+    .lightbox img {
+        display: block;
+        margin: auto;
+    }
+
+    .lightbox .caption {
+        margin: 15px auto;
+        width: 0%;
+        text-align: center;
+        font-size: 1em;
+        line-height: 1.5;
+        font-weight: 700;
+        color: #eee;
+    }
+</style>
+<div class="container mt-5">
+    <div class="carousel slide" data-bs-ride="carousel" id="carouselExampleSlidesOnly">
+        <div class="carousel-inner col-md-12">
+            <div class="carousel-item active">&nbsp;</div>
+        </div>
+    </div>
+
+    <p class="text-justify mt-3">La pol&iacute;tica de Gobierno Digital es la pol&iacute;tica p&uacute;blica del Estado
+        colombiano que establece los lineamientos de uso estrat&eacute;gico de las tecnolog&iacute;as de la
+        informaci&oacute;n y las comunicaciones para la gesti&oacute;n p&uacute;blica y la interacci&oacute;n entre
+        ciudadano y Estado, en el marco de una sociedad y una econom&iacute;a digital.</p>
+
+    <p class="text-justify mt-3">De acuerdo con lo anterior, el gobierno digital representa una oportunidad para
+        incrementar el bienestar de los ciudadanos fortaleciendo la confianza p&uacute;blica a partir de un Estado que
+        cada vez es m&aacute;s cercano e inteligente, generando un nuevo enfoque en donde no s&oacute;lo el Estado sino
+        tambi&eacute;n los diferentes actores de la sociedad, son actores fundamentales para un desarrollo integral del
+        Gobierno Digital en Colombia y en donde las necesidades y problem&aacute;ticas del contexto determinan el uso de
+        la tecnolog&iacute;a y la forma como &eacute;sta puede aportar en la generaci&oacute;n de valor p&uacute;blico.
+        En este sentido, el nuevo objetivo de la pol&iacute;tica de Gobierno Digital, seg&uacute;n el MINTIC es:
+        &ldquo;Promover el uso y aprovechamiento de las tecnolog&iacute;as de la informaci&oacute;n y las comunicaciones
+        para consolidar un Estado y ciudadanos competitivos, proactivos, e innovadores, que generen valor p&uacute;blico
+        en un entorno de confianza digital&rdquo;</p>
+</div>
+<!--iconos-->
+
+<div class="container mt-5">
+    <div class="card">
+        <div class="row ">
+            <div class="col-sm-3 ">
+                <div class="icon-dataset"><img alt="Plan estratégico de las tecnologías de la información"
+                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria13950.png" style="width:45px"
+                        title="Plan estratégico de las tecnologías de la información" /></div>
+
+                <div alt="Plan estratégico de las tecnologías de la información" class="name-category"
+                    title="Plan estratégico de las tecnologías de la información"><a href="/9254">PETI</a></div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="icon-dataset"><img alt="Proyectos TI"
+                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria13944.png" style="width:45px"
+                        title="Proyectos TI" /></div>
+
+                <div alt="Proyectos TI" class="name-category" title="Proyectos TI"><a href="/9255">Proyectos TI</a>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="icon-dataset"><img alt="Seguridad de la información"
+                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria13945.png" style="width:45px"
+                        title="Seguridad de la información" /></div>
+
+                <div alt="Seguridad de la información" class="name-category" title="Seguridad de la informacióno"><a
+                        href="/5427">Seguridad de la Informaci&oacute;n</a></div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="icon-dataset"><img alt="Participación Ciudadana"
+                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria13948.png" style="width:45px"
+                        title="Participación Ciudadana" /></div>
+
+                <div alt="Participación Ciudadanan" class="name-category" title="Participación Ciudadana"><a
+                        href="/7512">Participaci&oacute;n Ciudadana</a></div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="icon-dataset"><img alt="Rendición de cuentas"
+                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria13946.png" style="width:45px"
+                        title="Rendición de cuentas" /></div>
+
+                <div alt="Rendición de cuentas" class="name-category" title="Rendición de cuentas"><a
+                        href="/7546">Rendici&oacute;n de cuentas</a></div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="icon-dataset"><img alt="Catalogo de Servicio"
+                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria13949.png" style="width:45px"
+                        title="Catalogo de Servicio" /></div>
+
+                <div alt="Catalogo de Servicio" class="name-category" title="Catalogo de Servicio"><a
+                        href="/9256">Catalogo de Servicios</a></div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="icon-dataset"><img alt="Arquitectura"
+                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria13947.png" style="width:45px"
+                        title="Arquitectura" /></div>
+
+                <div alt="Arquitectura" class="name-category" title="Arquitectura"><a href="/9257">Arquitectura</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--maxima velocidad-->
+
+<div class="container">
+    <h3 class="text-center">M&aacute;xima Velocidad</h3>
+
+    <div class="container-sm ">
+        <p>M&aacute;xima Velocidad es una estrategia de gamificaci&oacute;n del MINTIC que busca fortalecer las
+            capacidades de TI de las entidades p&uacute;blicas mediante el desarrollo de retos enfocados a cada uno de
+            los elementos que conforman la pol&iacute;tica de Gobierno Digital. La estrategia funciona como un
+            &quot;acelerador&quot; para la implementaci&oacute;n de la pol&iacute;tica de Gobierno Digital, ya que
+            mediante incentivos permite que las entidades generen productos y desarrollen actividades que periten
+            fortalecer las capacidades de TI de las entidades, mejorando la gesti&oacute;n p&uacute;blica de las mismas
+            mediante el uso de las tecnolog&iacute;as de la informaci&oacute;n a la vez que incrementan su Indice de
+            Gobierno Digital de acuerdo a los lineamientos y directrices del Modelo de Integrado de Planeaci&oacute;n y
+            Gesti&oacute;n.</p>
+    </div>
+    <input id="spoiler3" type="checkbox" /> <label for="spoiler3">Versi&oacute;n 2022</label>
+
+    <div class="spoiler">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="lightbox-gallery"><img
+                        data-image-hd="https://www.acacias.gov.co/info/acacias_se/media/galeria5422.png"
+                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria5422.png"
+                        style="display:block; margin-top:20px; width:100%" title="maxima velocidad 2022" /></div>
+            </div>
+
+            <div class="col-md-9 m" style="margin-top: 12px;">
+                <p>La Administraci&oacute;n Camino de Oportunidad recibi&oacute; en 2022 un reconocimiento por lograr el
+                    tercer puesto en el podio del concurso M&aacute;xima Velocidad 2022, que este a&ntilde;o
+                    midi&oacute; la capacidad con que cuentan las entidades p&uacute;blicas nacionales y territoriales,
+                    frente a temas de Gobierno Digital, como lo son Ciudades y Territorios Inteligentes, Datos Abiertos,
+                    Servicios Ciudadanos Digitales, e Innovaci&oacute;n.</p>
+
+                <p>La Alcald&iacute;a de Acac&iacute;as adem&aacute;s fue reconocida por destacarse en las iniciativas
+                    Digitorial y Embajador Digital, que miden la capacidad con que cuentan las entidades p&uacute;blicas
+                    frente a temas de Gobierno Digital, como lo son Ciudades y Territorios Inteligentes, Datos Abiertos,
+                    Servicios Ciudadanos Digitales, e Innovaci&oacute;n.</p>
+            </div>
+        </div>
+    </div>
+    <input id="spoiler2" type="checkbox" /> <label for="spoiler2">Versi&oacute;n 2021</label>
+
+    <div class="spoiler">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="lightbox-gallery"><img
+                        data-image-hd="https://www.acacias.gov.co/info/acacias_se/media/galeria5423.png"
+                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria5423.png"
+                        style="isplay:block; margin-top:20px; width:100%" title="maxima velocidad 2021" /></div>
+            </div>
+
+            <div class="col-md-9" style="margin-top: 12px;">
+                <p>En la edici&oacute;n 2021 de M&aacute;xima Velocidad, la Alcald&iacute;a de Acac&iacute;as se
+                    centr&oacute; en el reto de transformar la manera de prestar los servicios ciudadanos digitales,
+                    adem&aacute;s de una implementaci&oacute;n efectiva de la Pol&iacute;tica de Gobierno Digital</p>
+
+                <p>La Escuder&iacute;a Acac&iacute;as Camina Digital logr&oacute; la posici&oacute;n No. 3 del ranking
+                    de M&aacute;xima Velocidad, en la que se ubican entidades con un alto &Iacute;ndice de Gobierno
+                    Digital. A trav&eacute;s de la Oficina TIC, la Alcald&iacute;a de Acac&iacute;as, ha implementado la
+                    Pol&iacute;tica de Gobierno digital, logrando impulsar su gobernanza por medio de un efectivo
+                    aprovechamiento a las tecnolog&iacute;as y herramientas digitales, facilitando as&iacute; una
+                    injerencia por parte de la ciudadan&iacute;a y grupos de inter&eacute;s, en asuntos de
+                    inter&eacute;s p&uacute;blico.</p>
+            </div>
+        </div>
+    </div>
+    <input id="spoiler" type="checkbox" /> <label for="spoiler">Versi&oacute;n 2020</label>
+
+    <div class="spoiler">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="lightbox-gallery"><img
+                        data-image-hd="https://www.acacias.gov.co/info/acacias_se/media/galeria5424.png"
+                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria5424.png"
+                        style="display:block; margin-top:20px; width:100%" title="maxima velocidad 2020" /></div>
+            </div>
+
+            <div class="col-md-9" style="margin-top: 12px;">
+                <p>Durante la quinta edici&oacute;n del concurso M&aacute;xima Velocidad del Ministerio TIC, la
+                    Alcald&iacute;a de Acac&iacute;as, compiti&oacute; junto a 741 entidades p&uacute;blicas
+                    clasificadas en las categor&iacute;as F&oacute;rmula 1, 2 y 3 de acuerdo a su nivel de madurez en
+                    Gobierno Digital. Las escuder&iacute;as participantes tuvieron la oportunidad de fortalecer la
+                    implementaci&oacute;n de la pol&iacute;tica de Gobierno Digital, mejorando su gesti&oacute;n y la
+                    calidad de vida de los ciudadanos.</p>
+
+                <p>La Escuder&iacute;a &ldquo;Acac&iacute;as, Camino de Oportunidad&rdquo; ocup&oacute; el 4to Lugar en
+                    el Ranking General de M&aacute;xima Velocidad de este importante concurso, siendo la &uacute;nica
+                    Alcald&iacute;a del pa&iacute;s y compartiendo podio con entidades como el SERVICIO NACIONAL DE
+                    APRENDIZAJE-SENA (1er puesto), INSTITUTO COLOMBIANO AGROPECUARIO (2do puesto), AGENCIA NACIONAL DEL
+                    ESPECTRO (3er Puesto), y el INSTITUTO NACIONAL DE VIGILANCIA DE MEDICAMENTOS Y ALIMENTOS (5to
+                    Puesto).</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--multimedia-->
+
+<div class="container mt-5">
+    <h3 class="text-center">Multimedia</h3>
+
+    <div class="row">
+        <div class="col-md-4"><!--video 1-->
+            <div class="card" data-target="#Modal1" data-toggle="modal"><img class="card-img-top"
+                    data-bs-target="#Modal1" data-bs-toggle="modal"
+                    src="https://www.acacias.gov.co/info/acacias_se/media/galeria5410.jpg" style="width:100%" />
+                <div class="card-body"><a data-bs-target="#Modal1" data-bs-toggle="modal">
+                        <h4>Reto concurso Maxima Velocidad</h4>
+                    </a></div>
+            </div>
+        </div>
+        <!-- Modal -->
+
+        <div class="modal fade" data-backdrop="static" data-keyboard="false" id="Modal1" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal"
+                            type="button"><span aria-hidden="true">&times;</span></button></div>
+
+                    <div class="modal-body">
+                        <div class="embed-responsive embed-responsive-16by9"><iframe
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen="" frameborder="0" height="315"
+                                src="https://www.youtube.com/embed/6pB8mVz_-Qw" width="560"></iframe></div>
+                    </div>
+
+                    <div class="modal-footer"><button class="btn btn-secondary" data-dismiss="modal"
+                            type="button">Cerrar</button></div>
+                </div>
+            </div>
+        </div>
+        <!--video 2-->
+
+        <div class="col-md-4">
+            <div class="card" data-target="#Modal2" data-toggle="modal"><img class="card-img-top"
+                    data-bs-target="#Modal2" data-bs-toggle="modal"
+                    src="https://www.acacias.gov.co/info/acacias_se/media/galeria5409.jpg" style="width:100%" />
+                <div class="card-body"><a data-bs-target="#Modal2" data-bs-toggle="modal">
+                        <h4>Descargue el certificado de residencia</h4>
+                    </a></div>
+            </div>
+        </div>
+        <!-- Modal 2-->
+
+        <div class="modal fade" data-backdrop="static" data-keyboard="false" id="Modal2" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal"
+                            type="button"><span aria-hidden="true">&times;</span></button></div>
+
+                    <div class="modal-body">
+                        <div class="embed-responsive embed-responsive-16by9"><iframe
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen="" frameborder="0" height="315"
+                                src="https://www.youtube.com/embed/BrrZMpkt8w8" title="YouTube video player"
+                                width="560"></iframe></div>
+                    </div>
+
+                    <div class="modal-footer"><button class="btn btn-secondary" data-dismiss="modal"
+                            type="button">Cerrar</button></div>
+                </div>
+            </div>
+        </div>
+        <!--video 3-->
+
+        <div class="col-md-4">
+            <div class="card" data-target="#Modal3" data-toggle="modal"><img class="card-img-top"
+                    data-bs-target="#Modal3" data-bs-toggle="modal"
+                    src="https://www.acacias.gov.co/info/acacias_se/media/galeria5401.png" style="width:100%" />
+                <div class="card-body"><a data-bs-target="#Modal3" data-bs-toggle="modal">
+                        <h4>Sitios de inter&eacute;s del municipio</h4>
+                    </a></div>
+            </div>
+        </div>
+        <!-- Modal 3-->
+
+        <div class="modal fade" data-backdrop="static" data-keyboard="false" id="Modal3" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal"
+                            type="button"><span aria-hidden="true">&times;</span></button></div>
+
+                    <div class="modal-body">
+                        <div class="embed-responsive embed-responsive-16by9"><iframe
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen="" frameborder="0" height="315"
+                                src="https://www.youtube.com/embed/cKMepp3kCss" title="YouTube video player"
+                                width="560"></iframe></div>
+                    </div>
+
+                    <div class="modal-footer"><button class="btn btn-secondary" data-dismiss="modal"
+                            type="button">Cerrar</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--maxima velocidad-->
+
+<div class="container mt-5 text-center">
+    <h3>Enlaces de Inter&eacute;s</h3>
+
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <div alt="Ministerio TIC" class="name-category" title="Ministerio TIC"><a
+                    href="https://www.mintic.gov.co/portal/inicio/" target="_blank">MINTIC</a></div>
+        </div>
+
+        <div class="col-md-3">
+            <div alt="Gobierno Digital" class="name-category" title="Gobierno Digital"><a
+                    href="https://gobiernodigital.mintic.gov.co/portal/" target="_blank">Gobierno Digital</a></div>
+        </div>
+
+        <div class="col-md-5">
+            <div alt="Carpeta Ciudadana Digital" class="name-category" title="Carpeta Ciudadana Digital"><a
+                    href="https://carpetaciudadana.and.gov.co/" target="_blank">Carpeta Ciudadana Digital</a></div>
+        </div>
+        <!--<div class="col-md-2">
+<div alt="Gov.co" class="name-category" title="Gov.co"><a href="https://www.gov.co/" target="_blank">Gov.co</a></div>
+</div>-->
+    </div>
+</div>
+<script>
+    // Create a lightbox
+    (function () {
+        var $lightbox = $("<div class='lightbox'></div>");
+        var $img = $("<img>");
+        var $caption = $("<p class='caption'></p>");
+
+        // Add image and caption to lightbox
+
+        $lightbox
+            .append($img)
+            .append($caption);
+
+        // Add lighbox to document
+
+        $('body').append($lightbox);
+
+        $('.lightbox-gallery img').click(function (e) {
+            e.preventDefault();
+
+            // Get image link and description
+            var src = $(this).attr("data-image-hd");
+            var cap = $(this).attr("alt");
+
+            // Add data to lighbox
+
+            $img.attr('src', src);
+            $caption.text(cap);
+
+            // Show lightbox
+
+            $lightbox.fadeIn('fast');
+
+            $lightbox.click(function () {
+                $lightbox.fadeOut('fast');
+            });
+        });
+
+    }());
+</script>
