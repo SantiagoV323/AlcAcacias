@@ -461,7 +461,7 @@ position: absolute;
         text-decoration: underline;
     }
 
-        
+
     .azul_c01 {
         background-color: #26a949;
     }
@@ -474,7 +474,8 @@ position: absolute;
         background-color: #f2f2f2;
     }
 
-    #navContent, #dropdownMenu1{
+    #navContent,
+    #dropdownMenu1 {
         font-size: 1.1em;
         font-weight: 600;
         font-family: var(--font-for-content-medium);
@@ -491,14 +492,14 @@ position: absolute;
         background-color: #26a949;
     }
 
-    .header-block .u-menu .nav-menu ul.megamenu>li>a  {
+    .header-block .u-menu .nav-menu ul.megamenu>li>a {
         font-size: 1em;
     }
 
-    .info_c01 >h2, .info_c02 >h2 {
+    .info_c01>h2,
+    .info_c02>h2 {
         color: #000;
     }
-
 </style>
 <div class="principal_cont">
     <div class="container_ps">
@@ -553,6 +554,11 @@ position: absolute;
                     <li class="nav-item">
                         <a class="btn-nav btn-primary nav-link boton_06" href="javascript:void(0);" id="navContent">
                             Encuéntranos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn-nav btn-primary nav-link boton_07" href="javascript:void(0);" id="navContent">
+                            Fondo Emprender
                         </a>
                     </li>
                 </ul>
@@ -715,7 +721,8 @@ position: absolute;
                 <p>
                     1. Adquisición áreas de conservación y protección de fuentes hídricas que suministran a los
                     acueductos de agua para el consumo de acacías, meta, orinoquía. <br> <br>
-                    2. Conservar y garantizar la sostenibilidad del recurso hídrico para el abastecimiento de acueductos del municipio de Acacías para vivir bien. <br> <br>
+                    2. Conservar y garantizar la sostenibilidad del recurso hídrico para el abastecimiento de acueductos
+                    del municipio de Acacías para vivir bien. <br> <br>
                     3. Desarrollo de habilidades personales, cognitivas y empresariales estratégicas para las
                     organizaciones base de desarrollo productivo acacias meta. <br> <br>
                     4. Desarrollo de habilidades personales, cognitivas y empresariales estratégicas para las
@@ -725,10 +732,15 @@ position: absolute;
                     campesinas para vivir bien en el municipio de Acacías. <br> <br>
                     7. Fortalecimiento y reconocimiento de las tradiciones culturales, productivas y económicas
                     campesinas para vivir bien en el municipio de acacías, meta, orinoquía. <br> <br>
-                    8. Identificación de líneas base productivas agropecuarias con los levantamientos de ruta en el municipio de Acacias. <br> <br>
-                    9. Implementación del banco de información tic en el municipio de acacías, meta, orinoquía. <br> <br>
-                    10. Implementación feria ganadera, equina y campesina en el municipio de acacías, meta, orinoquía. <br> <br>
-                    11. Reforestación de 90 hectáreas de área de reserva forestal de la parte alta de la microcuenca del río acaciitas y recuperación de diversas áreas degradadas del municipio de acacías, meta, orinoquía. <br> <br>
+                    8. Identificación de líneas base productivas agropecuarias con los levantamientos de ruta en el
+                    municipio de Acacias. <br> <br>
+                    9. Implementación del banco de información tic en el municipio de acacías, meta, orinoquía. <br>
+                    <br>
+                    10. Implementación feria ganadera, equina y campesina en el municipio de acacías, meta, orinoquía.
+                    <br> <br>
+                    11. Reforestación de 90 hectáreas de área de reserva forestal de la parte alta de la microcuenca del
+                    río acaciitas y recuperación de diversas áreas degradadas del municipio de acacías, meta, orinoquía.
+                    <br> <br>
                 </p>
                 <!-- Pendiente arreglar estilos de la fuente -->
                 <!-- <ol>
@@ -765,6 +777,23 @@ position: absolute;
                 </p>
             </div>
         </div>
+        <div class="row_c07">
+            <div class="titulo-micrositio">
+                <h2>Fondo Emprender</h2>
+            </div>
+            <div class="contenido-micrositio">
+                <p>
+                <p>&nbsp;</p>
+
+                <p style="font-size: 16px;"><label for="spoiler8"
+                        style="font-size: 18px; color: rgb(255, 255, 255); width: 180px; padding: 5px 20px; background: rgb(7, 137, 48); text-align: center; border-radius: 8px;">Información de interés</label></p>
+
+                <div>
+                    <p>DISPLAYDOCUMENTOS(1510)&nbsp;&nbsp;</p>
+                </div>
+                </p>
+            </div>
+        </div>
     </div>
 </div>
 <!-- Optional JavaScript -->
@@ -783,6 +812,7 @@ position: absolute;
             $(".row_c04").hide();
             $(".row_c05").hide();
             $(".row_c06").hide();
+            $(".row_c07").hide();
             $(".row_c01").show().css("display", "flex");
 
         });
@@ -793,6 +823,7 @@ position: absolute;
             $(".row_c04").hide();
             $(".row_c05").hide();
             $(".row_c06").hide();
+            $(".row_c07").hide();
             $(".row_c02").show().css("display", "flex");
         });
 
@@ -803,6 +834,7 @@ position: absolute;
             $(".row_c04").hide();
             $(".row_c05").hide();
             $(".row_c06").hide();
+            $(".row_c07").hide();
             $(".row_c03").show().css("display", "inline-block");
         });
 
@@ -812,6 +844,7 @@ position: absolute;
             $(".row_c03").hide();
             $(".row_c05").hide();
             $(".row_c06").hide();
+            $(".row_c07").hide();
             $(".row_c04").show().css("display", "inline-block");
         });
         $(".boton_05").click(function () {
@@ -820,6 +853,7 @@ position: absolute;
             $(".row_c03").hide();
             $(".row_c04").hide();
             $(".row_c06").hide();
+            $(".row_c07").hide();
             $(".row_c05").show().css("display", "inline-block");
         });
         $(".boton_06").click(function () {
@@ -828,7 +862,17 @@ position: absolute;
             $(".row_c03").hide();
             $(".row_c04").hide();
             $(".row_c05").hide();
+            $(".row_c07").hide();
             $(".row_c06").show().css("display", "inline-block");
+        });
+        $(".boton_07").click(function () {
+            $(".row_c01").hide();
+            $(".row_c02").hide();
+            $(".row_c03").hide();
+            $(".row_c04").hide();
+            $(".row_c05").hide();
+            $(".row_c06").hide();
+            $(".row_c07").show().css("display", "inline-block");
         });
     });
 </script>
