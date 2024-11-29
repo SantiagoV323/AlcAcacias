@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Políticas, lineamientos institucionales y manuales</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <style>
-        body {
+        /* body {
             font-family: 'Arial', sans-serif;
             color: #333;
-        }
+        } */
+
         .container-accordion {
             max-width: 800px;
             margin: 20px auto;
             padding: 15px;
         }
+
         h1 {
-            font-size: 24px;
+            font-size: 31px !important;
             color: #048;
-            text-align: center;
-            margin-bottom: 20px;
+            font-weight: 600;
         }
+
         .panel-heading {
             background: #f8f9fa;
             padding: 15px;
@@ -28,38 +31,46 @@
             border: 1px solid #ddd;
             border-radius: 5px;
         }
+
         .panel-title a {
             text-decoration: none;
             font-size: 16px;
             color: #048;
         }
+
         .panel-body ul {
             list-style: none;
             padding: 0;
         }
+
         .panel-body ul li {
             margin-bottom: 10px;
         }
+
         .panel-body ul li a {
             text-decoration: none;
             color: #555;
             font-size: 14px;
         }
+
         .panel-body ul li a:hover {
             text-decoration: underline;
             color: #048;
         }
+
         .search-box {
             display: flex;
             justify-content: space-between;
             margin-bottom: 20px;
         }
+
         .search-box input {
             width: 80%;
             padding: 8px;
             border: 1px solid #ccc;
             border-radius: 5px 0 0 5px;
         }
+
         .search-box button {
             padding: 8px 15px;
             border: none;
@@ -68,14 +79,15 @@
             border-radius: 0 5px 5px 0;
             cursor: pointer;
         }
+
         .search-box button:hover {
             background: #0056b3;
         }
     </style>
 </head>
+
 <body>
     <div class="container-accordion">
-        <h1>Políticas, lineamientos institucionales y manuales</h1>
         <div class="search-box">
             <input type="text" id="searchInput" placeholder="Buscar sub-elemento...">
             <button onclick="searchItem()">Buscar</button>
@@ -92,7 +104,8 @@
                             <li><a href="/5414">Política de Tratamiento de Datos Personales</a></li>
                             <li><a href="/5416">Política de Comunicaciones</a></li>
                             <li><a href="/13168">Política Conflicto de Intereses</a></li>
-                            <li><a href="/5419">Política de No consumo de alcohol, tabaco y sustancias psicoactivas</a></li>
+                            <li><a href="/5419">Política de No consumo de alcohol, tabaco y sustancias psicoactivas</a>
+                            </li>
                             <li><a href="/5420">Política de documentos electrónicos</a></li>
                             <li><a href="/5421">Política Integrada de Gestión</a></li>
                             <li><a href="/5422">Política Administración del Riesgo</a></li>
@@ -191,11 +204,13 @@
                 <div id="collapseOthers" class="panel-collapse collapse">
                     <div class="panel-body">
                         <ul>
-                            <li><a href="/5428">- Banco terminologico</a></li>
-                            <li><a href="/5442">- Registro de programación y ejecución Plan Operativo Anual de Inversiones</a></li>
-                            <li><a href="/5444">- Integraci&oacute;n de planes institucionales</a></li>
+                            <li><a href="/5428">Banco terminologico</a></li>
+                            <li><a href="/5442">Registro de programación y ejecución Plan Operativo Anual de
+                                    Inversiones</a></li>
+                            <li><a href="/5444">Integraci&oacute;n de planes institucionales</a></li>
                             <li><a href="/5447">Informe de Gestión</a></li>
-                            <li><a href="https://www.acacias.gov.co/documentos/93/marco-fiscal-de-mediano-plazo/">Marco Fiscal de Mediano Plazo</a></li>
+                            <li><a href="https://www.acacias.gov.co/documentos/93/marco-fiscal-de-mediano-plazo/">Marco
+                                    Fiscal de Mediano Plazo</a></li>
                         </ul>
                     </div>
                 </div>
@@ -205,30 +220,55 @@
     <script>
         function normalizeText(text) {
             return text
-                .normalize("NFD")
-                .replace(/[\u0300-\u036f]/g, "")
-                .toLowerCase();
+                .normalize("NFD") // Normaliza para eliminar tildes
+                .replace(/[\u0300-\u036f]/g, "") // Elimina caracteres especiales
+                .toLowerCase(); // Convierte a minúsculas
         }
 
         function searchItem() {
-            const input = document.getElementById("searchInput").value;
-            const filter = normalizeText(input);
-            const links = document.querySelectorAll(".panel-body ul li a");
-            let found = false;
+            const input = document.getElementById("searchInput").value.trim(); // Texto ingresado
+            const filter = normalizeText(input); // Normaliza el texto del input
+            const panels = document.querySelectorAll(".panel"); // Todos los paneles
+            const links = document.querySelectorAll(".panel-body ul li a"); // Todos los enlaces
 
-            links.forEach(link => {
-                const text = normalizeText(link.textContent);
-                if (text.includes(filter)) {
-                    link.scrollIntoView({ behavior: "smooth", block: "center" });
-                    link.style.color = "#0056b3";
-                    found = true;
-                } else {
-                    link.style.color = "";
+            let found = false; // Bandera para saber si encontramos algo
+
+            // Primero, cierra todos los paneles
+            panels.forEach(panel => {
+                const panelBody = panel.querySelector(".panel-collapse");
+                if (panelBody && panelBody.classList.contains("in")) {
+                    $(panelBody).collapse("hide"); // Usa Bootstrap para colapsar
                 }
             });
 
-            if (!found) alert("Sub-elemento no encontrado.");
+            links.forEach(link => {
+                const text = normalizeText(link.textContent); // Normaliza el texto del enlace
+                if (text.includes(filter)) {
+                    found = true;
+
+                    // Resaltar el enlace encontrado
+                    link.style.color = "#0056b3"; // Cambia el color del enlace encontrado
+                    link.style.fontWeight = "bold"; // Resalta el texto
+                    link.scrollIntoView({ behavior: "smooth", block: "center" }); // Desplaza hacia el enlace
+
+                    // Expandir solo el panel correspondiente
+                    const panelBody = link.closest(".panel-collapse"); // Encuentra el contenedor más cercano
+                    if (panelBody && !panelBody.classList.contains("in")) {
+                        $(panelBody).collapse("show"); // Expande el panel usando Bootstrap
+                    }
+                } else {
+                    // Restaurar estilos previos en enlaces no coincidentes
+                    link.style.color = "";
+                    link.style.fontWeight = "";
+                }
+            });
+
+            // Si no se encuentra ningún resultado, muestra un mensaje
+            if (!found) {
+                alert("Sub-elemento no encontrado.");
+            }
         }
     </script>
 </body>
+
 </html>
