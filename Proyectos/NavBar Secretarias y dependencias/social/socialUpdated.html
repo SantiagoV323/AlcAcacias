@@ -1,9 +1,8 @@
 <!-- Pendiente: Agreagar colores de la bandera como el navbar original --><!-- Realizar un dropdown en el navbar -->
 <meta charset="UTF-8">
-<meta name="viewport" content="initial-scale=1, maximum-scale=1">
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1"><!-- Latest compiled and minified CSS -->
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet" />
 <!-- Add the Bootstrap CSS link --><!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
 <style type="text/css">
     .h2,
@@ -621,11 +620,12 @@ position: absolute;
         text-align: justify;
     }
 
-    .btn-primary:visited, .btn:visited {
-    color: #333;
+    .btn-primary:visited,
+    .btn:visited {
+        color: #333;
     }
 
-        
+
     .azul_c01 {
         background-color: #26a949;
     }
@@ -638,7 +638,8 @@ position: absolute;
         background-color: #f2f2f2;
     }
 
-    #navContent, #dropdownMenu1{
+    #navContent,
+    #dropdownMenu1 {
         font-size: 1.1em;
         font-weight: 600;
         font-family: var(--font-for-content-medium);
@@ -655,31 +656,26 @@ position: absolute;
         background-color: #26a949;
     }
 
-    .header-block .u-menu .nav-menu ul.megamenu>li>a  {
+    .header-block .u-menu .nav-menu ul.megamenu>li>a {
         font-size: 1em;
     }
 
-    .info_c01 >h2, .info_c02 >h2 {
+    .info_c01>h2,
+    .info_c02>h2 {
         color: #000;
     }
 
-    .btn:visited, a.btn:visited {
+    .btn:visited,
+    a.btn:visited {
         color: #333;
     }
-
 </style>
 <div class="principal_cont">
     <div class="container_ps">
         <nav class="sub-nav navbar navbar-expand-lg navbar-light bg-light">
-            <!-- Botón inicio que puede llevar al home --><!-- <a class="navbar-brand" href="#">Inicio</a> -->
-            <button type="button" class="btn-nav navbar-toggle collapsed" data-toggle="collapse"
-                data-target="#navbarNavDropdown" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span style="font-size: 30px;" class="glyphicon glyphicon-menu-hamburger"></span>
-            </button>
-
-
-
+            <!-- Botón inicio que puede llevar al home --><!-- <a class="navbar-brand" href="#">Inicio</a> --><button
+                aria-expanded="false" class="btn-nav navbar-toggle collapsed" data-target="#navbarNavDropdown"
+                data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span></button>
             <div class="collapse navbar-collapse navbar-personalizado" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item nav-personalizado active"><a
@@ -692,24 +688,13 @@ position: absolute;
                         <!-- <a href="javascript:void(0);" class="btn btn-primary nav-link info boton_02">Información</a> -->
                     </li>
                     <li class="btn-nav nav-item dropdown">
-                        <div class="dropdown">
-                            <button class="btn-nav btn-default dropdown-toggle" type="button" id="dropdownMenu1"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                Publicaciones
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-personalizado" aria-labelledby="dropdownMenu1">
-                                <li>
-                                    <a
-                                        href="/12584">Edictos
-                                    </a>
-                                </li>
-                                <li>
-                                    <a style="font-weight: 500;" class="btn-nav btn-primary nav-link boton_03" href="javascript:void(0);"
-                                        id="navContent">
-                                        Resoluciones
-                                    </a>
-                                </li>
+                        <div class="dropdown"><button aria-expanded="true" aria-haspopup="true"
+                                class="btn-nav btn-default dropdown-toggle" data-toggle="dropdown" id="dropdownMenu1"
+                                type="button">Publicaciones</button>
+                            <ul aria-labelledby="dropdownMenu1" class="dropdown-menu dropdown-menu-personalizado">
+                                <li><a href="/12584">Edictos </a></li>
+                                <li><a class="btn-nav btn-primary nav-link boton_03" href="javascript:void(0);"
+                                        id="navContent" style="font-weight: 500;">Resoluciones </a></li>
                                 <!-- <li>
                                     <a href="/12279"
                                         id="navContent">
@@ -746,15 +731,12 @@ position: absolute;
                             </ul>
                         </div>
                     </li> -->
-                    <li class="nav-item">
-                        <a class="btn-nav btn-primary nav-link boton_04" href="javascript:void(0);" id="navContent">
-                            Proyectos
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn-nav btn-primary nav-link boton_05" href="javascript:void(0);" id="navContent">
-                            Convivencia escolar
-                        </a>
+                    <li class="nav-item"><a class="btn-nav btn-primary nav-link boton_04" href="javascript:void(0);"
+                            id="navContent">Proyectos </a></li>
+                    <li class="nav-item"><a class="btn-nav btn-primary nav-link boton_05" href="javascript:void(0);"
+                            id="navContent">Convivencia escolar </a></li>
+                    <li class="nav-item"><a class="btn-nav btn-primary nav-link boton_06" href="javascript:void(0);"
+                                id="navContent">Encuéntranos </a>
                     </li>
                 </ul>
             </div>
@@ -764,27 +746,22 @@ position: absolute;
             <div class="col-xs-12 col-md-6 blanco_c01">
                 <div>
                     <div class="nombre_c01">
-                        <h2 style="margin-bottom: 10px">Angela Gutiérrez Bustamante</h2>
+                        <h2 style="margin-bottom: 10px">Martha Luc&iacute;a Castro Romero</h2>
                     </div>
 
                     <div class="descripcion">
-                        <p>
-                            Licenciada en psicología educativa de la Universidad de La Sabana, con más de 10 años de
-                            experiencia en el sector público, se ha desempeñado en la Alcaldía de Acacías como directora
-                            del Hogar San José, directora operativa de Protección Social y Bienestar al Ciudadano,
-                            profesional de la Secretaría de Desarrollo Económico, gerente de Bienestar Social, jefe de
-                            Sección Comunitaria y Social.<br />
+                        <p>Economista con especializaci&oacute;n en Finanzas y una trayectoria dedicada al servicio de
+                            Acac&iacute;as, Martha Luc&iacute;a ha sido pilar en diversas &aacute;reas administrativas y
+                            financieras del municipio.<br />
                             <br />
-                            También trabajó con el INPEC, la Gobernación del Meta, la Universidad de Los Llanos y la
-                            UNAD. Se certificó como auditora interna de gestión de calidad del Instituto Colombiano de
-                            Normas Técnicas y certificación ICONTEC.
+                            Su experiencia como auditora y su liderazgo en el Hospital Municipal demuestran su capacidad
+                            para impulsar proyectos sociales que mejoran la calidad de vida de nuestra gente.
                         </p>
                     </div>
                 </div>
 
-                <div class="logo-alcaldia"><img alt="Logo de la Alcaldía"
-                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria11942.png"
-                        style="height:50px; margin-bottom:1rem" /></div>
+                <div class="logo-alcaldia"><img src="https://www.acacias.gov.co/info/acacias_se/media/galeria11942.png"
+                        style="width:50%" /></div>
             </div>
 
             <div class="col-xs-12 col-md-6 azul_c01">
@@ -792,12 +769,13 @@ position: absolute;
                     <div class="foto-persona">
                         <div class="franja-oscura">&nbsp;</div>
                         <img alt="Foto de la Persona"
-                            src="https://www.acacias.gov.co/info/acacias_se/media/galeria11934.png" />
+                            src="https://www.acacias.gov.co/info/acacias_se/media/galeria13696.png" />
                     </div>
 
                     <div class="titulo_c01">
-                        <h3 style="color: white">SECRETARÍA SOCIAL<br />
-                            DE EDUCACIÓN,<br>CULTURA Y DEPORTE</h3>
+                        <h3 style="color: white">SECRETAR&Iacute;A SOCIAL<br />
+                            DE EDUCACI&Oacute;N,<br />
+                            CULTURA Y DEPORTE</h3>
                     </div>
 
                     <div class="titulo-cilindro">
@@ -822,17 +800,16 @@ position: absolute;
                     </div>
 
                     <div class="descripcion_01">
-                        <p>
-                            Es misión de la Secretaría desarrollar las competencias asignadas en la Ley 715 de 2001 para
-                            los municipios no certificados establecidas en el artículo 8°. Una vez adquirida la
-                            certificación desarrollará las competencias establecidas en el artículo 7° de la misma Ley.
-                            De igual manera es misión de la secretaría planear, dirigir y controlar la ejecución de los
-                            programas y proyectos que se adelanten en recreación y deporte.
-                            Le corresponde programar y controlar la ejecución de los programas y proyectos que en
-                            materia educativa desarrolle el municipio dentro del Plan de Desarrollo. Es responsable por
-                            la administración directa o por terceros del servicio de la biblioteca municipal.
-                            Le corresponde ejercer el control de tutela del Instituto de Cultura y Turismo de Acacias.
-                        </p>
+                        <p>Es misi&oacute;n de la Secretar&iacute;a desarrollar las competencias asignadas en la Ley 715
+                            de 2001 para los municipios no certificados establecidas en el art&iacute;culo 8&deg;. Una
+                            vez adquirida la certificaci&oacute;n desarrollar&aacute; las competencias establecidas en
+                            el art&iacute;culo 7&deg; de la misma Ley. De igual manera es misi&oacute;n de la
+                            secretar&iacute;a planear, dirigir y controlar la ejecuci&oacute;n de los programas y
+                            proyectos que se adelanten en recreaci&oacute;n y deporte. Le corresponde programar y
+                            controlar la ejecuci&oacute;n de los programas y proyectos que en materia educativa
+                            desarrolle el municipio dentro del Plan de Desarrollo. Es responsable por la
+                            administraci&oacute;n directa o por terceros del servicio de la biblioteca municipal. Le
+                            corresponde ejercer el control de tutela del Instituto de Cultura y Turismo de Acacias.</p>
                     </div>
 
                     <div class="info_c02">
@@ -840,17 +817,14 @@ position: absolute;
                     </div>
 
                     <div class="descripcion_01">
-                        <p>
-                            Administrar y coordinar el servicio educativo en el Municipio; así como promover el
-                            desarrollo de la educación, la ciencia, deporte y la cultura en el Municipio de Acacías,
-                            priorizando la conservación de acervo cultural, folclórico y la mejora de la calidad de la
-                            educación de la población.
-                        </p>
+                        <p>Administrar y coordinar el servicio educativo en el Municipio; as&iacute; como promover el
+                            desarrollo de la educaci&oacute;n, la ciencia, deporte y la cultura en el Municipio de
+                            Acac&iacute;as, priorizando la conservaci&oacute;n de acervo cultural, folcl&oacute;rico y
+                            la mejora de la calidad de la educaci&oacute;n de la poblaci&oacute;n.</p>
                     </div>
                     <!-- <div class="info_c03">
                         <h2 style="margin-bottom: 10px">Funciones</h2>
-                    </div> -->
-                    <!-- <div class="descripcion_01">
+                    </div> --><!-- <div class="descripcion_01">
                     <p>
                         1. Planear, organizar, dirigir y controlar el cumplimiento de la misión de la dependencia de la cual es responsable y garantizar la ejecución de su misión, planes, programas y proyectos. <br>
                         2. Planificar la política educativa en el Municipio. <br>
@@ -872,42 +846,41 @@ position: absolute;
                 <div class="descripcion_01">
                     <p><br />
                         <br />
-                        1. Planear, organizar, dirigir y controlar el cumplimiento de la misión de la dependencia de la
-                        cual es responsable y garantizar la ejecución de su misión, planes, programas y proyectos.<br />
-                        2. Planificar la política educativa en el Municipio. <br>
-                        3. Coordinar la prestación del servicio público educativo, recreación y deporte, en condiciones
-                        de calidad, eficiencia y cobertura del sistema. <br>
-                        4. Presentar los proyectos de distribución de los recursos financieros del Sistema General de
-                        Participaciones entre los establecimientos educativos a cargo del Estado. <br>
-                        5. Mantener la actual cobertura y propender por su ampliación. <br>
+                        1. Planear, organizar, dirigir y controlar el cumplimiento de la misi&oacute;n de la dependencia
+                        de la cual es responsable y garantizar la ejecuci&oacute;n de su misi&oacute;n, planes,
+                        programas y proyectos.<br />
+                        2. Planificar la pol&iacute;tica educativa en el Municipio.<br />
+                        3. Coordinar la prestaci&oacute;n del servicio p&uacute;blico educativo, recreaci&oacute;n y
+                        deporte, en condiciones de calidad, eficiencia y cobertura del sistema.<br />
+                        4. Presentar los proyectos de distribuci&oacute;n de los recursos financieros del Sistema
+                        General de Participaciones entre los establecimientos educativos a cargo del Estado.<br />
+                        5. Mantener la actual cobertura y propender por su ampliaci&oacute;n.
                     </p>
                 </div>
 
                 <h2 class="titulosBlancos" style="margin-bottom: 10px;">Programas</h2>
 
                 <div class="descripcion_01">
-                    <p>
-                        1. Calidad y fortalecimiento de la educación inicial, preescolar, básica y media. <br>
-                        2. Fomento a la actividad física y el deporte. <br>
-                        3. Cultura centenaria. <br>
-                        4. Inclusión y protección social para el adulto mayor. <br>
-                        5. Apoyo a los programas nacionales. <br>
-                        6. Desarrollo integral de niños, niñas, adolescentes y fortalecimiento familiar. <br>
-                        7. Inclusión, igualdad y equidad con la mujer. <br>
-                    </p>
-
+                    <p>1. Calidad y fortalecimiento de la educaci&oacute;n inicial, preescolar, b&aacute;sica y
+                        media.<br />
+                        2. Fomento a la actividad f&iacute;sica y el deporte.<br />
+                        3. Cultura centenaria.<br />
+                        4. Inclusi&oacute;n y protecci&oacute;n social para el adulto mayor.<br />
+                        5. Apoyo a los programas nacionales.<br />
+                        6. Desarrollo integral de ni&ntilde;os, ni&ntilde;as, adolescentes y fortalecimiento
+                        familiar.<br />
+                        7. Inclusi&oacute;n, igualdad y equidad con la mujer.</p>
                 </div>
             </div>
         </div>
 
         <div class="row_c03">
             <h2>Resoluciones</h2>
+
             <div class="tabla de conenedores">
-                <div class="container-notificaciones">
-                    <input id="spoiler1" type="checkbox" />
-                    <label for="spoiler1">
-                        Vigencia 2021
-                    </label>
+                <div class="container-notificaciones"><input id="spoiler1" type="checkbox" /> <label for="spoiler1">
+                        Vigencia 2021 </label>
+
                     <div class="spoiler">
                         <div class="row">
                             <div class="col-md-12" style="margin-top: 12px;">
@@ -919,11 +892,9 @@ position: absolute;
             </div>
 
             <div class="tabla de conenedores">
-                <div class="container-notificaciones">
-                    <input id="spoiler2" type="checkbox" />
-                    <label for="spoiler2">
-                        Vigencia 2022
-                    </label>
+                <div class="container-notificaciones"><input id="spoiler2" type="checkbox" /> <label for="spoiler2">
+                        Vigencia 2022 </label>
+
                     <div class="spoiler">
                         <div class="row">
                             <div class="col-md-12" style="margin-top: 12px;">
@@ -935,11 +906,9 @@ position: absolute;
             </div>
 
             <div class="tabla de conenedores">
-                <div class="container-notificaciones">
-                    <input id="spoiler3" type="checkbox" />
-                    <label for="spoiler3">
-                        Vigencia 2023
-                    </label>
+                <div class="container-notificaciones"><input id="spoiler3" type="checkbox" /> <label for="spoiler3">
+                        Vigencia 2023 </label>
+
                     <div class="spoiler">
                         <div class="row">
                             <div class="col-md-12" style="margin-top: 12px;">
@@ -951,11 +920,9 @@ position: absolute;
             </div>
 
             <div class="tabla de conenedores">
-                <div class="container-notificaciones">
-                    <input id="spoiler4" type="checkbox" />
-                    <label for="spoiler4">
-                        Vigencia 2024
-                    </label>
+                <div class="container-notificaciones"><input id="spoiler4" type="checkbox" /> <label for="spoiler4">
+                        Vigencia 2024 </label>
+
                     <div class="spoiler">
                         <div class="row">
                             <div class="col-md-12" style="margin-top: 12px;">
@@ -971,33 +938,36 @@ position: absolute;
             <div class="titulo-micrositio">
                 <h2>Proyectos</h2>
             </div>
-            <div class=" contenido-micrositio">
-                <p>
-                    1. Aprovechamiento del tiempo libre a través de los programas de formación deportiva y actividades
-                    de integración familiar y social en el municipio de Acacías, Meta.<br />
+
+            <div class="contenido-micrositio">
+                <p>1. Aprovechamiento del tiempo libre a trav&eacute;s de los programas de formaci&oacute;n deportiva y
+                    actividades de integraci&oacute;n familiar y social en el municipio de Acac&iacute;as, Meta.<br />
                     2. Suministro de complemento nutricional para contribuir con el acceso y la permanencia de los
-                    estudiantes de las instituciones educativas oficiales del municipio de Acacías, Meta.<br />
-                    3. Apoyo para el mejoramiento de la calidad de la educación mediante la provisión del componente
-                    recurso físico de canasta educativa en instituciones educativas oficiales del municipio de Acacías,
-                    Meta.<br />
-                    4. Apoyo al fortalecimiento de la identidad cultural, mediante la implementación de programas de
-                    formación artística y difusión cultural en el municipio de Acacías.<br />
+                    estudiantes de las instituciones educativas oficiales del municipio de Acac&iacute;as, Meta.<br />
+                    3. Apoyo para el mejoramiento de la calidad de la educaci&oacute;n mediante la provisi&oacute;n del
+                    componente recurso f&iacute;sico de canasta educativa en instituciones educativas oficiales del
+                    municipio de Acac&iacute;as, Meta.<br />
+                    4. Apoyo al fortalecimiento de la identidad cultural, mediante la implementaci&oacute;n de programas
+                    de formaci&oacute;n art&iacute;stica y difusi&oacute;n cultural en el municipio de
+                    Acac&iacute;as.<br />
                     5. Fortalecimiento de los procesos bibliotecarios, como herramienta dinamizadora para la
-                    transformación social, intelectual y cultural en el municipio de Acacías, Meta.<br />
-                    7. Fortalecimiento de programas para la inclusión social, el envejecimiento activo y el
-                    aprovechamiento del tiempo libre en la población adulta mayor en el municipio de Acacías,
+                    transformaci&oacute;n social, intelectual y cultural en el municipio de Acac&iacute;as, Meta.<br />
+                    7. Fortalecimiento de programas para la inclusi&oacute;n social, el envejecimiento activo y el
+                    aprovechamiento del tiempo libre en la poblaci&oacute;n adulta mayor en el municipio de
+                    Acac&iacute;as, Meta.<br />
+                    8. Implementaci&oacute;n de acciones con orientaci&oacute;n gerontol&oacute;gica para la
+                    poblaci&oacute;n adulto mayor en condici&oacute;n de vulnerabilidad del municipio de
+                    Acac&iacute;as.<br />
+                    9. Apoyo a las estrategias y programas nacionales para la superaci&oacute;n de la pobreza y pobreza
+                    extrema en la poblaci&oacute;n focalizada del municipio de Acac&iacute;as, Meta.<br />
+                    10. Fortalecimiento de las acciones de prevenci&oacute;n, promoci&oacute;n y protecci&oacute;n de
+                    los derechos de ni&ntilde;os, ni&ntilde;as, adolescentes y familia del municipio de Acac&iacute;as,
                     Meta.<br />
-                    8. Implementación de acciones con orientación gerontológica para la población adulto mayor en
-                    condición de vulnerabilidad del municipio de Acacías.<br />
-                    9. Apoyo a las estrategias y programas nacionales para la superación de la pobreza y pobreza extrema
-                    en la población focalizada del municipio de Acacías, Meta. <br>
-                    10. Fortalecimiento de las acciones de prevención, promoción y protección de los derechos de niños,
-                    niñas, adolescentes y familia del municipio de Acacías, Meta. <br>
-                    11. Fortalecimiento de las estrategias que garanticen la equidad de género, la no discriminación y
-                    la lucha contra la violencia basada en género en el municipio de Acacías, Meta. <br>
+                    11. Fortalecimiento de las estrategias que garanticen la equidad de g&eacute;nero, la no
+                    discriminaci&oacute;n y la lucha contra la violencia basada en g&eacute;nero en el municipio de
+                    Acac&iacute;as, Meta.<br />
                     12. Fortalecimiento a la primera infancia con estrategias de crianza en los hogares comunitarios y
-                    familiares del municipio de Acacías, Meta.
-                </p>
+                    familiares del municipio de Acac&iacute;as, Meta.</p>
             </div>
         </div>
 
@@ -1005,6 +975,7 @@ position: absolute;
             <div class="titulo-micrositio">
                 <h2>Convivencia escolar</h2>
             </div>
+
             <div class="contenido-micrositio">
                 <div class="container-fluid">
                     <div class="card-grid">
@@ -1013,427 +984,460 @@ position: absolute;
                                 <div class="center-text">
                                     <p class="card-header">Ley de convivencia escolar</p>
                                 </div>
-                                <div class="card-body card-6-6">
-                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13366.png"
-                                        class="img-responsive" alt="convivencia escolar">
-                                </div>
+
+                                <div class="card-body card-6-6"><img alt="convivencia escolar" class="img-responsive"
+                                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria13366.png" /></div>
+
                                 <div class="titulo-secretaria social">
                                     <h3>Secretaria social, de cultura y deportes</h3>
                                 </div>
+
                                 <div class="card-body">
                                     <p>La ley establece un sistema para mejorar la convivencia escolar y abordar la
-                                        violencia y el
-                                        embarazo adolescente, con sanciones y rutas de atención.
+                                        violencia y el embarazo adolescente, con sanciones y rutas de atenci&oacute;n.
                                     </p>
                                 </div>
-
                             </div>
-                            <a href="https://www.mineducacion.gov.co/1780/w3-article-322486.html?_noredirect=1"
+                            <a aria-label="Más sobre ley de convivencia escolar"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre ley de convivencia escolar" target="_blank">Ver más información</a>
+                                href="https://www.mineducacion.gov.co/1780/w3-article-322486.html?_noredirect=1"
+                                target="_blank">Ver m&aacute;s informaci&oacute;n</a>
                         </div>
+
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="ruta-atencion">
                                 <div class="center-text">
-                                    <p class="card-header">Ruta de Atención Integral para la Convivencia Escolar</p>
+                                    <p class="card-header">Ruta de Atenci&oacute;n Integral para la Convivencia Escolar
+                                    </p>
                                 </div>
-                                <div class="card-body card-6-6">
-                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13367.png"
-                                        class="img-responsive" alt="convivencia escolar">
-                                </div>
+
+                                <div class="card-body card-6-6"><img alt="convivencia escolar" class="img-responsive"
+                                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria13367.png" /></div>
+
                                 <div class="titulo-secretaria social">
                                     <h3>Secretaria social, de cultura y deportes</h3>
                                 </div>
+
                                 <div class="card-body">
                                     <p>La ruta que necesitas conocer para el desarrollo del plan de convivencia escolar.
                                     </p>
                                 </div>
-
                             </div>
-                            <a href="https://www.mineducacion.gov.co/1780/w3-article-322486.html?_noredirect=1"
+                            <a aria-label="Más sobre ley de convivencia escolar"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre ley de convivencia escolar" target="_blank">Ver más información</a>
+                                href="https://www.mineducacion.gov.co/1780/w3-article-322486.html?_noredirect=1"
+                                target="_blank">Ver m&aacute;s informaci&oacute;n</a>
                         </div>
+
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="kit-herramientas">
                                 <div class="center-text">
                                     <p class="card-header">Kit de herramientas para la convivencia escolar</p>
                                 </div>
-                                <div class="card-body card-6-6">
-                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13368.png"
-                                        class="img-responsive" alt="herramientas para la convivencia escolar">
-                                </div>
+
+                                <div class="card-body card-6-6"><img alt="herramientas para la convivencia escolar"
+                                        class="img-responsive"
+                                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria13368.png" /></div>
+
                                 <div class="titulo-secretaria social">
                                     <h3>Secretaria social, de cultura y deportes</h3>
                                 </div>
-                                <div class="card-body">
-                                    <p>Materiales y recursos para estudiantes, docentes y familias que permitirán la
-                                        divulgación de
-                                        información relevante para adelantar prácticas pedagógicas e interacciones
-                                        orientadas a
-                                        promover la convivencia escolar.
-                                    </p>
-                                </div>
 
+                                <div class="card-body">
+                                    <p>Materiales y recursos para estudiantes, docentes y familias que permitir&aacute;n
+                                        la divulgaci&oacute;n de informaci&oacute;n relevante para adelantar
+                                        pr&aacute;cticas pedag&oacute;gicas e interacciones orientadas a promover la
+                                        convivencia escolar.</p>
+                                </div>
                             </div>
-                            <a href="https://www.colombiaaprende.edu.co/contenidos/coleccion/kit-de-herramientas-para-la-convivencia-escolar"
+                            <a aria-label="Más sobre las herramientas para la convivencia escolar"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre las herramientas para la convivencia escolar" target="_blank">Ver más
-                                información</a>
+                                href="https://www.colombiaaprende.edu.co/contenidos/coleccion/kit-de-herramientas-para-la-convivencia-escolar"
+                                target="_blank">Ver m&aacute;s informaci&oacute;n</a>
                         </div>
                     </div>
                     <!-- Subtitulo 2 -->
-                    <h2 class="subtitulo-cards">Protocolos para la acción y seguimiento</h2>
+
+                    <h2 class="subtitulo-cards">Protocolos para la acci&oacute;n y seguimiento</h2>
+
                     <div class="card-grid">
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="convivencia-escolar">
                                 <div class="center-text">
                                     <p class="card-header">Racismo y xenofobia</p>
                                 </div>
-                                <div class="card-body card-6-6">
-                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13369.png"
-                                        class="img-responsive" alt="convivencia escolar">
-                                </div>
+
+                                <div class="card-body card-6-6"><img alt="convivencia escolar" class="img-responsive"
+                                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria13369.png" /></div>
+
                                 <div class="titulo-secretaria social">
                                     <h3>Secretaria social, de cultura y deportes</h3>
                                 </div>
-                                <div class="card-body">
-                                    <p>
-                                        Protocolos para el abordaje pedagógico de situaciones de riesgo en el marco de
-                                        la ruta de
-                                        atención integral para la convivencia escolar.
-                                    </p>
-                                </div>
 
+                                <div class="card-body">
+                                    <p>Protocolos para el abordaje pedag&oacute;gico de situaciones de riesgo en el
+                                        marco de la ruta de atenci&oacute;n integral para la convivencia escolar.</p>
+                                </div>
                             </div>
-                            <a href="https://www.mineducacion.gov.co/1780/w3-article-322486.html?_noredirect=1"
+                            <a aria-label="Más sobre ley de convivencia escolar"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre ley de convivencia escolar" target="_blank">Ver más información</a>
+                                href="https://www.mineducacion.gov.co/1780/w3-article-322486.html?_noredirect=1"
+                                target="_blank">Ver m&aacute;s informaci&oacute;n</a>
                         </div>
+
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="ruta-atencion">
                                 <div class="center-text">
-                                    <p class="card-header">Protocolos contra Violencia de Género y Ciberacoso</p>
+                                    <p class="card-header">Protocolos contra Violencia de G&eacute;nero y Ciberacoso</p>
                                 </div>
-                                <div class="card-body card-6-6">
-                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13370.png"
-                                        class="img-responsive" alt="convivencia escolar">
-                                </div>
+
+                                <div class="card-body card-6-6"><img alt="convivencia escolar" class="img-responsive"
+                                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria13370.png" /></div>
+
                                 <div class="titulo-secretaria social">
                                     <h3>Secretaria social, de cultura y deportes</h3>
                                 </div>
-                                <div class="card-body">
-                                    <p>La vida escolar es un crisol de interacciones y aprendizajes, donde niños y
-                                        adolescentes se
-                                        relacionan con compañeros, educadores y familia en un ambiente educativo y
-                                        cotidiano.
-                                    </p>
-                                </div>
 
+                                <div class="card-body">
+                                    <p>La vida escolar es un crisol de interacciones y aprendizajes, donde ni&ntilde;os
+                                        y adolescentes se relacionan con compa&ntilde;eros, educadores y familia en un
+                                        ambiente educativo y cotidiano.</p>
+                                </div>
                             </div>
-                            <a href="https://www.mineducacion.gov.co/1780/w3-article-322486.html?_noredirect=1"
+                            <a aria-label="Más sobre ley de convivencia escolar"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre ley de convivencia escolar" target="_blank">Ver más información</a>
+                                href="https://www.mineducacion.gov.co/1780/w3-article-322486.html?_noredirect=1"
+                                target="_blank">Ver m&aacute;s informaci&oacute;n</a>
                         </div>
+
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="convivencia-escolar">
                                 <div class="center-text">
-                                    <p class="card-header">Prevención de ciberacoso y delitos en medios digitales</p>
+                                    <p class="card-header">Prevenci&oacute;n de ciberacoso y delitos en medios digitales
+                                    </p>
                                 </div>
-                                <div class="card-body card-6-6">
-                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13371.png"
-                                        class="img-responsive" alt="convivencia escolar">
-                                </div>
+
+                                <div class="card-body card-6-6"><img alt="convivencia escolar" class="img-responsive"
+                                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria13371.png" /></div>
+
                                 <div class="titulo-secretaria social">
                                     <h3>Secretaria social, de cultura y deportes</h3>
                                 </div>
+
                                 <div class="card-body">
-                                    <p>
-                                        El ciberacoso escolar y los delitos tecnológicos, que han aumentado
-                                        dramáticamente en
-                                        prevalencia, están vinculados a la creciente accesibilidad de los medios
-                                        digitales,
-                                        especialmente importantes para la generación digital que los utiliza
-                                        constantemente como su
-                                        principal forma de interacción.
-                                    </p>
+                                    <p>El ciberacoso escolar y los delitos tecnol&oacute;gicos, que han aumentado
+                                        dram&aacute;ticamente en prevalencia, est&aacute;n vinculados a la creciente
+                                        accesibilidad de los medios digitales, especialmente importantes para la
+                                        generaci&oacute;n digital que los utiliza constantemente como su principal forma
+                                        de interacci&oacute;n.</p>
                                 </div>
                             </div>
-                            <a href="https://www.mineducacion.gov.co/1780/w3-article-322486.html?_noredirect=1"
+                            <a aria-label="Más sobre ley de convivencia escolar"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre ley de convivencia escolar" target="_blank">Ver más información</a>
+                                href="https://www.mineducacion.gov.co/1780/w3-article-322486.html?_noredirect=1"
+                                target="_blank">Ver m&aacute;s informaci&oacute;n</a>
                         </div>
                     </div>
                     <!-- subtitulo 3-->
-                    <h2 class="subtitulo-cards">Modulo 1: Para la acción y el seguimiento</h2>
+
+                    <h2 class="subtitulo-cards">Modulo 1: Para la acci&oacute;n y el seguimiento</h2>
+
                     <div class="card-grid">
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="videos-para-accion-y-seguimiento">
                                 <div class="center-text">
-                                    <p class="card-header">Videos para la acción y el seguimiento</p>
+                                    <p class="card-header">Videos para la acci&oacute;n y el seguimiento</p>
                                 </div>
-                                <div class="card-body card-6-6">
-                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13372.png"
-                                        class="img-responsive" alt="convivencia escolar">
-                                </div>
+
+                                <div class="card-body card-6-6"><img alt="convivencia escolar" class="img-responsive"
+                                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria13372.png" /></div>
+
                                 <div class="titulo-secretaria social">
                                     <h3>Secretaria social, de cultura y deportes</h3>
                                 </div>
+
                                 <div class="card-body">
-                                    <p>
-                                        Aquí encontrarás videos y protocolos que describen dos herramientas del Sistema
-                                        Nacional de Convivencia Escolar: <br>
-                                        1) La Ruta de Atención Integral para la convivencia escolar y, <br>
-                                        2) Sistema de Información Unificado para la Convivencia Escolar (SIUCE) <br>
+                                    <p>Aqu&iacute; encontrar&aacute;s videos y protocolos que describen dos herramientas
+                                        del Sistema Nacional de Convivencia Escolar:<br />
+                                        1) La Ruta de Atenci&oacute;n Integral para la convivencia escolar y,<br />
+                                        2) Sistema de Informaci&oacute;n Unificado para la Convivencia Escolar (SIUCE)
                                     </p>
                                 </div>
-
                             </div>
-                            <a href="https://www.colombiaaprende.edu.co/recurso-coleccion/videos-para-la-accion-y-el-seguimiento"
+                            <a aria-label="Más sobre ley de convivencia escolar"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre ley de convivencia escolar" target="_blank">Ver más
-                                información</a>
+                                href="https://www.colombiaaprende.edu.co/recurso-coleccion/videos-para-la-accion-y-el-seguimiento"
+                                target="_blank">Ver m&aacute;s informaci&oacute;n</a>
                         </div>
+
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="ruta-atencion">
                                 <div class="center-text">
-                                    <p class="card-header">Protocolos para la acción y seguimiento</p>
+                                    <p class="card-header">Protocolos para la acci&oacute;n y seguimiento</p>
                                 </div>
-                                <div class="card-body card-6-6">
-                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13373.png"
-                                        class="img-responsive" alt="convivencia escolar">
-                                </div>
+
+                                <div class="card-body card-6-6"><img alt="convivencia escolar" class="img-responsive"
+                                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria13373.png" /></div>
+
                                 <div class="titulo-secretaria social">
                                     <h3>Secretaria social, de cultura y deportes</h3>
                                 </div>
-                                <div class="card-body">
-                                    <p>Protocolos para el abordaje pedagógico de situaciones de riesgo en el marco de la ruta de atención integral para la convivencia escolar
-                                    </p>
-                                </div>
 
+                                <div class="card-body">
+                                    <p>Protocolos para el abordaje pedag&oacute;gico de situaciones de riesgo en el
+                                        marco de la ruta de atenci&oacute;n integral para la convivencia escolar</p>
+                                </div>
                             </div>
-                            <a href="https://www.colombiaaprende.edu.co/recurso-coleccion/protocolos-para-la-accion-y-seguimiento"
+                            <a aria-label="Más sobre ley de convivencia escolar"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre ley de convivencia escolar" target="_blank">Ver más información</a>
+                                href="https://www.colombiaaprende.edu.co/recurso-coleccion/protocolos-para-la-accion-y-seguimiento"
+                                target="_blank">Ver m&aacute;s informaci&oacute;n</a>
                         </div>
                     </div>
                     <!-- subtitulo 4 -->
-                    <h2 class="subtitulo-cards">Módulo 2: Para la prevención</h2>
+
+                    <h2 class="subtitulo-cards">M&oacute;dulo 2: Para la prevenci&oacute;n</h2>
+
                     <div class="card-grid">
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="racismo-y-xenofobia">
                                 <div class="center-text">
-                                    <p class="card-header">Prevención de Consumo de SPA</p>
-                                </div>
-                                <div class="card-body card-6-6">
-                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13374.png"
-                                        class="img-responsive" alt="convivencia escolar">
-                                </div>
-                                <div class="card-body">
-                                    <p>
-                                        Las infografías dirigidas a estudiantes permiten desarrollar competencias socioemocionales que protegen contra el consumo de SPA en la infancia y la adolescencia e invitan a garantizar los derechos de las personas que ya están consumiendo, evitando la estigmatización, discriminación y exclusión dentro del sistema educativo.
-                                    </p>
+                                    <p class="card-header">Prevenci&oacute;n de Consumo de SPA</p>
                                 </div>
 
+                                <div class="card-body card-6-6"><img alt="convivencia escolar" class="img-responsive"
+                                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria13374.png" /></div>
+
+                                <div class="card-body">
+                                    <p>Las infograf&iacute;as dirigidas a estudiantes permiten desarrollar competencias
+                                        socioemocionales que protegen contra el consumo de SPA en la infancia y la
+                                        adolescencia e invitan a garantizar los derechos de las personas que ya
+                                        est&aacute;n consumiendo, evitando la estigmatizaci&oacute;n,
+                                        discriminaci&oacute;n y exclusi&oacute;n dentro del sistema educativo.</p>
+                                </div>
                             </div>
-                            <a href="https://www.colombiaaprende.edu.co/recurso-coleccion/prevencion-de-consumo-de-spa"
+                            <a aria-label="Más sobre ley de convivencia escolar"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre ley de convivencia escolar" target="_blank">Ver más información</a>
+                                href="https://www.colombiaaprende.edu.co/recurso-coleccion/prevencion-de-consumo-de-spa"
+                                target="_blank">Ver m&aacute;s informaci&oacute;n</a>
                         </div>
+
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="ruta-atencion">
                                 <div class="center-text">
-                                    <p class="card-header">Prevención del suicidio</p>
-                                </div>
-                                <div class="card-body card-6-6">
-                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13375.png"
-                                        class="img-responsive" alt="convivencia escolar">
-                                </div>
-                                <div class="card-body">
-                                    <p>El protocolo y estas infografías son herramientas útiles que indican una ruta clara y operativa que se sugiere seguir para la prevención y la atención de conductas suicidas en el escenario escolar y el seguimiento posterior que debe realizarse.
-                                    </p>
+                                    <p class="card-header">Prevenci&oacute;n del suicidio</p>
                                 </div>
 
+                                <div class="card-body card-6-6"><img alt="convivencia escolar" class="img-responsive"
+                                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria13375.png" /></div>
+
+                                <div class="card-body">
+                                    <p>El protocolo y estas infograf&iacute;as son herramientas &uacute;tiles que
+                                        indican una ruta clara y operativa que se sugiere seguir para la
+                                        prevenci&oacute;n y la atenci&oacute;n de conductas suicidas en el escenario
+                                        escolar y el seguimiento posterior que debe realizarse.</p>
+                                </div>
                             </div>
-                            <a href="https://www.colombiaaprende.edu.co/recurso-coleccion/prevencion-del-suicidio"
+                            <a aria-label="Más sobre ley de convivencia escolar"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre ley de convivencia escolar" target="_blank">Ver más información</a>
+                                href="https://www.colombiaaprende.edu.co/recurso-coleccion/prevencion-del-suicidio"
+                                target="_blank">Ver m&aacute;s informaci&oacute;n</a>
                         </div>
+
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="kit-herramientas">
                                 <div class="center-text">
-                                    <p class="card-header">Prevención de las Violencias Basadas en el Género</p>
-                                </div>
-                                <div class="card-body card-6-6">
-                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13376.png"
-                                        class="img-responsive" alt="herramientas para la convivencia escolar">
-                                </div>
-                                <div class="card-body">
-                                    <p>
-                                        Las infografías, basadas en el protocolo, informan, de una manera sencilla y fácil de comprender, sobre qué son las violencias de género, las cuales pueden ser violencia sexual, física, psicológica o simbólica, cómo prevenirlas y qué hacer en caso de identificar una víctima o ser víctima de estas agresiones.
-                                    </p>
+                                    <p class="card-header">Prevenci&oacute;n de las Violencias Basadas en el
+                                        G&eacute;nero</p>
                                 </div>
 
+                                <div class="card-body card-6-6"><img alt="herramientas para la convivencia escolar"
+                                        class="img-responsive"
+                                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria13376.png" /></div>
+
+                                <div class="card-body">
+                                    <p>Las infograf&iacute;as, basadas en el protocolo, informan, de una manera sencilla
+                                        y f&aacute;cil de comprender, sobre qu&eacute; son las violencias de
+                                        g&eacute;nero, las cuales pueden ser violencia sexual, f&iacute;sica,
+                                        psicol&oacute;gica o simb&oacute;lica, c&oacute;mo prevenirlas y qu&eacute;
+                                        hacer en caso de identificar una v&iacute;ctima o ser v&iacute;ctima de estas
+                                        agresiones.</p>
+                                </div>
                             </div>
-                            <a href="https://www.colombiaaprende.edu.co/recurso-coleccion/prevencion-de-las-violencias-basadas-en-el-genero"
+                            <a aria-label="Más sobre las herramientas para la convivencia escolar"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre las herramientas para la convivencia escolar" target="_blank">Ver más
-                                información</a>
+                                href="https://www.colombiaaprende.edu.co/recurso-coleccion/prevencion-de-las-violencias-basadas-en-el-genero"
+                                target="_blank">Ver m&aacute;s informaci&oacute;n</a>
                         </div>
+
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="kit-herramientas">
                                 <div class="center-text">
-                                    <p class="card-header">Prevención de la Xenofobia</p>
-                                </div>
-                                <div class="card-body card-6-6">
-                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13377.png"
-                                        class="img-responsive" alt="herramientas para la convivencia escolar">
-                                </div>
-                                <div class="card-body">
-                                    <p>
-                                        Las infografías orientan las acciones que deben desarrollarse en el entorno escolar frente a situaciones que inciten o configuren actos de xenofobia, exclusión o estigmatización en contra de niñas, niños, y adolescentes migrantes.
-                                    </p>
+                                    <p class="card-header">Prevenci&oacute;n de la Xenofobia</p>
                                 </div>
 
+                                <div class="card-body card-6-6"><img alt="herramientas para la convivencia escolar"
+                                        class="img-responsive"
+                                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria13377.png" /></div>
+
+                                <div class="card-body">
+                                    <p>Las infograf&iacute;as orientan las acciones que deben desarrollarse en el
+                                        entorno escolar frente a situaciones que inciten o configuren actos de
+                                        xenofobia, exclusi&oacute;n o estigmatizaci&oacute;n en contra de ni&ntilde;as,
+                                        ni&ntilde;os, y adolescentes migrantes.</p>
+                                </div>
                             </div>
-                            <a href="https://www.colombiaaprende.edu.co/recurso-coleccion/prevencion-de-la-xenofobia"
+                            <a aria-label="Más sobre las herramientas para la convivencia escolar"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre las herramientas para la convivencia escolar" target="_blank">Ver más
-                                información</a>
+                                href="https://www.colombiaaprende.edu.co/recurso-coleccion/prevencion-de-la-xenofobia"
+                                target="_blank">Ver m&aacute;s informaci&oacute;n</a>
                         </div>
+
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="kit-herramientas">
                                 <div class="center-text">
-                                    <p class="card-header">Prevención de Racismo</p>
-                                </div>
-                                <div class="card-body card-6-6">
-                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13378.png"
-                                        class="img-responsive" alt="herramientas para la convivencia escolar">
-                                </div>
-                                <div class="card-body">
-                                    <p>
-                                        se constituye en una hoja de ruta para dar respuesta desde un perspectiva integral a situaciones en las que se presente discriminación por aspectos étnicos y raciales o que promuevan actos excluyentes o de estigmatización en contra de niñas, niños, y  adolescentes por causa de su pertenencia étnica o racial.
-                                    </p>
+                                    <p class="card-header">Prevenci&oacute;n de Racismo</p>
                                 </div>
 
+                                <div class="card-body card-6-6"><img alt="herramientas para la convivencia escolar"
+                                        class="img-responsive"
+                                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria13378.png" /></div>
+
+                                <div class="card-body">
+                                    <p>se constituye en una hoja de ruta para dar respuesta desde un perspectiva
+                                        integral a situaciones en las que se presente discriminaci&oacute;n por aspectos
+                                        &eacute;tnicos y raciales o que promuevan actos excluyentes o de
+                                        estigmatizaci&oacute;n en contra de ni&ntilde;as, ni&ntilde;os, y adolescentes
+                                        por causa de su pertenencia &eacute;tnica o racial.</p>
+                                </div>
                             </div>
-                            <a href="https://www.colombiaaprende.edu.co/recurso-coleccion/prevencion-de-racismo"
+                            <a aria-label="Más sobre las herramientas para la convivencia escolar"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre las herramientas para la convivencia escolar" target="_blank">Ver más
-                                información</a>
+                                href="https://www.colombiaaprende.edu.co/recurso-coleccion/prevencion-de-racismo"
+                                target="_blank">Ver m&aacute;s informaci&oacute;n</a>
                         </div>
+
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="kit-herramientas">
                                 <div class="center-text">
-                                    <p class="card-header">Prevención del Ciberacoso y Delitos en medios digitales</p>
-                                </div>
-                                <div class="card-body card-6-6">
-                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13379.png"
-                                        class="img-responsive" alt="herramientas para la convivencia escolar">
-                                </div>
-                                <div class="card-body">
-                                    <p>
-                                        Este protocolo y sus infografías son aún más relevantes cuando se observa que el ciberacoso escolar y los delitos tecnológicos se han convertido en las “nuevas formas” de realizar agresiones entre pares, notándose un incremento dramático en su prevalencia durante los últimos años.
-                                    </p>
+                                    <p class="card-header">Prevenci&oacute;n del Ciberacoso y Delitos en medios
+                                        digitales</p>
                                 </div>
 
+                                <div class="card-body card-6-6"><img alt="herramientas para la convivencia escolar"
+                                        class="img-responsive"
+                                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria13379.png" /></div>
+
+                                <div class="card-body">
+                                    <p>Este protocolo y sus infograf&iacute;as son a&uacute;n m&aacute;s relevantes
+                                        cuando se observa que el ciberacoso escolar y los delitos tecnol&oacute;gicos se
+                                        han convertido en las &ldquo;nuevas formas&rdquo; de realizar agresiones entre
+                                        pares, not&aacute;ndose un incremento dram&aacute;tico en su prevalencia durante
+                                        los &uacute;ltimos a&ntilde;os.</p>
+                                </div>
                             </div>
-                            <a href="https://www.colombiaaprende.edu.co/recurso-coleccion/prevencion-del-ciberacoso-y-delitos-en-medios-digitales"
+                            <a aria-label="Más sobre las herramientas para la convivencia escolar"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre las herramientas para la convivencia escolar" target="_blank">Ver más
-                                información</a>
+                                href="https://www.colombiaaprende.edu.co/recurso-coleccion/prevencion-del-ciberacoso-y-delitos-en-medios-digitales"
+                                target="_blank">Ver m&aacute;s informaci&oacute;n</a>
                         </div>
+
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="kit-herramientas">
                                 <div class="center-text">
-                                    <p class="card-header">Contenidos para la prevención – Para todos y todas</p>
-                                </div>
-                                <div class="card-body card-6-6">
-                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13380.png"
-                                        class="img-responsive" alt="herramientas para la convivencia escolar">
-                                </div>
-                                <div class="card-body">
-                                    <p>
-                                        Tres micro videos que permiten conocer temas relacionados con la atención de la violencia sexual, la prevención del suicidio y la prevención de consumo de SPA
-                                    </p>
+                                    <p class="card-header">Contenidos para la prevenci&oacute;n &ndash; Para todos y
+                                        todas</p>
                                 </div>
 
+                                <div class="card-body card-6-6"><img alt="herramientas para la convivencia escolar"
+                                        class="img-responsive"
+                                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria13380.png" /></div>
+
+                                <div class="card-body">
+                                    <p>Tres micro videos que permiten conocer temas relacionados con la atenci&oacute;n
+                                        de la violencia sexual, la prevenci&oacute;n del suicidio y la prevenci&oacute;n
+                                        de consumo de SPA</p>
+                                </div>
                             </div>
-                            <a href="https://www.colombiaaprende.edu.co/recurso-coleccion/contenidos-para-la-prevencion-para-todos-y-todas"
+                            <a aria-label="Más sobre las herramientas para la convivencia escolar"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre las herramientas para la convivencia escolar" target="_blank">Ver más
-                                información</a>
+                                href="https://www.colombiaaprende.edu.co/recurso-coleccion/contenidos-para-la-prevencion-para-todos-y-todas"
+                                target="_blank">Ver m&aacute;s informaci&oacute;n</a>
                         </div>
                     </div>
                     <!-- Subtitulo 5 -->
-                    <h2 class="subtitulo-cards">Módulo 3: para el buen trato a niñas, niños y adolescentes</h2>
+
+                    <h2 class="subtitulo-cards">M&oacute;dulo 3: para el buen trato a ni&ntilde;as, ni&ntilde;os y
+                        adolescentes</h2>
+
                     <div class="card-grid">
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="convivencia-escolar">
                                 <div class="center-text">
-                                    <p class="card-header">Material pedagógico para prevenir el Maltrato Infantil</p>
-                                </div>
-                                <div class="card-body card-6-6">
-                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13381.png"
-                                        class="img-responsive" alt="convivencia escolar">
-                                </div>
-                                <div class="card-body">
-                                    <p>
-                                        Un material pedagógico de prevención del maltrato infantil, para que ellas y ellos se reconozcan a sí mismos(as) como las y los integrantes más importantes de nuestra sociedad, al ser sujetos de derecho de especial protección cuyo interés superior está protegido por el Estado, la sociedad y la familia.
+                                    <p class="card-header">Material pedag&oacute;gico para prevenir el Maltrato Infantil
                                     </p>
                                 </div>
 
+                                <div class="card-body card-6-6"><img alt="convivencia escolar" class="img-responsive"
+                                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria13381.png" /></div>
+
+                                <div class="card-body">
+                                    <p>Un material pedag&oacute;gico de prevenci&oacute;n del maltrato infantil, para
+                                        que ellas y ellos se reconozcan a s&iacute; mismos(as) como las y los
+                                        integrantes m&aacute;s importantes de nuestra sociedad, al ser sujetos de
+                                        derecho de especial protecci&oacute;n cuyo inter&eacute;s superior est&aacute;
+                                        protegido por el Estado, la sociedad y la familia.</p>
+                                </div>
                             </div>
-                            <a href="https://www.colombiaaprende.edu.co/recurso-coleccion/material-pedagogico-para-prevenir-el-maltrato-infantil"
+                            <a aria-label="Más sobre ley de convivencia escolar"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre ley de convivencia escolar" target="_blank">Ver más información</a>
+                                href="https://www.colombiaaprende.edu.co/recurso-coleccion/material-pedagogico-para-prevenir-el-maltrato-infantil"
+                                target="_blank">Ver m&aacute;s informaci&oacute;n</a>
                         </div>
+
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="ruta-atencion">
                                 <div class="center-text">
-                                    <p class="card-header">Guía para familia y cuidadores en el uso del material del kit
-                                        de
-                                        herramientas</p>
-                                </div>
-                                <div class="card-body card-6-6">
-                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13382.png"
-                                        class="img-responsive" alt="convivencia escolar">
-                                </div>
-                                <div class="card-body">
-                                    <p>Guía para familia y cuidadores en el uso del material del kit de herramientas.
-                                    </p>
+                                    <p class="card-header">Gu&iacute;a para familia y cuidadores en el uso del material
+                                        del kit de herramientas</p>
                                 </div>
 
+                                <div class="card-body card-6-6"><img alt="convivencia escolar" class="img-responsive"
+                                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria13382.png" /></div>
+
+                                <div class="card-body">
+                                    <p>Gu&iacute;a para familia y cuidadores en el uso del material del kit de
+                                        herramientas.</p>
+                                </div>
                             </div>
-                            <a href="https://www.colombiaaprende.edu.co/recurso-coleccion/guia-para-familia-y-cuidadores-en-el-uso-del-material-del-kit-de-herramientas"
+                            <a aria-label="Más sobre ley de convivencia escolar"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre ley de convivencia escolar" target="_blank">Ver más información</a>
+                                href="https://www.colombiaaprende.edu.co/recurso-coleccion/guia-para-familia-y-cuidadores-en-el-uso-del-material-del-kit-de-herramientas"
+                                target="_blank">Ver m&aacute;s informaci&oacute;n</a>
                         </div>
+
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="kit-herramientas">
                                 <div class="center-text">
-                                    <p class="card-header">¿Cómo aportamos a la convivencia escolar, al ejercicio de los
-                                        derechos
-                                        humanos y a la prevención del maltrato?</p>
-                                </div>
-                                <div class="card-body card-6-6">
-                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13383.png"
-                                        class="img-responsive" alt="herramientas para la convivencia escolar">
-                                </div>
-                                <div class="card-body">
-                                    <p>
-                                        Aquí encontrarás recursos creativos para promover una convivencia escolar positiva y el trato adecuado hacia los niños y adolescentes.
-                                    </p>
+                                    <p class="card-header">&iquest;C&oacute;mo aportamos a la convivencia escolar, al
+                                        ejercicio de los derechos humanos y a la prevenci&oacute;n del maltrato?</p>
                                 </div>
 
+                                <div class="card-body card-6-6"><img alt="herramientas para la convivencia escolar"
+                                        class="img-responsive"
+                                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria13383.png" /></div>
+
+                                <div class="card-body">
+                                    <p>Aqu&iacute; encontrar&aacute;s recursos creativos para promover una convivencia
+                                        escolar positiva y el trato adecuado hacia los ni&ntilde;os y adolescentes.</p>
+                                </div>
                             </div>
-                            <a href="https://especiales.colombiaaprende.edu.co/convivencia-escolar/"
+                            <a aria-label="Más sobre las herramientas para la convivencia escolar"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre las herramientas para la convivencia escolar" target="_blank">Ver más
-                                información</a>
+                                href="https://especiales.colombiaaprende.edu.co/convivencia-escolar/"
+                                target="_blank">Ver m&aacute;s informaci&oacute;n</a>
                         </div>
                     </div>
-
 
                     <div class="card-grid">
                         <div class="card card-display-content">
@@ -1441,63 +1445,68 @@ position: absolute;
                                 <div class="center-text">
                                     <p class="card-header">Ruta y herramientas para la convivencia escolar.</p>
                                 </div>
-                                <div class="card-body card-6-6">
-                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13384.png"
-                                        class="img-responsive" alt="convivencia escolar">
-                                </div>
-                                <div class="card-body">
-                                    <p>
-                                        Aquí se encuentran los video tutoriales para Directivos Docentes y Docentes que permiten conocer funcionalidades para el manejo del SIUCE, así como para programar acciones que posibiliten el mejoramiento de la convivencia escolar con la comunidad educativa a través de acciones de prevención, promoción, atención y seguimiento.
-                                    </p>
-                                </div>
 
+                                <div class="card-body card-6-6"><img alt="convivencia escolar" class="img-responsive"
+                                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria13384.png" /></div>
+
+                                <div class="card-body">
+                                    <p>Aqu&iacute; se encuentran los video tutoriales para Directivos Docentes y
+                                        Docentes que permiten conocer funcionalidades para el manejo del SIUCE,
+                                        as&iacute; como para programar acciones que posibiliten el mejoramiento de la
+                                        convivencia escolar con la comunidad educativa a trav&eacute;s de acciones de
+                                        prevenci&oacute;n, promoci&oacute;n, atenci&oacute;n y seguimiento.</p>
+                                </div>
                             </div>
-                            <a href="https://especiales.colombiaaprende.edu.co/convivencia-escolar/module-1.html"
+                            <a aria-label="Más sobre ley de convivencia escolar"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre ley de convivencia escolar" target="_blank">Ver más información</a>
+                                href="https://especiales.colombiaaprende.edu.co/convivencia-escolar/module-1.html"
+                                target="_blank">Ver m&aacute;s informaci&oacute;n</a>
                         </div>
+
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="ruta-atencion">
                                 <div class="center-text">
-                                    <p class="card-header">Conocimientos y prácticas para el cuidado y la protección.
-                                    </p>
-                                </div>
-                                <div class="card-body card-6-6">
-                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13385.png"
-                                        class="img-responsive" alt="convivencia escolar">
-                                </div>
-                                <div class="card-body">
-                                    <p>
-                                        En este módulo encontrará herramientas con información relevante para adelantar acciones de prevención ante diferentes factores de riesgo que afectan la convivencia escolar.
-                                    </p>
+                                    <p class="card-header">Conocimientos y pr&aacute;cticas para el cuidado y la
+                                        protecci&oacute;n.</p>
                                 </div>
 
+                                <div class="card-body card-6-6"><img alt="convivencia escolar" class="img-responsive"
+                                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria13385.png" /></div>
+
+                                <div class="card-body">
+                                    <p>En este m&oacute;dulo encontrar&aacute; herramientas con informaci&oacute;n
+                                        relevante para adelantar acciones de prevenci&oacute;n ante diferentes factores
+                                        de riesgo que afectan la convivencia escolar.</p>
+                                </div>
                             </div>
-                            <a href="https://especiales.colombiaaprende.edu.co/convivencia-escolar/module-2.html"
+                            <a aria-label="Más sobre ley de convivencia escolar"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre ley de convivencia escolar" target="_blank">Ver más información</a>
+                                href="https://especiales.colombiaaprende.edu.co/convivencia-escolar/module-2.html"
+                                target="_blank">Ver m&aacute;s informaci&oacute;n</a>
                         </div>
+
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="kit-herramientas">
                                 <div class="center-text">
                                     <p class="card-header">Herramientas para el buen trato en el marco de los derechos
                                         humanos.</p>
                                 </div>
-                                <div class="card-body card-6-6">
-                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13386.png"
-                                        class="img-responsive" alt="herramientas para la convivencia escolar">
-                                </div>
-                                <div class="card-body">
-                                    <p>
-                                        Aquí encuentran material pedagógico para la prevención del maltrato infantil, para que los niños, las niñas y adolescentes se reconozcan a sí mismos (as) como sujetos con derechos, capaces de incidir en las situaciones que les ocurren y en su desarrollo.
-                                    </p>
-                                </div>
 
+                                <div class="card-body card-6-6"><img alt="herramientas para la convivencia escolar"
+                                        class="img-responsive"
+                                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria13386.png" /></div>
+
+                                <div class="card-body">
+                                    <p>Aqu&iacute; encuentran material pedag&oacute;gico para la prevenci&oacute;n del
+                                        maltrato infantil, para que los ni&ntilde;os, las ni&ntilde;as y adolescentes se
+                                        reconozcan a s&iacute; mismos (as) como sujetos con derechos, capaces de incidir
+                                        en las situaciones que les ocurren y en su desarrollo.</p>
+                                </div>
                             </div>
-                            <a href="https://especiales.colombiaaprende.edu.co/convivencia-escolar/module-3.html"
+                            <a aria-label="Más sobre las herramientas para la convivencia escolar"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre las herramientas para la convivencia escolar" target="_blank">Ver más
-                                información</a>
+                                href="https://especiales.colombiaaprende.edu.co/convivencia-escolar/module-3.html"
+                                target="_blank">Ver m&aacute;s informaci&oacute;n</a>
                         </div>
                     </div>
 
@@ -1505,70 +1514,85 @@ position: absolute;
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="convivencia-escolar">
                                 <div class="center-text">
-                                    <p class="card-header">Sistema de Información Unificado de Convivencia Escolar
-                                        (SIUCE)</p>
-                                </div>
-                                <div class="card-body card-6-6">
-                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13387.png"
-                                        class="img-responsive" alt="convivencia escolar">
-                                </div>
-                                <div class="card-body">
-                                    <p>
-                                        Es un sistema nacional creado por la Ley 1620 de 2013 para la identificación, registro y seguimiento de los casos de acoso, violencia escolar y de vulneración de los derechos humanos, sexuales y reproductivos de niñas, niños y adolescentes de los establecimientos educativos oficiales y no oficiales de Colombia.
-                                    </p>
+                                    <p class="card-header">Sistema de Informaci&oacute;n Unificado de Convivencia
+                                        Escolar (SIUCE)</p>
                                 </div>
 
+                                <div class="card-body card-6-6"><img alt="convivencia escolar" class="img-responsive"
+                                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria13387.png" /></div>
+
+                                <div class="card-body">
+                                    <p>Es un sistema nacional creado por la Ley 1620 de 2013 para la
+                                        identificaci&oacute;n, registro y seguimiento de los casos de acoso, violencia
+                                        escolar y de vulneraci&oacute;n de los derechos humanos, sexuales y
+                                        reproductivos de ni&ntilde;as, ni&ntilde;os y adolescentes de los
+                                        establecimientos educativos oficiales y no oficiales de Colombia.</p>
+                                </div>
                             </div>
-                            <a href="https://www.mineducacion.gov.co/portal/salaprensa/Noticias/404764:Sistema-de-Informacion-Unificado-de-Convivencia-Escolar-SIUCE"
+                            <a aria-label="Más sobre ley de convivencia escolar"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre ley de convivencia escolar" target="_blank">Ver más información</a>
+                                href="https://www.mineducacion.gov.co/portal/salaprensa/Noticias/404764:Sistema-de-Informacion-Unificado-de-Convivencia-Escolar-SIUCE"
+                                target="_blank">Ver m&aacute;s informaci&oacute;n</a>
                         </div>
+
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="ruta-atencion">
                                 <div class="center-text">
-                                    <p class="card-header">Acceso para instituciones educativas, secretarías de
-                                        educación
-                                        certificadas y Policía Nacional</p>
-                                </div>
-                                <div class="card-body card-6-6">
-                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13388.png"
-                                        class="img-responsive" alt="convivencia escolar">
-                                </div>
-                                <div class="card-body">
-                                    <p>
-                                        Aquí puedes acceder a la plataforma SIUCE para SiA3 para casos de convivencia escolar.
-                                    </p>
+                                    <p class="card-header">Acceso para instituciones educativas, secretar&iacute;as de
+                                        educaci&oacute;n certificadas y Polic&iacute;a Nacional</p>
                                 </div>
 
+                                <div class="card-body card-6-6"><img alt="convivencia escolar" class="img-responsive"
+                                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria13388.png" /></div>
+
+                                <div class="card-body">
+                                    <p>Aqu&iacute; puedes acceder a la plataforma SIUCE para SiA3 para casos de
+                                        convivencia escolar.</p>
+                                </div>
                             </div>
-                            <a href="http://siuce.mineducacion.gov.co/siuce-angular2/"
+                            <a aria-label="Más sobre ley de convivencia escolar"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre ley de convivencia escolar" target="_blank">Ver más información</a>
+                                href="http://siuce.mineducacion.gov.co/siuce-angular2/" target="_blank">Ver m&aacute;s
+                                informaci&oacute;n</a>
                         </div>
+
                         <div class="card card-display-content">
                             <div class="card-default equal-height" id="kit-herramientas">
                                 <div class="center-text">
-                                    <p class="card-header">Acceso para reportar casos anónimos</p>
-                                </div>
-                                <div class="card-body card-6-6">
-                                    <img src="https://www.acacias.gov.co/info/acacias_se/media/galeria13389.png"
-                                        class="img-responsive" alt="herramientas para la convivencia escolar">
-                                </div>
-                                <div class="card-body">
-                                    <p>
-                                        Aquí puedes acceder a la plataforma SIUCE para reportar casos anónimos.
-                                    </p>
+                                    <p class="card-header">Acceso para reportar casos an&oacute;nimos</p>
                                 </div>
 
+                                <div class="card-body card-6-6"><img alt="herramientas para la convivencia escolar"
+                                        class="img-responsive"
+                                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria13389.png" /></div>
+
+                                <div class="card-body">
+                                    <p>Aqu&iacute; puedes acceder a la plataforma SIUCE para reportar casos
+                                        an&oacute;nimos.</p>
+                                </div>
                             </div>
-                            <a href="http://siuce.mineducacion.gov.co/siuceanonimo-angular2/"
+                            <a aria-label="Más sobre las herramientas para la convivencia escolar"
                                 class="btn btn-default btn-block boton-footer"
-                                aria-label="Más sobre las herramientas para la convivencia escolar" target="_blank">Ver más
-                                información</a>
+                                href="http://siuce.mineducacion.gov.co/siuceanonimo-angular2/" target="_blank">Ver
+                                m&aacute;s informaci&oacute;n</a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        
+        <div class="row_c06">
+            <div class="titulo-micrositio">
+                <h2>Encuéntranos</h2>
+            </div>
+            <div class="contenido-micrositio">
+                <h3>Correo electrónico</h3>
+                <p>social@acacias.gov.co</p>
+                <h3>Dirección</h3>
+                <p>Cl. 14 #32 no. 21, Acacías, Meta.</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7960.306451446257!2d-73.76745195879441!3d3.988887933939352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3e39003559de7b%3A0x59ecc13df2cb66fe!2sAlcald%C3%ADa%20Municipal%20de%20Acac%C3%ADas!5e0!3m2!1ses!2sco!4v1733499269343!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
         </div>
     </div>
 </div>
@@ -1587,6 +1611,7 @@ position: absolute;
             $(".row_c03").hide();
             $(".row_c04").hide();
             $(".row_c05").hide();
+            $(".row_c06").hide();
             $(".row_c01").show().css("display", "flex");
 
         });
@@ -1596,6 +1621,7 @@ position: absolute;
             $(".row_c03").hide();
             $(".row_c04").hide();
             $(".row_c05").hide();
+            $(".row_c06").hide();
             $(".row_c02").show().css("display", "flex");
         });
 
@@ -1604,6 +1630,7 @@ position: absolute;
             $(".row_c02").hide();
             $(".row_c04").hide();
             $(".row_c05").hide();
+            $(".row_c06").hide();
             $(".row_c03").show().css("display", "inline-block");
         });
 
@@ -1612,6 +1639,7 @@ position: absolute;
             $(".row_c02").hide();
             $(".row_c03").hide();
             $(".row_c05").hide();
+            $(".row_c06").hide();
             $(".row_c04").show().css("display", "inline-block");
         });
         $(".boton_05").click(function () {
@@ -1619,7 +1647,16 @@ position: absolute;
             $(".row_c02").hide();
             $(".row_c03").hide();
             $(".row_c04").hide();
+            $(".row_c06").hide();
             $(".row_c05").show().css("display", "inline-block");
+        });
+        $(".boton_06").click(function () {
+            $(".row_c01").hide();
+            $(".row_c02").hide();
+            $(".row_c03").hide();
+            $(".row_c04").hide();
+            $(".row_c05").hide();
+            $(".row_c06").show().css("display", "inline-block");
         });
     });
     document.getElementById('convivencia-escolar').addEventListener('click', function () {
