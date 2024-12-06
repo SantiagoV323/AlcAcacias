@@ -1,9 +1,8 @@
 <!-- Pendiente: Agreagar colores de la bandera como el navbar original --><!-- Realizar un dropdown en el navbar -->
 <meta charset="UTF-8">
-<meta name="viewport" content="initial-scale=1, maximum-scale=1">
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1"><!-- Latest compiled and minified CSS -->
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet" />
 <!-- Add the Bootstrap CSS link --><!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
 <style type="text/css">
     .h2,
@@ -154,9 +153,9 @@
     .foto-persona img {
         width: 100%;
         height: 100%;
-        padding-top: 0px;
-        padding-bottom: 8px;
-        padding-left: 8px;
+        padding-top: 9px;
+        padding-bottom: 0px;
+        padding-left: 25px;
         object-fit: cover;
         background-color: #fff;
     }
@@ -462,7 +461,7 @@ position: absolute;
         text-decoration: underline;
     }
 
-        
+
     .azul_c01 {
         background-color: #26a949;
     }
@@ -475,7 +474,8 @@ position: absolute;
         background-color: #f2f2f2;
     }
 
-    #navContent, #dropdownMenu1{
+    #navContent,
+    #dropdownMenu1 {
         font-size: 1.1em;
         font-weight: 600;
         font-family: var(--font-for-content-medium);
@@ -492,27 +492,21 @@ position: absolute;
         background-color: #26a949;
     }
 
-    .header-block .u-menu .nav-menu ul.megamenu>li>a  {
+    .header-block .u-menu .nav-menu ul.megamenu>li>a {
         font-size: 1em;
     }
 
-    .info_c01 >h2, .info_c02 >h2 {
+    .info_c01>h2,
+    .info_c02>h2 {
         color: #000;
     }
-
 </style>
 <div class="principal_cont">
     <div class="container_ps">
         <nav class="sub-nav navbar navbar-expand-lg navbar-light bg-light">
-            <!-- Botón inicio que puede llevar al home --><!-- <a class="navbar-brand" href="#">Inicio</a> -->
-            <button type="button" class="btn-nav navbar-toggle collapsed" data-toggle="collapse"
-                data-target="#navbarNavDropdown" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span style="font-size: 30px;" class="glyphicon glyphicon-menu-hamburger"></span>
-            </button>
-
-
-
+            <!-- Botón inicio que puede llevar al home --><!-- <a class="navbar-brand" href="#">Inicio</a> --><button
+                aria-expanded="false" class="btn-nav navbar-toggle collapsed" data-target="#navbarNavDropdown"
+                data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span></button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item active"><a class="btn-nav nav-link btn-primary nav-link jefe boton_01"
@@ -523,8 +517,7 @@ position: absolute;
                             id="navContent">Informaci&oacute;n de la secretar&iacute;a</a>
                         <!-- <a href="javascript:void(0);" class="btn btn-primary nav-link info boton_02">Información</a> -->
                     </li>
-                    <!-- Módulo de dropdown -->
-                    <!-- <li class="btn-nav nav-item dropdown">
+                    <!-- Módulo de dropdown --><!-- <li class="btn-nav nav-item dropdown">
                         <div class="dropdown">
                             <button class="btn-nav btn-default dropdown-toggle" type="button" id="dropdownMenu1"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -541,21 +534,12 @@ position: absolute;
                             </ul>
                         </div>
                     </li> -->
-                    <li class="nav-item">
-                        <a class="btn-nav btn-primary nav-link boton_04" href="javascript:void(0);" id="navContent">
-                            Proyectos
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn-nav btn-primary nav-link boton_05" href="javascript:void(0);" id="navContent">
-                            Nuestro equipo
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn-nav btn-primary nav-link boton_06" href="javascript:void(0);" id="navContent">
-                            Encuéntranos
-                        </a>
-                    </li>
+                    <li class="nav-item"><a class="btn-nav btn-primary nav-link boton_04" href="javascript:void(0);"
+                            id="navContent">Proyectos </a></li>
+                    <li class="nav-item"><a class="btn-nav btn-primary nav-link boton_05" href="javascript:void(0);"
+                            id="navContent">Nuestro equipo </a></li>
+                    <li class="nav-item"><a class="btn-nav btn-primary nav-link boton_06" href="javascript:void(0);"
+                            id="navContent">Encu&eacute;ntranos </a></li>
                 </ul>
             </div>
         </nav>
@@ -564,22 +548,29 @@ position: absolute;
             <div class="col-xs-12 col-md-6 blanco_c01">
                 <div>
                     <div class="nombre_c01">
-                        <h2 style="margin-bottom: 10px">Sandra Patricia Fonseca Avella</h2>
+                        <h2 style="margin-bottom: 10px">Edgar Ivan Balcazar Mayorga</h2>
                     </div>
 
                     <div class="descripcion">
-                        <p>Abogada, mag&iacute;ster en derecho administrativo y especialista en derecho urbano. Cuenta
-                            con m&aacute;s de 18 a&ntilde;os de experiencia profesional en el sector p&uacute;blico,
-                            asesorando jur&iacute;dicamente y ejerciendo cargos de nivel directivo, se ha
-                            desempe&ntilde;ado profesionalmente en entidades p&uacute;blicas de diferente orden como la
-                            Secretar&iacute;a Distrital de Planeaci&oacute;n, la Unidad Administrativa Especial de
-                            Catastro Distrital, la Corporaci&oacute;n Aut&oacute;noma Regional de Cundinamarca, la
-                            Superintendencia de Servicios P&uacute;blicos Domiciliarios, Central de Inversiones
-                            S.A.<br />
+                        <p>Abogado con amplia formaci&oacute;n acad&eacute;mica, cuenta con una Maestr&iacute;a en
+                            Derecho Contractual P&uacute;blico y Privado, y cuatro especializaciones en &aacute;reas
+                            como Derecho Administrativo, Derecho Contractual, Gesti&oacute;n P&uacute;blica y m&aacute;s
+                            de 15 a&ntilde;os de experiencia profesional en el sector p&uacute;blico y privado. Ha
+                            ejercido como abogado asesor, contratista y funcionario en diversas entidades
+                            gubernamentales y educativas, demostrando competencias en la asesor&iacute;a
+                            jur&iacute;dica, la gesti&oacute;n p&uacute;blica y el control fiscal.<br />
                             <br />
-                            Tiene experiencia y conocimiento en el marco de la gesti&oacute;n jur&iacute;dica,
-                            administrativa, urban&iacute;stica, de ordenamiento territorial, integraci&oacute;n y
-                            asociatividad territorial, as&iacute; como en temas catastrales y ambientales.
+                            Entre las instituciones donde ha prestado sus servicios se encuentran la Contralor&iacute;a
+                            General de la Rep&uacute;blica, la Gobernaci&oacute;n de Vaup&eacute;s, la Alcald&iacute;a
+                            de Puerto L&oacute;pez, la Universidad de los Llanos, entre otras. Actualmente,
+                            contin&uacute;a desarrollando su carrera como abogado asesor y contratista, asumiendo roles
+                            clave en diversas entidades.<br />
+                            <br />
+                            Con un perfil enfocado en el derecho administrativo y contractual, tiene habilidades
+                            comprobadas en la asesor&iacute;a jur&iacute;dica y la gesti&oacute;n administrativa en
+                            proyectos relacionados con la construcci&oacute;n, medio ambiente y control fiscal. Su
+                            experiencia abarca desde el &aacute;mbito local hasta el nacional, con un enfoque en la
+                            correcta administraci&oacute;n de recursos p&uacute;blicos y el cumplimiento normativo.
                         </p>
                     </div>
                 </div>
@@ -594,11 +585,11 @@ position: absolute;
                     <div class="foto-persona">
                         <div class="franja-oscura">&nbsp;</div>
                         <img alt="Foto de la Persona"
-                            src="https://www.acacias.gov.co/info/acacias_se/media/galeria11930.png" />
+                            src="https://www.acacias.gov.co/info/acacias_se/media/galeria13940.png" />
                     </div>
 
                     <div class="titulo_c01">
-                        <h3 style="color: white">OFICINA JURÍDICA</h3>
+                        <h3 style="color: white">OFICINA JUR&Iacute;DICA</h3>
                     </div>
 
                     <div class="titulo-cilindro">
@@ -623,7 +614,11 @@ position: absolute;
                     </div>
 
                     <div class="descripcion_01">
-                        <p>Es la Oficina responsable por el proceso de asesoria y asistencia juridica al despacho del alcalde y demás dependencias de la estructura municipal, en los asuntos de orden legal que deba atender el municipio, para lo cual prepara las minutas, realiza la revisión y ajuste de los actos de la administración y adelantará los procesos disciplinarios a que haya lugar.</p>
+                        <p>Es la Oficina responsable por el proceso de asesoria y asistencia juridica al despacho del
+                            alcalde y dem&aacute;s dependencias de la estructura municipal, en los asuntos de orden
+                            legal que deba atender el municipio, para lo cual prepara las minutas, realiza la
+                            revisi&oacute;n y ajuste de los actos de la administraci&oacute;n y adelantar&aacute; los
+                            procesos disciplinarios a que haya lugar.</p>
                     </div>
 
                     <div class="info_c02">
@@ -631,8 +626,8 @@ position: absolute;
                     </div>
 
                     <div class="descripcion_01">
-                        <p>Asesorar a la Administración Municipal en todos los temas jurídicos para dar cumplimiento a las normas legales y defender los intereses del Municipio.
-                        </p>
+                        <p>Asesorar a la Administraci&oacute;n Municipal en todos los temas jur&iacute;dicos para dar
+                            cumplimiento a las normas legales y defender los intereses del Municipio.</p>
                     </div>
                     <!-- <div class="info_c03">
                     <h2 style="margin-bottom: 10px">Funciones</h2>
@@ -649,8 +644,7 @@ position: absolute;
                 </div>
             </div>
 
-            <div class="col-xs-12 col-md-6 inf_cont02">
-                <!-- <div class="descripcion_01">
+            <div class="col-xs-12 col-md-6 inf_cont02"><!-- <div class="descripcion_01">
                     <p><br />
                         <br />
                         11. Afianzar metodolog&iacute;as para el seguimiento y evaluaci&oacute;n del Plan de
@@ -679,14 +673,18 @@ position: absolute;
                         gesti&oacute;n administrativos
                     </p>
                 </div> -->
-
                 <h2 class="titulosBlancos" style="margin-bottom: 10px;">Funciones</h2>
 
                 <div class="descripcion_01">
-                    <p>1. Asesorar al Alcalde y a los diferentes funcionarios que lo requieran en temas jurídicos relacionados con la misión de la Alcaldía Municipal. <br>
-                        2. Representar al Municipio en los procesos que se instauren en su contra, ejecutando las acciones legales para defender los intereses del Municipio, bien sea en forma directa o a través de los asesores externos. <br>
-                        3. Instaurar las demandas originadas en actuaciones de terceros que contravengan la ley y la norma en detrimento de los intereses del Municipio. <br>
-                        4. Realizar los procesos de análisis y validación de los títulos de propiedad de bienes públicos y fiscales y, construir el archivo correspondiente.</p>
+                    <p>1. Asesorar al Alcalde y a los diferentes funcionarios que lo requieran en temas jur&iacute;dicos
+                        relacionados con la misi&oacute;n de la Alcald&iacute;a Municipal.<br />
+                        2. Representar al Municipio en los procesos que se instauren en su contra, ejecutando las
+                        acciones legales para defender los intereses del Municipio, bien sea en forma directa o a
+                        trav&eacute;s de los asesores externos.<br />
+                        3. Instaurar las demandas originadas en actuaciones de terceros que contravengan la ley y la
+                        norma en detrimento de los intereses del Municipio.<br />
+                        4. Realizar los procesos de an&aacute;lisis y validaci&oacute;n de los t&iacute;tulos de
+                        propiedad de bienes p&uacute;blicos y fiscales y, construir el archivo correspondiente.</p>
                 </div>
             </div>
         </div>
@@ -699,10 +697,9 @@ position: absolute;
             <div class="titulo-micrositio">
                 <h2>Proyectos</h2>
             </div>
-            <div class=" contenido-micrositio">
-                <p>
 
-                </p>
+            <div class="contenido-micrositio">
+                <p>&nbsp;</p>
             </div>
         </div>
 
@@ -710,18 +707,21 @@ position: absolute;
             <div class="titulo-micrositio">
                 <h2>Nuestro equipo</h2>
             </div>
-            <div class="contenido-micrositio">
-            </div>
+
+            <div class="contenido-micrositio">&nbsp;</div>
         </div>
 
         <div class="row_c06">
             <div class="titulo-micrositio">
-                <h2>Encuéntranos</h2>
+                <h2>Encu&eacute;ntranos</h2>
             </div>
+
             <div class="contenido-micrositio">
-                <p>
-                    <!-- Acá va el contenido del micrositio -->
-                </p>
+                <h3>Correo electrónico</h3>
+                <p>juridica@acacias.gov.co</p>
+                <h3>Dirección</h3>
+                <p>Cl. 14 #32 no. 21, Acacías, Meta.</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7960.306451446257!2d-73.76745195879441!3d3.988887933939352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3e39003559de7b%3A0x59ecc13df2cb66fe!2sAlcald%C3%ADa%20Municipal%20de%20Acac%C3%ADas!5e0!3m2!1ses!2sco!4v1733499269343!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </div>
