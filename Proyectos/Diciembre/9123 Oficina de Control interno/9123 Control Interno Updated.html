@@ -1,0 +1,788 @@
+<!-- Pendiente: Agreagar colores de la bandera como el navbar original --><!-- Realizar un dropdown en el navbar -->
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1"><!-- Latest compiled and minified CSS -->
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet" />
+<!-- Add the Bootstrap CSS link --><!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+<style type="text/css">
+    .h2,
+    h2 {
+        font-size: 30px !important;
+    }
+
+    .h3 {
+        font-size: 24px !important;
+    }
+
+    .principal_cont {
+        margin: 0;
+        padding: 0;
+    }
+
+    .blanco_c01,
+    .azul_c01 {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .info_cont01,
+    .inf_cont02 {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .titulo-cilindro {
+        text-align: center;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        margin-top: 80px;
+    }
+
+    .container_ps {
+        width: 80%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .botones_container {
+        width: 100%;
+        padding-right: 7.5px;
+        padding-left: 0%;
+        margin-right: auto;
+        margin-left: auto;
+        /* display: flex; */
+        flex: 1;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px
+    }
+
+    .titulo-cilindro h3 {
+        font-size: 20px;
+        margin: 20px 0;
+        font-family: 'Work Sans', sans-serif !important;
+        font-weight: bold;
+    }
+
+    .titulo-cilindro span {
+        font-size: 16px;
+    }
+
+    .blanco_c01 {
+        background-color: #ebebeb;
+        color: #333;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .info_cont01 {
+        background-color: #ebebeb;
+        color: #333;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        flex: 1;
+    }
+
+    .inf_cont02 {
+        background-color: #ebebeb;
+        color: #333;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        flex: 1;
+    }
+
+    .azul_c01 {
+        background-color: #3462ad;
+        color: #fff;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .inf_cont02 {
+        background-color: #3462ad;
+        color: #fff;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        min-width: 300px;
+        flex: 1;
+    }
+
+    .logo-alcaldia {
+        margin-top: 6%;
+        margin-bottom: 35px;
+        text-align: center;
+    }
+
+
+    .nombre_c01 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .descripcion p,
+    .alcaldia p {
+        margin-top: 50px;
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .descripcion_01 p {
+        margin: 50px 0;
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .foto-persona {
+        position: relative;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 20px;
+        width: 200px;
+        height: 200px;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .foto-persona img {
+        width: 100%;
+        height: 100%;
+        padding-top: 0px;
+        padding-left: 6px;
+        padding-bottom: 6px;
+        object-fit: cover;
+        background-color: #fff;
+    }
+
+    .franja-oscura {
+        position: absolute;
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+        top: 5px;
+        left: 5px;
+        border: 5px solid #2c3e50;
+        border-radius: 80%;
+    }
+
+    .titulo_c01 h3 {
+        margin: 50px 0;
+        font-family: 'Work Sans', sans-serif !important;
+        font-weight: bold;
+        font-size: 20px !important;
+    }
+
+    .titulo-cilindro {
+        background-color: #2c3e50;
+        color: #fff;
+        padding: 1px;
+        border-radius: 60px 0px 0px 60px;
+        margin-bottom: 20px;
+        margin-right: 0;
+        letter-spacing: -1px;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: bold;
+        position: relative;
+    }
+
+    .nombre-persona {
+        /* margin-top: 56%; */
+        margin-bottom: 32px;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: bold;
+    }
+
+    .nombre-persona>p {
+        margin: 0px;
+    }
+
+    .alcaldia_c01 {
+        /* margin-top: 76px; */
+        font-family: 'Work Sans', sans-serif;
+        font-weight: bold;
+    }
+
+    .row_c01 {
+        font-family: Arial, sans-serif;
+        max-width: 1200px;
+        margin: auto;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #ffffff;
+    }
+
+    .row_c02 {
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        max-width: 1200px;
+        margin: auto;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #ffffff;
+    }
+
+    .principal_cont {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* .botones_container {
+justify-content: center;
+position: absolute;
+} */
+
+    .cont_btns {
+
+        display: flex;
+        /* justify-content: center; */
+        padding-right: 0px;
+        gap: 28px;
+        align-items: center;
+
+    }
+
+    .titulosBlancos,
+    .subtitulosBlancos {
+        color: white;
+    }
+
+    @keyframes slideInFromRight {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideOutToLeft {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+    @keyframes slideInFromLeft {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideOutToRight {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+
+    .row_c02,
+    .row_c03,
+    .row_c04,
+    .row_c05,
+    .row_c06 {
+        display: none;
+    }
+
+    .row_c01,
+    .row_c02,
+    .row_c03,
+    .row_c04,
+    .row_c05,
+    .row_c06 {
+
+        position: relative;
+        width: 100%;
+        height: auto;
+        z-index: 1;
+    }
+
+    .row_c01,
+    .row_c02,
+    .row_c03,
+    .row_c04,
+    .row_c05 {
+        animation: slideInFromRight 1s ease-out forwards;
+    }
+
+
+    .boton {
+        margin: 0 10px;
+    }
+
+    .btn-primary {
+        color: black;
+        font-weight: 600;
+        background-color: transparent;
+        border-color: transparent;
+
+    }
+
+    .sub-nav .navbar-nav {
+        display: flex;
+        padding: 10px;
+        flex-wrap: wrap;
+        justify-content: left;
+        align-items: center;
+    }
+
+    .nav-item {
+        list-style: none;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        background-color: transparent;
+
+        color: black;
+        font-weight: 600;
+        display: inline-block;
+    }
+
+    .open>.dropdown-menu {
+        min-width: auto;
+    }
+
+
+    .navbar-expand-lg .navbar-nav .dropdown-menu {
+        position: absolute;
+        border-radius: 8px;
+        background-color: #ebebeb;
+        min-width: none;
+
+    }
+
+    .btn-nav .dropdown-menu>li>a {
+        text-decoration: none;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        border-top: 5px solid #fbbb00;
+        border-bottom: 5px solid #078930;
+        margin: 20 0;
+    }
+
+    /* Estilos existentes para los enlaces del navbar */
+    .navbar-nav>li>a {
+        color: black;
+        /* O el color original de tus enlaces */
+        padding-left: 8px;
+
+    }
+
+    /* Agregar estilos para el hover */
+    .navbar-nav>li>a:hover {
+        /* Cambiar al color azul deseado */
+        background-color: #3462ad;
+        /* Cambiar el color del texto a blanco */
+        color: white;
+    }
+
+    .desplegable {
+        color: black;
+        font-weight: 600;
+        background-color: transparent;
+    }
+
+    .navbar-collapse {
+        align-items: center;
+    }
+
+    .nav-link {
+        width: 100%;
+        text-align: left;
+        padding-left: 8px
+    }
+
+    .contenido-micrositio {
+        margin-top: 50px;
+    }
+
+    .contenido-micrositio p {
+        font-size: large;
+    }
+
+
+    @media (max-width: 767px) {
+        .navbar .nav-link.btn {
+            /* display: block; */
+            width: 100%;
+            text-align: left;
+            /* Asegurarse de que estén alineados a la izquierda */
+        }
+    }
+
+    #navContent {
+        margin: 0px 6px;
+    }
+
+    #navContent,
+    #navbarDropdownMenuLink {
+        padding-left: 8px;
+    }
+
+    .navbar .navbar-toggle {
+        margin: 0px;
+        float: left;
+    }
+
+    .btn-nav {
+        color: black;
+        font-weight: 600;
+        background-color: transparent;
+        border-color: transparent;
+        text-decoration: none;
+    }
+
+    .btn-nav:hover {
+        text-decoration: underline;
+    }
+
+
+
+    .azul_c01 {
+        background-color: #26a949;
+    }
+
+    .titulo-cilindro {
+        background-color: #ffba31;
+    }
+
+    .blanco_c01 {
+        background-color: #f2f2f2;
+    }
+
+    #navContent,
+    #dropdownMenu1 {
+        font-size: 1.1em;
+        font-weight: 600;
+        font-family: var(--font-for-content-medium);
+    }
+
+    .dropdown-menu .dropdown-menu-personalizado .show {
+        font-weight: 500;
+        font-size: 1em;
+        font-family: var(--font-for-content-medium);
+
+    }
+
+    .inf_cont02 {
+        background-color: #26a949;
+    }
+
+    .header-block .u-menu .nav-menu ul.megamenu>li>a {
+        font-size: 1em;
+    }
+
+    .info_c01>h2,
+    .info_c02>h2 {
+        color: #000;
+    }
+</style>
+<div class="principal_cont">
+    <div class="container_ps">
+        <nav class="sub-nav navbar navbar-expand-lg navbar-light bg-light">
+            <!-- Botón inicio que puede llevar al home --><!-- <a class="navbar-brand" href="#">Inicio</a> --><button
+                aria-expanded="false" class="btn-nav navbar-toggle collapsed" data-target="#navbarNavDropdown"
+                data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span></button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active"><a class="btn-nav nav-link btn-primary nav-link jefe boton_01"
+                            href="javascript:void(0);" id="navContent">Jefe <span class="sr-only">(current)</span></a>
+                        <!-- <a class="btn btn-primary nav-link jefe boton_01" href="javascript:void(0);">Jefe</a> -->
+                    </li>
+                    <li class="nav-item"><a class="btn-nav btn-primary nav-link boton_02" href="javascript:void(0);"
+                            id="navContent">Informaci&oacute;n de la secretar&iacute;a</a>
+                        <!-- <a href="javascript:void(0);" class="btn btn-primary nav-link info boton_02">Información</a> -->
+                    </li>
+                    <!-- Módulo de dropdown --><!-- <li class="btn-nav nav-item dropdown">
+                        <div class="dropdown">
+                            <button class="btn-nav btn-default dropdown-toggle" type="button" id="dropdownMenu1"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                Publicaciones
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a href="#">Edictos</a></li>
+                                <li>
+                                    <a class="btn-nav btn-primary nav-link boton_03" href="javascript:void(0);" id="navContent">
+                                        Notificaciones
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li> -->
+                    <li class="nav-item"><a class="btn-nav btn-primary nav-link boton_04" href="javascript:void(0);"
+                            id="navContent">Proyectos </a></li>
+                    <li class="nav-item"><a class="btn-nav btn-primary nav-link boton_05" href="javascript:void(0);"
+                            id="navContent">Nuestro equipo </a></li>
+                    <li class="nav-item"><a class="btn-nav btn-primary nav-link boton_06" href="javascript:void(0);"
+                            id="navContent">Encu&eacute;ntranos </a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="row_c01">
+            <div class="col-xs-12 col-md-6 blanco_c01">
+                <div>
+                    <div class="nombre_c01">
+                        <h2 style="margin-bottom: 10px">Dora Patricia Moreno Reyes</h2>
+                    </div>
+
+                    <div class="descripcion">
+                        <p>Abogada egresada de la universidad La Gran Colombia, especialista en derecho del medio
+                            ambiente, con gran variedad de diplomados entre ellos control interno y auditoría en el
+                            sector público y privado.<br />
+                            <br />
+                            Ha laborado com abogada litigante 15 años, docente en las áreas de derechos humanos,
+                            defensoría pública en el municipio de Acacías, Secretaría de Gobierno (año 2016-2019),
+                            asesoría jurídica (ESPA), profesional de servicio al cliente, ESPA, asesor de control
+                            interno (Hospital Municipal de Acacías), donde ha liderado con profesionalismo todas las
+                            tareas encomendadas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="logo-alcaldia"><img alt="Logo de la Alcaldía"
+                        src="https://www.acacias.gov.co/info/acacias_se/media/galeria11942.png"
+                        style="height:50px; margin-bottom:1rem" /></div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 azul_c01">
+                <div>
+                    <div class="foto-persona">
+                        <div class="franja-oscura">&nbsp;</div>
+                        <img alt="Foto de la Persona"
+                            src="https://www.acacias.gov.co/info/acacias_se/media/galeria14166.png" />
+                    </div>
+
+                    <div class="titulo_c01">
+                        <h3 style="color: white">OFICINA DE CONTROL INTERNO</h3>
+                    </div>
+
+                    <div class="titulo-cilindro">
+                        <h3 style="color: white"><span>EQUIPO DE</span><br />
+                            GOBIERNO</h3>
+                    </div>
+                </div>
+
+                <div class="nombre-persona">
+                    <p><span class="alcaldia_c01">CARLOS JULIO<br />
+                            PLATA BECERRA<br />
+                            Alcalde</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row_c02">
+            <div class="col-xs-12 col-md-6 info_cont01">
+                <div class="contenido_inf">
+                    <div class="info_c01">
+                        <h2 style="margin-bottom: 10px">Misi&oacute;n</h2>
+                    </div>
+
+                    <div class="descripcion_01">
+                        <p>Estructurar de control fortaleciendo un enfoque preventivo mediante la gestión de riesgos y
+                            el desarrollo del esquema de roles y responsabilidades, desplegando acciones de seguimiento,
+                            evaluación y monitoreo en instancias razonables de la entidad.</p>
+                    </div>
+
+                    <div class="info_c02">
+                        <h2 style="margin-bottom: 10px">Objetivos</h2>
+                    </div>
+
+                    <div class="descripcion_01">
+                        <p>Dirigir, planear, ejecutar, hacer seguimiento, evaluar y controlar la gestión institucional
+                            con el fin de generar los resultados que atiendan los planes de desarrollo y resolver las
+                            necesidades y problemas de los ciudadanos con integridad y calidad en el servicio.
+                        </p>
+                    </div>
+                    <!-- <div class="info_c03">
+                    <h2 style="margin-bottom: 10px">Funciones</h2>
+                </div>
+                <div class="descripcion_01">
+                    <p>
+                        ELIMINAR
+                    </p>
+                </div> -->
+
+                    <div class="logo-alcaldia"><img alt="Logo de la Alcaldía"
+                            src="https://www.acacias.gov.co/info/acacias_se/media/galeria11942.png"
+                            style="height:50px" /></div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 inf_cont02"><!-- <div class="descripcion_01">
+                    <p><br />
+                        <br />
+                        11. Afianzar metodolog&iacute;as para el seguimiento y evaluaci&oacute;n del Plan de
+                        Desarrollo y del Plan B&aacute;sico de Ordenamiento Territorial, los Planes Parciales,
+                        zonales, as&iacute; como la participaci&oacute;n ciudadana en el proceso de
+                        planeaci&oacute;n.<br />
+                        12. Formular el Plan Operativo Anual de Inversiones.<br />
+                        13. Coordinar la acci&oacute;n de las entidades municipales, departamentales y nacionales en
+                        el municipio con miras al cumplimiento del plan municipal.<br />
+                        14. Elaborar el Plan Anual y Plurianual de Inversiones del Municipio.<br />
+                        15. Dirigir, organizar y sistematizar el banco de programas y proyectos de inversi&oacute;n
+                        municipal.<br />
+                        16. Proponer y guiar la aplicaci&oacute;n de los instrumentos de estratificaci&oacute;n, a
+                        fin de propender por el modelo mas equitativo para el Municipio.<br />
+                        17. Guiar la planeaci&oacute;n financiera dentro de los par&aacute;metros legales.
+                        18. Guiar la estructura organizacional de mediano y largo plazo que permita adaptarla a los
+                        nuevos retos de la localizaci&oacute;n, identificar las tendencias y procesos de cambio en el
+                        contexto regional, nacional que inciden o determinan las condiciones de desarrollo de la ciudad
+                        y su poblaci&oacute;n, para ser incorporadas en la formulaci&oacute;n de escenarios de futuro y
+                        proyectos de largo plazo.<br />
+                        19. Guiar la demanda de informaci&oacute;n de los usuarios, sobre aspectos de naturaleza social,
+                        econ&oacute;mica, demogr&aacute;fica, f&iacute;sico espacial, ambiental, y legal, relacionados
+                        con los procesos de gesti&oacute;n, planeaci&oacute;n, investigaci&oacute;n y desarrollo del
+                        Municipio de Acacias.<br />
+                        20. Formular, desarrollar y direccionar la implementaci&oacute;n de los sistemas de
+                        gesti&oacute;n administrativos
+                    </p>
+                </div> -->
+                <h2 class="titulosBlancos" style="margin-bottom: 10px;">Funciones</h2>
+
+                <div class="descripcion_01">
+                    <p>Asesores, coordinadores y auditores en el ejercicio de seguimiento y evaluación independiente que
+                        deben aplicar en el desarrollo de las funciones que despliegan cinco roles:<br />
+                    </p>
+                    <p>
+                        1. Liderazgo estratégico.<br />
+                        2. Enfoque hacia la prevención.<br />
+                        3. Evaluación a la gestión del riesgo.<br />
+                        4. Evaluación y seguimiento.<br />
+                        5. Relación con entes externos de control.<br />
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row_c03">
+            <h2>Notificaciones</h2>
+        </div>
+
+        <div class="row_c04">
+            <div class="titulo-micrositio">
+                <h2>Proyectos</h2>
+            </div>
+
+            <div class="contenido-micrositio">
+                <p>&nbsp;</p>
+            </div>
+        </div>
+
+        <div class="row_c05">
+            <div class="titulo-micrositio">
+                <h2>Nuestro equipo</h2>
+            </div>
+
+            <div class="contenido-micrositio">&nbsp;</div>
+        </div>
+
+        <div class="row_c06">
+            <div class="titulo-micrositio">
+                <h2>Encuéntranos</h2>
+            </div>
+
+            <div class="contenido-micrositio">
+                <h3>Correo electrónico</h3>
+                <p>Controlinterno@acacias.gov.co</p>
+                <h3>Dirección</h3>
+                <p>Carrera 18 No 14-08 Centro. Edificio Asovendas, 4° piso. Acacías, Meta.</p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d995.0411877503926!2d-73.76091332980972!3d3.9865079611627077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3e394d370cd4f5%3A0x49757b47c67e7f5e!2sAsovendas!5e0!3m2!1ses!2sco!4v1733433910996!5m2!1ses!2sco"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Optional JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function mostrarContenido(id) {
+        console.log('Mostrar contenido con id:', id);
+    }
+
+    $(document).ready(function () {
+        $(".boton_01").click(function () {
+            $(".row_c02").hide();
+            $(".row_c03").hide();
+            $(".row_c04").hide();
+            $(".row_c05").hide();
+            $(".row_c06").hide();
+            $(".row_c01").show().css("display", "flex");
+
+        });
+
+        $(".boton_02").click(function () {
+            $(".row_c01").hide();
+            $(".row_c03").hide();
+            $(".row_c04").hide();
+            $(".row_c05").hide();
+            $(".row_c06").hide();
+            $(".row_c02").show().css("display", "flex");
+        });
+
+        // Dropdown
+        $(".boton_03").click(function () {
+            $(".row_c01").hide();
+            $(".row_c02").hide();
+            $(".row_c04").hide();
+            $(".row_c05").hide();
+            $(".row_c06").hide();
+            $(".row_c03").show().css("display", "inline-block");
+        });
+
+        $(".boton_04").click(function () {
+            $(".row_c01").hide();
+            $(".row_c02").hide();
+            $(".row_c03").hide();
+            $(".row_c05").hide();
+            $(".row_c06").hide();
+            $(".row_c04").show().css("display", "inline-block");
+        });
+        $(".boton_05").click(function () {
+            $(".row_c01").hide();
+            $(".row_c02").hide();
+            $(".row_c03").hide();
+            $(".row_c04").hide();
+            $(".row_c06").hide();
+            $(".row_c05").show().css("display", "inline-block");
+        });
+        $(".boton_06").click(function () {
+            $(".row_c01").hide();
+            $(".row_c02").hide();
+            $(".row_c03").hide();
+            $(".row_c04").hide();
+            $(".row_c05").hide();
+            $(".row_c06").show().css("display", "inline-block");
+        });
+    });
+</script>
